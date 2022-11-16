@@ -5,11 +5,11 @@ import time
 
 xml = '<?xml version="1.0" encoding="UTF-8"?>'
 
-_layer = 0
+_layer = 1
 _arr = 0
 _genarg = False
 _isnull = False
-DEBUG = True
+DEBUG = False
 gentime = 0.5
 tab = chr(32) * 3
 bazis = {}

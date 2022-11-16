@@ -1,4 +1,4 @@
-# JSON to XML
+# JSON to XML with regex
 
 import os
 import time
@@ -72,7 +72,7 @@ with open('schedule.json', encoding='UTF-8') as f:
                 xml += '\n</root>'
 
         if _genarg:
-            key, arg = re.split('": ', re.findall(r'^"\w*":\s"?[а-яА-Я\w\s.-0-9:]*"?', line)[0])
+            key, arg = re.split(r'": ', re.findall(r'^"\w*":\s"?[а-яА-Я\w\s.-0-9:]*"?', line)[0])
             if arg == 'null':
                 _isnull = True
                 xml += f'\n{tab * _layer}<{key} null="true" />'

@@ -1,53 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-   <Вторник type="list">
-      <element type="dict">
-         <Time>08:20-09:50</Time>
-         <Campus>Ул.Ломоносова, д.9, лит. М</Campus>
-         <Subject>Информатика (Лекция)</Subject>
-         <Cabinet>Актовый зал</Cabinet>
-         <Teacher>Балакшин Павел Валерьевич</Teacher>
-         <Format>Очно - дистанционный</Format>
-      </element>
-      <element type="dict">
-         <Time>08:20-09:50</Time>
-         <Campus null="true" />
-         <Subject>Информатика (Лекция): ZOOM</Subject>
-         <Cabinet null="true" />
-         <Teacher>Балакшин Павел Валерьевич</Teacher>
-         <Format>Дистанционный</Format>
-      </element>
-      <element type="dict">
-         <Time>10:00-11:30</Time>
-         <Campus>Ул.Ломоносова, д.9, лит. М</Campus>
-         <Subject>Основы профессиональной деятельности (Лекция)</Subject>
-         <Cabinet>Актовый зал</Cabinet>
-         <Teacher>Клименков Сергей Викторович</Teacher>
-         <Format>Очно - дистанционный</Format>
-      </element>
-      <element type="dict">
-         <Time>10:00-11:30</Time>
-         <Campus null="true" />
-         <Subject>Основы профессиональной деятельности (Лекция): ZOOM</Subject>
-         <Cabinet null="true" />
-         <Teacher>Клименков Сергей Викторович</Teacher>
-         <Format>Дистанционный</Format>
-      </element>
-      <element type="dict">
-         <Time>11:40-13:10</Time>
-         <Campus>Ул.Ломоносова, д.9, лит. М</Campus>
-         <Subject>Программирование (Лекция)</Subject>
-         <Cabinet>1223 ауд.</Cabinet>
-         <Teacher>Письмак Алексей Евгеньевич</Teacher>
-         <Format>Очно - дистанционный</Format>
-      </element>
-      <element type="dict">
-         <Time>11:40-13:10</Time>
-         <Campus null="true" />
-         <Subject>Программирование (Лекция): ZOOM</Subject>
-         <Cabinet null="true" />
-         <Teacher>Письмак Алексей Евгеньевич</Teacher>
-         <Format>Дистанционный</Format>
-      </element>
-   </Вторник>
+   <Format>UTF-8</Format>
+   <Group>P3131</Group>
+      <Вторник type="list">
+         <element type="dict">
+            <Time>08:20-09:50</Time>
+            <Campus>Ул.Ломоносова, д.9, лит. М</Campus>
+            <Subject>Информатика (Лекция)</Subject>
+            <Cabinet>Актовый зал</Cabinet>
+            <Teacher>Балакшин Павел Валерьевич</Teacher>
+            <Format>Очно - дистанционный</Format>
+         </element>
+         <element type="dict">
+            <Time>08:20-09:50</Time>
+            <Campus null="true" />
+            <Subject>Информатика (Лекция): ZOOM</Subject>
+            <Cabinet null="true" />
+            <Teacher>Балакшин Павел Валерьевич</Teacher>
+            <Format>Дистанционный</Format>
+         </element>
+         <element type="dict">
+            <Time>10:00-11:30</Time>
+            <Campus>Ул.Ломоносова, д.9, лит. М</Campus>
+            <Subject>Основы профессиональной деятельности (Лекция)</Subject>
+            <Cabinet>Актовый зал</Cabinet>
+            <Teacher>Клименков Сергей Викторович</Teacher>
+            <Format>Очно - дистанционный</Format>
+         </element>
+         <element type="dict">
+            <Time>10:00-11:30</Time>
+            <Campus null="true" />
+            <Subject>Основы профессиональной деятельности (Лекция): ZOOM</Subject>
+            <Cabinet null="true" />
+            <Teacher>Клименков Сергей Викторович</Teacher>
+            <Format>Дистанционный</Format>
+         </element>
+         <element type="dict">
+            <Time>11:40-13:10</Time>
+            <Campus>Ул.Ломоносова, д.9, лит. М</Campus>
+            <Subject>Программирование (Лекция)</Subject>
+            <Cabinet>1223 ауд.</Cabinet>
+            <Teacher>Письмак Алексей Евгеньевич</Teacher>
+            <Format>Очно - дистанционный</Format>
+         </element>
+         <element type="dict">
+            <Time>11:40-13:10</Time>
+            <Campus null="true" />
+            <Subject>Программирование (Лекция): ZOOM</Subject>
+            <Cabinet null="true" />
+            <Teacher>Письмак Алексей Евгеньевич</Teacher>
+            <Format>Дистанционный</Format>
+         </element>
+      </Вторник>
 </root>
