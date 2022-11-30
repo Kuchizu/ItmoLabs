@@ -10,18 +10,19 @@
 \usepackage[14pt]{extsizes}
 \usepackage[left=10mm, top=-1mm, right=10mm, bottom=10mm, nohead, nofoot]{geometry}
 \usepackage{graphicx}
-\graphicspath{{pictures/}}
 \usepackage[usenames]{color}
 \usepackage[most]{tcolorbox}
 \usepackage{colortbl}
 \usepackage{fancyhdr}
 \usepackage[document]{ragged2e}
+\usepackage{afterpage}
+
+\graphicspath{{pictures/}}
 \setlength\columnsep{60pt}
 \pagestyle{fancy}
 \fancyhf{}
 \DeclareGraphicsExtensions{.png}
-\usepackage{afterpage}
-\fancyfoot[L]{40}
+\fancyfoot[L]{56}
 
 \begin{document}
 \begin{multicols}{2}
@@ -74,11 +75,7 @@ $\Delta A$ = - $q_2$($\varphi$$_2$ - $\varphi$$_2$) = -$q_2$$q_1$ $\times$ \\
 же определяется формулой (6). В\linebreak
 системе СИ\\
 
-%\begin{left}
-%\includegraphics[scale=0.7]{pic1.png}
-%\end{left}
-
-\parindent50pt
+	\parindent50pt
 \indent $\varphi$ = $\frac{q}{4 \pi \varepsilon_2 \varepsilon r} + c$, \hfill (7) \\\\
 если шар находится в однородном\linebreak
 диэлектрике с диэлектрической про-\linebreak
@@ -140,12 +137,12 @@ $\Delta A$ = - $q_2$($\varphi$$_2$ - $\varphi$$_2$) = -$q_2$$q_1$ $\times$ \\
 \renewcommand{\arraystretch}{1.5}
 \parindent0pt\begin{tabular}[b]{ | m{0.3cm} | m{2.8cm} | m{2.5cm} | m{1.6cm}  | }
 
-\text{1} & \scriptsize{\text{Длина}} & \scriptsize{\text{сантиметр}} & \scriptsize{см} \\
-\text{2} & \scriptsize{\text{Масса}} & \scriptsize{\text{грамм}} & \scriptsize{г} \\
-\text{3} & \scriptsize{\text{Время}} & \scriptsize{\text{секунда}} & \scriptsize{с} \\
-\text{3} & \scriptsize{\text{Сила}} & \scriptsize{\text{дина}} & \scriptsize{дин} \\
-\text{3} & \scriptsize{\text{Давление}} & \scriptsize{\text{дина на $cm^2$}} & \scriptsize{дин/$cm^2$} \\
-\text{3} & \scriptsize{\text{Работа, энергия}} & \scriptsize{\text{эрг}} & \scriptsize{эрг} \\
+\cellcolor{green} \color{white} \text{1} & \cellcolor{green} \color{white} \scriptsize{\text{Длина}} & \cellcolor{green} \color{white} \scriptsize{\text{сантиметр}} & \cellcolor{green}\color{white} \scriptsize{см} \\
+\cellcolor{red} \color{yellow} \text{2} & \cellcolor{red} \color{yellow} \scriptsize{\text{Масса}} & \cellcolor{red} \color{yellow} \scriptsize{\text{грамм}} & \cellcolor{red} \color{yellow} \scriptsize{г} \\
+\cellcolor{green} \color{white} \text{3} & \cellcolor{green} \color{white}  \scriptsize{\text{Время}} & \cellcolor{green} \color{white}  \scriptsize{\text{секунда}} & \cellcolor{green} \color{white}  \scriptsize{с} \\
+\cellcolor{red} \color{yellow} \text{4} & \cellcolor{red} \color{yellow} \scriptsize{\text{Сила}} & \cellcolor{red} \color{yellow} \scriptsize{\text{дина}} & \cellcolor{red} \color{yellow} \scriptsize{дин} \\
+%\text{3} & \scriptsize{\text{Давление}} & \scriptsize{\text{дина на $cm^2$}} & \scriptsize{дин/$cm^2$} \\
+%\text{3} & \scriptsize{\text{Работа, энергия}} & \scriptsize{\text{эрг}} & \scriptsize{эрг} \\
 
 \end{tabular}
 \renewcommand{\arraystretch}{1}

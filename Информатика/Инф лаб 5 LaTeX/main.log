@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.29)  29 NOV 2022 18:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.29)  30 NOV 2022 09:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1270,23 +1270,23 @@ File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Info: Redefining \th on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Info: Redefining \th on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1345,361 +1345,357 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count382
-Package ragged2e Info: ABD: executing \RaggedRight on input line 26.
+Package ragged2e Info: ABD: executing \RaggedRight on input line 27.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
 []\T2A/cmr/m/n/12 виде
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 []$\OML/cmm/m/it/12 '$ \T2A/cmr/m/n/12 = $[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12
  c$\T2A/cmr/m/n/12 , [](6)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
 []\T2A/cmr/m/n/12 где c - про-из-воль-на€ по-сто-€н-на€,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
 \T2A/cmr/m/n/12 можно с по-мо-щью (2) по-лу-чить за-кон
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
 \T2A/cmr/m/n/12  улона. Ёто и бу-дет озна-чать, что
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
 \T2A/cmr/m/n/12 формула (6), ко-то-ра€ при-во-дит-с€ без
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
 \T2A/cmr/m/n/12 доказательств в школь-ном кур-се фи-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
 \T2A/cmr/m/n/12 зики, дей-стви-тель-но опре-де-л€-ет по-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
 \T2A/cmr/m/n/12 тенциал то-чеч-но-го за-р€-да в си-сте-ме
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
 \T2A/cmr/m/n/12 —√—Ё.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--47
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--62
+Underfull \hbox (badness 10000) in paragraph at lines 51--63
 []\T2A/cmr/m/n/12 ¬ са-мом де-ле, пусть то-чеч-ный
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--62
+Underfull \hbox (badness 10000) in paragraph at lines 51--63
 \T2A/cmr/m/n/12 зар€д $\OML/cmm/m/it/12 q[]$ \T2A/cmr/m/n/12 сме-ща-ет-с€ в по-
 ле дру-го-го
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--62
+Underfull \hbox (badness 10000) in paragraph at lines 51--63
 \T2A/cmr/m/n/12 точечного за-р€-да $\OML/cmm/m/it/12 q[]$ \T2A/cmr/m/n/12 на оч
 ень ма-лый
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--62
+Underfull \hbox (badness 10000) in paragraph at lines 51--63
 \T2A/cmr/m/n/12 отрезок r. “о-гда, со-глас-но форму-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--62
+Underfull \hbox (badness 10000) in paragraph at lines 51--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--62
+Underfull \hbox (badness 10000) in paragraph at lines 51--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--68
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 []\T2A/cmr/m/n/12 —ледовательно, си-ла $\OML/cmm/m/it/12 F$ \T2A/cmr/m/n/12 рав
 -на $[]\OML/cmm/m/it/12 ;$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--68
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 \T2A/cmr/m/n/12 а это и есть за-кон  у-ло-на. «на-чит,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--68
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
+Underfull \hbox (badness 10000) in paragraph at lines 70--77
 []\T2A/cmr/m/n/12 ѕодобно то-му как на-пр€-жен-ность
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
+Underfull \hbox (badness 10000) in paragraph at lines 70--77
 \T2A/cmr/m/n/12 пол€ сфе-ри-че-ски сим-мет-рич-но зар€-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
+Underfull \hbox (badness 10000) in paragraph at lines 70--77
 \T2A/cmr/m/n/12 женного ша-ра сов-па-да-ет с напр€жен-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
+Underfull \hbox (badness 10000) in paragraph at lines 70--77
 \T2A/cmr/m/n/12 ностью то-чеч-но-го за-р€-да, по-тен-ци-ал
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
+Underfull \hbox (badness 10000) in paragraph at lines 70--77
 \T2A/cmr/m/n/12 зар€женного ша-ра (вне ша-ра) так-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
+Underfull \hbox (badness 10000) in paragraph at lines 70--77
 \T2A/cmr/m/n/12 же опре-де-л€-ет-с€ фор-му-лой (6). ¬
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
+Underfull \hbox (badness 10000) in paragraph at lines 70--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 если шар на-хо-дит-с€ в од-но-род-ном
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 диэлектрике с ди-элек-три-че-ской про-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 []\T2A/cmr/m/n/12 ƒл€ ре-ше-ни€ за-дач до-ста-точ-но
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 хорошо пред-став-л€ть се-бе физиче-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 ский смысл ос-нов-ных фор-му.  ро-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 ме то-го, ча-сто при-хо-дит-с€ использо-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 вать про-стые, но очень важ-ные по-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 ложени€: ра-бо-та электростатиче-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 ского по-л€ на за-мкну-том пу-ти рав-на
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 ростатике име-ют один и тот же по-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 вовать элек-три-че-ское по-ле, на-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 пр€женность ко-то-ро-го не ме-н€-ет-с€
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 \T2A/cmr/m/n/12 в на-прав-ле-нии $\OML/cmm/m/it/12 x$ \T2A/cmr/m/n/12 и воз-рас
 -та-ет в на-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--102
+Underfull \hbox (badness 10000) in paragraph at lines 79--99
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
 \T2A/cmr/m/n/12 в та-ком по-ле ра-бо-та при перемеще-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
 
  []
 
 <pic1.png, id=41, 512.91624pt x 213.79875pt>
 File: pic1.png Graphic file (type png)
 <use pic1.png>
-Package pdftex.def Info: pic1.png  used on input line 107.
+Package pdftex.def Info: pic1.png  used on input line 104.
 (pdftex.def)             Requested size: 230.81018pt x 96.20854pt.
 
-Overfull \hbox (2.11543pt too wide) in paragraph at lines 107--111
+Overfull \hbox (2.11543pt too wide) in paragraph at lines 104--108
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--111
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
 \T2A/cmr/m/n/12 (например, пр€-мо-уголь-но-му со сто-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--111
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
 \T2A/cmr/m/n/12 ронами, па-рал-лель-ны-ми $\OML/cmm/m/it/12 x$ \T2A/cmr/m/n/12 
 и $\OML/cmm/m/it/12 y$\T2A/cmr/m/n/12 ) от-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--111
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--125
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 \T2A/cmr/m/n/12 ке изо-ли-ро-ван-но-го от зем-ли электро-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--125
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 \T2A/cmr/m/n/12 метра при-креп-лен ме-тал-ли-че-ский
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--125
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 \T2A/cmr/m/n/12 листочек (рис. 2). —тер-жень и кор-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--125
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 \T2A/cmr/m/n/12 пус элек-тро-мет-ра со-еде-ни-ли прово-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--125
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 \T2A/cmr/m/n/12 дом и по-сле это-го со-об-щи-ли кор-пу-су
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--125
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 \T2A/cmr/m/n/12 электрометра неко-то-рый за-р€д. ќт-
  []
 
 
-Underfull \hbox (badness 6741) in paragraph at lines 112--125
+Underfull \hbox (badness 6741) in paragraph at lines 109--122
 \T2A/cmr/m/n/12 клон€тс€ ли при этом ли-сточ-ки элект-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--125
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 \T2A/cmr/m/n/12 рометра? „то про-изой-дет с листоч-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--125
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 \T2A/cmr/m/n/12 ками, ес-ли про-вод убрать и по-сле
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--125
+Underfull \hbox (badness 10000) in paragraph at lines 109--122
 
  []
 
 <pic2.png, id=43, 403.5075pt x 268.00125pt>
 File: pic2.png Graphic file (type png)
 <use pic2.png>
-Package pdftex.def Info: pic2.png  used on input line 127.
+Package pdftex.def Info: pic2.png  used on input line 124.
 (pdftex.def)             Requested size: 181.57669pt x 120.59944pt.
 
-Overfull \hbox (4.95737pt too wide) in paragraph at lines 133--133
+Overfull \hbox (4.95737pt too wide) in paragraph at lines 130--130
 []|[]|  
  []
 
 
-Overfull \hbox (5.81738pt too wide) in paragraph at lines 133--133
+Overfull \hbox (5.81738pt too wide) in paragraph at lines 130--130
 []|[]|  
  []
 
 
-Overfull \hbox (4.63678pt too wide) in paragraph at lines 133--133
+Overfull \hbox (4.63678pt too wide) in paragraph at lines 130--130
 []|\T2A/cmr/m/n/8 ќбозначени€|  
  []
 
 
-Overfull \hbox (6.16539pt too wide) in paragraph at lines 131--136
+Overfull \hbox (6.16539pt too wide) in paragraph at lines 128--133
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
 
-Overfull \hbox (6.16539pt too wide) in paragraph at lines 141--152
+Overfull \hbox (6.16539pt too wide) in paragraph at lines 138--149
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--152
+Underfull \hbox (badness 10000) in paragraph at lines 138--149
 
  []
-
-
-Overfull \vbox (2.11923pt too high) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1711,13 +1707,13 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pic1.png> <./pic2.png>] 
 (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 25798 strings out of 478023
- 523127 string characters out of 5841207
+ 25797 strings out of 478023
+ 523113 string characters out of 5841207
  905731 words of memory out of 5000000
- 43845 multiletter control sequences out of 15000+600000
- 476700 words of font info for 47 fonts, out of 8000000 for 9000
+ 43844 multiletter control sequences out of 15000+600000
+ 476473 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,13n,99p,438b,404s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,11n,99p,438b,374s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/kuchizu/.texlive2022/texmf-var/fonts/pk/ljfour/lh/lh-t2a/
 larm1000.600pk> </home/kuchizu/.texlive2022/texmf-var/fonts/pk/ljfour/lh/lh-t2a
 /larm0800.600pk> </home/kuchizu/.texlive2022/texmf-var/fonts/pk/ljfour/lh/lh-t2
@@ -1727,9 +1723,9 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (1 page, 140582 bytes).
+Output written on main.pdf (1 page, 139503 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
+ 186 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
