@@ -23,7 +23,7 @@ public class Main {
 
         Place loc1 = new Place("Локация 1");
         System.out.println();
-        loc1.setType(Places.Kitchen);
+        loc1.setType(PlaceEnum.Kitchen);
         System.out.println();
         mom.addSkill(new Skills("Читать газету и пить кофе", loc1.getType().toString()));
         System.out.println();
@@ -31,7 +31,7 @@ public class Main {
 
         Place loc2 = new Place("Локация 2");
         System.out.println();
-        loc2.setType(Places.Knees);
+        loc2.setType(PlaceEnum.Knees);
         System.out.println();
         malchik.addSkill(new Skills("Сидеть", loc2.getType().toString()));
         System.out.println();

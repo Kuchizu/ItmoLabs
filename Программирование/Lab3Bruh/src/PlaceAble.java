@@ -1,5 +1,5 @@
 public interface PlaceAble {
     String getPlace();
-    void setType(Places type);
-    Places getType();
+    void setType(PlaceEnum type);
+    PlaceEnum getType();
 }

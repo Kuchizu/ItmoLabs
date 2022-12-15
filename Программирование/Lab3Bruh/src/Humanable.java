@@ -1,16 +1,16 @@
-public abstract class Human implements Homosapiens {
+public abstract class Humanable implements Mammal {
 
     public String name;
     public int age;
 
-    public Human(){
+    public Humanable(){
         this.name = "Noname";
         this.age = -1;
     }
-    public Human(String name){
+    public Humanable(String name){
         this.name = name;
     }
-    public Human(String name, int age){
+    public Humanable(String name, int age){
         this.name = name;
         this.age = age;
     }

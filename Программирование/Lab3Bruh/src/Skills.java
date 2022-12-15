@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Skills {
+public class Skills implements Ability{
 
     private final String title;
     private final String info;
@@ -17,4 +17,8 @@ public class Skills {
         return Objects.requireNonNullElse(info, "...");
     }
 
+    @Override
+    public String name() {
+        return this.getTitle();
+    }
 }

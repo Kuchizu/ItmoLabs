@@ -4,14 +4,14 @@ import java.util.Objects;
 
 public class Place extends AbsPlace{
 
-    private Places type;
+    private PlaceEnum type;
 
     public Place(String name){
         this.placeName = name;
         System.out.printf("Место %s создано", name);
     }
 
-    public void setType(@NotNull Places type){
+    public void setType(@NotNull PlaceEnum type){
         this.type = type;
         switch (type) {
             case Kitchen -> typeName = "Кухня";
@@ -20,7 +20,7 @@ public class Place extends AbsPlace{
         System.out.printf("%s объявлена как %s", placeName, typeName);
     }
 
-    public Places getType() {
+    public PlaceEnum getType() {
         return this.type;
     }
 

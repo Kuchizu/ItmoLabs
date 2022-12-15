@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Person extends Human {
+public class Person extends Humanable {
     private final List<Skills> skills = new ArrayList<Skills>();
 
     public Person(String name){

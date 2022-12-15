@@ -42,8 +42,15 @@ with open('schedule.json', encoding='UTF-8') as f:
         if '[' in line:
             art = ext(line.split(':')[0])
             _arr += 1
-            _layer += 1
-            xml += f'\n{tab * _layer}<{art} type="list">'
+            if ']' not in line:
+                _layer += 1
+                xml += f'\n{tab * _layer}<{art} type="list">'
+            else:
+                xml += f'\n{tab * _layer}<{art} type="list">'
+                for i in line.split('[')[1].split(']')[0].split(', '):
+                    xml += f'\n{tab * (_layer + 1)}<item type="int">{i}</item>'
+                xml += f'\n{tab * _layer}</{art}>'
+                continue
 
         if ']' in line:
             _arr -= 1
