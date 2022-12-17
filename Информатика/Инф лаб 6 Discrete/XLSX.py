@@ -1,10 +1,18 @@
 import openpyxl
 import os
 
-xfile = openpyxl.load_workbook('1.xlsx')
+xfile = openpyxl.load_workbook('123.xlsx')
 sheet = xfile.get_sheet_by_name('Лист1')
 
 os.system('clear')
+
+print(sheet['A1'].value)
+print(sheet['A2'].value)
+print(sheet['A3'].value)
+print(sheet['A4'].value)
+
+
+exit()
 
 a, c = input('A: '), input('C: ')
 
