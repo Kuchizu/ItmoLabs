@@ -15,8 +15,8 @@ public class NewsPaper extends Furniture {
     }
 
     public String setPages(int cap) throws CapacityException {
-        if (pages < 1) {
-            throw new CapacityException("Газета без страниц?");
+        if (cap < 1) {
+            throw new CapacityException(cap, 1, 100);
         } else {
             this.pages = cap;
             return "Количество страниц газеты установлено на " + cap;

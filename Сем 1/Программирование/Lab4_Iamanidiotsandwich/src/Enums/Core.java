@@ -5,7 +5,9 @@ public enum Core {
     WOOD("Древесина"),
     COTTON("Хлопок"),
     PAPER("Бумага"),
-    PLASTIC("Пластмасса");
+    PLASTIC("Пластмасса"),
+
+    STONE("Камень");
 
     private final String type;
     Core(String name) {

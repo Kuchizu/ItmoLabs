@@ -12,7 +12,7 @@ public class Chair extends Furniture implements Puttable {
         super(name, id, color, core);
 
         if(core.getConsistance() != Core.WOOD){
-            throw new CompositException("Стул не может быть сделан из " + core.getType());
+            throw new CompositException("Стул", core.getConsistance(), Core.WOOD);
         }
     }
 

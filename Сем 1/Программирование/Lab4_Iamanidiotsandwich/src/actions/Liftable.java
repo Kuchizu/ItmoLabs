@@ -1,7 +1,6 @@
 package actions;
 
-import characters.Malish;
-
+import ObjMaker.CoreMaker;
 public interface Liftable {
-    String lift(Malish obj);
+    String lift(CoreMaker obj);
 }

@@ -2,6 +2,7 @@ package characters;
 
 import BuildingObjects.*;
 import Furnitures.Furniture;
+import ObjMaker.CoreMaker;
 import actions.*;
 
 public abstract class Human{
@@ -12,6 +13,18 @@ public abstract class Human{
     public Human(String name, int id, BuildingObject location) {
         this.name = name;
         this.location = location;
+    }
+
+    public static class starets{
+        private final String name;
+        private final BuildingObject location;
+        public starets(String name, int id, BuildingObject location){
+            this.name = name;
+            this.location = location;
+        }
+        public void Mine(CoreMaker core){
+            System.out.println("Старец добывает " + core.getType());
+        }
     }
 
     public String getName() {

@@ -1,11 +1,11 @@
 package Exceptions;
 
-public class CapacityException extends RuntimeException{
+public class TemperatureException extends Exception{
     private int thisval;
     private int minval;
     private int maxval;
 
-    public CapacityException(int thisval, int minval, int maxval) {
+    public TemperatureException(int thisval, int minval, int maxval) {
         super();
         this.thisval = thisval;
         this.minval = minval;
@@ -14,7 +14,6 @@ public class CapacityException extends RuntimeException{
 
     @Override
     public String getMessage(){
-        return "CapacityException throwed, your value is " + thisval + " range of value for this object is " + minval + " " + maxval;
+        return "TemperatureException throwed, your value is " + thisval + " range of value for this object is " + minval + " " + maxval;
     }
-
 }

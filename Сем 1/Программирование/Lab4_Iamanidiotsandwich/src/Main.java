@@ -3,12 +3,13 @@ import Enums.Color;
 import Enums.Core;
 import Exceptions.CapacityException;
 import Exceptions.CompositException;
+import Exceptions.TemperatureException;
 import ObjMaker.*;
 import Furnitures.*;
 import characters.*;
 
 public class Main {
-    public static void main(String[] args) throws CapacityException, CompositException {
+    public static void main(String[] args) throws CompositException {
 
         BuildingObject home = new Home("Дом", 1, 100, 20);
         BuildingObject school = new School("Школа", 2, 315, 50);
@@ -19,6 +20,7 @@ public class Main {
         Human char3 = new Papa("Папа", 3, job);
         Human char4 = new Betan("Бетан", 4, school);
         Human char5 = new Betan("Боссе", 5, school);
+        Human.starets char6 = new Human.starets("Старец", 6, home);
 
         BuildingObject area = new Park("Площадка", 1, 1000, 1000);
 
@@ -36,6 +38,8 @@ public class Main {
         CompositMaker paper = new CompositMaker(Core.PAPER);
         paper.size(100);
 
+
+
         char1.sleep();
         char4.go(school.getName());
         char5.go(school.getName());
@@ -47,6 +51,11 @@ public class Main {
         System.out.println(school.capacity(500));
 
         System.out.println("Размер школы " + school.getSquare());
+
+
+        CoreMaker stone = new CoreMaker(Core.STONE);
+
+        char6.Mine(stone);
 
         System.out.println(char1.getName() + " находится в " + char2.getLocation());
         char2.read(newsPaper.getName());
@@ -68,9 +77,27 @@ public class Main {
 
         /* Exception */
 
-        newsPaper.setPages(-100);
-        Chair chair2 = new Chair("Стул2", 10, Color.GREEN, paper);
-        paper.size(10000);
+        try{
+            newsPaper.setPages(-100);
+        }
+        catch (CapacityException e){
+            System.err.println(e.getMessage());
+        }
+        try{
+            Chair chair2 = new Chair("Стул2", 10, Color.GREEN, paper);
+        }
+        catch (CompositException e){
+            System.err.println(e.getMessage());
+        }
+        try{
+            paper.size(10000);
+        }
+        catch(CapacityException e){
+            System.err.println(e.getMessage());
+        }
+
+        stone.tempset(10000);
+
 
     }
 }

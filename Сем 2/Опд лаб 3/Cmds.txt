@@ -1,8 +1,0 @@
-IP - Instruction Pointer / next addr
-CR - Command Register / Code of znach
-AR - Adress Register / Промежуточный аддрес Which addr uses
-DR - Data Refister / Value of AR
-SP - Stack Pointer / 000 / Stack
-BR - Buffer Register / Code of command
-AC - Accumulator / Accumulator
-NZVC - Negative/Zero/Overflow/Perenos
