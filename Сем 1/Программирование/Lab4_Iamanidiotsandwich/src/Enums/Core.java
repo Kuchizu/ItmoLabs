@@ -6,7 +6,6 @@ public enum Core {
     COTTON("Хлопок"),
     PAPER("Бумага"),
     PLASTIC("Пластмасса"),
-
     STONE("Камень");
 
     private final String type;
