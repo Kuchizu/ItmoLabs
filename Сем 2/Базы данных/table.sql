@@ -37,12 +37,18 @@ CREATE TABLE Animals(
 CREATE TABLE Cars(
 	id SERIAL PRIMARY KEY,
 	model TEXT,
-	Owner INT REFERENCES Persons,
-	pass1 INT REFERENCES Persons,
-	pass2 INT REFERENCES Persons,
-	pass3 INT REFERENCES Persons
+	owner INT REFERENCES Persons,
+	way INT REFERENCES Ways,
+	pass1 INT REFERENCES Persons check(pass1 <> pass2 and pass1 <> pass3),
+	pass2 INT REFERENCES Persons check(pass2 <> pass1 and pass2 <> pass3),
+	pass3 INT REFERENCES Persons check(pass3 <> pass1 and pass3 <> pass2)
 );
 
+CREATE TABLE Lycenses(
+	id SERIAL PRIMARY KEY,
+	person_id INT REFERENCES Persons,
+	car INT REFERENCES Cars
+);
 
 
 INSERT INTO Types(type, ecosystem) VALUES('Морской', 53);
@@ -70,13 +76,15 @@ INSERT INTO Animals(name, type, location) VALUES('Мурка', 'Кот', 2);
 INSERT INTO Animals(name, type, location, way) VALUES('Не Мурка', 'Собака', 2, 5);
 
 INSERT INTO Cars(model, owner, pass1, pass2) VALUES('Tesla', 3, 1, 2);
-INSERT INTO Cars(model, owner, pass1, pass2) VALUES('Mercedes', 1, 2, 3);
-INSERT INTO Cars(model, owner, pass1) VALUES('BMW', 2, 1);
+INSERT INTO Cars(model, way, owner, pass1, pass2) VALUES('Mercedes', 1, 1, 2, 3);
+INSERT INTO Cars(model, way, owner, pass1) VALUES('BMW', 4, 2, 1);
 
 
-Drop table cars;
-Drop table Animals;
-Drop table Persons;
-Drop table Ways;
-Drop table Locations;
-Drop table Types;
+Drop table cars cascade;
+Drop table Animals cascade;
+Drop table Persons cascade;
+Drop table Ways cascade;
+Drop table Locations cascade;
+Drop table Types cascade;
+Drop table Lycenses cascade;
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<data>
+      
+    <Flat>
+            
+        <id>1</id>
+            
+        <name>"Name"</name>
+            
+        <coordinates>
+                  
+            <x>2</x>
+                  
+            <y>4</y>
+                
+        </coordinates>
+            
+        <creationDate>1231231231</creationDate>
+            
+        <area>123232</area>
+            
+        <numberOfRooms>10</numberOfRooms>
+            
+        <timeToMetroOnFoot>1.23</timeToMetroOnFoot>
+            
+        <timeToMetroByTransport>123.456</timeToMetroByTransport>
+            
+        <furnish>DESIGNER</furnish>
+            
+        <house>
+                  
+            <name>"Khona1"</name>
+                  
+            <year>4</year>
+                  
+            <numberOfFloors>123</numberOfFloors>
+                  
+            <numberOfLifts>33</numberOfLifts>
+                
+        </house>
+          
+    </Flat>
+    
+    <Language id="1">
+        <name>Java</name>
+        <age>21</age>
+    </Language>
+</data>
