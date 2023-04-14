@@ -48,12 +48,12 @@ public class House {
     @Override
     public String toString(){
         return String.format(
-                """
-  name: %s
-  year: %s
-  numberOfFloors: %s
-  numberOfLifts: %s
-                """,
+"""
+    name: %s
+    year: %s
+    numberOfFloors: %s
+    numberOfLifts: %s
+""",
 
                 this.getName(),
                 this.getYear(),

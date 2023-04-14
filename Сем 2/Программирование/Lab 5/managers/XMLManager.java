@@ -19,10 +19,7 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -63,6 +60,11 @@ public class XMLManager {
     public static void loadData(String path) throws SAXException, IOException, ParserConfigurationException {
 
         removeBlank(path);
+
+        File checknull = new File("Data.xml");
+        if(checknull.length() == 0){
+            return;
+        }
 
         Document doc;
 
@@ -125,71 +127,71 @@ public class XMLManager {
         XMLManager.data.add(flat);
     }
 
-    public static void writeToFile(String path) throws TransformerException, ParserConfigurationException, SAXException, IOException {
-
-        Document doc;
-        try {
-            DocumentBuilderFactory dbFact = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilt = dbFact.newDocumentBuilder();
-            doc = dBuilt.parse(new File("Data.xml"));
-        } catch (SAXException sax) {
-            throw new SAXException("Неверная конфигурация xml файла, проверьте исходный файл.");
-        } catch (IOException io) {
-            throw new IOException("...");
-        }
-
-
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
-        Element rootElement = (Element) doc.getElementsByTagName("data").item(0);
-
-
-        Element nodee = doc.createElement("Flat");
-        Node q = rootElement.appendChild(nodee);
-
-        q.appendChild(getLanguageElements(doc, "id", String.valueOf(123)));
-        q.appendChild(getLanguageElements(doc, "name", "name"));
-
-        Element corelem = doc.createElement("coordinates");
-        Node coordinates = q.appendChild(corelem);
-        coordinates.appendChild(getLanguageElements(doc, "x", "2"));
-        coordinates.appendChild(getLanguageElements(doc, "x", "4"));
-
-
-        q.appendChild(getLanguageElements(doc, "creationDate", "123"));
-        q.appendChild(getLanguageElements(doc, "area", String.valueOf(123)));
-        q.appendChild(getLanguageElements(doc, "numberOfRooms", String.valueOf(123)));
-        q.appendChild(getLanguageElements(doc, "timeToMetroOnFoot", String.valueOf(3213)));
-        q.appendChild(getLanguageElements(doc, "timeToMetroByTransport", String.valueOf(3213)));
-        q.appendChild(getLanguageElements(doc, "furnish", String.valueOf(3123)));
-
-        Element houseelem = doc.createElement("house");
-        Node house = q.appendChild(houseelem);
-        house.appendChild(getLanguageElements(doc, "name", "Khona1"));
-        house.appendChild(getLanguageElements(doc, "year", "4"));
-        house.appendChild(getLanguageElements(doc, "numberOfFloors", "6"));
-        house.appendChild(getLanguageElements(doc, "numberOfLifts", "4"));
-
-
-        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transformer = transformerFactory.newTransformer();
-
-        // для красивого вывода в консоль
-
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-        DOMSource source = new DOMSource(doc);
-
-        StreamResult console = new StreamResult(System.out);
-        StreamResult file = new StreamResult(new File("Data.xml"));
-
-        transformer.transform(source, console);
-        transformer.transform(source, file);
-
-        Runtime.getRuntime().exec("sed '/^[[:space:]]*$/d' " + path);
-
+    public static void dropAll(){
+        XMLManager.data.clear();
     }
 
-    private static Node getLanguageElements(Document doc, String name, String value) {
+    public static void writeToFile(String path) throws TransformerException, ParserConfigurationException, SAXException, IOException {
+
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        builder = factory.newDocumentBuilder();
+        Document doc = builder.newDocument();
+        Element rootElement = doc.createElementNS(null, "data");
+        doc.appendChild(rootElement);
+
+        ArrayDeque<Flat> flats = XMLManager.getData();
+
+        if(flats.isEmpty()){
+            new FileWriter("Data.xml", false).close();
+        }
+
+        for(Flat flat: flats) {
+
+            System.out.println(flat.getName());
+
+            Element nodee = doc.createElement("Flat");
+            Node q = rootElement.appendChild(nodee);
+
+            q.appendChild(parseNode(doc, "id", String.valueOf(flat.getId())));
+            q.appendChild(parseNode(doc, "name", flat.getName()));
+
+            Element corelem = doc.createElement("coordinates");
+            Node coordinates = q.appendChild(corelem);
+            coordinates.appendChild(parseNode(doc, "x", String.valueOf(flat.getCoordinates().getX())));
+            coordinates.appendChild(parseNode(doc, "y", String.valueOf(flat.getCoordinates().getY())));
+
+
+            q.appendChild(parseNode(doc, "creationDate", String.valueOf(flat.getCreationDate().toEpochSecond())));
+            q.appendChild(parseNode(doc, "area", String.valueOf(flat.getArea())));
+            q.appendChild(parseNode(doc, "numberOfRooms", String.valueOf(flat.getNumberOfRooms())));
+            q.appendChild(parseNode(doc, "timeToMetroOnFoot", String.valueOf(flat.getTimeToMetroOnFoot())));
+            q.appendChild(parseNode(doc, "timeToMetroByTransport", String.valueOf(flat.getTimeToMetroByTransport())));
+            q.appendChild(parseNode(doc, "furnish", String.valueOf(flat.getFurnish())));
+
+            Element houseelem = doc.createElement("house");
+            Node house = q.appendChild(houseelem);
+            house.appendChild(parseNode(doc, "name", flat.getHouse().getName()));
+            house.appendChild(parseNode(doc, "year", String.valueOf(flat.getHouse().getYear())));
+            house.appendChild(parseNode(doc, "numberOfFloors", String.valueOf(flat.getHouse().getNumberOfFloors())));
+            house.appendChild(parseNode(doc, "numberOfLifts", String.valueOf(flat.getHouse().getNumberOfLifts())));
+
+
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            DOMSource source = new DOMSource(doc);
+
+            StreamResult console = new StreamResult(System.out);
+            StreamResult file = new StreamResult(new File("Data.xml"));
+
+//            transformer.transform(source, console);
+            transformer.transform(source, file);
+        }
+    }
+
+    private static Node parseNode(Document doc, String name, String value) {
         Element node = doc.createElement(name);
         node.appendChild(doc.createTextNode(value));
         return node;

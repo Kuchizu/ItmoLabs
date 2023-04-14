@@ -11,18 +11,15 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Add extends Command {
-    @Override
     public String getName() {
         return "Add";
     }
 
-    @Override
     public String getDesc() {
         return "Add element";
     }
 
-    @Override
-    public void execute() throws CreateObjException {
+    public void execute(String arg) throws CreateObjException {
         Scanner obj = new Scanner(System.in);
 
         System.out.println("Введите name (String):");
@@ -37,6 +34,9 @@ public class Add extends Command {
 
         if(cord.isEmpty()){
             throw new CreateObjException("Поле не может быть null");
+        }
+        if(cord.split(" ").length != 2){
+            throw new CreateObjException("Введите два значения");
         }
 
         System.out.println("Введите area (Integer): ");
@@ -67,7 +67,7 @@ public class Add extends Command {
         System.out.println("Введите timeToMetroOnFoot (Float):");
         String timeToMetroOnFoot = obj.nextLine();
         if(!timeToMetroOnFoot.isEmpty()){
-            if(Integer.parseInt(timeToMetroOnFoot) < 1){
+            if(Float.parseFloat(timeToMetroOnFoot) < 1){
                 throw new CreateObjException("Значение поля должно быть больше  0");
             }
         }
@@ -75,7 +75,7 @@ public class Add extends Command {
         System.out.println("Введите timeToMetroByTransport (Double):");
         String timeToMetroByTransport = obj.nextLine();
         if(!timeToMetroByTransport.isEmpty()){
-            if(Integer.parseInt(timeToMetroByTransport) < 1){
+            if(Double.parseDouble(timeToMetroByTransport) < 1){
                 throw new CreateObjException("Значение поля должно быть больше  0");
             }
         }
@@ -84,10 +84,9 @@ public class Add extends Command {
         String furnish = obj.nextLine();
 
         if(furnish.isEmpty()){
-            throw new CreateObjException("Поле не может быть null");
+            furnish = "NONE";
         }
-
-        if(!Objects.equals(furnish, "NONE") || !Objects.equals(furnish, "DESIGNER") || !Objects.equals(furnish, "FINE") || !Objects.equals(furnish, "LITTLE")){
+        else if(!Objects.equals(furnish, "NONE") || !Objects.equals(furnish, "DESIGNER") || !Objects.equals(furnish, "FINE") || !Objects.equals(furnish, "LITTLE")){
             furnish = "NONE";
         }
 
@@ -142,4 +141,5 @@ public class Add extends Command {
         System.out.println(XMLManager.getData().getLast());
 
     }
+
 }

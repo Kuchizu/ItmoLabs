@@ -125,20 +125,16 @@ public class Flat {
         return String.format(
                 """
     ***    ***    ***
-
 Flat №%s
-
- name: %s
- coordinates: %s
- creationDate: %s
- area: %s
- numberOfRooms: %s
- timeToMetroOnFoot: %s
- timeToMetroByTransport: %s
- furnish: %s
-
+    name: %s
+    coordinates: %s
+    creationDate: %s
+    area: %s
+    numberOfRooms: %s
+    timeToMetroOnFoot: %s
+    timeToMetroByTransport: %s
+    furnish: %s
 House:
-
 %s
     ***    ***    ***
                 """,

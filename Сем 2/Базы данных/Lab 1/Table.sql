@@ -31,7 +31,7 @@ CREATE TABLE Animals(
 	name TEXT,
 	type TEXT NOT NULL,
 	location INT NOT NULL REFERENCES Locations,
-	way INT REFERENCES Ways
+	way INT REFERENCES Ways on delete cascade
 );
 
 CREATE TABLE Cars(
@@ -49,7 +49,6 @@ CREATE TABLE Lycenses(
 	person_id INT REFERENCES Persons,
 	car INT REFERENCES Cars
 );
-
 
 INSERT INTO Types(type, ecosystem) VALUES('Морской', 53);
 INSERT INTO Types(type, ecosystem) VALUES('Речной', 31);
@@ -79,6 +78,10 @@ INSERT INTO Cars(model, owner, pass1, pass2) VALUES('Tesla', 3, 1, 2);
 INSERT INTO Cars(model, way, owner, pass1, pass2) VALUES('Mercedes', 1, 1, 2, 3);
 INSERT INTO Cars(model, way, owner, pass1) VALUES('BMW', 4, 2, 1);
 
+INSERT INTO Lycenses(person_id, car) VALUES(1, 1)
+INSERT INTO Lycenses(person_id, car) VALUES(1, 2)
+INSERT INTO Lycenses(person_id, car) VALUES(1, 3)
+INSERT INTO Lycenses(person_id, car) VALUES(3, 1)
 
 Drop table cars cascade;
 Drop table Animals cascade;
@@ -87,4 +90,3 @@ Drop table Ways cascade;
 Drop table Locations cascade;
 Drop table Types cascade;
 Drop table Lycenses cascade;
-
