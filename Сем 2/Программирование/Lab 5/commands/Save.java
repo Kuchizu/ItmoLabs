@@ -20,7 +20,8 @@ public class Save extends Command {
 
     @Override
     public void execute(String arg) throws ParserConfigurationException, IOException, TransformerException, SAXException {
-        XMLManager.writeToFile("Data.xml");
-        System.out.println("Успешно сохранено.");
+        if (XMLManager.writeToFile("Data.xml")){
+            System.out.println("Успешно сохранено.");
+        }
     }
 }

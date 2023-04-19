@@ -19,13 +19,18 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.ArrayDeque;
-import java.util.Scanner;
 
+/**
+ * XMLManager for loading and saving XML DB
+ */
 public class XMLManager {
 
     public static ArrayDeque<Flat> getData() {
@@ -38,35 +43,18 @@ public class XMLManager {
 
     private static ArrayDeque<Flat> data = new ArrayDeque<>();
 
-    private static void removeBlank(String path) throws FileNotFoundException {
+    /**
+     * @param path XML DB file path
+     * @throws ParserConfigurationException
+     */
+    public static void loadData(String path) throws ParserConfigurationException {
 
-        Scanner file = new Scanner(new File(path));
-        StringBuilder w = new StringBuilder();
-
-        while (file.hasNext()) {
-            String line = file.nextLine();
-            if (!line.trim().isEmpty()) {
-                w.append(line).append('\n');
-            }
-        }
-        file.close();
-
-        PrintWriter writer = new PrintWriter(path);
-        writer.write(w.toString());
-        writer.close();
-
-    }
-
-    public static void loadData(String path) throws SAXException, IOException, ParserConfigurationException {
-
-        removeBlank(path);
-
-        File checknull = new File("Data.xml");
+        File checknull = new File(path);
         if(checknull.length() == 0){
             return;
         }
 
-        Document doc;
+        Document doc = null;
 
         try {
             DocumentBuilderFactory dbFact = DocumentBuilderFactory.newInstance();
@@ -74,12 +62,11 @@ public class XMLManager {
             doc = dBuilt.parse(new File(path));
 
         } catch (SAXException sax) {
-            throw new SAXException("Неверная конфигурация xml файла, проверьте исходный файл.");
+            System.err.println("Неверная конфигурация xml файла, проверьте исходный файл.");
+            System.exit(-1);
         } catch (IOException io) {
-            throw new IOException("...");
-        }
-        catch (ParserConfigurationException pce){
-            throw new ParserConfigurationException();
+            System.err.println("Ошибка доступа к базе, проверьте и повторите заного.");
+            System.exit(-1);
         }
 
         ArrayDeque<Flat> data = new ArrayDeque<>();
@@ -88,7 +75,6 @@ public class XMLManager {
 
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
-            System.out.println(node.getNodeName());
             if (node.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) node;
 
@@ -123,7 +109,21 @@ public class XMLManager {
         XMLManager.data = data;
     }
 
+    /**
+     * @param flat Flat object
+     */
     public static void addElement(Flat flat){
+        XMLManager.data.add(flat);
+    }
+    public static void changeElement(int flatid, Flat flat){
+        for(Flat f : XMLManager.data){
+            if (f.getId() == flatid){
+                flat.setId(f.getId());
+                flat.setCreationDate(f.getCreationDate());
+                XMLManager.data.remove(f);
+                break;
+            }
+        }
         XMLManager.data.add(flat);
     }
 
@@ -131,7 +131,15 @@ public class XMLManager {
         XMLManager.data.clear();
     }
 
-    public static void writeToFile(String path) throws TransformerException, ParserConfigurationException, SAXException, IOException {
+    /**
+     * @param path XML DB file path
+     * @return
+     * @throws TransformerException
+     * @throws ParserConfigurationException
+     * @throws SAXException
+     * @throws IOException
+     */
+    public static boolean writeToFile(String path) throws TransformerException, ParserConfigurationException, SAXException, IOException {
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
@@ -143,12 +151,16 @@ public class XMLManager {
         ArrayDeque<Flat> flats = XMLManager.getData();
 
         if(flats.isEmpty()){
-            new FileWriter("Data.xml", false).close();
+            try {
+                new FileWriter(path, false).close();
+            }
+            catch (java.io.IOException io){
+                System.err.println("Изменения не сохранены. Ошибка доступа к файлу, проверьте файл и попробуйте сохранить ещё раз.");
+                return false;
+            }
         }
 
         for(Flat flat: flats) {
-
-            System.out.println(flat.getName());
 
             Element nodee = doc.createElement("Flat");
             Node q = rootElement.appendChild(nodee);
@@ -183,14 +195,25 @@ public class XMLManager {
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             DOMSource source = new DOMSource(doc);
 
-            StreamResult console = new StreamResult(System.out);
-            StreamResult file = new StreamResult(new File("Data.xml"));
+            try {
+                StreamResult file = new StreamResult(new PrintWriter(path));
+                transformer.transform(source, file);
+            }
+            catch (java.io.FileNotFoundException jxtt){
+                System.err.println("Изменения не сохранены. Ошибка доступа к файлу, проверьте файл и попробуйте сохранить ещё раз.");
+                return false;
+            }
 
-//            transformer.transform(source, console);
-            transformer.transform(source, file);
         }
+        return true;
     }
 
+    /**
+     * @param doc
+     * @param name
+     * @param value
+     * @return
+     */
     private static Node parseNode(Document doc, String name, String value) {
         Element node = doc.createElement(name);
         node.appendChild(doc.createTextNode(value));

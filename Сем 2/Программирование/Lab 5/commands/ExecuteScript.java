@@ -1,59 +1,117 @@
 package commands;
 
+import collections.Coordinates;
+import collections.Flat;
+import collections.Furnish;
+import collections.House;
 import exceptions.CreateObjException;
+import managers.CommandExecutor;
+import managers.XMLManager;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class ExecuteScript extends Command {
     @Override
     public String getName() {
-        return "Head";
+        return "Execute";
     }
 
     @Override
     public String getDesc() {
-        return "Show first element of the collection.";
+        return "Execute script.";
     }
 
     @Override
     public void execute(String arg) throws IOException, CreateObjException, ParserConfigurationException, TransformerException, SAXException {
+        if(arg == null){
+            System.err.println("Usage: execute_script: {file_name}");
+            return;
+        }
 
-        final Map<String, Command> commands = new HashMap<>();
-        commands.put("help", new Help());
-        commands.put("info", new Info());
-        commands.put("show", new Show());
-        commands.put("add", new Add());
-        commands.put("clear", new Clear());
-        commands.put("save", new Save());
-        commands.put("exit", new Exit());
-        commands.put("head", new Head());
-        commands.put("remove_head", new RemoveHead());
-        commands.put("average_of_time_to_metro_by_transport", new Averagemetrotime());
-        commands.put("print_descending", new ReversePrint());
-        commands.put("update", new UpdateElement());
-        commands.put("remove_by_id", new RemoveById());
-        commands.put("execute_script", new ExecuteScript());
-        commands.put("remove_lower", new RemoveIfLover());
-        commands.put("count_by_time_to_metro_on_foot", new CountMetroFootTime());
+        Map<String, Command> commands = CommandExecutor.getCommands();
 
-        Scanner scanner = new Scanner(new File(arg));
-        while (scanner.hasNextLine()) {
+
+        Scanner scanner;
+        try {
+            scanner = new Scanner(new File(arg));
+        }
+        catch (java.io.FileNotFoundException f){
+            System.err.println("Файл не существует, но суч файл ор директорииииии");
+            return;
+        }
+        catch (java.lang.NullPointerException n) {
+            System.err.println("Ошибка чтения файла");
+            return;
+        }
+        while (scanner.hasNext()) {
             String line = scanner.nextLine().trim();
+            System.out.println(line);
+            if (line.isEmpty()) continue;
+
             String cmd = line.split(" ")[0];
-            String argg = null;
+
+            String sarg = null;
             if (line.split(" ").length == 2){
-                argg = line.split(" ")[1];
+                sarg = line.split(" ")[1];
             }
 
-            commands.get(cmd).execute(argg);
+            if (cmd.equals("add") || cmd.equals("update")) {
+                Flat flat;
+                try {
+
+                    String name = scanner.nextLine().trim();
+                    String cord = scanner.nextLine().trim();
+                    int area = scanner.nextInt();
+                    int numberOfRooms = scanner.nextInt();
+                    float timeToMetroOnFoot = scanner.nextFloat();
+                    double timeToMetroByTransport = scanner.nextDouble();
+                    scanner.nextLine();
+                    Furnish furnish = Furnish.valueOf(scanner.nextLine().trim());
+                    String hname = scanner.nextLine();
+                    long hyear = scanner.nextLong();
+                    long hnumberOfFloors = scanner.nextLong();
+                    int hnumberOfLifts = scanner.nextInt();
+                    String[] coordinates = cord.split("\\s+");
+
+                    flat = new Flat(
+                            name,
+                            new Coordinates(Long.parseLong(coordinates[0]), Double.parseDouble(coordinates[1])),
+                            area,
+                            numberOfRooms,
+                            timeToMetroOnFoot,
+                            timeToMetroByTransport,
+                            furnish,
+                            new House(hname, hyear, hnumberOfFloors, hnumberOfLifts)
+                    );
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                    System.err.println("Ошибка при выполнении команды add.: " + e.getMessage());
+                    return;
+                }
+                if(cmd.equals("add")){
+                    XMLManager.addElement(flat);
+                    System.out.println("Объект " + flat.getName() + " добавлен в коллекцию.");
+                }
+                else{
+                    XMLManager.changeElement(Integer.parseInt(arg), flat);
+                    System.out.println("Объект " + flat.getName() + " изменён");
+                }
+                continue;
+            }
+
+            if (commands.containsKey(cmd)) {
+                commands.get(cmd).execute(sarg);
+            }
+            else{
+                System.err.println("Неизевстная комманда: " + line);
+            }
         }
-        scanner.close();
+
     }
 }

@@ -12,11 +12,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * CommandExecutor for handling CLI commands
+ */
 public class CommandExecutor {
+
+    private static final Map<String, Command> commands = new HashMap<>();
+
+    public static Map<String, Command> getCommands(){
+        return commands;
+    }
+
+    /**
+     * @param input Input stream commands
+     * @throws CreateObjException
+     * @throws ParserConfigurationException
+     * @throws IOException
+     * @throws TransformerException
+     * @throws SAXException
+     */
     public void run(InputStream input) throws CreateObjException, ParserConfigurationException, IOException, TransformerException, SAXException {
+        System.out.print(">>> ");
         Scanner cmdScanner = new Scanner(input);
 
-        final Map<String, Command> commands = new HashMap<>();
         commands.put("help", new Help());
         commands.put("info", new Info());
         commands.put("show", new Show());
@@ -37,6 +55,8 @@ public class CommandExecutor {
 
         while (cmdScanner.hasNext()) {
             String line = cmdScanner.nextLine().trim();
+            if (line.isEmpty()) continue;
+
             String cmd = line.split(" ")[0];
 
             String arg = null;
@@ -44,13 +64,13 @@ public class CommandExecutor {
                 arg = line.split(" ")[1];
             }
 
-            if (line.isEmpty()) continue;
-            if (commands.containsKey(line)) {
-                commands.get(line).execute(arg);
+            if (commands.containsKey(cmd)) {
+                commands.get(cmd).execute(arg);
             }
             else{
                 System.err.println("Неизевстная комманда");
             }
+            System.out.print(">>> ");
         }
     }
 }

@@ -1,29 +1,26 @@
 package commands;
 
-import collections.Flat;
-import managers.XMLManager;
 
-import java.util.HashMap;
-import java.util.Map;
+import exceptions.CreateObjException;
 
 public class UpdateElement extends Command {
     @Override
     public String getName() {
-        return "Head";
+        return "Update";
     }
 
     @Override
     public String getDesc() {
-        return "Show first element of the collection.";
+        return "Update element.";
     }
 
     @Override
-    public void execute(String arg){
-        for(Flat flat: XMLManager.getData()){
-            if(flat.getId() == Integer.parseInt(arg)){
-                System.out.println("Введите значение которое хотите поменять");
-                System.out.println("Введите новое значение");
-            }
+    public void execute(String arg) throws CreateObjException {
+        if(arg == null){
+            System.err.println("Usage: update {arg}");
+            return;
         }
+        Add add = new Add();
+        add.execute(arg);
     }
 }

@@ -19,10 +19,12 @@ public class Show extends Command {
     @Override
     public void execute(String arg) {
         ArrayDeque<Flat> flat = XMLManager.getData();
+
         if(flat.size() == 0){
             System.out.println("Clear collection, nothing to show.");
             return;
         }
+
         flat.forEach(System.out::println);
     }
 }

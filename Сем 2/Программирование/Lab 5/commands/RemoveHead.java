@@ -20,6 +20,11 @@ public class RemoveHead extends Command {
     public void execute(String arg) {
         ArrayDeque<Flat> flat = XMLManager.getData();
 
+        if(flat.size() == 0){
+            System.err.println("Clear collection, nothing to return and delete.");
+            return;
+        }
+
         System.out.println(flat.pop());
 
     }

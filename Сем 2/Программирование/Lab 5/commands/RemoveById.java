@@ -17,6 +17,11 @@ public class RemoveById extends Command {
     }
     @Override
     public void execute(String arg) {
+        if(arg == null){
+            System.err.println("Usage: remove_by_id {arg}");
+            return;
+        }
+
         int val = Integer.parseInt(arg);
 
         ArrayDeque<Flat> flat = XMLManager.getData();

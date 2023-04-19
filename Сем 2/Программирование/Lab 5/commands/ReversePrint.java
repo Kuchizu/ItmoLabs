@@ -22,6 +22,11 @@ public class ReversePrint extends Command {
     public void execute(String arg) {
         ArrayDeque<Flat> flat = XMLManager.getData();
 
+        if(flat.size() == 0){
+            System.out.println("Clear collection, nothing to show.");
+            return;
+        }
+
         Iterator<Flat> it = flat.descendingIterator();
         while(it.hasNext()) {
             System.out.println(it.next());

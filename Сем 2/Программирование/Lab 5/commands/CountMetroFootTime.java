@@ -4,6 +4,7 @@ import collections.Flat;
 import managers.XMLManager;
 
 import java.util.ArrayDeque;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class CountMetroFootTime extends Command {
@@ -18,13 +19,18 @@ public class CountMetroFootTime extends Command {
     }
 
     public void execute(String vall) {
+        if(vall == null){
+            System.err.println("Usage: count_by_time_to_metro_on_foot {arg}");
+            return;
+        }
+
         Float val = Float.parseFloat(vall);
         ArrayDeque<Flat> flats = XMLManager.getData();
 
         int x = 0;
 
         for(Flat flat: flats){
-            if(flat.getTimeToMetroOnFoot() == val){
+            if(Objects.equals(flat.getTimeToMetroOnFoot(), val)){
                 x++;
             }
         }
