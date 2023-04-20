@@ -15,6 +15,8 @@ import java.io.IOException;
  * AYO MAIN
  * Author Kuchizu
  * Var: 3131015
+ * <p>
+ * Passed 19.04.2022 85 / 100
 
  ***/
 
