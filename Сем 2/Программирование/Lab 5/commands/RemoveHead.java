@@ -5,6 +5,9 @@ import managers.XMLManager;
 
 import java.util.ArrayDeque;
 
+/**
+ * Returns first collection element and delete it.
+ */
 public class RemoveHead extends Command {
     @Override
     public String getName() {

@@ -2,6 +2,9 @@ package collections;
 
 import java.time.ZonedDateTime;
 
+/**
+ * Flat object that will be saved in collection.
+ */
 public class Flat {
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой

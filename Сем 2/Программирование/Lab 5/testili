@@ -90,7 +90,7 @@ Exception in thread "main" java.io.FileNotFoundException: Data.xml (Permission d
 	at java.base/java.util.Scanner.<init>(Scanner.java:639)
 	at managers.XMLManager.removeBlank(XMLManager.java:43)
 	at managers.XMLManager.loadData(XMLManager.java:62)
-	at Main.main(Main.java:37)
+	at main.Main.main(main.Main.java:37)
 [s373746@helios ~/lab5/123123]$ chmod +r Data.xml 
 [s373746@helios ~/lab5/123123]$ 
 [s373746@helios ~/lab5/123123]$ 
@@ -105,7 +105,7 @@ Exception in thread "main" java.io.FileNotFoundException: Data.xml (Permission d
 	at java.base/java.io.PrintWriter.<init>(PrintWriter.java:200)
 	at managers.XMLManager.removeBlank(XMLManager.java:54)
 	at managers.XMLManager.loadData(XMLManager.java:62)
-	at Main.main(Main.java:37)
+	at main.Main.main(main.Main.java:37)
 [s373746@helios ~/lab5/123123]$ 
 [s373746@helios ~/lab5/123123]$ 
 [s373746@helios ~/lab5/123123]$ ls -l
@@ -244,7 +244,7 @@ asd
 Exception in thread "main" exceptions.CreateObjException: Введите два значения
 	at commands.Add.execute(Add.java:39)
 	at managers.CommandExecutor.run(CommandExecutor.java:49)
-	at Main.main(Main.java:39)
+	at main.Main.main(main.Main.java:39)
 [s373746@helios ~/lab5/123123]$ java -jar Lab5.jar 
 Flat
 [s373746@helios ~/lab5/123123]$ java -jar Lab5.jar 
@@ -255,7 +255,7 @@ Exception in thread "main" java.util.NoSuchElementException: No line found
 	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
 	at commands.Add.execute(Add.java:26)
 	at managers.CommandExecutor.run(CommandExecutor.java:49)
-	at Main.main(Main.java:39)
+	at main.Main.main(main.Main.java:39)
 [s373746@helios ~/lab5/123123]$ java -jar Lab5.jar 
 Flat
 add
@@ -270,7 +270,7 @@ asd
 Exception in thread "main" exceptions.CreateObjException: Максимальное значение поля: 19
 	at commands.Add.execute(Add.java:63)
 	at managers.CommandExecutor.run(CommandExecutor.java:49)
-	at Main.main(Main.java:39)
+	at main.Main.main(main.Main.java:39)
 [s373746@helios ~/lab5/123123]$ 
 [s373746@helios ~/lab5/123123]$ 
 [s373746@helios ~/lab5/123123]$ 

@@ -5,15 +5,18 @@ import managers.XMLManager;
 
 import java.util.ArrayDeque;
 
+/**
+ * Shows first element of the collection.
+ */
 public class Head extends Command {
     @Override
     public String getName() {
-        return "Head";
+        return "head";
     }
 
     @Override
     public String getDesc() {
-        return "Show first element of the collection.";
+        return "Вывести первый элемент коллекции";
     }
 
     @Override

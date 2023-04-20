@@ -7,6 +7,9 @@ import java.util.ArrayDeque;
 
 import java.util.*;
 
+/**
+ * Prints all collection elements reversed.
+ */
 public class ReversePrint extends Command {
     @Override
     public String getName() {

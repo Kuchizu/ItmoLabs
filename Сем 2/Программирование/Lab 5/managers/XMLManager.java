@@ -29,7 +29,7 @@ import java.time.ZonedDateTime;
 import java.util.ArrayDeque;
 
 /**
- * XMLManager for loading and saving XML DB
+ * XMLManager for managing XML DB
  */
 public class XMLManager {
 
@@ -37,15 +37,17 @@ public class XMLManager {
         return data;
     }
 
-    public static void setData(ArrayDeque<Flat> data) {
+    public void setData(ArrayDeque<Flat> data) {
         XMLManager.data = data;
     }
 
-    private static ArrayDeque<Flat> data = new ArrayDeque<>();
+    public static ArrayDeque<Flat> data = new ArrayDeque<>();
 
     /**
+     * Loads database to data object.
      * @param path XML DB file path
      * @throws ParserConfigurationException
+     * Throws when DB can't be parsed.
      */
     public static void loadData(String path) throws ParserConfigurationException {
 
@@ -110,6 +112,7 @@ public class XMLManager {
     }
 
     /**
+     * Adds new Flat element to the collection.
      * @param flat Flat object
      */
     public static void addElement(Flat flat){
@@ -127,11 +130,15 @@ public class XMLManager {
         XMLManager.data.add(flat);
     }
 
+    /**
+     * Clears data object.
+     */
     public static void dropAll(){
         XMLManager.data.clear();
     }
 
     /**
+     * Writes new changes to DB file.
      * @param path XML DB file path
      * @return
      * @throws TransformerException
@@ -209,6 +216,7 @@ public class XMLManager {
     }
 
     /**
+     * Parses node.
      * @param doc
      * @param name
      * @param value

@@ -6,6 +6,9 @@ import managers.XMLManager;
 import java.util.ArrayDeque;
 import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * Returns Averagemetrotime of all elements in collection.
+ */
 public class Averagemetrotime extends Command {
     @Override
     public String getName() {
@@ -17,6 +20,10 @@ public class Averagemetrotime extends Command {
         return "Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции";
     }
 
+    /**
+     * Return timeToMetroByTransport
+     * @param arg
+     */
     @Override
     public void execute(String arg) {
         ArrayDeque<Flat> flat = XMLManager.getData();
@@ -30,7 +37,7 @@ public class Averagemetrotime extends Command {
 
         flat.forEach((x) -> avgm.updateAndGet(v -> v + x.getTimeToMetroByTransport()));
 
-        System.out.println("Среднее значение timeToMetroByTransport: " + avgm);
+        System.out.println("Среднее значение timeToMetroByTransport: " + avgm.get() / flat.size());
 
     }
 

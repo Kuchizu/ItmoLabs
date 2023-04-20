@@ -5,15 +5,18 @@ import managers.XMLManager;
 
 import java.util.ArrayDeque;
 
+/**
+ * Shows information about collection.
+ */
 public class Info extends Command {
     @Override
     public String getName() {
-        return "Info";
+        return "info";
     }
 
     @Override
     public String getDesc() {
-        return "Show information about colleciton.";
+        return "Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)";
     }
 
     @Override

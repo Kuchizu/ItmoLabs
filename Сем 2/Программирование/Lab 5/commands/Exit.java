@@ -1,14 +1,17 @@
 package commands;
 
+/**
+ * Exites CLI.
+ */
 public class Exit extends Command {
     @Override
     public String getName() {
-        return "Exit";
+        return "exit";
     }
 
     @Override
     public String getDesc() {
-        return "Exit CLI.";
+        return "Завершить программу (без сохранения в файл)";
     }
 
     @Override

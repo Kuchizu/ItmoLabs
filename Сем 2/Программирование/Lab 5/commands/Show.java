@@ -5,15 +5,18 @@ import managers.XMLManager;
 
 import java.util.ArrayDeque;
 
+/**
+ * Shows all collection elements.
+ */
 public class Show extends Command {
     @Override
     public String getName() {
-        return "Info";
+        return "show";
     }
 
     @Override
     public String getDesc() {
-        return "Show information about colleciton.";
+        return "Вывести в стандартный поток вывода все элементы коллекции в строковом представлении";
     }
 
     @Override

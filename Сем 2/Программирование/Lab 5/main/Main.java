@@ -1,11 +1,6 @@
-//import collection.City.City;
-//import collectionManagers.CityManager;
-//import collectionManagers.CollectionManager;
-//import commandManagers.CommandExecutor;
-//import commandManagers.CommandMode;
+package main;
 
 import collections.Flat;
-import collections.Furnish;
 import exceptions.CreateObjException;
 import managers.CommandExecutor;
 import managers.XMLManager;
@@ -27,7 +22,7 @@ public class Main {
     /**
      * The environment key to the CSV file for storing the collection.
      */
-    private static final String ENV_KEY = "Data.xml";
+    public static final String ENV_KEY = "Data.xml";
     /**
      The main method that loads the collection from the XML file and starts the user interface.
      @param args an array of command-line arguments for the application
@@ -41,5 +36,6 @@ public class Main {
         System.out.println("Enter commands below. Use help for more information.\n");
 
         executor.run(System.in);
+
     }
 }

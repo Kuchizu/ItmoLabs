@@ -9,15 +9,24 @@ import managers.XMLManager;
 
 import java.util.Scanner;
 
+/**
+ * Add class used to add elements to collection.
+ */
 public class Add extends Command {
     public String getName() {
-        return "Add";
+        return "add {element}";
     }
 
     public String getDesc() {
-        return "Add element";
+        return "добавить новый элемент в коллекцию";
     }
-    
+
+    /**
+     * Execute method that adds new Object to the collection
+     * @param arg if arg then change existing element
+     * @throws CreateObjException
+     */
+    @Override
     public void execute(String arg) throws CreateObjException {
         Scanner obj = new Scanner(System.in);
 

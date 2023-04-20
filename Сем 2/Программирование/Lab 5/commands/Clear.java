@@ -2,17 +2,24 @@ package commands;
 
 import managers.XMLManager;
 
+/**
+ * Clears collection.
+ */
 public class Clear extends Command {
     @Override
     public String getName() {
-        return "Clear";
+        return "clear";
     }
 
     @Override
     public String getDesc() {
-        return "Clear collection";
+        return "Очистить коллекцию";
     }
 
+    /**
+     * Clears collection
+     * @param arg
+     */
     @Override
     public void execute(String arg) {
         XMLManager.dropAll();

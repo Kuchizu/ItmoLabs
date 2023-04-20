@@ -16,15 +16,18 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * ExecuteScript class that reads and executes file.
+ */
 public class ExecuteScript extends Command {
     @Override
     public String getName() {
-        return "Execute";
+        return "execute_script file_name";
     }
 
     @Override
     public String getDesc() {
-        return "Execute script.";
+        return "Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.";
     }
 
     @Override
@@ -33,6 +36,8 @@ public class ExecuteScript extends Command {
             System.err.println("Usage: execute_script: {file_name}");
             return;
         }
+
+
 
         Map<String, Command> commands = CommandExecutor.getCommands();
 

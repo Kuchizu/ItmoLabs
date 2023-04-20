@@ -5,10 +5,13 @@ import managers.XMLManager;
 
 import java.util.ArrayDeque;
 
+/**
+ * Removes element from collection by it id.
+ */
 public class RemoveById extends Command {
     @Override
     public String getName() {
-        return "remove_by_id";
+        return "remove_by_id id";
     }
 
     @Override

@@ -3,15 +3,18 @@ package commands;
 
 import exceptions.CreateObjException;
 
+/**
+ * Updates element in collection which id = arg.
+ */
 public class UpdateElement extends Command {
     @Override
     public String getName() {
-        return "Update";
+        return "update id {element}";
     }
 
     @Override
     public String getDesc() {
-        return "Update element.";
+        return "Обновить значение элемента коллекции, id которого равен заданному";
     }
 
     @Override

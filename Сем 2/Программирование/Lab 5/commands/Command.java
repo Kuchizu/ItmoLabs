@@ -7,6 +7,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
 
+/**
+ * Abstract class for command classes ran by CLI.
+ */
 public abstract class Command {
 
     public abstract String getName();

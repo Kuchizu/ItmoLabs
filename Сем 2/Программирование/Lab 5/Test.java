@@ -1,46 +1,58 @@
 import collections.Flat;
-import collections.Sequence;
 import managers.XMLManager;
-import org.w3c.dom.Element;
-import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
 import java.time.ZonedDateTime;
-import java.util.Scanner;
-import java.util.UUID;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class Test {
-    public static void main(String[] args) throws ParserConfigurationException, IOException, TransformerException, SAXException {
-        System.out.println(ZonedDateTime.now());
-//        System.out.println(ZonedDateTime.now().toInstant());
-//        System.out.println(ZonedDateTime.now().toString());
-//        System.out.println(ZonedDateTime.now().toEpochSecond());
-//        System.out.println((int) ZonedDateTime.now().toEpochSecond() - 1_670_000_000);
-//
-//        System.out.println(Math.abs((int) System.nanoTime()));
-//        System.out.println(Math.abs((int) System.nanoTime()));
-//        System.out.println(Math.abs((int) System.nanoTime()));
-//        System.out.println(Math.abs((int) System.nanoTime()));
-//        System.out.println(Math.abs((int) System.nanoTime()));
-//        System.out.println(Math.abs((int) System.nanoTime()));
-//        System.out.println(Math.abs((int) System.nanoTime()));
+    public class q{
+    }
+    public class Animal extends q{
 
-//        Scanner obj = new Scanner(System.in);
-//        String a = obj.nextLine();
-//        System.out.println(a);
+        public void feed() {
 
-        XMLManager.writeToFile("");
+            System.out.println("Animal.feed()");
+        }
+    }
+
+    public class Pet extends Animal {
+
+        public void call() {
+
+            System.out.println("Pet.call()");
+        }
+    }
+
+    public class Cat extends Pet {
+
+        public void meow() {
+
+            System.out.println("Cat.meow()");
+        }
+    }
+
+    public void iterateAnimals(Collection<? super Animal> animals) {
+        animals.add(new Cat());
 
 
-
-//        System.out.println((int) (System.currentTimeMillis() & 0xfffffff));
-//        System.out.println((int) (System.currentTimeMillis() & 0xfffffff));
-//        System.out.println((int) (System.currentTimeMillis() & 0xfffffff));
-//        System.out.println((int) (System.currentTimeMillis() & 0xfffffff));
 
     }
+    public void main(String[] args) throws ParserConfigurationException, IOException, TransformerException, SAXException {
+        System.out.println(ZonedDateTime.now());
+
+        List<Animal> animals = new ArrayList<>();
+        animals.add(new Animal());
+        animals.add(new Animal());
+
+        iterateAnimals(animals);
+
+    }
+
 }

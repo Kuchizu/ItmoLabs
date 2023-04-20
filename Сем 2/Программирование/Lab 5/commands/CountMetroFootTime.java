@@ -5,12 +5,14 @@ import managers.XMLManager;
 
 import java.util.ArrayDeque;
 import java.util.Objects;
-import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * Returns CountMetroFootTime of all elements in collection.
+ */
 public class CountMetroFootTime extends Command {
     @Override
     public String getName() {
-        return "count_by_time_to_metro_on_foot";
+        return "count_by_time_to_metro_on_foot timeToMetroOnFoot";
     }
 
     @Override
@@ -18,6 +20,7 @@ public class CountMetroFootTime extends Command {
         return "Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному";
     }
 
+    @Override
     public void execute(String vall) {
         if(vall == null){
             System.err.println("Usage: count_by_time_to_metro_on_foot {arg}");
