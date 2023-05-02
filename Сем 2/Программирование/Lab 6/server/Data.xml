@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<data>
+    <Flat>
+        <id>1458791979</id>
+        <name>1</name>
+        <coordinates>
+            <x>1</x>
+            <y>1.0</y>
+        </coordinates>
+        <creationDate>1681869911</creationDate>
+        <area>1</area>
+        <numberOfRooms>1</numberOfRooms>
+        <timeToMetroOnFoot>11.0</timeToMetroOnFoot>
+        <timeToMetroByTransport>1.0</timeToMetroByTransport>
+        <furnish>NONE</furnish>
+        <house>
+            <name>1</name>
+            <year>1</year>
+            <numberOfFloors>1</numberOfFloors>
+            <numberOfLifts>1</numberOfLifts>
+        </house>
+    </Flat>
+    <Flat>
+        <id>1985467341</id>
+        <name>123</name>
+        <coordinates>
+            <x>1</x>
+            <y>1.0</y>
+        </coordinates>
+        <creationDate>1681874900</creationDate>
+        <area>1</area>
+        <numberOfRooms>1</numberOfRooms>
+        <timeToMetroOnFoot>1.0</timeToMetroOnFoot>
+        <timeToMetroByTransport>1.0</timeToMetroByTransport>
+        <furnish>FINE</furnish>
+        <house>
+            <name>ASD</name>
+            <year>1</year>
+            <numberOfFloors>1</numberOfFloors>
+            <numberOfLifts>123</numberOfLifts>
+        </house>
+    </Flat>
+</data>
