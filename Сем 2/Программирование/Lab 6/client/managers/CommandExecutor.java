@@ -5,10 +5,12 @@ import commands.*;
 
 import java.io.*;
 import java.net.*;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 class EofIndicatorClass implements Serializable{}
 
@@ -50,83 +52,117 @@ public class CommandExecutor {
     /**
      * @param input Input stream commands
      */
-    public void run(InputStream input){
+    public void run(InputStream input) throws IOException {
+
+        ByteArrayOutputStream baosc = new ByteArrayOutputStream();
+        ObjectOutputStream oosc = new ObjectOutputStream(baosc);
+        InfoPacket connectmePacket = new InfoPacket("connectme", null);
+        oosc.writeObject(connectmePacket);
+        oosc.writeObject(new EofIndicatorClass());
+        oosc.flush();
+        oosc.close();
+        buffer = baosc.toByteArray();
+        datagramSocket.send(new DatagramPacket(buffer, buffer.length, inetAddress, 1234));
+
+
         System.out.print(">>> ");
         Scanner cmdScanner = new Scanner(input);
 
-        while(cmdScanner.hasNext()) {
+        while(true) {
             String line = cmdScanner.nextLine().trim();
-            if (line.isEmpty()) continue;
+            if (line.isEmpty()){
+                System.out.print(">>> ");
+                continue;
+            }
 
             String cmd = line.split(" ")[0];
-
             String arg = null;
             if (line.split(" ").length == 2){
                 arg = line.split(" ")[1];
             }
 
-            if (commands.containsKey(cmd)) {
-                System.out.println(commands.get(cmd));
+            if(!(commands.containsKey(cmd))){
+                System.out.println("Неизевстная комманда");
+                System.out.print(">>> ");
+                continue;
+            }
+            try{
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                ObjectOutputStream oos = new ObjectOutputStream(baos);
 
-                try{
-                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                    ObjectOutputStream oos = new ObjectOutputStream(baos);
+                InfoPacket infoPacket = new InfoPacket(cmd, arg);
 
-                    InfoPacket infoPacket = new InfoPacket(cmd, arg);
-
-                    if(cmd.equals("update") && arg == null){
-                        System.err.println("Usage: update {arg}");
+                if(cmd.equals("update") && arg == null){
+                    System.err.println("Usage: update {arg}");
+                    continue;
+                }
+                if(cmd.equals("add") || cmd.equals("update")){
+                    Flat flat = new Add().create();
+                    if(flat == null){
+                        System.out.print("Canceled.\n>>> ");
                         continue;
                     }
-                    if(cmd.equals("add") || cmd.equals("update")){
-                        Flat flat = new Add().create();
-                        if(flat == null){
-                            System.out.println("Exited.");
-                            continue;
-                        }
-                        System.out.println(flat);
-                        infoPacket.setFlat(flat);
-                    }
-
-                    System.out.println(infoPacket);
-                    System.out.println(infoPacket.getFlat());
-
-                    oos.writeObject(infoPacket);
-                    oos.writeObject(new EofIndicatorClass());
-                    oos.flush();
-                    oos.close();
-
-                    buffer = baos.toByteArray();
-                    DatagramPacket cmdPacket = new DatagramPacket(buffer, buffer.length, inetAddress, 1234);
-
-                    datagramSocket.send(cmdPacket);
-
-                    if(cmd.equals("exit")){
-                        System.out.println("Closing client application, bye!");
-                        System.exit(0);
-                    }
-
-                    DatagramPacket respPacket = new DatagramPacket(new byte[10000], 10000, inetAddress, 1234);
-                    datagramSocket.receive(respPacket);
-
-                    ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(respPacket.getData()));
-                    InfoPacket inf = (InfoPacket) ois.readObject();
-                    System.out.println("Got from server:\n\n" + inf.toString());
-
-
-                } catch (IOException e ){
-                    e.printStackTrace();
-                    break;
-                } catch (ClassNotFoundException e) {
-                    throw new RuntimeException(e);
+                    System.out.println(flat);
+                    infoPacket.setFlat(flat);
                 }
 
+                System.out.println(infoPacket);
+
+                oos.writeObject(infoPacket);
+                oos.writeObject(new EofIndicatorClass());
+                oos.flush();
+                oos.close();
+
+                buffer = baos.toByteArray();
+                DatagramPacket cmdPacket = new DatagramPacket(buffer, buffer.length, inetAddress, 1234);
+
+                datagramSocket.send(cmdPacket);
+
+                if(cmd.equals("exit")){
+                    System.out.println("Closing client application, bye!");
+                    System.exit(0);
+                }
+
+                ExecutorService executorService = Executors.newSingleThreadExecutor();
+                DatagramPacket respPacket = new DatagramPacket(new byte[10000], 10000, inetAddress, 1234);
+                executorService.execute(() -> {
+                    try {
+                        datagramSocket.receive(respPacket);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+                executorService.shutdown();
+                try {
+                    if (!executorService.awaitTermination(1000, TimeUnit.MILLISECONDS)) {
+                        System.err.println("Took too long for server to respond; the server might be experiencing issues or downtime. Try again later.");
+                        System.exit(0);
+                    }
+                }catch(InterruptedException e){
+                    e.printStackTrace();
+                }
+
+                ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(respPacket.getData()));
+                InfoPacket inf = (InfoPacket) ois.readObject();
+                System.out.println("Got response:\n\n" + inf.getCmd());
+
+
+            } catch (IOException e ){
+                e.printStackTrace();
+                break;
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
             }
-            else{
-                System.err.println("Неизевстная комманда");
-            }
+
             System.out.print(">>> ");
         }
+    }
+
+    private DatagramPacket getResponse() throws IOException {
+        DatagramPacket respPacket = new DatagramPacket(new byte[10000], 10000, inetAddress, 1234);
+        datagramSocket.receive(respPacket);
+
+        return respPacket;
     }
 
 }

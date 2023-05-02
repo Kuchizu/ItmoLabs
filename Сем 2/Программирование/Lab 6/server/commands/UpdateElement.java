@@ -23,7 +23,7 @@ public class UpdateElement extends Command {
             System.err.println("Usage: update {arg}");
             return arg;
         }
-        Add add = new Add();
+//        Add add = new Add();
 //        add.execute(arg);
         return arg;
     }

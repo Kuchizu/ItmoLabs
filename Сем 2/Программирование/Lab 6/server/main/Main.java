@@ -29,13 +29,13 @@ public class Main {
      The main method that loads the collection from the XML file and starts the user interface.
      @param args an array of command-line arguments for the application
      */
-    public static void main(String[] args) throws SAXException, IOException, TransformerException, CreateObjException, ParserConfigurationException {
+    public static void main(String[] args) throws IOException, ParserConfigurationException {
 
         XMLManager.loadData(ENV_KEY);
         CommandExecutor executor = new CommandExecutor();
 
-        System.out.println("Welcome to CLI!\nCollection: " + XMLManager.getData().getClass().getName() + "\nDB type: XML" + "\nElement type: " + Flat.class.getName());
-        System.out.println("Enter commands below. Use help for more information.\n");
+        System.out.println("Welcome to Server!\nCollection: " + XMLManager.getData().getClass().getName() + "\nDB type: XML" + "\nElement type: " + Flat.class.getName() + "\nConnection protocol: UDP");
+        System.out.println("Server started handling.\n");
 
         executor.run();
 

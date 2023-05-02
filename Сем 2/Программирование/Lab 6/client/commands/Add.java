@@ -171,6 +171,11 @@ public class Add extends Command {
         System.out.println("Введите name of House (String):");
         String hname = obj.nextLine();
 
+        while(hname.isEmpty()){
+            System.err.println("Строка не может быть пустой, введите заново");
+            hname = obj.nextLine();
+        }
+
         System.out.println("Введите year of House (Long):");
 
         long hyear;

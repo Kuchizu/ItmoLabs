@@ -15,30 +15,32 @@ import java.net.SocketException;
 import java.util.*;
 
 class EofIndicatorClass implements Serializable{}
-
-class JTread extends Thread{
-    public void run(){
-
-        System.out.printf("Server started running \n", Thread.currentThread().getName());
-        Scanner scan = new Scanner(System.in);
-        while(true){
-            if(scan.nextLine().equals("save")){
-                try {
-                    XMLManager.writeToFile(Main.ENV_KEY);
-                } catch (ParserConfigurationException ignored){}
-            }
-            else{
-                System.err.println("Неизвестная команда");
-            }
-        }
-        System.out.printf("%s fiished... \n", Thread.currentThread().getName());
-    }
-}
-
 /**
  * CommandExecutor for handling CLI commands
  */
 public class CommandExecutor {
+
+    private void saveDB() throws ParserConfigurationException {
+        XMLManager.writeToFile(Main.ENV_KEY);
+    }
+
+    class JTread extends Thread{
+        public void run(){
+
+            Scanner scan = new Scanner(System.in);
+            while(true){
+                if(scan.nextLine().equals("save")){
+                    try {
+                        saveDB();
+                        System.out.println("[Server]: Изменения сохранены.");
+                    } catch (ParserConfigurationException ignored){}
+                }
+                else{
+                    System.err.println("Неизвестная команда");
+                }
+            }
+        }
+    }
 
     private byte[] buffer = new byte[10000];
 
@@ -47,10 +49,7 @@ public class CommandExecutor {
             put("help", new Help());
             put("info", new Info());
             put("show", new Show());
-            put("add", new Add());
             put("clear", new Clear());
-            put("save", new Save());
-            put("exit", new Exit());
             put("head", new Head());
             put("remove_head", new RemoveHead());
             put("average_of_time_to_metro_by_transport", new Averagemetrotime());
@@ -60,6 +59,7 @@ public class CommandExecutor {
             put("execute_script", new ExecuteScript());
             put("remove_lower", new RemoveIfLover());
             put("count_by_time_to_metro_on_foot", new CountMetroFootTime());
+            put("exit", new Exit());
         }
     };
 
@@ -70,10 +70,11 @@ public class CommandExecutor {
      *
      */
     public void run() throws SocketException {
+
+        JTread t = new JTread();
+        t.start();
+
         DatagramSocket datagramSocket = new DatagramSocket(1234);
-
-        HashMap connectedClients = new HashMap();
-
         while(true){
             try {
                 DatagramPacket cmdPacket = new DatagramPacket(new byte[10000],10000);
@@ -81,10 +82,6 @@ public class CommandExecutor {
 
                 InetAddress inetAddress = cmdPacket.getAddress();
                 int port = cmdPacket.getPort();
-
-                if(connectedClients.contains(<>)){
-
-                }
 
                 ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(cmdPacket.getData()));
 
@@ -95,6 +92,19 @@ public class CommandExecutor {
                 }
                 assert inf != null;
 
+                switch (inf.getCmd()){
+                    case "connectme" -> {
+                        System.out.printf("[%s][%s]: [Connected]\n", inetAddress, port);
+                        continue;
+                    }
+                    case "exit" -> {
+                        System.out.printf("[%s][%s]: [Disconnected]\n", inetAddress, port);
+                        XMLManager.writeToFile(Main.ENV_KEY);
+                        continue;
+                    }
+                }
+
+
                 System.out.printf(
                         "[%s][%s]: Got message:\n%s\n%s: %s\n",
                         inetAddress, port, inf,
@@ -104,17 +114,17 @@ public class CommandExecutor {
 
                 String resp;
 
-                if (inf.getCmd().equals("add")) {
-                    XMLManager.addElement(inf.getFlat());
-                    resp = "Объект " + inf.getFlat().getName() + " добавлен в коллекцию.";
-                } else if (inf.getCmd().equals("update")) {
-                    XMLManager.changeElement(Integer.parseInt(inf.getArg()), inf.getFlat());
-                    resp = "Объект " + inf.getFlat().getName() + " изменён";
-                } else {
-                    resp = commands.get(inf.getCmd()).execute(inf.getArg());
+                switch (inf.getCmd()) {
+                    case "add" -> {
+                        XMLManager.addElement(inf.getFlat());
+                        resp = "Объект " + inf.getFlat().getName() + " добавлен в коллекцию.";
+                    }
+                    case "update" -> {
+                        XMLManager.changeElement(Integer.parseInt(inf.getArg()), inf.getFlat());
+                        resp = "Объект " + inf.getFlat().getName() + " изменён";
+                    }
+                    default -> resp = commands.get(inf.getCmd()).execute(inf.getArg());
                 }
-
-                // System.out.println("Executed: " + resp);
 
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
                 ObjectOutputStream oos = new ObjectOutputStream(baos);
