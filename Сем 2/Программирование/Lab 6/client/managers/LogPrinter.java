@@ -17,7 +17,7 @@ public class LogPrinter extends PrintStream {
         FileHandler fh = new FileHandler(String.format("Logs/Clientlogs.log"));
         fh.setFormatter(new SimpleFormatter());
         LOGGER.setUseParentHandlers(false);
-        LOGGER.addHandler(fh);
+//        LOGGER.addHandler(fh);
         LOGGER.setLevel(Level.INFO);
     }
 
