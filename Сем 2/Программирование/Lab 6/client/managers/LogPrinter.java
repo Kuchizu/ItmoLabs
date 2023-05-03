@@ -14,7 +14,7 @@ public class LogPrinter extends PrintStream {
             dir.mkdir();
         }
 
-        FileHandler fh = new FileHandler(String.format("Logs/[%s] Clientlogs.log", new Date()));
+        FileHandler fh = new FileHandler(String.format("Logs/Clientlogs.log", new Date()));
         fh.setFormatter(new SimpleFormatter());
         LOGGER.setUseParentHandlers(false);
         LOGGER.addHandler(fh);
