@@ -29,7 +29,6 @@ public class Show extends Command{
 
         StringBuilder res = new StringBuilder();
 
-
         for(Flat i: flat){
             res.append(i.toString());
         }

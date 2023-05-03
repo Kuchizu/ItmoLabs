@@ -1,13 +1,9 @@
 package main;
 
-import collections.Flat;
-import exceptions.CreateObjException;
 import managers.CommandExecutor;
 import managers.XMLManager;
-import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 import java.io.IOException;
 
 /***
@@ -34,10 +30,6 @@ public class Main {
         XMLManager.loadData(ENV_KEY);
         CommandExecutor executor = new CommandExecutor();
 
-        System.out.println("Welcome to Server!\nCollection: " + XMLManager.getData().getClass().getName() + "\nDB type: XML" + "\nElement type: " + Flat.class.getName() + "\nConnection protocol: UDP");
-        System.out.println("Server started handling.\n");
-
         executor.run();
-
     }
 }

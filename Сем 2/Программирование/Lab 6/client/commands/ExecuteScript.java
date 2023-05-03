@@ -37,23 +37,11 @@ public class ExecuteScript extends Command {
             return null;
         }
 
-
-
         Map<String, Command> commands = CommandExecutor.getCommands();
+        
+        StringBuilder response = new StringBuilder();
+        Scanner scanner = new Scanner(arg);
 
-
-        Scanner scanner;
-        try {
-            scanner = new Scanner(new File(arg));
-        }
-        catch (java.io.FileNotFoundException f){
-            System.err.println("Файл не существует, но суч файл ор директорииииии");
-            return null;
-        }
-        catch (java.lang.NullPointerException n) {
-            System.err.println("Ошибка чтения файла");
-            return null;
-        }
         while (scanner.hasNext()) {
             String line = scanner.nextLine().trim();
             System.out.println(line);
@@ -95,28 +83,27 @@ public class ExecuteScript extends Command {
                             new House(hname, hyear, hnumberOfFloors, hnumberOfLifts)
                     );
                 } catch (Exception e) {
-                    System.out.println(e.getMessage());
-                    System.err.println("Ошибка при выполнении команды add.: " + e.getMessage());
-                    return null;
+                    response.append("Ошибка при выполнении команды add.: ").append(e.getMessage());
+                    return response.toString();
                 }
                 if(cmd.equals("add")){
                     XMLManager.addElement(flat);
-                    System.out.println("Объект " + flat.getName() + " добавлен в коллекцию.");
+                    response.append("Объект ").append(flat.getName()).append(" добавлен в коллекцию.");
                 }
                 else{
                     XMLManager.changeElement(Integer.parseInt(arg), flat);
-                    System.out.println("Объект " + flat.getName() + " изменён");
+                    response.append("Объект ").append(flat.getName()).append(" изменён");
                 }
                 continue;
             }
 
             if (commands.containsKey(cmd)) {
-                commands.get(cmd).execute(sarg);
+                response.append(commands.get(cmd).execute(sarg));
             }
             else{
-                System.err.println("Неизевстная комманда: " + line);
+                response.append("Неизевстная комманда: ").append(line);
             }
         }
-        return null;
+        return response.toString();
     }
 }

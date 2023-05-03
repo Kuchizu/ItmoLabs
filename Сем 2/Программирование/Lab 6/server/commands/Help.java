@@ -22,10 +22,8 @@ public class Help extends Command {
     @Override
     public String execute(String arg) throws SocketException {
 
-        CommandExecutor commandExecutor = new CommandExecutor();
         StringBuilder res = new StringBuilder();
-
-        for(Command cmd: commandExecutor.getCommands().values()){
+        for(Command cmd: CommandExecutor.getCommands().values()){
             res.append(cmd.getName()).append(": ").append(cmd.getDesc()).append("\n");
         }
 

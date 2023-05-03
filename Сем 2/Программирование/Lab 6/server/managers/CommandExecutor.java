@@ -8,11 +8,11 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.*;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.net.SocketException;
-import java.util.*;
+import java.net.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.logging.Logger;
 
 class EofIndicatorClass implements Serializable{}
 /**
@@ -23,13 +23,15 @@ public class CommandExecutor {
     private void saveDB() throws ParserConfigurationException {
         XMLManager.writeToFile(Main.ENV_KEY);
     }
-
+    private static final Logger LOGGER = Logger.getLogger(CommandExecutor.class.getName());
     class JTread extends Thread{
         public void run(){
 
             Scanner scan = new Scanner(System.in);
             while(true){
-                if(scan.nextLine().equals("save")){
+                String s = scan.nextLine();
+                LOGGER.info(s);
+                if(s.equals("save")){
                     try {
                         saveDB();
                         System.out.println("[Server]: Изменения сохранены.");
@@ -42,7 +44,7 @@ public class CommandExecutor {
         }
     }
 
-    private byte[] buffer = new byte[10000];
+    private byte[] buffer = new byte[2048];
 
     private static final Map<String, Command> commands = new HashMap<>(){
         {
@@ -63,21 +65,33 @@ public class CommandExecutor {
         }
     };
 
-    public Map<String, Command> getCommands(){
+    public static Map<String, Command> getCommands(){
         return commands;
     }
     /**
      *
      */
-    public void run() throws SocketException {
+    public void run() throws IOException {
+
+        System.setOut(new LogPrinter(System.out));
 
         JTread t = new JTread();
         t.start();
 
-        DatagramSocket datagramSocket = new DatagramSocket(1234);
+        DatagramSocket datagramSocket = null;
+        try {
+            datagramSocket = new DatagramSocket(1234);
+            System.out.printf("Server started handling [%s][1234].\n", InetAddress.getLocalHost());
+        } catch (BindException e){
+            System.err.println("Server already running in other place.");
+            System.exit(0);
+        } catch (UnknownHostException e) {
+            throw new RuntimeException(e);
+        }
+
         while(true){
             try {
-                DatagramPacket cmdPacket = new DatagramPacket(new byte[10000],10000);
+                DatagramPacket cmdPacket = new DatagramPacket(new byte[2048],2048);
                 datagramSocket.receive(cmdPacket);
 
                 InetAddress inetAddress = cmdPacket.getAddress();
@@ -100,17 +114,18 @@ public class CommandExecutor {
                     case "exit" -> {
                         System.out.printf("[%s][%s]: [Disconnected]\n", inetAddress, port);
                         XMLManager.writeToFile(Main.ENV_KEY);
+                        System.out.println("[Server]: Изменения сохранены.");
                         continue;
                     }
                 }
 
 
                 System.out.printf(
-                        "[%s][%s]: Got message:\n%s\n%s: %s\n",
-                        inetAddress, port, inf,
-                        Arrays.toString(cmdPacket.getData()).length(),
-                        Arrays.toString(cmdPacket.getData())
+                        "[%s][%s]: Got message:\n%s\n",
+                        inetAddress, port, inf
                 );
+
+                System.out.println();
 
                 String resp;
 

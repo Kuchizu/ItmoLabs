@@ -1,0 +1,64 @@
+May 03, 2023 2:46:22 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:46:23 AM managers.CommandExecutor run
+INFO: info
+May 03, 2023 2:46:23 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+
+May 03, 2023 2:46:23 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+
+May 03, 2023 2:46:23 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:46:25 AM managers.CommandExecutor run
+INFO: info
+May 03, 2023 2:46:25 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+
+May 03, 2023 2:46:25 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+
+May 03, 2023 2:46:25 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:46:26 AM managers.CommandExecutor run
+INFO: info
+May 03, 2023 2:46:26 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+
+May 03, 2023 2:46:26 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+
+May 03, 2023 2:46:26 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:46:27 AM managers.CommandExecutor run
+INFO: show
+May 03, 2023 2:46:27 AM managers.LogPrinter print
+INFO: 
+Clear collection, nothing to show.
+May 03, 2023 2:46:27 AM managers.LogPrinter println
+INFO: 
+Clear collection, nothing to show.
+May 03, 2023 2:46:27 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:46:31 AM managers.CommandExecutor run
+INFO: hlep
+May 03, 2023 2:46:32 AM managers.LogPrinter print
+INFO: Неизевстная комманда
+May 03, 2023 2:46:32 AM managers.LogPrinter println
+INFO: Неизевстная комманда
+May 03, 2023 2:46:32 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:46:32 AM managers.CommandExecutor run
+INFO: help

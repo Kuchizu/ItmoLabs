@@ -1,0 +1,38 @@
+May 03, 2023 2:43:05 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:43:11 AM managers.CommandExecutor run
+INFO: info
+May 03, 2023 2:43:11 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+May 03, 2023 2:43:11 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+May 03, 2023 2:43:11 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:43:46 AM managers.CommandExecutor run
+INFO: info
+May 03, 2023 2:43:46 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+May 03, 2023 2:43:46 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+May 03, 2023 2:43:46 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:43:48 AM managers.CommandExecutor run
+INFO: info
+May 03, 2023 2:43:48 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+May 03, 2023 2:43:48 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+May 03, 2023 2:43:48 AM managers.LogPrinter print
+INFO: >>> 

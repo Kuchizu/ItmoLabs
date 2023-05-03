@@ -5,12 +5,17 @@ import commands.*;
 
 import java.io.*;
 import java.net.*;
+import java.nio.file.AccessDeniedException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 class EofIndicatorClass implements Serializable{}
 
@@ -20,8 +25,9 @@ class EofIndicatorClass implements Serializable{}
 public class CommandExecutor {
 
     private DatagramSocket datagramSocket = new DatagramSocket();
-    private InetAddress inetAddress = InetAddress.getByName("localhost");
-    private byte[] buffer = new byte[10000];
+    private InetAddress inetAddress = InetAddress.getByName("80.89.235.70");
+    private static final Logger LOGGER = Logger.getLogger(CommandExecutor.class.getName());
+    private byte[] buffer = new byte[2048];
     private static final Map<String, Command> commands = new HashMap<>(){
         {
             put("help", new Help());
@@ -54,6 +60,8 @@ public class CommandExecutor {
      */
     public void run(InputStream input) throws IOException {
 
+        System.setOut(new LogPrinter(System.out));
+
         ByteArrayOutputStream baosc = new ByteArrayOutputStream();
         ObjectOutputStream oosc = new ObjectOutputStream(baosc);
         InfoPacket connectmePacket = new InfoPacket("connectme", null);
@@ -64,12 +72,13 @@ public class CommandExecutor {
         buffer = baosc.toByteArray();
         datagramSocket.send(new DatagramPacket(buffer, buffer.length, inetAddress, 1234));
 
-
         System.out.print(">>> ");
         Scanner cmdScanner = new Scanner(input);
 
         while(true) {
             String line = cmdScanner.nextLine().trim();
+            LOGGER.info(line);
+
             if (line.isEmpty()){
                 System.out.print(">>> ");
                 continue;
@@ -106,7 +115,26 @@ public class CommandExecutor {
                     infoPacket.setFlat(flat);
                 }
 
-                System.out.println(infoPacket);
+                if(cmd.equals("execute_script")){
+                    if(arg == null){
+                        System.out.print("Usage: execute_script: {file_name}\n>>> ");
+                        continue;
+                    }
+                    else{
+                        try {
+                            infoPacket.setArg(Files.readString(Paths.get(arg)));
+                            System.out.println(Files.readString(Paths.get(arg)));
+                        }
+                        catch (NoSuchFileException e){
+                            System.out.print("Файл не существует.\n>>> ");
+                            continue;
+                        }
+                        catch (AccessDeniedException e) {
+                            System.out.print("Ошибка чтения файла.\n>>> ");
+                            continue;
+                        }
+                    }
+                }
 
                 oos.writeObject(infoPacket);
                 oos.writeObject(new EofIndicatorClass());
@@ -124,7 +152,8 @@ public class CommandExecutor {
                 }
 
                 ExecutorService executorService = Executors.newSingleThreadExecutor();
-                DatagramPacket respPacket = new DatagramPacket(new byte[10000], 10000, inetAddress, 1234);
+                DatagramPacket respPacket = new DatagramPacket(new byte[2048], 2048, inetAddress, 1234);
+
                 executorService.execute(() -> {
                     try {
                         datagramSocket.receive(respPacket);
@@ -134,17 +163,17 @@ public class CommandExecutor {
                 });
                 executorService.shutdown();
                 try {
-                    if (!executorService.awaitTermination(1000, TimeUnit.MILLISECONDS)) {
+                    if (!executorService.awaitTermination(3000, TimeUnit.MILLISECONDS)) {
                         System.err.println("Took too long for server to respond; the server might be experiencing issues or downtime. Try again later.");
-                        System.exit(0);
+                        continue;
                     }
-                }catch(InterruptedException e){
+                } catch(InterruptedException e){
                     e.printStackTrace();
                 }
 
                 ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(respPacket.getData()));
                 InfoPacket inf = (InfoPacket) ois.readObject();
-                System.out.println("Got response:\n\n" + inf.getCmd());
+                System.out.println("\n" + inf.getCmd());
 
 
             } catch (IOException e ){
@@ -159,7 +188,7 @@ public class CommandExecutor {
     }
 
     private DatagramPacket getResponse() throws IOException {
-        DatagramPacket respPacket = new DatagramPacket(new byte[10000], 10000, inetAddress, 1234);
+        DatagramPacket respPacket = new DatagramPacket(new byte[2048], 2048, inetAddress, 1234);
         datagramSocket.receive(respPacket);
 
         return respPacket;

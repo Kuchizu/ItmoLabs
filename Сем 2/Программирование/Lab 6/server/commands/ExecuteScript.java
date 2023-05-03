@@ -5,6 +5,7 @@ import collections.Flat;
 import collections.Furnish;
 import collections.House;
 import exceptions.CreateObjException;
+import managers.CommandExecutor;
 import managers.XMLManager;
 import org.xml.sax.SAXException;
 
@@ -12,6 +13,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.File;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -30,23 +32,12 @@ public class ExecuteScript extends Command {
 
     @Override
     public String execute(String arg) throws IOException, CreateObjException, ParserConfigurationException, TransformerException, SAXException {
-        if(arg == null){
-            System.err.println("Usage: execute_script: {file_name}");
-            return arg;
-        }
 
-        Scanner scanner;
-        try {
-            scanner = new Scanner(new File(arg));
-        }
-        catch (java.io.FileNotFoundException f){
-            System.err.println("Файл не существует, но суч файл ор директорииииии");
-            return arg;
-        }
-        catch (java.lang.NullPointerException n) {
-            System.err.println("Ошибка чтения файла");
-            return arg;
-        }
+        Map<String, Command> commands = CommandExecutor.getCommands();
+
+        StringBuilder response = new StringBuilder();
+        Scanner scanner = new Scanner(arg);
+
         while (scanner.hasNext()) {
             String line = scanner.nextLine().trim();
             System.out.println(line);
@@ -88,22 +79,26 @@ public class ExecuteScript extends Command {
                             new House(hname, hyear, hnumberOfFloors, hnumberOfLifts)
                     );
                 } catch (Exception e) {
-                    System.out.println(e.getMessage());
-                    System.err.println("Ошибка при выполнении команды add.: " + e.getMessage());
-                    return arg;
+                    response.append("Ошибка при выполнении команды add.: \n").append(e.getMessage());
+                    return response.toString();
                 }
                 if(cmd.equals("add")){
                     XMLManager.addElement(flat);
-                    System.out.println("Объект " + flat.getName() + " добавлен в коллекцию.");
+                    response.append("Объект ").append(flat.getName()).append(" добавлен в коллекцию.\n");
                 }
                 else{
                     XMLManager.changeElement(Integer.parseInt(arg), flat);
-                    System.out.println("Объект " + flat.getName() + " изменён");
+                    response.append("Объект ").append(flat.getName()).append(" изменён\n");
                 }
                 continue;
             }
+            if (commands.containsKey(cmd)) {
+                response.append(commands.get(cmd).execute(sarg));
+            }
+            else{
+                response.append("Неизвестная команда: ").append(line).append("\n");
+            }
         }
-
-        return arg;
+        return response.toString();
     }
 }

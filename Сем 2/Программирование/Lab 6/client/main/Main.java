@@ -9,6 +9,7 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
+import java.util.Date;
 
 /***
 
@@ -29,7 +30,7 @@ public class Main {
      The main method that loads the collection from the XML file and starts the user interface.
      @param args an array of command-line arguments for the application
      */
-    public static void main(String[] args) throws SAXException, IOException, TransformerException, CreateObjException, ParserConfigurationException {
+    public static void main(String[] args) throws IOException, ParserConfigurationException {
 
         XMLManager.loadData(ENV_KEY);
         CommandExecutor executor = new CommandExecutor();

@@ -27,17 +27,15 @@ public class Info extends Command implements Serializable {
         ArrayDeque<Flat> flat = XMLManager.getData();
 
         if(flat.size() == 0){
-            return "Clear collection, nothing to show.";
+            return "Collection ArrayDeque\nSize: 0 elements\n";
         }
 
         return String.format(
-            """
-            
+            """            
             Collection ArrayDeque
             Size: %s elements
             CreationDate: %s
             LastElementID: %s
-            
             """,
                 flat.size(), flat.getFirst().getCreationDate(), flat.getLast().getId()
         );
