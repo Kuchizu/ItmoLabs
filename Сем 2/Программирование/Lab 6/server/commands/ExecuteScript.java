@@ -40,7 +40,6 @@ public class ExecuteScript extends Command {
 
         while (scanner.hasNext()) {
             String line = scanner.nextLine().trim();
-            System.out.println(line);
             if (line.isEmpty()) continue;
 
             String cmd = line.split(" ")[0];

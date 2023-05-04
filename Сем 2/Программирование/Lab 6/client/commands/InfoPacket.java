@@ -8,14 +8,13 @@ import java.io.Serializable;
 /**
  * ...
  */
-public class InfoPacket implements Serializable {
+public class InfoPacket extends OptionDecorator implements Serializable {
     @Serial
     private static final long serialVersionUID = 1;
 
     private String cmd;
     private String arg;
     private Flat flat;
-
 
     public Flat getFlat() {
         return flat;
@@ -26,6 +25,7 @@ public class InfoPacket implements Serializable {
     }
 
     public InfoPacket(String cmd, String arg) {
+        super("2");
         this.cmd = cmd;
         this.arg = arg;
     }

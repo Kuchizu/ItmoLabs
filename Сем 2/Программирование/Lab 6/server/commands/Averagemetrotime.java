@@ -35,7 +35,7 @@ public class Averagemetrotime extends Command {
             return arg;
         }
 
-        AtomicReference<Double> avgm = new AtomicReference<>(0.0);
+        AtomicReference <Double> avgm = new AtomicReference<>(0.0);
 
         flat.forEach((x) -> avgm.updateAndGet(v -> v + x.getTimeToMetroByTransport()));
 

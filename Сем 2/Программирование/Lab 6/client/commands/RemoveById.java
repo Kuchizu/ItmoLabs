@@ -5,6 +5,7 @@ import managers.XMLManager;
 
 import java.util.ArrayDeque;
 
+
 /**
  * Removes element from collection by it id.
  */
@@ -18,6 +19,12 @@ public class RemoveById extends Command {
     public String getDesc() {
         return "Удалить элемент из коллекции по его id";
     }
+
+    public String dec(Object o){
+        System.out.println("1");
+        return null;
+    }
+
     @Override
     public String execute(String arg) {
         if(arg == null){

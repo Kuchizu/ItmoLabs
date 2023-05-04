@@ -9,15 +9,16 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Date;
 
 /***
 
  * AYO MAIN
  * Author Kuchizu
- * Var: 3131015
+ * Var: 3131704
  * <p>
- * Passed 19.04.2023 85 / 100
+ * Passed 04.05.2023 85 / 100
 
  ***/
 
@@ -33,7 +34,14 @@ public class Main {
     public static void main(String[] args) throws IOException, ParserConfigurationException {
 
         XMLManager.loadData(ENV_KEY);
-        CommandExecutor executor = new CommandExecutor();
+
+        CommandExecutor executor;
+        if(args.length == 2){
+            executor = new CommandExecutor(args);
+        }
+        else {
+            executor = new CommandExecutor();
+        }
 
         System.out.println("Welcome to CLI!\nCollection: " + XMLManager.getData().getClass().getName() + "\nDB type: XML" + "\nElement type: " + Flat.class.getName());
         System.out.println("Enter commands below. Use help for more information.\n");

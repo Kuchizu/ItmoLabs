@@ -10,7 +10,7 @@ import java.util.ArrayDeque;
 /**
  * Shows information about collection.
  */
-public class Info extends Command implements Serializable {
+public class Info extends Command implements Serializable{
     private static final long serialVersionUID = 1;
     @Override
     public String getName() {

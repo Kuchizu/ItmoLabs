@@ -12,9 +12,6 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 class EofIndicatorClass implements Serializable{}
@@ -25,7 +22,9 @@ class EofIndicatorClass implements Serializable{}
 public class CommandExecutor {
 
     private DatagramSocket datagramSocket = new DatagramSocket();
-    private InetAddress inetAddress = InetAddress.getByName("80.89.235.70");
+    private static String host = null;
+    private static int port;
+    private InetAddress inetAddress;
     private static final Logger LOGGER = Logger.getLogger(CommandExecutor.class.getName());
     private byte[] buffer = new byte[2048];
     private static final Map<String, Command> commands = new HashMap<>(){
@@ -49,6 +48,14 @@ public class CommandExecutor {
     };
 
     public CommandExecutor() throws SocketException, UnknownHostException {
+        host = "localhost";
+        port = 1234;
+        this.inetAddress = InetAddress.getByName(host);
+    }
+    public CommandExecutor(String[] args) throws SocketException, UnknownHostException {
+        host = args[0];
+        port = Integer.parseInt(args[1]);
+        this.inetAddress = InetAddress.getByName(host);
     }
 
     public static Map<String, Command> getCommands(){
@@ -62,6 +69,8 @@ public class CommandExecutor {
 
         System.setOut(new LogPrinter(System.out));
 
+        System.out.printf("Client started running on [%s][%s]\n\n", host, port);
+
         ByteArrayOutputStream baosc = new ByteArrayOutputStream();
         ObjectOutputStream oosc = new ObjectOutputStream(baosc);
         InfoPacket connectmePacket = new InfoPacket("connectme", null);
@@ -70,7 +79,8 @@ public class CommandExecutor {
         oosc.flush();
         oosc.close();
         buffer = baosc.toByteArray();
-        datagramSocket.send(new DatagramPacket(buffer, buffer.length, inetAddress, 1234));
+        datagramSocket.setSoTimeout(3000);
+        datagramSocket.send(new DatagramPacket(buffer, buffer.length, inetAddress, port));
 
         System.out.print(">>> ");
         Scanner cmdScanner = new Scanner(input);
@@ -91,7 +101,7 @@ public class CommandExecutor {
             }
 
             if(!(commands.containsKey(cmd))){
-                System.out.println("Неизевстная комманда");
+                System.out.println("Неизвестная команда");
                 System.out.print(">>> ");
                 continue;
             }
@@ -142,7 +152,7 @@ public class CommandExecutor {
                 oos.close();
 
                 buffer = baos.toByteArray();
-                DatagramPacket cmdPacket = new DatagramPacket(buffer, buffer.length, inetAddress, 1234);
+                DatagramPacket cmdPacket = new DatagramPacket(buffer, buffer.length, inetAddress, port);
 
                 datagramSocket.send(cmdPacket);
 
@@ -151,24 +161,14 @@ public class CommandExecutor {
                     System.exit(0);
                 }
 
-                ExecutorService executorService = Executors.newSingleThreadExecutor();
-                DatagramPacket respPacket = new DatagramPacket(new byte[2048], 2048, inetAddress, 1234);
+                DatagramPacket respPacket = new DatagramPacket(new byte[2048], 2048, inetAddress, port);
 
-                executorService.execute(() -> {
-                    try {
-                        datagramSocket.receive(respPacket);
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                });
-                executorService.shutdown();
                 try {
-                    if (!executorService.awaitTermination(3000, TimeUnit.MILLISECONDS)) {
-                        System.err.println("Took too long for server to respond; the server might be experiencing issues or downtime. Try again later.");
-                        continue;
-                    }
-                } catch(InterruptedException e){
-                    e.printStackTrace();
+                    datagramSocket.receive(respPacket);
+
+                } catch (SocketTimeoutException e){
+                    System.err.println("Took too long for server to respond; The server might be experiencing issues or downtime. Try again later.\nServer: " + host);
+                    continue;
                 }
 
                 ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(respPacket.getData()));
@@ -185,13 +185,6 @@ public class CommandExecutor {
 
             System.out.print(">>> ");
         }
-    }
-
-    private DatagramPacket getResponse() throws IOException {
-        DatagramPacket respPacket = new DatagramPacket(new byte[2048], 2048, inetAddress, 1234);
-        datagramSocket.receive(respPacket);
-
-        return respPacket;
     }
 
 }

@@ -23,7 +23,16 @@ public class CommandExecutor {
     private void saveDB() throws ParserConfigurationException {
         XMLManager.writeToFile(Main.ENV_KEY);
     }
+    private static int port;
     private static final Logger LOGGER = Logger.getLogger(CommandExecutor.class.getName());
+
+    public CommandExecutor(){
+        port = 1234;
+    }
+    public CommandExecutor(String[] args){
+        port = Integer.parseInt(args[0]);
+    }
+
     class JTread extends Thread{
         public void run(){
 
@@ -80,11 +89,13 @@ public class CommandExecutor {
 
         DatagramSocket datagramSocket = null;
         try {
-            datagramSocket = new DatagramSocket(1234);
-            System.out.printf("Server started handling [%s][1234].\n", InetAddress.getLocalHost());
+            datagramSocket = new DatagramSocket(port);
+            System.out.printf("Server started handling [%s][%s].\n", InetAddress.getLocalHost(), port);
+
         } catch (BindException e){
-            System.err.println("Server already running in other place.");
+            System.err.printf("Server already running in other place. Port %s is busy.\n", port);
             System.exit(0);
+
         } catch (UnknownHostException e) {
             throw new RuntimeException(e);
         }

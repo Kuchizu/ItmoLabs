@@ -1,0 +1,82 @@
+May 03, 2023 2:30:27 PM managers.LogPrinter print
+INFO: Client started running on [
+May 03, 2023 2:30:27 PM managers.LogPrinter print
+INFO: 80.89.235.70
+May 03, 2023 2:30:27 PM managers.LogPrinter print
+INFO: ][
+May 03, 2023 2:30:27 PM managers.LogPrinter print
+INFO: 1234
+May 03, 2023 2:30:27 PM managers.LogPrinter print
+INFO: ]
+
+
+May 03, 2023 2:30:27 PM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:30:30 PM managers.CommandExecutor run
+INFO: info
+May 03, 2023 2:30:30 PM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 1 elements
+CreationDate: 2023-05-03T09:45:38+03:00[Europe/Moscow]
+LastElementID: 823458668
+
+May 03, 2023 2:30:30 PM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 1 elements
+CreationDate: 2023-05-03T09:45:38+03:00[Europe/Moscow]
+LastElementID: 823458668
+
+May 03, 2023 2:30:30 PM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:30:32 PM managers.CommandExecutor run
+INFO: show
+May 03, 2023 2:30:32 PM managers.LogPrinter print
+INFO: 
+    ***    ***    ***
+Flat №823458668
+    name: krg
+    coordinates: X: 4; Y: 5.0
+    creationDate: 2023-05-03T09:45:38+03:00[Europe/Moscow]
+    area: 565
+    numberOfRooms: 4
+    timeToMetroOnFoot: 43534.0
+    timeToMetroByTransport: 465.0
+    furnish: FINE
+House:
+    name: 4454
+    year: 4
+    numberOfFloors: 3
+    numberOfLifts: 4
+
+    ***    ***    ***
+
+May 03, 2023 2:30:33 PM managers.LogPrinter println
+INFO: 
+    ***    ***    ***
+Flat №823458668
+    name: krg
+    coordinates: X: 4; Y: 5.0
+    creationDate: 2023-05-03T09:45:38+03:00[Europe/Moscow]
+    area: 565
+    numberOfRooms: 4
+    timeToMetroOnFoot: 43534.0
+    timeToMetroByTransport: 465.0
+    furnish: FINE
+House:
+    name: 4454
+    year: 4
+    numberOfFloors: 3
+    numberOfLifts: 4
+
+    ***    ***    ***
+
+May 03, 2023 2:30:33 PM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 2:30:33 PM managers.CommandExecutor run
+INFO: exit
+May 03, 2023 2:30:33 PM managers.LogPrinter print
+INFO: Closing client application, bye!
+May 03, 2023 2:30:33 PM managers.LogPrinter println
+INFO: Closing client application, bye!

@@ -5,14 +5,15 @@ import managers.XMLManager;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.Arrays;
 
 /***
 
  * AYO MAIN
  * Author Kuchizu
- * Var: 3131015
+ * Var: 3131704
  * <p>
- * Passed 19.04.2023 85 / 100
+ * Passed 04.05.2023 85 / 100
 
  ***/
 
@@ -28,7 +29,15 @@ public class Main {
     public static void main(String[] args) throws IOException, ParserConfigurationException {
 
         XMLManager.loadData(ENV_KEY);
-        CommandExecutor executor = new CommandExecutor();
+        CommandExecutor executor;
+
+        if(args.length == 1){
+            executor = new CommandExecutor(args);
+        }
+        else{
+            executor = new CommandExecutor();
+        }
+
 
         executor.run();
     }

@@ -4,6 +4,7 @@ import collections.Flat;
 import managers.XMLManager;
 
 import java.util.ArrayDeque;
+import java.util.stream.Collectors;
 
 /**
  * Shows all collection elements.
@@ -27,12 +28,6 @@ public class Show extends Command{
             return "Clear collection, nothing to show.";
         }
 
-        StringBuilder res = new StringBuilder();
-
-        for(Flat i: flat){
-            res.append(i.toString());
-        }
-
-        return res.toString();
+        return flat.stream().map(Flat::toString).collect(Collectors.joining());
     }
 }
