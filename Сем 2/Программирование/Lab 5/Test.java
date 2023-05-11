@@ -1,15 +1,10 @@
-import collections.Flat;
-import managers.XMLManager;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
 import java.time.ZonedDateTime;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 
 public class Test {
     public class q{
@@ -47,11 +42,15 @@ public class Test {
     public void main(String[] args) throws ParserConfigurationException, IOException, TransformerException, SAXException {
         System.out.println(ZonedDateTime.now());
 
-        List<Animal> animals = new ArrayList<>();
-        animals.add(new Animal());
-        animals.add(new Animal());
+//        List<Animal> animals = new ArrayList<>();
+//        animals.add(new Animal());
+//        animals.add(new Animal());
+//
+//        iterateAnimals(animals);
 
-        iterateAnimals(animals);
+        String s = "   ";
+        s = s.strip();
+        System.out.println(s.isEmpty());
 
     }
 
