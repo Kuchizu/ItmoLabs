@@ -1,0 +1,212 @@
+May 14, 2023 1:38:14 AM managers.LogPrinter print
+INFO: Server started handling [
+May 14, 2023 1:38:14 AM managers.LogPrinter print
+INFO: Kuchizu/127.0.1.1
+May 14, 2023 1:38:14 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:38:14 AM managers.LogPrinter print
+INFO: 1234
+May 14, 2023 1:38:14 AM managers.LogPrinter print
+INFO: ].
+
+May 14, 2023 1:38:19 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:38:19 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:38:19 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:38:19 AM managers.LogPrinter print
+INFO: 47255
+May 14, 2023 1:38:19 AM managers.LogPrinter print
+INFO: ]: [Connected]
+
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: 47255
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: InfoPacket{cmd='info', arg='null'}
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: 
+
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: 47255
+May 14, 2023 1:38:22 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 14, 2023 1:42:16 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:42:16 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:42:16 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:42:16 AM managers.LogPrinter print
+INFO: 35608
+May 14, 2023 1:42:16 AM managers.LogPrinter print
+INFO: ]: [Connected]
+
+May 14, 2023 1:42:19 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:42:19 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:42:19 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:42:19 AM managers.LogPrinter print
+INFO: 35608
+May 14, 2023 1:42:20 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 14, 2023 1:42:20 AM managers.LogPrinter print
+INFO: InfoPacket{cmd='help', arg='null'}
+May 14, 2023 1:42:20 AM managers.LogPrinter print
+INFO: 
+
+May 14, 2023 1:42:20 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:42:20 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:42:20 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:42:20 AM managers.LogPrinter print
+INFO: 35608
+May 14, 2023 1:42:20 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 14, 2023 1:43:34 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:43:34 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:43:34 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:43:34 AM managers.LogPrinter print
+INFO: 56485
+May 14, 2023 1:43:34 AM managers.LogPrinter print
+INFO: ]: [Connected]
+
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: 56485
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: InfoPacket{cmd='info', arg='null'}
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: 
+
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: 56485
+May 14, 2023 1:43:41 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: 56485
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: InfoPacket{cmd='help', arg='null'}
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: 
+
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: 56485
+May 14, 2023 1:43:42 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: 56485
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: InfoPacket{cmd='remove_head', arg='null'}
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: 
+
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: 56485
+May 14, 2023 1:43:48 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: 56485
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: InfoPacket{cmd='help', arg='null'}
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: 
+
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: [
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: ][
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: 56485
+May 14, 2023 1:43:51 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+

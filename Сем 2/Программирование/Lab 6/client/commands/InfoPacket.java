@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * ...
  */
-public class InfoPacket extends OptionDecorator implements Serializable {
+public class InfoPacket implements Serializable {
     @Serial
     private static final long serialVersionUID = 1;
 

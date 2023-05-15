@@ -1,0 +1,80 @@
+May 15, 2023 3:12:17 AM managers.LogPrinter print
+INFO: Client started running on [
+May 15, 2023 3:12:17 AM managers.LogPrinter print
+INFO: localhost
+May 15, 2023 3:12:17 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:12:17 AM managers.LogPrinter print
+INFO: 1234
+May 15, 2023 3:12:17 AM managers.LogPrinter print
+INFO: ]
+
+
+May 15, 2023 3:12:17 AM managers.LogPrinter print
+INFO: >>> 
+May 15, 2023 3:12:18 AM managers.CommandExecutor run
+INFO: info
+May 15, 2023 3:12:18 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+
+May 15, 2023 3:12:18 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+
+May 15, 2023 3:12:18 AM managers.LogPrinter print
+INFO: >>> 
+May 15, 2023 3:12:22 AM managers.CommandExecutor run
+INFO: help
+May 15, 2023 3:12:22 AM managers.LogPrinter print
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 3:12:22 AM managers.LogPrinter println
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 3:12:22 AM managers.LogPrinter print
+INFO: >>> 
+May 15, 2023 3:12:30 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 3:12:30 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 15, 2023 3:12:32 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 15, 2023 3:12:33 AM managers.LogPrinter print
+INFO: a
+May 15, 2023 3:12:33 AM managers.LogPrinter println
+INFO: a
+May 15, 2023 3:12:33 AM managers.LogPrinter print
+INFO: a
+May 15, 2023 3:12:33 AM managers.LogPrinter println
+INFO: a

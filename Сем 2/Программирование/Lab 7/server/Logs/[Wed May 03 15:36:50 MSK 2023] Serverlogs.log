@@ -1,0 +1,95 @@
+May 03, 2023 3:36:50 PM managers.LogPrinter print
+INFO: Server started handling [
+May 03, 2023 3:36:50 PM managers.LogPrinter print
+INFO: Kuchizu/127.0.1.1
+May 03, 2023 3:36:50 PM managers.LogPrinter print
+INFO: ][
+May 03, 2023 3:36:50 PM managers.LogPrinter print
+INFO: 1234
+May 03, 2023 3:36:50 PM managers.LogPrinter print
+INFO: ].
+
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: [
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: ][
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: 34826
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: InfoPacket{cmd='info', arg='null'}
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: 
+
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: [
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: ][
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: 34826
+May 03, 2023 3:36:52 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: [
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: ][
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: 34826
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: InfoPacket{cmd='show', arg='null'}
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: 
+
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: [
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: ][
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: 34826
+May 03, 2023 3:36:54 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: [
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: ][
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: 34826
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: InfoPacket{cmd='info', arg='null'}
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: 
+
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: [
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: ][
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: 34826
+May 03, 2023 3:36:55 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+

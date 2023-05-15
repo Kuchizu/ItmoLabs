@@ -1,0 +1,67 @@
+May 15, 2023 4:07:43 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 4:07:43 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 4:07:43 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 4:07:43 AM managers.LogPrinter print
+INFO: 44607
+May 15, 2023 4:07:43 AM managers.LogPrinter print
+INFO: ]: [Connected]
+
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: 44607
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = '/login', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: 44607
+May 15, 2023 4:07:48 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: 44607
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'show', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: 44607
+May 15, 2023 4:07:49 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+

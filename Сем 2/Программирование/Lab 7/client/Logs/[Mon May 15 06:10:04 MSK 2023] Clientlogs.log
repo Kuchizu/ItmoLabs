@@ -1,0 +1,32 @@
+May 15, 2023 6:10:04 AM managers.LogPrinter print
+INFO: Client started running on [
+May 15, 2023 6:10:04 AM managers.LogPrinter print
+INFO: localhost
+May 15, 2023 6:10:04 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:10:04 AM managers.LogPrinter print
+INFO: 1234
+May 15, 2023 6:10:04 AM managers.LogPrinter print
+INFO: ]
+
+
+May 15, 2023 6:10:04 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:10:04 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:10:04 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:10:10 AM managers.CommandExecutor run
+INFO: e                    response.append("Объект ").append(flat.getName()).append(" изменён\n");
+May 15, 2023 6:10:10 AM managers.LogPrinter print
+INFO: Неизвестная команда
+May 15, 2023 6:10:10 AM managers.LogPrinter println
+INFO: Неизвестная команда
+May 15, 2023 6:10:10 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:10:10 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:10:10 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:10:20 AM managers.CommandExecutor run
+INFO: execute_script 1234

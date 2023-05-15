@@ -1,0 +1,952 @@
+May 15, 2023 5:29:55 AM managers.LogPrinter print
+INFO: Client started running on [
+May 15, 2023 5:29:55 AM managers.LogPrinter print
+INFO: localhost
+May 15, 2023 5:29:55 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 5:29:55 AM managers.LogPrinter print
+INFO: 1234
+May 15, 2023 5:29:55 AM managers.LogPrinter print
+INFO: ]
+
+
+May 15, 2023 5:29:55 AM managers.LogPrinter print
+INFO: >>> 
+May 15, 2023 5:30:00 AM managers.CommandExecutor run
+INFO: info
+May 15, 2023 5:30:00 AM managers.LogPrinter print
+INFO: Для использования команд войдите в систему (/login) или зарегистрируйтесь (/reg)
+May 15, 2023 5:30:00 AM managers.LogPrinter println
+INFO: Для использования команд войдите в систему (/login) или зарегистрируйтесь (/reg)
+May 15, 2023 5:30:00 AM managers.LogPrinter print
+INFO: >>> 
+May 15, 2023 5:30:05 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 5:30:05 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 15, 2023 5:30:06 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 15, 2023 5:30:07 AM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 15, 2023 5:30:07 AM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 15, 2023 5:30:07 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:30:07 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:30:07 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:30:08 AM managers.CommandExecutor run
+INFO: info
+May 15, 2023 5:30:08 AM managers.LogPrinter print
+INFO: Collection ArrayDeque
+Size: 4 elements
+CreationDate: 2023-05-15T03:58:42.179563+03:00[Europe/Moscow]
+LastElementID: 4
+
+May 15, 2023 5:30:08 AM managers.LogPrinter println
+INFO: Collection ArrayDeque
+Size: 4 elements
+CreationDate: 2023-05-15T03:58:42.179563+03:00[Europe/Moscow]
+LastElementID: 4
+
+May 15, 2023 5:30:08 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:30:08 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:30:08 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:30:34 AM managers.CommandExecutor run
+INFO: help
+May 15, 2023 5:30:34 AM managers.LogPrinter print
+INFO: remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:30:34 AM managers.LogPrinter println
+INFO: remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:30:34 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:30:34 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:30:34 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:30:45 AM managers.CommandExecutor run
+INFO: help
+May 15, 2023 5:30:45 AM managers.LogPrinter print
+INFO: remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:30:45 AM managers.LogPrinter println
+INFO: remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:30:45 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:30:45 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:30:45 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:30:50 AM managers.CommandExecutor run
+INFO: head
+May 15, 2023 5:30:50 AM managers.LogPrinter print
+INFO:     ***    ***    ***
+
+Flat №1
+    name: 1
+    coordinates: X: 1; Y: 1.0
+    creationDate: 2023-05-15T03:58:42.179563+03:00[Europe/Moscow]
+    area: 1
+    numberOfRooms: 1
+    timeToMetroOnFoot: 1.0
+    timeToMetroByTransport: 1.0
+    furnish: NONE
+House:
+    name: 1
+    year: 1
+    numberOfFloors: 1
+    numberOfLifts: 1
+
+    ***    ***    ***
+
+May 15, 2023 5:30:50 AM managers.LogPrinter println
+INFO:     ***    ***    ***
+
+Flat №1
+    name: 1
+    coordinates: X: 1; Y: 1.0
+    creationDate: 2023-05-15T03:58:42.179563+03:00[Europe/Moscow]
+    area: 1
+    numberOfRooms: 1
+    timeToMetroOnFoot: 1.0
+    timeToMetroByTransport: 1.0
+    furnish: NONE
+House:
+    name: 1
+    year: 1
+    numberOfFloors: 1
+    numberOfLifts: 1
+
+    ***    ***    ***
+
+May 15, 2023 5:30:50 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:30:50 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:30:50 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:31:03 AM managers.CommandExecutor run
+INFO: help
+May 15, 2023 5:31:03 AM managers.LogPrinter print
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:31:03 AM managers.LogPrinter println
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:31:03 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:31:03 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:31:03 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:31:05 AM managers.CommandExecutor run
+INFO: info
+May 15, 2023 5:31:05 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 4 elements
+CreationDate: 2023-05-15T03:58:42.179563+03:00[Europe/Moscow]
+LastElementID: 4
+
+May 15, 2023 5:31:05 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 4 elements
+CreationDate: 2023-05-15T03:58:42.179563+03:00[Europe/Moscow]
+LastElementID: 4
+
+May 15, 2023 5:31:05 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:31:05 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:31:05 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:31:15 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 5:31:15 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 15, 2023 5:31:18 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 15, 2023 5:31:19 AM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 15, 2023 5:31:19 AM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 15, 2023 5:31:19 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:31:19 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:31:19 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:31:22 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 5:31:22 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 15, 2023 5:31:24 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 15, 2023 5:31:25 AM managers.LogPrinter print
+INFO: User with login ZUkuchi not found.
+May 15, 2023 5:31:25 AM managers.LogPrinter println
+INFO: User with login ZUkuchi not found.
+May 15, 2023 5:31:25 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:31:25 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:31:25 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:31:27 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 5:31:27 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 15, 2023 5:31:29 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 15, 2023 5:31:30 AM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 15, 2023 5:31:30 AM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 15, 2023 5:31:30 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:31:30 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:31:30 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:31:33 AM managers.CommandExecutor run
+INFO: remove_jead
+May 15, 2023 5:31:33 AM managers.LogPrinter print
+INFO: Неизвестная команда
+May 15, 2023 5:31:33 AM managers.LogPrinter println
+INFO: Неизвестная команда
+May 15, 2023 5:31:33 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:31:33 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:31:33 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:31:41 AM managers.CommandExecutor run
+INFO: remove_head
+May 15, 2023 5:31:41 AM managers.LogPrinter print
+INFO: You don't have permission to modify this object.
+May 15, 2023 5:31:41 AM managers.LogPrinter println
+INFO: You don't have permission to modify this object.
+May 15, 2023 5:31:41 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:31:41 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:31:41 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:31:46 AM managers.CommandExecutor run
+INFO: info
+May 15, 2023 5:31:46 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 4 elements
+CreationDate: 2023-05-15T03:58:42.179563+03:00[Europe/Moscow]
+LastElementID: 4
+
+May 15, 2023 5:31:46 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 4 elements
+CreationDate: 2023-05-15T03:58:42.179563+03:00[Europe/Moscow]
+LastElementID: 4
+
+May 15, 2023 5:31:46 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:31:46 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:31:46 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:31:48 AM managers.CommandExecutor run
+INFO: help
+May 15, 2023 5:31:48 AM managers.LogPrinter print
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:31:48 AM managers.LogPrinter println
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:31:48 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:31:48 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:31:48 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:31:50 AM managers.CommandExecutor run
+INFO: clear
+May 15, 2023 5:31:50 AM managers.LogPrinter print
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:31:50 AM managers.LogPrinter println
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:31:50 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:31:50 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:31:50 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:00 AM managers.CommandExecutor run
+INFO: count_by_time_to_metro_on_foot
+May 15, 2023 5:32:00 AM managers.LogPrinter print
+INFO: Usage: count_by_time_to_metro_on_foot {arg}
+May 15, 2023 5:32:00 AM managers.LogPrinter println
+INFO: Usage: count_by_time_to_metro_on_foot {arg}
+May 15, 2023 5:32:00 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:00 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:00 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:02 AM managers.CommandExecutor run
+INFO: count_by_time_to_metro_on_foot 1
+May 15, 2023 5:32:02 AM managers.LogPrinter print
+INFO: Количество элементов, значение поля timeToMetroOnFoot которых равно заданному: 1
+May 15, 2023 5:32:02 AM managers.LogPrinter println
+INFO: Количество элементов, значение поля timeToMetroOnFoot которых равно заданному: 1
+May 15, 2023 5:32:02 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:02 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:02 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:08 AM managers.CommandExecutor run
+INFO: count_by_time_to_metro_on_foot 2
+May 15, 2023 5:32:08 AM managers.LogPrinter print
+INFO: Количество элементов, значение поля timeToMetroOnFoot которых равно заданному: 0
+May 15, 2023 5:32:08 AM managers.LogPrinter println
+INFO: Количество элементов, значение поля timeToMetroOnFoot которых равно заданному: 0
+May 15, 2023 5:32:08 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:08 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:08 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:11 AM managers.CommandExecutor run
+INFO: count_by_time_to_metro_on_foot 3
+May 15, 2023 5:32:11 AM managers.LogPrinter print
+INFO: Количество элементов, значение поля timeToMetroOnFoot которых равно заданному: 1
+May 15, 2023 5:32:11 AM managers.LogPrinter println
+INFO: Количество элементов, значение поля timeToMetroOnFoot которых равно заданному: 1
+May 15, 2023 5:32:11 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:11 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:11 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:16 AM managers.CommandExecutor run
+INFO: clear
+May 15, 2023 5:32:16 AM managers.LogPrinter print
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:32:16 AM managers.LogPrinter println
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:32:16 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:16 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:16 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:22 AM managers.CommandExecutor run
+INFO: 
+May 15, 2023 5:32:22 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:22 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:22 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:22 AM managers.CommandExecutor run
+INFO: [Zukuchi] >>> count_by_timeremove_by_id_to_metro_on_foot
+May 15, 2023 5:32:22 AM managers.LogPrinter print
+INFO: Неизвестная команда
+May 15, 2023 5:32:22 AM managers.LogPrinter println
+INFO: Неизвестная команда
+May 15, 2023 5:32:22 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:22 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:22 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:24 AM managers.CommandExecutor run
+INFO: [Zukuchi] >>> count_by_timeremove_by_id_to_metro_on_foot
+May 15, 2023 5:32:24 AM managers.LogPrinter print
+INFO: Неизвестная команда
+May 15, 2023 5:32:24 AM managers.LogPrinter println
+INFO: Неизвестная команда
+May 15, 2023 5:32:24 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:24 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:24 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:28 AM managers.CommandExecutor run
+INFO: remove_by_id 1
+May 15, 2023 5:32:28 AM managers.LogPrinter print
+INFO: You don't have permission to modify this object.
+May 15, 2023 5:32:28 AM managers.LogPrinter println
+INFO: You don't have permission to modify this object.
+May 15, 2023 5:32:28 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:28 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:28 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:35 AM managers.CommandExecutor run
+INFO: remove_lower 1
+May 15, 2023 5:32:35 AM managers.LogPrinter print
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:32:35 AM managers.LogPrinter println
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:32:35 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:35 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:35 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:40 AM managers.CommandExecutor run
+INFO: remove_lower 123123
+May 15, 2023 5:32:40 AM managers.LogPrinter print
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:32:40 AM managers.LogPrinter println
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:32:40 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:40 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:40 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:45 AM managers.CommandExecutor run
+INFO: remove_lower asd
+May 15, 2023 5:32:45 AM managers.LogPrinter print
+INFO: Invalid argument, asd can not be parsed to int
+May 15, 2023 5:32:45 AM managers.LogPrinter println
+INFO: Invalid argument, asd can not be parsed to int
+May 15, 2023 5:32:45 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:45 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:45 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:32:52 AM managers.CommandExecutor run
+INFO: remove_lower 123123123123131213123
+May 15, 2023 5:32:52 AM managers.LogPrinter print
+INFO: Invalid argument, 123123123123131213123 can not be parsed to int
+May 15, 2023 5:32:52 AM managers.LogPrinter println
+INFO: Invalid argument, 123123123123131213123 can not be parsed to int
+May 15, 2023 5:32:52 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:32:52 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:32:52 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:33:18 AM managers.CommandExecutor run
+INFO: update 1
+May 15, 2023 5:33:18 AM managers.LogPrinter print
+INFO: Введите Name (String), /q для отмены:
+May 15, 2023 5:33:18 AM managers.LogPrinter println
+INFO: Введите Name (String), /q для отмены:
+May 15, 2023 5:33:19 AM managers.LogPrinter print
+INFO: Введите координаты x, y (Long, Double):
+May 15, 2023 5:33:19 AM managers.LogPrinter println
+INFO: Введите координаты x, y (Long, Double):
+May 15, 2023 5:33:20 AM managers.LogPrinter print
+INFO: Введите area (Integer): 
+May 15, 2023 5:33:20 AM managers.LogPrinter println
+INFO: Введите area (Integer): 
+May 15, 2023 5:33:20 AM managers.LogPrinter print
+INFO: Введите numberOfRooms (Integer):
+May 15, 2023 5:33:20 AM managers.LogPrinter println
+INFO: Введите numberOfRooms (Integer):
+May 15, 2023 5:33:20 AM managers.LogPrinter print
+INFO: Введите timeToMetroOnFoot (Float):
+May 15, 2023 5:33:20 AM managers.LogPrinter println
+INFO: Введите timeToMetroOnFoot (Float):
+May 15, 2023 5:33:20 AM managers.LogPrinter print
+INFO: Введите timeToMetroByTransport (Double):
+May 15, 2023 5:33:20 AM managers.LogPrinter println
+INFO: Введите timeToMetroByTransport (Double):
+May 15, 2023 5:33:21 AM managers.LogPrinter print
+INFO: Введите furnish (Enum [NONE, DESIGNER, FINE, LITTLE]):
+May 15, 2023 5:33:21 AM managers.LogPrinter println
+INFO: Введите furnish (Enum [NONE, DESIGNER, FINE, LITTLE]):
+May 15, 2023 5:33:23 AM managers.LogPrinter print
+INFO: Введите name of House (String):
+May 15, 2023 5:33:23 AM managers.LogPrinter println
+INFO: Введите name of House (String):
+May 15, 2023 5:33:24 AM managers.LogPrinter print
+INFO: Введите year of House (Long):
+May 15, 2023 5:33:24 AM managers.LogPrinter println
+INFO: Введите year of House (Long):
+May 15, 2023 5:33:24 AM managers.LogPrinter print
+INFO: Введите numberOfFloors of House (Long):
+May 15, 2023 5:33:24 AM managers.LogPrinter println
+INFO: Введите numberOfFloors of House (Long):
+May 15, 2023 5:33:25 AM managers.LogPrinter print
+INFO: Введите numberOfLifts of House (Int):
+May 15, 2023 5:33:25 AM managers.LogPrinter println
+INFO: Введите numberOfLifts of House (Int):
+May 15, 2023 5:33:25 AM managers.LogPrinter print
+INFO: You don't have permission to modify this object.
+May 15, 2023 5:33:25 AM managers.LogPrinter println
+INFO: You don't have permission to modify this object.
+May 15, 2023 5:33:25 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:33:25 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 5:33:25 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:34:01 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 5:34:01 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 15, 2023 5:34:03 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 15, 2023 5:34:05 AM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 15, 2023 5:34:05 AM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 15, 2023 5:34:05 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:34:05 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:34:05 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:34:09 AM managers.CommandExecutor run
+INFO: help
+May 15, 2023 5:34:09 AM managers.LogPrinter print
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:34:09 AM managers.LogPrinter println
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:34:09 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:34:09 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:34:09 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:34:12 AM managers.CommandExecutor run
+INFO: remove_by_id 1
+May 15, 2023 5:34:12 AM managers.LogPrinter print
+INFO: Removed.
+May 15, 2023 5:34:12 AM managers.LogPrinter println
+INFO: Removed.
+May 15, 2023 5:34:12 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:34:12 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:34:13 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:34:26 AM managers.CommandExecutor run
+INFO: update id 1
+May 15, 2023 5:34:30 AM managers.CommandExecutor run
+INFO: 
+May 15, 2023 5:34:30 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:34:30 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:34:30 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:34:32 AM managers.CommandExecutor run
+INFO: update 1
+May 15, 2023 5:34:32 AM managers.LogPrinter print
+INFO: Введите Name (String), /q для отмены:
+May 15, 2023 5:34:32 AM managers.LogPrinter println
+INFO: Введите Name (String), /q для отмены:
+May 15, 2023 5:34:33 AM managers.LogPrinter print
+INFO: Введите координаты x, y (Long, Double):
+May 15, 2023 5:34:33 AM managers.LogPrinter println
+INFO: Введите координаты x, y (Long, Double):
+May 15, 2023 5:34:34 AM managers.LogPrinter print
+INFO: Введите area (Integer): 
+May 15, 2023 5:34:34 AM managers.LogPrinter println
+INFO: Введите area (Integer): 
+May 15, 2023 5:34:34 AM managers.LogPrinter print
+INFO: Введите numberOfRooms (Integer):
+May 15, 2023 5:34:34 AM managers.LogPrinter println
+INFO: Введите numberOfRooms (Integer):
+May 15, 2023 5:34:35 AM managers.LogPrinter print
+INFO: Введите timeToMetroOnFoot (Float):
+May 15, 2023 5:34:35 AM managers.LogPrinter println
+INFO: Введите timeToMetroOnFoot (Float):
+May 15, 2023 5:34:35 AM managers.LogPrinter print
+INFO: Введите timeToMetroByTransport (Double):
+May 15, 2023 5:34:35 AM managers.LogPrinter println
+INFO: Введите timeToMetroByTransport (Double):
+May 15, 2023 5:34:35 AM managers.LogPrinter print
+INFO: Введите furnish (Enum [NONE, DESIGNER, FINE, LITTLE]):
+May 15, 2023 5:34:35 AM managers.LogPrinter println
+INFO: Введите furnish (Enum [NONE, DESIGNER, FINE, LITTLE]):
+May 15, 2023 5:34:37 AM managers.LogPrinter print
+INFO: Введите name of House (String):
+May 15, 2023 5:34:37 AM managers.LogPrinter println
+INFO: Введите name of House (String):
+May 15, 2023 5:34:37 AM managers.LogPrinter print
+INFO: Введите year of House (Long):
+May 15, 2023 5:34:37 AM managers.LogPrinter println
+INFO: Введите year of House (Long):
+May 15, 2023 5:34:38 AM managers.LogPrinter print
+INFO: Введите numberOfFloors of House (Long):
+May 15, 2023 5:34:38 AM managers.LogPrinter println
+INFO: Введите numberOfFloors of House (Long):
+May 15, 2023 5:34:39 AM managers.LogPrinter print
+INFO: Введите numberOfLifts of House (Int):
+May 15, 2023 5:34:39 AM managers.LogPrinter println
+INFO: Введите numberOfLifts of House (Int):
+May 15, 2023 5:34:39 AM managers.LogPrinter print
+INFO: Object by id 1 not found
+May 15, 2023 5:34:39 AM managers.LogPrinter println
+INFO: Object by id 1 not found
+May 15, 2023 5:34:39 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:34:39 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:34:39 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:34:47 AM managers.CommandExecutor run
+INFO: HELP
+May 15, 2023 5:34:47 AM managers.LogPrinter print
+INFO: Неизвестная команда
+May 15, 2023 5:34:47 AM managers.LogPrinter println
+INFO: Неизвестная команда
+May 15, 2023 5:34:47 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:34:47 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:34:47 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:34:48 AM managers.CommandExecutor run
+INFO: help
+May 15, 2023 5:34:48 AM managers.LogPrinter print
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:34:48 AM managers.LogPrinter println
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 5:34:48 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:34:48 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:34:48 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:35:10 AM managers.CommandExecutor run
+INFO: remove_lower 2
+May 15, 2023 5:35:10 AM managers.LogPrinter print
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:35:10 AM managers.LogPrinter println
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:35:10 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:35:10 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:35:10 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:35:13 AM managers.CommandExecutor run
+INFO: remove_lower 3
+May 15, 2023 5:36:22 AM managers.CommandExecutor run
+INFO: 
+May 15, 2023 5:36:22 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:36:22 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:36:22 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:36:24 AM managers.CommandExecutor run
+INFO: show
+May 15, 2023 5:36:33 AM managers.CommandExecutor run
+INFO: show
+May 15, 2023 5:36:33 AM managers.LogPrinter print
+INFO:     ***    ***    ***
+
+Flat №3
+    name: 3
+    coordinates: X: 3; Y: 3.0
+    creationDate: 2023-05-15T04:11:16.425006+03:00[Europe/Moscow]
+    area: 3
+    numberOfRooms: 3
+    timeToMetroOnFoot: 3.0
+    timeToMetroByTransport: 3.0
+    furnish: LITTLE
+House:
+    name: 3
+    year: 3
+    numberOfFloors: 3
+    numberOfLifts: 3
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №4
+    name: 4
+    coordinates: X: 4; Y: 4.0
+    creationDate: 2023-05-15T04:14:17.472883+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 4
+    timeToMetroOnFoot: 4.0
+    timeToMetroByTransport: 4.0
+    furnish: LITTLE
+House:
+    name: 4
+    year: 4
+    numberOfFloors: 4
+    numberOfLifts: 4
+
+    ***    ***    ***
+
+May 15, 2023 5:36:33 AM managers.LogPrinter println
+INFO:     ***    ***    ***
+
+Flat №3
+    name: 3
+    coordinates: X: 3; Y: 3.0
+    creationDate: 2023-05-15T04:11:16.425006+03:00[Europe/Moscow]
+    area: 3
+    numberOfRooms: 3
+    timeToMetroOnFoot: 3.0
+    timeToMetroByTransport: 3.0
+    furnish: LITTLE
+House:
+    name: 3
+    year: 3
+    numberOfFloors: 3
+    numberOfLifts: 3
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №4
+    name: 4
+    coordinates: X: 4; Y: 4.0
+    creationDate: 2023-05-15T04:14:17.472883+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 4
+    timeToMetroOnFoot: 4.0
+    timeToMetroByTransport: 4.0
+    furnish: LITTLE
+House:
+    name: 4
+    year: 4
+    numberOfFloors: 4
+    numberOfLifts: 4
+
+    ***    ***    ***
+
+May 15, 2023 5:36:33 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:36:33 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:36:33 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:36:36 AM managers.CommandExecutor run
+INFO: info
+May 15, 2023 5:36:36 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 2 elements
+CreationDate: 2023-05-15T04:11:16.425006+03:00[Europe/Moscow]
+LastElementID: 4
+
+May 15, 2023 5:36:36 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 2 elements
+CreationDate: 2023-05-15T04:11:16.425006+03:00[Europe/Moscow]
+LastElementID: 4
+
+May 15, 2023 5:36:36 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:36:36 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:36:36 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:36:55 AM managers.CommandExecutor run
+INFO: remove_lower 2
+May 15, 2023 5:36:55 AM managers.LogPrinter print
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:36:55 AM managers.LogPrinter println
+INFO: Removed 0 objects in collection.
+May 15, 2023 5:36:55 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 5:36:55 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 5:36:55 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 5:36:58 AM managers.CommandExecutor run
+INFO: remove_lower 4

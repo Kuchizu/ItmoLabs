@@ -1,5 +1,7 @@
 package commands;
 
+// Для защиты я хз что это
+
 public class OptionDecorator implements Service {
     private String info;
     private InfoPacket p;
