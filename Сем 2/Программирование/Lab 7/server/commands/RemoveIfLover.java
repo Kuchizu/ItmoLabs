@@ -33,10 +33,8 @@ public class RemoveIfLover extends Command {
             return "Invalid argument, " + arg + " can not be parsed to int";
         }
 
-        ArrayDeque<Flat> flats = DBManager.getData();
-
         int x = 0;
-        for(Flat f: flats){
+        for(Flat f: new ArrayDeque<>(DBManager.getData())){
             if(f.getId() < val && Objects.equals(DBManager.getFlatOwnerLogin(f.getId()), login)){
                 DBManager.removeflat(f.getId());
                 x++;

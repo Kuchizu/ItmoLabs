@@ -37,7 +37,7 @@ public class ExecuteScript extends Command {
         return null;
     }
 
-    public String execute(String arg, String login, String pass) throws IOException, CreateObjException, ParserConfigurationException, TransformerException, SAXException, SQLException {
+    public String execute(String arg, String login, String pass) {
 
         Map<String, Command> commands = CommandExecutor.getCommands();
 
@@ -90,24 +90,40 @@ public class ExecuteScript extends Command {
                     return response.toString();
                 }
                 if(cmd.equals("add")){
-                    DBManager.addElement(flat, login, pass);
+                    try {
+                        DBManager.addElement(flat, login, pass);
+                    } catch (SQLException ignored){
+
+                    }
                     response.append("Объект ").append(flat.getName()).append(" добавлен в коллекцию.\n");
                 }
                 else{
-                    String owner = DBManager.getFlatOwnerLogin(Integer.parseInt(arg));
+                    String owner = null;
+                    try {
+                        owner = DBManager.getFlatOwnerLogin(Integer.parseInt(arg));
+                    } catch (SQLException ignored){
+
+                    }
                     if(owner == null) {
                         response.append(String.format("Object by id %s not found", arg));
                     } else if(!owner.equals(login)){
                         response.append("You don't have permission to modify this object.");
                     } else {
-                        DBManager.changeElement(Integer.parseInt(arg), flat, login, pass);
+                        try {
+                            DBManager.changeElement(Integer.parseInt(arg), flat, login, pass);
+                        } catch (SQLException ignored){
+                        }
                         response.append("Объект ").append(flat.getName()).append(" изменён\n");
                     }
                 }
                 continue;
             }
             if (commands.containsKey(cmd)) {
-                response.append(commands.get(cmd).execute(sarg, login));
+                try {
+                    response.append(commands.get(cmd).execute(sarg, login));
+                } catch (IOException | ParserConfigurationException | TransformerException | SAXException | CreateObjException | SQLException ignored){
+
+                }
             }
             else{
                 response.append("Неизвестная команда: ").append(line).append("\n");

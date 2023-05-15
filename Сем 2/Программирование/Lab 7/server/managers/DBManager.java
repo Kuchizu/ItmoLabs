@@ -30,6 +30,7 @@ public class DBManager {
     }
 
     // jdbc:postgresql://localhost/postgres?user=postgres&password=postgres
+    // jdbc:postgresql://127.0.0.1:5432/studs?user=s373746&password=zxXKGXjCdzuyqIhi
     private static String host = "jdbc:postgresql://127.0.0.1:5432/studs?user=s373746&password=zxXKGXjCdzuyqIhi";
     static Connection conn;
     public static void setHost(String sqlhost) {
