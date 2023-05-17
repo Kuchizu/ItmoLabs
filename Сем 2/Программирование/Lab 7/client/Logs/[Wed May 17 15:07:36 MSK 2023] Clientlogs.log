@@ -1,0 +1,44 @@
+May 17, 2023 3:07:36 PM managers.LogPrinter print
+INFO: Client started running on [
+May 17, 2023 3:07:36 PM managers.LogPrinter print
+INFO: localhost
+May 17, 2023 3:07:36 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 3:07:36 PM managers.LogPrinter print
+INFO: 1234
+May 17, 2023 3:07:36 PM managers.LogPrinter print
+INFO: ]
+
+
+May 17, 2023 3:07:36 PM managers.LogPrinter print
+INFO: >>> 
+May 17, 2023 3:07:41 PM managers.CommandExecutor run
+INFO: /login
+May 17, 2023 3:07:41 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 17, 2023 3:07:43 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 17, 2023 3:07:44 PM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 17, 2023 3:07:44 PM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 17, 2023 3:07:44 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 3:07:44 PM managers.LogPrinter print
+INFO: Kuchizu
+May 17, 2023 3:07:44 PM managers.LogPrinter print
+INFO: ] >>> 
+May 17, 2023 3:07:48 PM managers.CommandExecutor run
+INFO: execute_script 1234
+May 17, 2023 3:07:48 PM managers.LogPrinter print
+INFO: Неизвестная команда: 1234
+
+May 17, 2023 3:07:48 PM managers.LogPrinter println
+INFO: Неизвестная команда: 1234
+
+May 17, 2023 3:07:48 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 3:07:48 PM managers.LogPrinter print
+INFO: Kuchizu
+May 17, 2023 3:07:48 PM managers.LogPrinter print
+INFO: ] >>> 

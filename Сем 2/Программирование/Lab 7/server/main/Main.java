@@ -14,7 +14,7 @@ import java.time.LocalTime;
  * Author Kuchizu
  * Var: 3131704
  * <p>
- * Passed xx.xx.xxxx xxx / xxx
+ * Passed 17.05.2023 90 / 100
 
  ***/
 

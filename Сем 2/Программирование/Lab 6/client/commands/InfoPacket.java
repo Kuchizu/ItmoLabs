@@ -25,7 +25,6 @@ public class InfoPacket implements Serializable {
     }
 
     public InfoPacket(String cmd, String arg) {
-        super("2");
         this.cmd = cmd;
         this.arg = arg;
     }

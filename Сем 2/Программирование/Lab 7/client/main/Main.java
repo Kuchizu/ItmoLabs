@@ -18,7 +18,7 @@ import java.util.Date;
  * Author Kuchizu
  * Var: 3131704
  * <p>
- * Passed 04.05.2023 85 / 100
+ * Passed 17.05.2023 90 / 100
 
  ***/
 

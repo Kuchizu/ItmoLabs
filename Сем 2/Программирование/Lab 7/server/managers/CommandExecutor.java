@@ -141,6 +141,7 @@ public class CommandExecutor {
                                         switch (finalInf.getCmd()) {
                                             case "add" -> {
                                                 DBManager.addElement(finalInf.getFlat(), finalInf.getLogin(), finalInf.getPassword());
+                                                System.out.println("+++++");
                                                 infoPacket.setCmd("Объект " + finalInf.getFlat().getName() + " добавлен в коллекцию.");
                                             }
 

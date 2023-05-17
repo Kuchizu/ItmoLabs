@@ -1,0 +1,28 @@
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: 36889
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = '/login', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: 36889
+May 17, 2023 2:48:33 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
