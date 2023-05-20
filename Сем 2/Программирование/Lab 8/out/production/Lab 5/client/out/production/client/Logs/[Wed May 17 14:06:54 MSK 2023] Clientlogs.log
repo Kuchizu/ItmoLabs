@@ -1,0 +1,128 @@
+May 17, 2023 2:06:54 PM managers.LogPrinter print
+INFO: Client started running on [
+May 17, 2023 2:06:54 PM managers.LogPrinter print
+INFO: localhost
+May 17, 2023 2:06:54 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:06:54 PM managers.LogPrinter print
+INFO: 1234
+May 17, 2023 2:06:54 PM managers.LogPrinter print
+INFO: ]
+
+
+May 17, 2023 2:06:54 PM managers.LogPrinter print
+INFO: >>> 
+May 17, 2023 2:06:57 PM managers.CommandExecutor run
+INFO: /login
+May 17, 2023 2:06:58 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 17, 2023 2:07:00 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 17, 2023 2:07:02 PM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 17, 2023 2:07:02 PM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 17, 2023 2:07:02 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:07:02 PM managers.LogPrinter print
+INFO: Kuchizu
+May 17, 2023 2:07:02 PM managers.LogPrinter print
+INFO: ] >>> 
+May 17, 2023 2:07:03 PM managers.CommandExecutor run
+INFO: info
+May 17, 2023 2:07:03 PM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 1 elements
+CreationDate: 2023-05-15T07:04:30.682844+03:00[Europe/Moscow]
+LastElementID: 18
+
+May 17, 2023 2:07:03 PM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 1 elements
+CreationDate: 2023-05-15T07:04:30.682844+03:00[Europe/Moscow]
+LastElementID: 18
+
+May 17, 2023 2:07:03 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:07:03 PM managers.LogPrinter print
+INFO: Kuchizu
+May 17, 2023 2:07:03 PM managers.LogPrinter print
+INFO: ] >>> 
+May 17, 2023 2:07:26 PM managers.CommandExecutor run
+INFO: execute_script 1234
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :add:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :add:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :1:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :1:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :2 3:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :2 3:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :4:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :4:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :5:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :5:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :6:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :6:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :7:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :7:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :FINE:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :FINE:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :8:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :8:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :9:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :9:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :10:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :10:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :11:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :11:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: :info:
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: :info:
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 2 elements
+CreationDate: 2023-05-15T07:04:30.682844+03:00[Europe/Moscow]
+LastElementID: 49
+
+May 17, 2023 2:07:26 PM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 2 elements
+CreationDate: 2023-05-15T07:04:30.682844+03:00[Europe/Moscow]
+LastElementID: 49
+
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: Kuchizu
+May 17, 2023 2:07:26 PM managers.LogPrinter print
+INFO: ] >>> 

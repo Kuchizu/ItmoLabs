@@ -1,0 +1,1062 @@
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: Client started running on [
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: localhost
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: 1234
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: ]
+
+
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:10 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 2 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 8
+
+May 15, 2023 6:13:10 AM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 2 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 8
+
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:15 AM managers.CommandExecutor run
+INFO: [Kuchizu] >>> infoPacket.setCmd(commands.get(inf.getCmd()).execute(inf.getArg(), inf.getLogin()));
+May 15, 2023 6:13:15 AM managers.LogPrinter print
+INFO: Неизвестная команда
+May 15, 2023 6:13:15 AM managers.LogPrinter println
+INFO: Неизвестная команда
+May 15, 2023 6:13:15 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:15 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:13:15 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:15 AM managers.CommandExecutor run
+INFO: 
+May 15, 2023 6:13:15 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:15 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:13:15 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:24 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 3 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 9
+
+May 15, 2023 6:13:24 AM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 3 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 9
+
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:25 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 4 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 10
+
+May 15, 2023 6:13:25 AM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 4 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 10
+
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:25 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 5 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 11
+
+May 15, 2023 6:13:25 AM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 5 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 11
+
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:26 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 6 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 12
+
+May 15, 2023 6:13:26 AM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 6 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 12
+
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:27 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 7 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 13
+
+May 15, 2023 6:13:27 AM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 7 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 13
+
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:27 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 8 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 14
+
+May 15, 2023 6:13:27 AM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 8 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 14
+
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:30 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 6:13:30 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 15, 2023 6:13:31 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: Wrong password for user Kuchizu
+May 15, 2023 6:13:34 AM managers.LogPrinter println
+INFO: Wrong password for user Kuchizu
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:36 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 6:13:36 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 15, 2023 6:13:38 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 15, 2023 6:13:39 AM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:40 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 9 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 15
+
+May 15, 2023 6:13:41 AM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 9 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 15
+
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:41 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 10 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 16
+
+May 15, 2023 6:13:41 AM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 10 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 16
+
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:42 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 11 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 17
+
+May 15, 2023 6:13:42 AM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 11 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 17
+
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:13:46 AM managers.CommandExecutor run
+INFO: remove_lower 123
+May 15, 2023 6:14:17 AM managers.CommandExecutor run
+INFO: execute_script 1234
+May 15, 2023 6:14:20 AM managers.CommandExecutor run
+INFO: 
+May 15, 2023 6:14:20 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:14:20 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 6:14:20 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:14:30 AM managers.CommandExecutor run
+INFO: remove_lower 12321
+May 15, 2023 6:14:30 AM managers.LogPrinter print
+INFO: Removed 1 objects in collection.
+May 15, 2023 6:14:30 AM managers.LogPrinter println
+INFO: Removed 1 objects in collection.
+May 15, 2023 6:14:30 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:14:30 AM managers.LogPrinter print
+INFO: Zukuchi
+May 15, 2023 6:14:30 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:14:45 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 6:14:45 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 15, 2023 6:14:47 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 15, 2023 6:14:49 AM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 15, 2023 6:14:49 AM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 15, 2023 6:14:49 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:14:49 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:14:49 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:14:52 AM managers.CommandExecutor run
+INFO: info
+May 15, 2023 6:14:52 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 8 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 14
+
+May 15, 2023 6:14:52 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 8 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 14
+
+May 15, 2023 6:14:52 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:14:52 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:14:52 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:14:54 AM managers.CommandExecutor run
+INFO: show
+May 15, 2023 6:14:54 AM managers.LogPrinter print
+INFO:     ***    ***    ***
+
+Flat №7
+    name: 1
+    coordinates: X: 1; Y: 1.0
+    creationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+    area: 1
+    numberOfRooms: 1
+    timeToMetroOnFoot: 1.0
+    timeToMetroByTransport: 1.0
+    furnish: DESIGNER
+House:
+    name: 1
+    year: 1
+    numberOfFloors: 1
+    numberOfLifts: 1
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №8
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:10.190003+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №9
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:24.362786+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №10
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:25.081264+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №11
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:25.679623+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №12
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:26.387115+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №13
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:27.048866+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №14
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:27.689698+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+May 15, 2023 6:14:54 AM managers.LogPrinter println
+INFO:     ***    ***    ***
+
+Flat №7
+    name: 1
+    coordinates: X: 1; Y: 1.0
+    creationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+    area: 1
+    numberOfRooms: 1
+    timeToMetroOnFoot: 1.0
+    timeToMetroByTransport: 1.0
+    furnish: DESIGNER
+House:
+    name: 1
+    year: 1
+    numberOfFloors: 1
+    numberOfLifts: 1
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №8
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:10.190003+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №9
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:24.362786+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №10
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:25.081264+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №11
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:25.679623+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №12
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:26.387115+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №13
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:27.048866+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+    ***    ***    ***
+
+Flat №14
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:27.689698+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+May 15, 2023 6:14:54 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:14:54 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:14:54 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:15:01 AM managers.CommandExecutor run
+INFO: help
+May 15, 2023 6:15:01 AM managers.LogPrinter print
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 6:15:01 AM managers.LogPrinter println
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 6:15:01 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:15:01 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:15:01 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:15:08 AM managers.CommandExecutor run
+INFO: remove_by_id 17
+May 15, 2023 6:15:08 AM managers.LogPrinter print
+INFO: Element by id: 17 not found.
+May 15, 2023 6:15:08 AM managers.LogPrinter println
+INFO: Element by id: 17 not found.
+May 15, 2023 6:15:08 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:15:08 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:15:08 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:15:13 AM managers.CommandExecutor run
+INFO: remove_by_id 7
+May 15, 2023 6:15:13 AM managers.LogPrinter print
+INFO: Object by id: 7 was deleted.
+May 15, 2023 6:15:13 AM managers.LogPrinter println
+INFO: Object by id: 7 was deleted.
+May 15, 2023 6:15:13 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:15:13 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:15:13 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:15:20 AM managers.CommandExecutor run
+INFO: print_descending
+May 15, 2023 6:15:20 AM managers.LogPrinter print
+INFO:     ***    ***    ***
+
+Flat №14
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:27.689698+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №13
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:27.048866+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №12
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:26.387115+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №11
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:25.679623+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №10
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:25.081264+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №9
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:24.362786+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №8
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:10.190003+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+
+May 15, 2023 6:15:20 AM managers.LogPrinter println
+INFO:     ***    ***    ***
+
+Flat №14
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:27.689698+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №13
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:27.048866+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №12
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:26.387115+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №11
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:25.679623+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №10
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:25.081264+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №9
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:24.362786+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+    ***    ***    ***
+
+Flat №8
+    name: 1
+    coordinates: X: 2; Y: 3.0
+    creationDate: 2023-05-15T06:13:10.190003+03:00[Europe/Moscow]
+    area: 4
+    numberOfRooms: 5
+    timeToMetroOnFoot: 6.0
+    timeToMetroByTransport: 7.0
+    furnish: FINE
+House:
+    name: 8
+    year: 9
+    numberOfFloors: 10
+    numberOfLifts: 11
+
+    ***    ***    ***
+
+
+May 15, 2023 6:15:20 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:15:20 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:15:20 AM managers.LogPrinter print
+INFO: ] >>> 
+May 15, 2023 6:15:24 AM managers.CommandExecutor run
+INFO: help
+May 15, 2023 6:15:24 AM managers.LogPrinter print
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 6:15:24 AM managers.LogPrinter println
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 6:15:24 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:15:24 AM managers.LogPrinter print
+INFO: Kuchizu
+May 15, 2023 6:15:24 AM managers.LogPrinter print
+INFO: ] >>> 

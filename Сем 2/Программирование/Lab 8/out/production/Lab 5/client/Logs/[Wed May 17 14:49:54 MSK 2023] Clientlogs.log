@@ -1,0 +1,80 @@
+May 17, 2023 2:49:54 PM managers.LogPrinter print
+INFO: Client started running on [
+May 17, 2023 2:49:54 PM managers.LogPrinter print
+INFO: localhost
+May 17, 2023 2:49:54 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:49:54 PM managers.LogPrinter print
+INFO: 1234
+May 17, 2023 2:49:54 PM managers.LogPrinter print
+INFO: ]
+
+
+May 17, 2023 2:49:54 PM managers.LogPrinter print
+INFO: >>> 
+May 17, 2023 2:49:55 PM managers.CommandExecutor run
+INFO: info
+May 17, 2023 2:49:55 PM managers.LogPrinter print
+INFO: Для использования команд войдите в систему (/login) или зарегистрируйтесь (/reg)
+May 17, 2023 2:49:55 PM managers.LogPrinter println
+INFO: Для использования команд войдите в систему (/login) или зарегистрируйтесь (/reg)
+May 17, 2023 2:49:55 PM managers.LogPrinter print
+INFO: >>> 
+May 17, 2023 2:49:58 PM managers.CommandExecutor run
+INFO: /login
+May 17, 2023 2:49:58 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 17, 2023 2:49:59 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 17, 2023 2:50:04 PM managers.CommandExecutor run
+INFO: 
+May 17, 2023 2:50:04 PM managers.LogPrinter print
+INFO: >>> 
+May 17, 2023 2:50:05 PM managers.CommandExecutor run
+INFO: 
+May 17, 2023 2:50:05 PM managers.LogPrinter print
+INFO: >>> 
+May 17, 2023 2:50:07 PM managers.CommandExecutor run
+INFO: /login
+May 17, 2023 2:50:07 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 17, 2023 2:50:09 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 17, 2023 2:50:22 PM managers.CommandExecutor run
+INFO: /login
+May 17, 2023 2:50:22 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 17, 2023 2:50:23 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 17, 2023 2:50:24 PM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 17, 2023 2:50:24 PM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 17, 2023 2:50:24 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:50:24 PM managers.LogPrinter print
+INFO: Kuchizu
+May 17, 2023 2:50:24 PM managers.LogPrinter print
+INFO: ] >>> 
+May 17, 2023 2:50:26 PM managers.CommandExecutor run
+INFO: info
+May 17, 2023 2:50:26 PM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 9467 elements
+CreationDate: 2023-05-15T07:04:30.682844+03:00[Europe/Moscow]
+LastElementID: 9514
+
+May 17, 2023 2:50:26 PM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 9467 elements
+CreationDate: 2023-05-15T07:04:30.682844+03:00[Europe/Moscow]
+LastElementID: 9514
+
+May 17, 2023 2:50:26 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:50:26 PM managers.LogPrinter print
+INFO: Kuchizu
+May 17, 2023 2:50:26 PM managers.LogPrinter print
+INFO: ] >>> 

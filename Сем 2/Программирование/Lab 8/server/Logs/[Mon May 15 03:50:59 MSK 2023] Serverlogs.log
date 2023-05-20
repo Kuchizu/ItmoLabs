@@ -1,0 +1,140 @@
+May 15, 2023 3:50:59 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 3:50:59 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 3:50:59 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:50:59 AM managers.LogPrinter print
+INFO: 41192
+May 15, 2023 3:50:59 AM managers.LogPrinter print
+INFO: ]: [Connected]
+
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: 41192
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = '/login', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: 41192
+May 15, 2023 3:51:19 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: 41192
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'info', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: 41192
+May 15, 2023 3:51:23 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: 41192
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'show', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: 41192
+May 15, 2023 3:51:25 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: 41192
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'help', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: 41192
+May 15, 2023 3:51:28 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+

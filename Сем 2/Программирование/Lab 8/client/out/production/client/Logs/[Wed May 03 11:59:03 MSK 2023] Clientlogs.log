@@ -1,0 +1,12 @@
+May 03, 2023 11:59:04 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 11:59:07 AM managers.CommandExecutor run
+INFO: iinfo
+May 03, 2023 11:59:07 AM managers.LogPrinter print
+INFO: Неизевстная комманда
+May 03, 2023 11:59:07 AM managers.LogPrinter println
+INFO: Неизевстная комманда
+May 03, 2023 11:59:07 AM managers.LogPrinter print
+INFO: >>> 
+May 03, 2023 11:59:08 AM managers.CommandExecutor run
+INFO: info

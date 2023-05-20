@@ -1,0 +1,36 @@
+May 15, 2023 3:10:44 AM managers.LogPrinter print
+INFO: Client started running on [
+May 15, 2023 3:10:45 AM managers.LogPrinter print
+INFO: localhost
+May 15, 2023 3:10:45 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:10:45 AM managers.LogPrinter print
+INFO: 1234
+May 15, 2023 3:10:45 AM managers.LogPrinter print
+INFO: ]
+
+
+May 15, 2023 3:10:45 AM managers.LogPrinter print
+INFO: >>> 
+May 15, 2023 3:10:49 AM managers.CommandExecutor run
+INFO: info
+May 15, 2023 3:10:49 AM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+
+May 15, 2023 3:10:49 AM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 0 elements
+
+May 15, 2023 3:10:49 AM managers.LogPrinter print
+INFO: >>> 
+May 15, 2023 3:10:52 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 3:10:52 AM managers.LogPrinter print
+INFO: Неизвестная команда
+May 15, 2023 3:10:52 AM managers.LogPrinter println
+INFO: Неизвестная команда
+May 15, 2023 3:10:52 AM managers.LogPrinter print
+INFO: >>> 

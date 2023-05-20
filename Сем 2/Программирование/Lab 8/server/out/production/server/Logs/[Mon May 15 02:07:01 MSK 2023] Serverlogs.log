@@ -1,0 +1,50 @@
+May 15, 2023 2:36:17 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 2:36:17 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 2:36:17 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 2:36:17 AM managers.LogPrinter print
+INFO: 53263
+May 15, 2023 2:36:17 AM managers.LogPrinter print
+INFO: ]: [Connected]
+
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: 53263
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: InfoPacket{cmd='info', arg='null'}
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: 53263
+May 15, 2023 2:36:19 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 3:05:34 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 3:05:34 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 3:05:34 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:05:34 AM managers.LogPrinter print
+INFO: 56410
+May 15, 2023 3:05:34 AM managers.LogPrinter print
+INFO: ]: [Connected]
+

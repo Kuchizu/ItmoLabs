@@ -1,0 +1,26 @@
+May 17, 2023 2:05:09 PM managers.LogPrinter print
+INFO: Client started running on [
+May 17, 2023 2:05:09 PM managers.LogPrinter print
+INFO: localhost
+May 17, 2023 2:05:09 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:05:09 PM managers.LogPrinter print
+INFO: 1234
+May 17, 2023 2:05:09 PM managers.LogPrinter print
+INFO: ]
+
+
+May 17, 2023 2:05:09 PM managers.LogPrinter print
+INFO: >>> 
+May 17, 2023 2:05:13 PM managers.CommandExecutor run
+INFO: /login
+May 17, 2023 2:05:13 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 17, 2023 2:05:14 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 17, 2023 2:05:30 PM managers.CommandExecutor run
+INFO: /login
+May 17, 2023 2:05:30 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 17, 2023 2:05:31 PM managers.LogPrinter print
+INFO: Введите пароль: 

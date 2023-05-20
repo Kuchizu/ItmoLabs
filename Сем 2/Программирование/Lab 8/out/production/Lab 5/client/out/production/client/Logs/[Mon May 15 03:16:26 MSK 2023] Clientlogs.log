@@ -1,0 +1,46 @@
+May 15, 2023 3:16:26 AM managers.LogPrinter print
+INFO: Client started running on [
+May 15, 2023 3:16:26 AM managers.LogPrinter print
+INFO: localhost
+May 15, 2023 3:16:26 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 3:16:26 AM managers.LogPrinter print
+INFO: 1234
+May 15, 2023 3:16:26 AM managers.LogPrinter print
+INFO: ]
+
+
+May 15, 2023 3:16:26 AM managers.LogPrinter print
+INFO: >>> 
+May 15, 2023 3:16:31 AM managers.CommandExecutor run
+INFO: log
+May 15, 2023 3:16:31 AM managers.LogPrinter print
+INFO: Неизвестная команда
+May 15, 2023 3:16:31 AM managers.LogPrinter println
+INFO: Неизвестная команда
+May 15, 2023 3:16:31 AM managers.LogPrinter print
+INFO: >>> 
+May 15, 2023 3:16:33 AM managers.CommandExecutor run
+INFO: /log
+May 15, 2023 3:16:33 AM managers.LogPrinter print
+INFO: Неизвестная команда
+May 15, 2023 3:16:33 AM managers.LogPrinter println
+INFO: Неизвестная команда
+May 15, 2023 3:16:33 AM managers.LogPrinter print
+INFO: >>> 
+May 15, 2023 3:16:34 AM managers.CommandExecutor run
+INFO: /login
+May 15, 2023 3:16:34 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 15, 2023 3:16:35 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 15, 2023 3:16:35 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'null', arg = 'null', login = 'null', password = 'null'}
+May 15, 2023 3:16:35 AM managers.LogPrinter print
+INFO: 
+null
+May 15, 2023 3:16:35 AM managers.LogPrinter println
+INFO: 
+null
+May 15, 2023 3:16:35 AM managers.LogPrinter print
+INFO: >>> 

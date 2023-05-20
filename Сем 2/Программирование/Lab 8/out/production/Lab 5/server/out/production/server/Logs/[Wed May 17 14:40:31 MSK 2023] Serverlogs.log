@@ -1,0 +1,354 @@
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: 37302
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'add', arg = 'null', login = 'null', password = 'null'}
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: 37302
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'add', arg = 'null', login = 'null', password = 'null'}
+May 17, 2023 2:40:37 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: ]: [Connected]
+
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'connectme', arg = 'null', login = 'null', password = 'null'}
+May 17, 2023 2:41:43 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = '/login', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:41:48 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'add', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'add', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: +++++
+May 17, 2023 2:41:58 PM managers.LogPrinter println
+INFO: +++++
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: +++++
+May 17, 2023 2:41:58 PM managers.LogPrinter println
+INFO: +++++
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:41:58 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'info', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:01 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'info', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:04 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'info', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:08 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'add', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'add', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: +++++
+May 17, 2023 2:42:32 PM managers.LogPrinter println
+INFO: +++++
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: +++++
+May 17, 2023 2:42:32 PM managers.LogPrinter println
+INFO: +++++
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:32 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'info', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: 
+
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: 43515
+May 17, 2023 2:42:37 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 17, 2023 2:47:28 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: 36889
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: ]: [Connected]
+
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: /127.0.0.1
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: 36889
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'connectme', arg = 'null', login = 'null', password = 'null'}
+May 17, 2023 2:47:29 PM managers.LogPrinter print
+INFO: 
+

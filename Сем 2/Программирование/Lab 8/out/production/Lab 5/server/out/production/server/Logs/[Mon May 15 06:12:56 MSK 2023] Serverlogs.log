@@ -1,0 +1,573 @@
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:12:57 AM managers.LogPrinter print
+INFO: ]: [Connected]
+
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'execute_script', arg = 'add
+1
+2 3
+4
+5
+6
+7
+FINE
+8
+9
+10
+11
+info
+', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 2 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 8
+
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:10 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'execute_script', arg = 'add
+1
+2 3
+4
+5
+6
+7
+FINE
+8
+9
+10
+11
+info
+', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 3 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 9
+
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:24 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'execute_script', arg = 'add
+1
+2 3
+4
+5
+6
+7
+FINE
+8
+9
+10
+11
+info
+', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 4 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 10
+
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'execute_script', arg = 'add
+1
+2 3
+4
+5
+6
+7
+FINE
+8
+9
+10
+11
+info
+', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 5 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 11
+
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:25 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'execute_script', arg = 'add
+1
+2 3
+4
+5
+6
+7
+FINE
+8
+9
+10
+11
+info
+', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 6 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 12
+
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:26 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'execute_script', arg = 'add
+1
+2 3
+4
+5
+6
+7
+FINE
+8
+9
+10
+11
+info
+', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 7 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 13
+
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'execute_script', arg = 'add
+1
+2 3
+4
+5
+6
+7
+FINE
+8
+9
+10
+11
+info
+', login = 'Kuchizu', password = 'kometa'}
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 8 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 14
+
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:27 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = '/login', arg = 'null', login = 'Kuchizu', password = 'a'}
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:34 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = '/login', arg = 'null', login = 'Zukuchi', password = 'kometa'}
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:39 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:40 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:40 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:40 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:40 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:40 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:40 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'execute_script', arg = 'add
+1
+2 3
+4
+5
+6
+7
+FINE
+8
+9
+10
+11
+info
+', login = 'Zukuchi', password = 'kometa'}
+May 15, 2023 6:13:40 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 9 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 15
+
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'execute_script', arg = 'add
+1
+2 3
+4
+5
+6
+7
+FINE
+8
+9
+10
+11
+info
+', login = 'Zukuchi', password = 'kometa'}
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 10 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 16
+
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:41 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'execute_script', arg = 'add
+1
+2 3
+4
+5
+6
+7
+FINE
+8
+9
+10
+11
+info
+', login = 'Zukuchi', password = 'kometa'}
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: 
+
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+
+Collection ArrayDeque
+Size: 11 elements
+CreationDate: 2023-05-15T05:52:28.392838+03:00[Europe/Moscow]
+LastElementID: 17
+
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:42 AM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+May 15, 2023 6:13:46 AM managers.LogPrinter print
+INFO: [
+May 15, 2023 6:13:46 AM managers.LogPrinter print
+INFO: /127.0.0.1
+May 15, 2023 6:13:46 AM managers.LogPrinter print
+INFO: ][
+May 15, 2023 6:13:46 AM managers.LogPrinter print
+INFO: 54278
+May 15, 2023 6:13:46 AM managers.LogPrinter print
+INFO: ]: Got message:
+
+May 15, 2023 6:13:46 AM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'remove_lower', arg = '123', login = 'Zukuchi', password = 'kometa'}
+May 15, 2023 6:13:46 AM managers.LogPrinter print
+INFO: 
+

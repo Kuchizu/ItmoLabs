@@ -1,0 +1,244 @@
+May 17, 2023 3:08:42 PM managers.LogPrinter print
+INFO: Client started running on [
+May 17, 2023 3:08:42 PM managers.LogPrinter print
+INFO: localhost
+May 17, 2023 3:08:42 PM managers.LogPrinter print
+INFO: ][
+May 17, 2023 3:08:42 PM managers.LogPrinter print
+INFO: 1234
+May 17, 2023 3:08:42 PM managers.LogPrinter print
+INFO: ]
+
+
+May 17, 2023 3:08:42 PM managers.LogPrinter print
+INFO: >>> 
+May 17, 2023 3:08:46 PM managers.CommandExecutor run
+INFO: /login
+May 17, 2023 3:08:46 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 17, 2023 3:08:48 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 17, 2023 3:08:49 PM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 17, 2023 3:08:49 PM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 17, 2023 3:08:49 PM managers.LogPrinter print
+INFO: [
+May 17, 2023 3:08:49 PM managers.LogPrinter print
+INFO: Kuchizu
+May 17, 2023 3:08:49 PM managers.LogPrinter print
+INFO: ] >>> 
+May 17, 2023 3:08:53 PM managers.CommandExecutor run
+INFO: execute_script 1234
+May 17, 2023 3:08:53 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:08:54 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:08:55 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:08:56 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:08:57 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:08:58 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:08:59 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:00 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:01 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:02 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:03 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:04 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:05 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:06 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:07 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:08 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:09 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:10 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:11 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:12 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:13 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:14 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:15 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:16 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:17 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:18 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:19 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:20 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:21 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:22 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:23 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:24 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:25 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:26 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:27 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:28 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:29 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:30 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:31 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:32 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:33 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:34 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:35 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:36 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:37 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:38 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:39 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:40 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:41 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:42 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:43 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:44 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:45 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:46 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:47 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:48 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:49 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:50 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:51 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:52 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:53 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:54 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:55 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:56 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:57 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:09:58 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:09:59 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:00 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:01 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:02 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:03 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:04 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:05 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:06 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:07 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:08 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:09 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:10 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:11 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:12 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:13 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:14 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:15 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:16 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:17 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:18 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:19 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:20 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:21 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:22 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:23 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:24 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:25 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:26 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:27 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:28 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:29 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:30 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:31 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:32 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:33 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:34 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:35 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:36 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
+May 17, 2023 3:10:37 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 6 7 FINE 8 9 10 11
+May 17, 2023 3:10:38 PM managers.LogPrinter print
+INFO: add 1 2 3 4 5 2 7 FINE 1 9 10 11
