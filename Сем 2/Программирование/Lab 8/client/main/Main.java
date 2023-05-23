@@ -1,5 +1,6 @@
 package main;
 
+import GUI.MainGUI;
 import collections.Flat;
 import exceptions.CreateObjException;
 import managers.CommandExecutor;
@@ -47,7 +48,8 @@ public class Main {
         System.out.println("Welcome to CLI!\nCollection: " + XMLManager.getData().getClass().getName() + "\nDB type: XML" + "\nElement type: " + Flat.class.getName());
         System.out.println("Enter commands below. Use help for more information.\n\nUse /login to login to the system.\nUse /reg to register into the system.\n");
 
-        executor.run(System.in);
+//        executor.run(System.in);
+        MainGUI.run();
 
     }
 }

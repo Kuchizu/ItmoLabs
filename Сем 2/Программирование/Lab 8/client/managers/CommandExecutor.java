@@ -23,13 +23,22 @@ class EofIndicatorClass implements Serializable{}
  */
 public class CommandExecutor {
 
-    private final DatagramSocket datagramSocket = new DatagramSocket();
+    private static final DatagramSocket datagramSocket;
+
+    static {
+        try {
+            datagramSocket = new DatagramSocket();
+        } catch (SocketException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private static String host = null;
     private static String login;
     private static String pass;
     private static byte[] buffer;
     private static int port;
-    private final InetAddress inetAddress;
+    private static InetAddress inetAddress = 1234;
     private static final Logger LOGGER = Logger.getLogger(CommandExecutor.class.getName());
     private static final Map<String, Command> commands = new HashMap<>() {
         {
@@ -56,13 +65,13 @@ public class CommandExecutor {
     public CommandExecutor() throws SocketException, UnknownHostException {
         host = "localhost";
         port = 1234;
-        this.inetAddress = InetAddress.getByName(host);
+        inetAddress = InetAddress.getByName(host);
     }
 
     public CommandExecutor(String[] args) throws SocketException, UnknownHostException {
         host = args[0];
         port = Integer.parseInt(args[1]);
-        this.inetAddress = InetAddress.getByName(host);
+        inetAddress = InetAddress.getByName(host);
     }
 
     public static Map<String, Command> getCommands() {
@@ -137,6 +146,72 @@ public class CommandExecutor {
         }
     }
 
+    public static InfoPacket request(InfoPacket inf) throws IOException, ClassNotFoundException {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(baos);
+
+        InfoPacket infoPacket = new InfoPacket(inf.getCmd(), inf.getArg());
+        infoPacket.setLogin(login);
+        infoPacket.setPassword(pass);
+
+        if (inf.getCmd().equals("/login") || inf.getCmd().equals("/reg")) {
+            infoPacket.setLogin(inf.getLogin());
+            infoPacket.setPassword(inf.getPassword());
+        }
+
+        if (inf.getCmd().equals("add") || inf.getCmd().equals("update")) {
+            infoPacket.setFlat(inf.getFlat());
+        }
+
+//        if (cmd.equals("execute_script")) { // TODO
+//            if (arg == null) {
+//                System.out.print("Usage: execute_script: {file_name}");
+//                userprint();
+//                continue;
+//            } else {
+//                JTread t = new JTread();
+//                t.run(arg, datagramSocket, inetAddress);
+//            }
+//        }
+
+        oos.writeObject(infoPacket);
+        oos.writeObject(new EofIndicatorClass());
+        oos.flush();
+        oos.close();
+
+        buffer = baos.toByteArray();
+        DatagramPacket cmdPacket = new DatagramPacket(buffer, buffer.length, inetAddress, port);
+
+        datagramSocket.send(cmdPacket);
+
+//        if (inf.getCmd().equals("exit")) { # TODO
+//            System.out.println("Closing client application, bye!");
+//            System.exit(0);
+//        }
+
+        DatagramPacket respPacket = new DatagramPacket(new byte[3000], 3000, inetAddress, port);
+
+        try {
+            datagramSocket.receive(respPacket);
+
+        } catch (SocketTimeoutException e) {
+            return new InfoPacket("Err", "\"Took too long for server to respond; The server might be experiencing issues or downtime. Try again later.\\nServer: \" + host");
+        }
+
+        ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(respPacket.getData()));
+        InfoPacket resinf = (InfoPacket) ois.readObject();
+
+        if (resinf.getCmd() != null && resinf.getCmd().equals("/login") || resinf.getCmd().equals("/reg")) {
+            System.out.println(inf.getArg());
+            login = inf.getLogin();
+            pass = inf.getPassword();
+            return resinf;
+
+        } else {
+            return new InfoPacket(inf.getCmd(), null);
+        }
+    }
+
     /**
      * @param input Input stream commands
      */
@@ -186,90 +261,6 @@ public class CommandExecutor {
                 System.out.println("Для использования команд войдите в систему (/login) или зарегистрируйтесь (/reg)");
                 userprint();
                 continue;
-            }
-            try {
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                ObjectOutputStream oos = new ObjectOutputStream(baos);
-
-                InfoPacket infoPacket = new InfoPacket(cmd, arg);
-                infoPacket.setLogin(login);
-                infoPacket.setPassword(pass);
-
-                if (cmd.equals("/login") || cmd.equals("/reg")) {
-                    String[] logargs = new Login().login(cmd.equals("/reg"));
-                    infoPacket.setLogin(logargs[0]);
-                    infoPacket.setPassword(logargs[1]);
-                }
-
-                if (cmd.equals("update") && arg == null) {
-                    System.err.println("Usage: update {arg}");
-                    continue;
-                }
-
-                if (cmd.equals("add") || cmd.equals("update")) {
-                    Flat flat = new Add().create();
-                    if (flat == null) {
-                        System.out.print("Canceled.\n");
-                        userprint();
-                        continue;
-                    }
-                    infoPacket.setFlat(flat);
-                }
-
-                if (cmd.equals("execute_script")) {
-                    if (arg == null) {
-                        System.out.print("Usage: execute_script: {file_name}");
-                        userprint();
-                        continue;
-                    } else {
-                        JTread t = new JTread();
-                        t.run(arg, datagramSocket, inetAddress);
-                    }
-                }
-
-                oos.writeObject(infoPacket);
-                oos.writeObject(new EofIndicatorClass());
-                oos.flush();
-                oos.close();
-
-                buffer = baos.toByteArray();
-                DatagramPacket cmdPacket = new DatagramPacket(buffer, buffer.length, inetAddress, port);
-
-                datagramSocket.send(cmdPacket);
-
-                if (cmd.equals("exit")) {
-                    System.out.println("Closing client application, bye!");
-                    System.exit(0);
-                }
-
-                DatagramPacket respPacket = new DatagramPacket(new byte[3000], 3000, inetAddress, port);
-
-                try {
-                    datagramSocket.receive(respPacket);
-
-                } catch (SocketTimeoutException e) {
-                    System.err.println("Took too long for server to respond; The server might be experiencing issues or downtime. Try again later.\nServer: " + host);
-                    continue;
-                }
-
-                ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(respPacket.getData()));
-                InfoPacket inf = (InfoPacket) ois.readObject();
-
-                if (inf.getCmd() != null && inf.getCmd().equals("/login") || inf.getCmd().equals("/reg")) {
-                    System.out.println(inf.getArg());
-                    login = inf.getLogin();
-                    pass = inf.getPassword();
-                } else {
-                    System.out.println(inf.getCmd());
-                }
-
-            } catch (IOException e) {
-                e.printStackTrace();
-                break;
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
             }
 
             userprint();

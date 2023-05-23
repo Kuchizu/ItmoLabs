@@ -4,11 +4,12 @@ import collections.Coordinates;
 import collections.Flat;
 import collections.Furnish;
 import collections.House;
-import com.sun.jdi.connect.Transport;
+import commands.InfoPacket;
 import javafx.application.Application;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -24,25 +25,30 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.FloatStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 import javafx.util.converter.LongStringConverter;
+import managers.CommandExecutor;
 
+import java.io.IOException;
 import java.sql.Timestamp;
-import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
 
 import static managers.ConverterChecker.*;
 
-public class Main extends Application {
+public class MainGUI extends Application {
 
     private ObservableList<Flat> objects = FXCollections.observableArrayList();
     private Label itemCountLabel;
     private Label yourItemCountLabel;
+    private boolean isVisualizerOpened = false;
 
     @Override
     public void start(Stage primaryStage) {
@@ -63,7 +69,7 @@ public class Main extends Application {
 
         // Login and Register buttons
         Button loginButton = new Button("Login");
-        loginButton.setPrefSize(150, 20);
+        loginButton.setPrefSize(170, 30);
         loginButton.setOnAction(event -> {
             if (loginField.getText().isEmpty() || passwordField.getText().isEmpty()) {
                 showError("Both fields must be filled in!", "Err");
@@ -77,20 +83,29 @@ public class Main extends Application {
         });
 
         Button registerButton = new Button("Register");
-        registerButton.setPrefSize(150, 20);
+        registerButton.setPrefSize(170, 30);
         registerButton.setOnAction(event -> {
             // Your register event handling code here
         });
 
-        HBox buttons = new HBox(10, loginButton, registerButton);
+        HBox buttons = new HBox(15, loginButton, registerButton);
         buttons.setAlignment(Pos.CENTER);
 
-        VBox layout = new VBox(20, welcomeLabel, loginPasswordPane, buttons);
+        VBox layout = new VBox(30, welcomeLabel, loginPasswordPane, buttons);
         layout.setPadding(new Insets(10));
         layout.setAlignment(Pos.CENTER);
 
         primaryStage.setScene(new Scene(layout, 800, 600));
         primaryStage.show();
+    }
+
+    private void showInfo(String title, String header, String context){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(context);
+
+        alert.showAndWait();
     }
 
     private void showError(String header, String context) {
@@ -206,11 +221,38 @@ public class Main extends Application {
         return field;
     }
 
+    private void requestInfo(ActionEvent event) {
+
+        Map<String, String> commands = new HashMap<>() {
+            {
+                put("create object", "add");
+                put("remove head", "remove_head");
+                put("average metro time", "average_of_time_to_metro_by_transport");
+                put("count metro time", "count_by_time_to_metro_on_foot");
+            }
+        };
+
+        Button clickedButton = (Button) event.getSource();
+        String cmd = clickedButton.getText();
+
+        if(commands.containsKey(cmd)){
+            cmd = commands.get(cmd);
+        }
+
+        try {
+            InfoPacket inf = CommandExecutor.request(new InfoPacket(cmd, null));
+            showInfo(cmd, inf.getArg(), inf.getArg());
+        } catch (IOException | ClassNotFoundException ignored){}
+
+    }
+
     private void showMainApp(Stage primaryStage, String username) {
         Label usernameLabel = new Label(username);
         usernameLabel.setFont(Font.font("Arial", FontWeight.BOLD, 20));
         TitledPane usernamePane = new TitledPane("Username", usernameLabel);
         usernamePane.setCollapsible(false);
+
+        TableView<Flat> table = new TableView<>();
 
         itemCountLabel = new Label("Total objects: " + objects.size());
 
@@ -223,20 +265,6 @@ public class Main extends Application {
         TitledPane itemCountPane = new TitledPane("Info", new VBox(itemCountLabel, yourItemCountLabel));
         itemCountPane.setCollapsible(false);
 
-
-        TableView<Flat> table = new TableView<>();
-
-        table.setItems(null);
-        table.layout();
-        table.setItems(objects);
-
-        table.setOnKeyPressed(keyEvent -> {
-            final Flat selectedItem = table.getSelectionModel().getSelectedItem();
-            if (selectedItem != null && keyEvent.getCode().equals(KeyCode.DELETE)) {
-                objects.remove(selectedItem);
-            }
-        });
-
         Button Create_ObjectButton = new Button("Create object");
         Create_ObjectButton.setOnAction(event -> {
             showCreateObjectWindow();
@@ -244,40 +272,33 @@ public class Main extends Application {
 
         Button helpButton = new Button("Help");
         helpButton.setOnAction(event -> {
+
+            Flat f = new Flat(ZonedDateTime.now().getSecond(), 1, "1", new Coordinates(ZonedDateTime.now().getSecond() * 10, 30), ZonedDateTime.now(), 30, 1, (float) 1.1, 1.1, Furnish.DESIGNER, new House("1", (long) 1, 1, 1));
+
+            objects.add(f);
+
             System.out.println(objects);
         });
 
         Button infoButton = new Button("Info");
-        infoButton.setOnAction(event -> {
-            showCreateObjectWindow();
-        });
+        infoButton.setOnAction(this::requestInfo);
 
         Button clearButton = new Button("Clear");
-        clearButton.setOnAction(event -> {
-            showCreateObjectWindow();
-        });
+        clearButton.setOnAction(this::requestInfo);
 
         Button execute_scriptButton = new Button("Execute_script?");
-        execute_scriptButton.setOnAction(event -> {
-            showCreateObjectWindow();
-        });
+        execute_scriptButton.setOnAction(this::requestInfo);
 
         Button headButton = new Button("Head"); // Popup first
-        headButton.setOnAction(event -> {
-            showCreateObjectWindow();
-        });
+        headButton.setOnAction(this::requestInfo);
 
         Button remove_headButton = new Button("Remove Head"); // Pop first
-        remove_headButton.setOnAction(event -> {
-            showCreateObjectWindow();
-        });
+        remove_headButton.setOnAction(this::requestInfo);
 
         // TODO:
 
         Button remove_lowerButton = new Button("Remove lower");
-        remove_lowerButton.setOnAction(event -> {
-            showCreateObjectWindow();
-        });
+        remove_lowerButton.setOnAction(this::requestInfo);
 
         Button count_by_time_to_metro_on_footButtn = new Button("Count metro time");
         count_by_time_to_metro_on_footButtn.setOnAction(event -> {
@@ -291,7 +312,28 @@ public class Main extends Application {
             showCreateObjectWindow();
         });
 
-        VBox buttonsGroup = new VBox(Create_ObjectButton, helpButton, infoButton, clearButton, execute_scriptButton, headButton, remove_headButton, remove_lowerButton, average_of_time_to_metro_by_transportButton, count_by_time_to_metro_on_footButtn);
+        Button visualize = new Button("Visualize");
+        visualize.setOnAction(event -> {
+            if (!isVisualizerOpened) {
+                isVisualizerOpened = true;
+
+                CanvasManager canvasManager = new CanvasManager(objects, table, 1920, 1080);
+                VBox vbox = new VBox(canvasManager.getCanvas());
+
+                Stage newWindow = new Stage();
+                newWindow.setTitle("New Window");
+                newWindow.setOnCloseRequest(e -> isVisualizerOpened = false);
+
+                Scene secondScene = new Scene(vbox, 1000, 1000);
+                newWindow.setScene(secondScene);
+                newWindow.initModality(Modality.NONE);
+                newWindow.setMaximized(true);
+                newWindow.show();
+            }
+        });
+
+
+        VBox buttonsGroup = new VBox(Create_ObjectButton, helpButton, infoButton, clearButton, execute_scriptButton, headButton, remove_headButton, remove_lowerButton, average_of_time_to_metro_by_transportButton, count_by_time_to_metro_on_footButtn, visualize);
 
         for(Node butt: buttonsGroup.getChildren()){
             butt.setStyle("-fx-background-color: #347d89; -fx-text-fill: white;");
@@ -304,6 +346,17 @@ public class Main extends Application {
         buttonsPane.setCollapsible(true);
         buttonsPane.setExpanded(false);
 
+
+        table.setItems(null);
+        table.layout();
+        table.setItems(objects);
+
+        table.setOnKeyPressed(keyEvent -> {
+            final Flat selectedItem = table.getSelectionModel().getSelectedItem();
+            if (selectedItem != null && keyEvent.getCode().equals(KeyCode.DELETE)) {
+                objects.remove(selectedItem);
+            }
+        });
 
         TableColumn<Flat, Integer> idColumn = new TableColumn<>("ID");
         TableColumn<Flat, Integer> ownerIdColumn = new TableColumn<>("Owner");
@@ -451,7 +504,7 @@ public class Main extends Application {
 
     }
 
-    public static void main(String[] args) {
-        launch(args);
+    public static void run(){
+        launch();
     }
 }
