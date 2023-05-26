@@ -36,10 +36,7 @@ import managers.CommandExecutor;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.time.ZonedDateTime;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 import static managers.ConverterChecker.*;
 
@@ -48,7 +45,11 @@ public class MainGUI extends Application {
     private ObservableList<Flat> objects = FXCollections.observableArrayList();
     private Label itemCountLabel;
     private Label yourItemCountLabel;
+    private CommandExecutor executor = new CommandExecutor();
     private boolean isVisualizerOpened = false;
+
+    public MainGUI() throws IOException {
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -72,13 +73,24 @@ public class MainGUI extends Application {
         loginButton.setPrefSize(170, 30);
         loginButton.setOnAction(event -> {
             if (loginField.getText().isEmpty() || passwordField.getText().isEmpty()) {
-                showError("Both fields must be filled in!", "Err");
+                showError("Both fields must be filled in!", "Try again.");
             } else {
-                if (true) {
-                    showMainApp(primaryStage, loginField.getText());
+                InfoPacket credentials = new InfoPacket("/login", null);
+                credentials.setLogin(loginField.getText());
+                credentials.setPassword(passwordField.getText());
+
+                executor.setLogin(credentials.getLogin());
+                executor.setPass(credentials.getPassword());
+
+                InfoPacket loginPacket = executor.request(credentials);
+
+                if (loginPacket.getCmd().equals("/login")){
+                    showMainApp(primaryStage);
+
                 } else {
-                    showError("Invalid login or password!", "Err");
+                    showError(loginPacket.getCmd(), "Try again.");
                 }
+
             }
         });
 
@@ -100,6 +112,9 @@ public class MainGUI extends Application {
     }
 
     private void showInfo(String title, String header, String context){
+
+        System.out.println(title + header + context);
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setHeaderText(header);
@@ -233,30 +248,46 @@ public class MainGUI extends Application {
         };
 
         Button clickedButton = (Button) event.getSource();
-        String cmd = clickedButton.getText();
+        String cmd = clickedButton.getText().toLowerCase(Locale.ROOT);
 
         if(commands.containsKey(cmd)){
             cmd = commands.get(cmd);
         }
 
-        try {
-            InfoPacket inf = CommandExecutor.request(new InfoPacket(cmd, null));
-            showInfo(cmd, inf.getArg(), inf.getArg());
-        } catch (IOException | ClassNotFoundException ignored){}
+        InfoPacket inf = executor.request(new InfoPacket(cmd, null));
+        System.out.println(inf);
+        showInfo(cmd, inf.getCmd(), inf.getCmd());
 
     }
 
-    private void showMainApp(Stage primaryStage, String username) {
-        Label usernameLabel = new Label(username);
+    private void requestChange(Flat newflat) { // TODO: FIX
+
+        InfoPacket upd = new InfoPacket("update", Integer.toString(newflat.getId()));
+        upd.setFlat(newflat);
+
+        InfoPacket inf = executor.request(upd);
+
+        System.out.println(inf);
+
+    }
+
+
+    private void showMainApp(Stage primaryStage) {
+        Label usernameLabel = new Label(executor.getLogin());
         usernameLabel.setFont(Font.font("Arial", FontWeight.BOLD, 20));
         TitledPane usernamePane = new TitledPane("Username", usernameLabel);
         usernamePane.setCollapsible(false);
 
-        TableView<Flat> table = new TableView<>();
 
+        InfoPacket DB = executor.request(new InfoPacket("/loadDB", null));
+        System.out.println(DB.getDB().size());
+        objects.addAll(DB.getDB());
+
+
+        TableView<Flat> table = new TableView<>();
         itemCountLabel = new Label("Total objects: " + objects.size());
 
-        yourItemCountLabel = new Label("Your objects: " + "0"); // TODO
+        yourItemCountLabel = new Label("Your objects: " + "0"); // TODO:
         yourItemCountLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 16));
 
         itemCountLabel = new Label("Total objects: " + objects.size());
@@ -284,7 +315,17 @@ public class MainGUI extends Application {
         infoButton.setOnAction(this::requestInfo);
 
         Button clearButton = new Button("Clear");
-        clearButton.setOnAction(this::requestInfo);
+        clearButton.setOnAction(event -> {
+            Alert confirmationDialog = new Alert(Alert.AlertType.CONFIRMATION);
+            confirmationDialog.setTitle("Confirmation");
+            confirmationDialog.setHeaderText("Confirm Clear");
+            confirmationDialog.setContentText("Are you sure you want to clear all elements?");
+
+            Optional<ButtonType> result = confirmationDialog.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+                requestInfo(event);
+            }
+        });
 
         Button execute_scriptButton = new Button("Execute_script?");
         execute_scriptButton.setOnAction(this::requestInfo);
@@ -396,17 +437,9 @@ public class MainGUI extends Application {
         houseYearColumn.setCellValueFactory(cellData -> new SimpleLongProperty(cellData.getValue().getHouse().getYear()).asObject());
         houseNumberOfFloorsColumn.setCellValueFactory(cellData -> new SimpleLongProperty(cellData.getValue().getHouse().getNumberOfFloors()).asObject());
         houseNumberOfLiftsColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getHouse().getNumberOfLifts()).asObject());
-        nameColumn.setOnEditCommit(event -> {
-            Flat flat = event.getRowValue();
-            flat.setName(event.getNewValue());
-        });
-
 
         nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        nameColumn.setOnEditCommit(event -> {
-            Flat flat = event.getRowValue();
-            flat.setName(event.getNewValue());
-        });
+        nameColumn.setOnEditCommit(event -> requestChange(event.getRowValue()));
 
         xColumn.setCellFactory(TextFieldTableCell.forTableColumn(new LongStringConverter()));
         xColumn.setOnEditCommit(event -> {
@@ -503,8 +536,8 @@ public class MainGUI extends Application {
         itemCountLabel.setText("Total objects: " + objects.size());
 
     }
-
-    public static void run(){
+    public void run(){
         launch();
     }
+
 }

@@ -4,6 +4,7 @@ import collections.Flat;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.ArrayDeque;
 
 /**
  * ...
@@ -15,6 +16,8 @@ public class InfoPacket implements Serializable {
     private String cmd;
     private String arg;
     private Flat flat;
+
+    private ArrayDeque<Flat> db;
 
     private String login;
     private String password;
@@ -64,6 +67,14 @@ public class InfoPacket implements Serializable {
         this.arg = arg;
     }
 
+    public ArrayDeque<Flat> getDB() {
+        return db;
+    }
+
+    public void setDB(ArrayDeque<Flat> db) {
+        this.db = db;
+    }
+
     @Override
     public String toString() {
         return "InfoPacket{" +
@@ -73,4 +84,5 @@ public class InfoPacket implements Serializable {
                 ", password = '" + password + '\'' +
                 '}';
     }
+
 }

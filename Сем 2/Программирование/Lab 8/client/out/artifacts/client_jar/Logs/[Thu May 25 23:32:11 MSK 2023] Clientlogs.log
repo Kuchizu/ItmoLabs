@@ -1,0 +1,110 @@
+May 25, 2023 11:32:11 PM managers.LogPrinter print
+INFO: Client started running on [
+May 25, 2023 11:32:11 PM managers.LogPrinter print
+INFO: localhost
+May 25, 2023 11:32:11 PM managers.LogPrinter print
+INFO: ][
+May 25, 2023 11:32:11 PM managers.LogPrinter print
+INFO: 1234
+May 25, 2023 11:32:11 PM managers.LogPrinter print
+INFO: ]
+
+
+May 25, 2023 11:32:11 PM managers.LogPrinter print
+INFO: >>> 
+May 25, 2023 11:32:14 PM managers.CommandExecutor run
+INFO: info
+May 25, 2023 11:32:14 PM managers.LogPrinter print
+INFO: Для использования команд войдите в систему (/login) или зарегистрируйтесь (/reg)
+May 25, 2023 11:32:14 PM managers.LogPrinter println
+INFO: Для использования команд войдите в систему (/login) или зарегистрируйтесь (/reg)
+May 25, 2023 11:32:14 PM managers.LogPrinter print
+INFO: >>> 
+May 25, 2023 11:32:16 PM managers.CommandExecutor run
+INFO: /login
+May 25, 2023 11:32:16 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 25, 2023 11:32:18 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 25, 2023 11:32:19 PM managers.LogPrinter print
+INFO: Wrong password for user Kuchizu
+May 25, 2023 11:32:19 PM managers.LogPrinter println
+INFO: Wrong password for user Kuchizu
+May 25, 2023 11:32:19 PM managers.LogPrinter print
+INFO: >>> 
+May 25, 2023 11:32:22 PM managers.CommandExecutor run
+INFO: /login
+May 25, 2023 11:32:22 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 25, 2023 11:32:23 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 25, 2023 11:32:24 PM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 25, 2023 11:32:24 PM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 25, 2023 11:32:24 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:32:24 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:32:24 PM managers.LogPrinter print
+INFO: ] >>> 
+May 25, 2023 11:32:29 PM managers.CommandExecutor run
+INFO: info
+May 25, 2023 11:32:29 PM managers.LogPrinter print
+INFO: Collection ArrayDeque
+Size: 0 elements
+
+May 25, 2023 11:32:29 PM managers.LogPrinter println
+INFO: Collection ArrayDeque
+Size: 0 elements
+
+May 25, 2023 11:32:29 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:32:29 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:32:29 PM managers.LogPrinter print
+INFO: ] >>> 
+May 25, 2023 11:32:31 PM managers.CommandExecutor run
+INFO: help
+May 25, 2023 11:32:31 PM managers.LogPrinter print
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 25, 2023 11:32:31 PM managers.LogPrinter println
+INFO: 
+remove_head: Вывести первый элемент коллекции и удалить его
+add {element}: Добавить новый элемент в коллекцию
+count_by_time_to_metro_on_foot timeToMetroOnFoot: Вывести количество элементов, значение поля timeToMetroOnFoot которых равно заданному
+execute_script file_name: Cчитать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+show: Вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+clear: Очистить коллекцию
+update id {element}: Обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id: Удалить элемент из коллекции по его id
+remove_lower: Удалить из коллекции все элементы, меньшие, чем заданный
+head: Вывести первый элемент коллекции
+help: Вывести справку по доступным командам
+exit: Завершить программу (без сохранения в файл)
+print_descending: Вывести элементы коллекции в порядке убывания
+average_of_time_to_metro_by_transport: Вывести среднее значение поля timeToMetroByTransport для всех элементов коллекции
+info: Вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+
+May 25, 2023 11:32:31 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:32:31 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:32:31 PM managers.LogPrinter print
+INFO: ] >>> 

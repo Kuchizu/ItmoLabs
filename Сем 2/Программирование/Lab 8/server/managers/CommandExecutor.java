@@ -150,8 +150,10 @@ public class CommandExecutor {
                                                 owner = DBManager.getFlatOwnerLogin(Integer.parseInt(finalInf.getArg()));
                                                 if (owner == null) {
                                                     infoPacket.setCmd(String.format("Object by id %s not found", finalInf.getArg()));
+
                                                 } else if (!owner.equals(finalInf.getLogin())) {
                                                     infoPacket.setCmd("You don't have permission to modify this object.");
+
                                                 } else {
                                                     DBManager.changeElement(Integer.parseInt(finalInf.getArg()), finalInf.getFlat(), finalInf.getLogin(), finalInf.getPassword());
                                                     infoPacket.setCmd("Объект " + finalInf.getFlat().getName() + " изменён");
@@ -161,6 +163,7 @@ public class CommandExecutor {
                                             case "execute_script" -> {
                                                 infoPacket.setCmd(new ExecuteScript().execute(finalInf.getArg(), finalInf.getLogin(), finalInf.getPassword()));
                                             }
+
                                             case "/login" -> {
                                                 String[] log;
                                                 log = DBManager.check_user(finalInf.getLogin(), finalInf.getPassword());
@@ -174,6 +177,7 @@ public class CommandExecutor {
                                                     infoPacket.setCmd(log[1]);
                                                 }
                                             }
+
                                             case "/reg" -> {
                                                 String[] reg;
                                                 reg = DBManager.reg_user(finalInf.getLogin(), finalInf.getPassword());
@@ -187,11 +191,21 @@ public class CommandExecutor {
                                                     infoPacket.setCmd(reg[1]);
                                                 }
                                             }
+
+                                            case "/loadDB" -> {
+                                                System.out.println("DB");
+                                                System.out.println(DBManager.getData().size());
+                                                infoPacket.setDB(DBManager.getData());
+                                            }
+
                                             default -> infoPacket.setCmd(commands.get(finalInf.getCmd()).execute(finalInf.getArg(), finalInf.getLogin()));
+
                                         }
+
                                     } catch (SQLException | ParserConfigurationException | IOException | TransformerException |
                                              SAXException | CreateObjException e) {
                                         infoPacket.setCmd("Ошибка при выполнении SQL запроса");
+
                                     }
 
                                     try {

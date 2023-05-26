@@ -12,6 +12,7 @@ public class Flat implements Serializable {
     private static final long serialVersionUID = 3;
 
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
+    private Integer ownerId; //Чупапи мунянё
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
     private java.time.ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
@@ -22,8 +23,9 @@ public class Flat implements Serializable {
     private Furnish furnish; //Поле может быть null
     private House house; //Поле не может быть null
 
-    public Flat(int id, String name, Coordinates coordinates, java.time.ZonedDateTime creationDate, Integer area, Integer numberOfRooms, Float timeToMetroOnFoot, Double timeToMetroByTransport, Furnish furnish, House house) {
+    public Flat(int id, int ownerId, String name, Coordinates coordinates, java.time.ZonedDateTime creationDate, Integer area, Integer numberOfRooms, Float timeToMetroOnFoot, Double timeToMetroByTransport, Furnish furnish, House house) {
         this.id = id;
+        this.ownerId = ownerId;
         this.name = name;
         this.coordinates = coordinates;
         this.creationDate = creationDate;
@@ -33,6 +35,14 @@ public class Flat implements Serializable {
         this.timeToMetroByTransport = timeToMetroByTransport;
         this.furnish = furnish;
         this.house = house;
+    }
+
+    public Integer getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(Integer ownerId) {
+        this.ownerId = ownerId;
     }
 
     public Integer getId() {
@@ -148,4 +158,3 @@ House:
     }
 
 }
-

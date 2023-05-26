@@ -138,12 +138,13 @@ public class DBManager {
 
     }
 
-    public static void loadData() throws SQLException, IOException {
+    public static void loadData() throws SQLException {
         st.execute(Struct.struct);
 
         ResultSet rs = st.executeQuery("Select * from flats");
         while(rs.next()) {
             int flatid = rs.getInt(1);
+            int ownerid = rs.getInt(2);
             String name = rs.getString(3);
             int cordid = rs.getInt(4);
             Timestamp ctime = rs.getTimestamp(5);
@@ -168,6 +169,7 @@ public class DBManager {
 
             Flat flat = new Flat(
                     flatid,
+                    ownerid,
                     name,
                     new Coordinates(cord.getLong(1), cord.getDouble(2)),
                     ctime.toLocalDateTime().atZone(ZoneId.systemDefault()),

@@ -75,6 +75,7 @@ public class ExecuteScript extends Command {
 
                     flat = new Flat(
                             1,
+                            -1,
                             name,
                             new Coordinates(Long.parseLong(coordinates[0]), Double.parseDouble(coordinates[1])),
                             ZonedDateTime.now(),

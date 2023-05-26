@@ -1,0 +1,118 @@
+May 25, 2023 11:57:51 PM managers.LogPrinter print
+INFO: Client started running on [
+May 25, 2023 11:57:51 PM managers.LogPrinter print
+INFO: localhost
+May 25, 2023 11:57:51 PM managers.LogPrinter print
+INFO: ][
+May 25, 2023 11:57:51 PM managers.LogPrinter print
+INFO: 1234
+May 25, 2023 11:57:51 PM managers.LogPrinter print
+INFO: ]
+
+
+May 25, 2023 11:57:51 PM managers.LogPrinter print
+INFO: >>> 
+May 25, 2023 11:57:53 PM managers.CommandExecutor run
+INFO: /login
+May 25, 2023 11:57:53 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 25, 2023 11:57:55 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 25, 2023 11:57:56 PM managers.LogPrinter print
+INFO: Wrong password for user Kuchizu
+May 25, 2023 11:57:56 PM managers.LogPrinter println
+INFO: Wrong password for user Kuchizu
+May 25, 2023 11:57:56 PM managers.LogPrinter print
+INFO: >>> 
+May 25, 2023 11:57:57 PM managers.CommandExecutor run
+INFO: /login
+May 25, 2023 11:57:57 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 25, 2023 11:57:58 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 25, 2023 11:57:58 PM managers.LogPrinter print
+INFO: User with login asd not found.
+May 25, 2023 11:57:58 PM managers.LogPrinter println
+INFO: User with login asd not found.
+May 25, 2023 11:57:58 PM managers.LogPrinter print
+INFO: >>> 
+May 26, 2023 12:16:08 AM managers.CommandExecutor run
+INFO: /reg
+May 26, 2023 12:16:08 AM managers.LogPrinter print
+INFO: Регистрация нового пользователя
+May 26, 2023 12:16:08 AM managers.LogPrinter println
+INFO: Регистрация нового пользователя
+May 26, 2023 12:16:08 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 26, 2023 12:16:09 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 26, 2023 12:16:10 AM managers.LogPrinter print
+INFO: Пользователь a успешно зарегистрирован
+May 26, 2023 12:16:10 AM managers.LogPrinter println
+INFO: Пользователь a успешно зарегистрирован
+May 26, 2023 12:16:10 AM managers.LogPrinter print
+INFO: [
+May 26, 2023 12:16:10 AM managers.LogPrinter print
+INFO: a
+May 26, 2023 12:16:10 AM managers.LogPrinter print
+INFO: ] >>> 
+May 26, 2023 12:16:13 AM managers.CommandExecutor run
+INFO: /reg
+May 26, 2023 12:16:13 AM managers.LogPrinter print
+INFO: Регистрация нового пользователя
+May 26, 2023 12:16:13 AM managers.LogPrinter println
+INFO: Регистрация нового пользователя
+May 26, 2023 12:16:13 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 26, 2023 12:16:15 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 26, 2023 12:16:15 AM managers.LogPrinter print
+INFO: Пользователь  успешно зарегистрирован
+May 26, 2023 12:16:15 AM managers.LogPrinter println
+INFO: Пользователь  успешно зарегистрирован
+May 26, 2023 12:16:15 AM managers.LogPrinter print
+INFO: [
+May 26, 2023 12:16:15 AM managers.LogPrinter print
+INFO: 
+May 26, 2023 12:16:15 AM managers.LogPrinter print
+INFO: ] >>> 
+May 26, 2023 12:16:23 AM managers.CommandExecutor run
+INFO: /reg
+May 26, 2023 12:16:23 AM managers.LogPrinter print
+INFO: Регистрация нового пользователя
+May 26, 2023 12:16:23 AM managers.LogPrinter println
+INFO: Регистрация нового пользователя
+May 26, 2023 12:16:23 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 26, 2023 12:16:23 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 26, 2023 12:16:24 AM managers.LogPrinter print
+INFO: Пользователь с логином a уже существует.
+May 26, 2023 12:16:24 AM managers.LogPrinter println
+INFO: Пользователь с логином a уже существует.
+May 26, 2023 12:16:24 AM managers.LogPrinter print
+INFO: [
+May 26, 2023 12:16:24 AM managers.LogPrinter print
+INFO: 
+May 26, 2023 12:16:24 AM managers.LogPrinter print
+INFO: ] >>> 
+May 26, 2023 12:16:27 AM managers.CommandExecutor run
+INFO: /reg
+May 26, 2023 12:16:27 AM managers.LogPrinter print
+INFO: Регистрация нового пользователя
+May 26, 2023 12:16:27 AM managers.LogPrinter println
+INFO: Регистрация нового пользователя
+May 26, 2023 12:16:27 AM managers.LogPrinter print
+INFO: Введите логин: 
+May 26, 2023 12:16:35 AM managers.LogPrinter print
+INFO: Введите пароль: 
+May 26, 2023 12:16:35 AM managers.LogPrinter print
+INFO: Пользователь 1 успешно зарегистрирован
+May 26, 2023 12:16:35 AM managers.LogPrinter println
+INFO: Пользователь 1 успешно зарегистрирован
+May 26, 2023 12:16:35 AM managers.LogPrinter print
+INFO: [
+May 26, 2023 12:16:35 AM managers.LogPrinter print
+INFO: 1
+May 26, 2023 12:16:35 AM managers.LogPrinter print
+INFO: ] >>> 

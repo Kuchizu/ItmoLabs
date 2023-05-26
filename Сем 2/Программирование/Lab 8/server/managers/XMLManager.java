@@ -80,6 +80,7 @@ public class XMLManager {
 
                 Flat flat = new Flat(
                         Integer.parseInt(eElement.getElementsByTagName("id").item(0).getTextContent()),
+                        -1,
                         eElement.getElementsByTagName("name").item(0).getTextContent(),
                         new Coordinates(Long.parseLong(coordinates[0]), Double.parseDouble(coordinates[1])),
                         ZonedDateTime.ofInstant(Instant.ofEpochSecond(crdate), ZoneId.of("Europe/Moscow")),

@@ -1,0 +1,264 @@
+May 25, 2023 11:34:05 PM managers.LogPrinter print
+INFO: Client started running on [
+May 25, 2023 11:34:05 PM managers.LogPrinter print
+INFO: localhost
+May 25, 2023 11:34:05 PM managers.LogPrinter print
+INFO: ][
+May 25, 2023 11:34:05 PM managers.LogPrinter print
+INFO: 1234
+May 25, 2023 11:34:05 PM managers.LogPrinter print
+INFO: ]
+
+
+May 25, 2023 11:34:05 PM managers.LogPrinter print
+INFO: >>> 
+May 25, 2023 11:34:17 PM managers.CommandExecutor run
+INFO: /login
+May 25, 2023 11:34:17 PM managers.LogPrinter print
+INFO: Введите логин: 
+May 25, 2023 11:34:19 PM managers.LogPrinter print
+INFO: Введите пароль: 
+May 25, 2023 11:34:20 PM managers.LogPrinter print
+INFO: Успешная авторизация.
+May 25, 2023 11:34:20 PM managers.LogPrinter println
+INFO: Успешная авторизация.
+May 25, 2023 11:34:20 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:34:20 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:34:20 PM managers.LogPrinter print
+INFO: ] >>> 
+May 25, 2023 11:34:23 PM managers.CommandExecutor run
+INFO: info
+May 25, 2023 11:34:23 PM managers.LogPrinter print
+INFO: Collection ArrayDeque
+Size: 0 elements
+
+May 25, 2023 11:34:23 PM managers.LogPrinter println
+INFO: Collection ArrayDeque
+Size: 0 elements
+
+May 25, 2023 11:34:23 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:34:23 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:34:23 PM managers.LogPrinter print
+INFO: ] >>> 
+May 25, 2023 11:34:26 PM managers.CommandExecutor run
+INFO: add
+May 25, 2023 11:34:26 PM managers.LogPrinter print
+INFO: Введите Name (String), /q для отмены:
+May 25, 2023 11:34:26 PM managers.LogPrinter println
+INFO: Введите Name (String), /q для отмены:
+May 25, 2023 11:34:26 PM managers.LogPrinter print
+INFO: Введите координаты x, y (Long, Double):
+May 25, 2023 11:34:26 PM managers.LogPrinter println
+INFO: Введите координаты x, y (Long, Double):
+May 25, 2023 11:34:28 PM managers.LogPrinter print
+INFO: Введите area (Integer): 
+May 25, 2023 11:34:28 PM managers.LogPrinter println
+INFO: Введите area (Integer): 
+May 25, 2023 11:34:29 PM managers.LogPrinter print
+INFO: Введите numberOfRooms (Integer):
+May 25, 2023 11:34:29 PM managers.LogPrinter println
+INFO: Введите numberOfRooms (Integer):
+May 25, 2023 11:34:29 PM managers.LogPrinter print
+INFO: Введите timeToMetroOnFoot (Float):
+May 25, 2023 11:34:29 PM managers.LogPrinter println
+INFO: Введите timeToMetroOnFoot (Float):
+May 25, 2023 11:34:29 PM managers.LogPrinter print
+INFO: Введите timeToMetroByTransport (Double):
+May 25, 2023 11:34:29 PM managers.LogPrinter println
+INFO: Введите timeToMetroByTransport (Double):
+May 25, 2023 11:34:29 PM managers.LogPrinter print
+INFO: Введите furnish (Enum [NONE, DESIGNER, FINE, LITTLE]):
+May 25, 2023 11:34:29 PM managers.LogPrinter println
+INFO: Введите furnish (Enum [NONE, DESIGNER, FINE, LITTLE]):
+May 25, 2023 11:34:32 PM managers.LogPrinter print
+INFO: Введите name of House (String):
+May 25, 2023 11:34:32 PM managers.LogPrinter println
+INFO: Введите name of House (String):
+May 25, 2023 11:34:32 PM managers.LogPrinter print
+INFO: Введите year of House (Long):
+May 25, 2023 11:34:32 PM managers.LogPrinter println
+INFO: Введите year of House (Long):
+May 25, 2023 11:34:32 PM managers.LogPrinter print
+INFO: Введите numberOfFloors of House (Long):
+May 25, 2023 11:34:32 PM managers.LogPrinter println
+INFO: Введите numberOfFloors of House (Long):
+May 25, 2023 11:34:33 PM managers.LogPrinter print
+INFO: Введите numberOfLifts of House (Int):
+May 25, 2023 11:34:33 PM managers.LogPrinter println
+INFO: Введите numberOfLifts of House (Int):
+May 25, 2023 11:34:33 PM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+May 25, 2023 11:34:33 PM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+May 25, 2023 11:34:33 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:34:33 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:34:33 PM managers.LogPrinter print
+INFO: ] >>> 
+May 25, 2023 11:41:11 PM managers.CommandExecutor run
+INFO: add
+May 25, 2023 11:41:11 PM managers.LogPrinter print
+INFO: Введите Name (String), /q для отмены:
+May 25, 2023 11:41:11 PM managers.LogPrinter println
+INFO: Введите Name (String), /q для отмены:
+May 25, 2023 11:41:12 PM managers.LogPrinter print
+INFO: Введите координаты x, y (Long, Double):
+May 25, 2023 11:41:12 PM managers.LogPrinter println
+INFO: Введите координаты x, y (Long, Double):
+May 25, 2023 11:41:13 PM managers.LogPrinter print
+INFO: Введите area (Integer): 
+May 25, 2023 11:41:13 PM managers.LogPrinter println
+INFO: Введите area (Integer): 
+May 25, 2023 11:41:13 PM managers.LogPrinter print
+INFO: Введите numberOfRooms (Integer):
+May 25, 2023 11:41:13 PM managers.LogPrinter println
+INFO: Введите numberOfRooms (Integer):
+May 25, 2023 11:41:13 PM managers.LogPrinter print
+INFO: Введите timeToMetroOnFoot (Float):
+May 25, 2023 11:41:13 PM managers.LogPrinter println
+INFO: Введите timeToMetroOnFoot (Float):
+May 25, 2023 11:41:13 PM managers.LogPrinter print
+INFO: Введите timeToMetroByTransport (Double):
+May 25, 2023 11:41:13 PM managers.LogPrinter println
+INFO: Введите timeToMetroByTransport (Double):
+May 25, 2023 11:41:13 PM managers.LogPrinter print
+INFO: Введите furnish (Enum [NONE, DESIGNER, FINE, LITTLE]):
+May 25, 2023 11:41:13 PM managers.LogPrinter println
+INFO: Введите furnish (Enum [NONE, DESIGNER, FINE, LITTLE]):
+May 25, 2023 11:41:15 PM managers.LogPrinter print
+INFO: Введите name of House (String):
+May 25, 2023 11:41:15 PM managers.LogPrinter println
+INFO: Введите name of House (String):
+May 25, 2023 11:41:15 PM managers.LogPrinter print
+INFO: Введите year of House (Long):
+May 25, 2023 11:41:15 PM managers.LogPrinter println
+INFO: Введите year of House (Long):
+May 25, 2023 11:41:15 PM managers.LogPrinter print
+INFO: Введите numberOfFloors of House (Long):
+May 25, 2023 11:41:15 PM managers.LogPrinter println
+INFO: Введите numberOfFloors of House (Long):
+May 25, 2023 11:41:15 PM managers.LogPrinter print
+INFO: Введите numberOfLifts of House (Int):
+May 25, 2023 11:41:15 PM managers.LogPrinter println
+INFO: Введите numberOfLifts of House (Int):
+May 25, 2023 11:41:15 PM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+May 25, 2023 11:41:15 PM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+May 25, 2023 11:41:15 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:41:15 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:41:15 PM managers.LogPrinter print
+INFO: ] >>> 
+May 25, 2023 11:41:16 PM managers.CommandExecutor run
+INFO: 1
+May 25, 2023 11:41:16 PM managers.LogPrinter print
+INFO: Неизвестная команда
+May 25, 2023 11:41:16 PM managers.LogPrinter println
+INFO: Неизвестная команда
+May 25, 2023 11:41:16 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:41:16 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:41:16 PM managers.LogPrinter print
+INFO: ] >>> 
+May 25, 2023 11:46:38 PM managers.CommandExecutor run
+INFO: info
+May 25, 2023 11:46:38 PM managers.LogPrinter print
+INFO: Collection ArrayDeque
+Size: 0 elements
+
+May 25, 2023 11:46:38 PM managers.LogPrinter println
+INFO: Collection ArrayDeque
+Size: 0 elements
+
+May 25, 2023 11:46:38 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:46:38 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:46:38 PM managers.LogPrinter print
+INFO: ] >>> 
+May 25, 2023 11:46:39 PM managers.CommandExecutor run
+INFO: add
+May 25, 2023 11:46:39 PM managers.LogPrinter print
+INFO: Введите Name (String), /q для отмены:
+May 25, 2023 11:46:39 PM managers.LogPrinter println
+INFO: Введите Name (String), /q для отмены:
+May 25, 2023 11:46:40 PM managers.LogPrinter print
+INFO: Введите координаты x, y (Long, Double):
+May 25, 2023 11:46:40 PM managers.LogPrinter println
+INFO: Введите координаты x, y (Long, Double):
+May 25, 2023 11:46:41 PM managers.LogPrinter print
+INFO: Введите area (Integer): 
+May 25, 2023 11:46:41 PM managers.LogPrinter println
+INFO: Введите area (Integer): 
+May 25, 2023 11:46:41 PM managers.LogPrinter print
+INFO: Введите numberOfRooms (Integer):
+May 25, 2023 11:46:41 PM managers.LogPrinter println
+INFO: Введите numberOfRooms (Integer):
+May 25, 2023 11:46:41 PM managers.LogPrinter print
+INFO: Введите timeToMetroOnFoot (Float):
+May 25, 2023 11:46:41 PM managers.LogPrinter println
+INFO: Введите timeToMetroOnFoot (Float):
+May 25, 2023 11:46:41 PM managers.LogPrinter print
+INFO: Введите timeToMetroByTransport (Double):
+May 25, 2023 11:46:41 PM managers.LogPrinter println
+INFO: Введите timeToMetroByTransport (Double):
+May 25, 2023 11:46:41 PM managers.LogPrinter print
+INFO: Введите furnish (Enum [NONE, DESIGNER, FINE, LITTLE]):
+May 25, 2023 11:46:41 PM managers.LogPrinter println
+INFO: Введите furnish (Enum [NONE, DESIGNER, FINE, LITTLE]):
+May 25, 2023 11:46:43 PM managers.LogPrinter print
+INFO: Введите name of House (String):
+May 25, 2023 11:46:43 PM managers.LogPrinter println
+INFO: Введите name of House (String):
+May 25, 2023 11:46:43 PM managers.LogPrinter print
+INFO: Введите year of House (Long):
+May 25, 2023 11:46:43 PM managers.LogPrinter println
+INFO: Введите year of House (Long):
+May 25, 2023 11:46:43 PM managers.LogPrinter print
+INFO: Введите numberOfFloors of House (Long):
+May 25, 2023 11:46:43 PM managers.LogPrinter println
+INFO: Введите numberOfFloors of House (Long):
+May 25, 2023 11:46:43 PM managers.LogPrinter print
+INFO: Введите numberOfLifts of House (Int):
+May 25, 2023 11:46:43 PM managers.LogPrinter println
+INFO: Введите numberOfLifts of House (Int):
+May 25, 2023 11:46:44 PM managers.LogPrinter print
+INFO: Объект 1 добавлен в коллекцию.
+May 25, 2023 11:46:44 PM managers.LogPrinter println
+INFO: Объект 1 добавлен в коллекцию.
+May 25, 2023 11:46:44 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:46:44 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:46:44 PM managers.LogPrinter print
+INFO: ] >>> 
+May 25, 2023 11:46:47 PM managers.CommandExecutor run
+INFO: info
+May 25, 2023 11:46:47 PM managers.LogPrinter print
+INFO: 
+Collection ArrayDeque
+Size: 1 elements
+CreationDate: 2023-05-25T23:46:43.981693220+03:00[Europe/Moscow]
+LastElementID: 3
+
+May 25, 2023 11:46:47 PM managers.LogPrinter println
+INFO: 
+Collection ArrayDeque
+Size: 1 elements
+CreationDate: 2023-05-25T23:46:43.981693220+03:00[Europe/Moscow]
+LastElementID: 3
+
+May 25, 2023 11:46:47 PM managers.LogPrinter print
+INFO: [
+May 25, 2023 11:46:47 PM managers.LogPrinter print
+INFO: Kuchizu
+May 25, 2023 11:46:47 PM managers.LogPrinter print
+INFO: ] >>> 

@@ -1,7 +1,5 @@
 package commands;
 
-import main.Main;
-import managers.XMLManager;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -24,10 +22,9 @@ public class Save extends Command {
 
     @Override
     public String execute(String arg) throws ParserConfigurationException, IOException, TransformerException, SAXException {
-        if (XMLManager.writeToFile(Main.ENV_KEY)){
-            System.out.println("Успешно сохранено.");
-        }
+//        if (XMLManager.writeToFile(Main.ENV_KEY)){
+//            System.out.println("Успешно сохранено.");
+//        }
         return null;
-
     }
 }
