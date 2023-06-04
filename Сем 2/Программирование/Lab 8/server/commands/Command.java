@@ -14,6 +14,8 @@ import java.sql.SQLException;
 public abstract class Command {
 
     public abstract String getName();
+
     public abstract String getDesc();
+
     public abstract String execute(String arg, String pass) throws ParserConfigurationException, IOException, TransformerException, SAXException, CreateObjException, SQLException;
 }

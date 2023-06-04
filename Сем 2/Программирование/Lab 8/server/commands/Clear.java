@@ -30,8 +30,8 @@ public class Clear extends Command {
     @Override
     public String execute(String arg, String login) throws SQLException {
         int x = 0;
-        for(Flat f: new ArrayDeque<>(DBManager.getData())){
-            if(Objects.equals(DBManager.getFlatOwnerLogin(f.getId()), login)){
+        for (Flat f : new ArrayDeque<>(DBManager.getData())) {
+            if (Objects.equals(DBManager.getFlatOwnerLogin(f.getId()), login)) {
                 DBManager.removeflat(f.getId());
                 x++;
             }

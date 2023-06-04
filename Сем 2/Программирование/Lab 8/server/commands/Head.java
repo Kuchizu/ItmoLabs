@@ -2,7 +2,6 @@ package commands;
 
 import collections.Flat;
 import managers.DBManager;
-import managers.DBManager;
 
 import java.util.ArrayDeque;
 
@@ -24,7 +23,7 @@ public class Head extends Command {
     public String execute(String arg, String login) {
         ArrayDeque<Flat> flat = DBManager.getData();
 
-        if(flat.size() == 0){
+        if (flat.size() == 0) {
             return "Clear collection, nothing to show.";
         }
 

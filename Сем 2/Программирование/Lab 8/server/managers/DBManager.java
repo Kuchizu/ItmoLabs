@@ -6,7 +6,6 @@ import collections.Furnish;
 import collections.House;
 import commands.Struct;
 
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -21,6 +20,7 @@ public class DBManager {
 
     public DBManager() throws SQLException {
     }
+
     public static ArrayDeque<Flat> getData() {
         return data;
     }
@@ -33,6 +33,7 @@ public class DBManager {
     // jdbc:postgresql://127.0.0.1:5432/studs?user=s373746&password=zxXKGXjCdzuyqIhi
     private static String host = "jdbc:postgresql://localhost/postgres?user=postgres&password=postgres";
     static Connection conn;
+
     public static void setHost(String sqlhost) {
         host = sqlhost;
     }
@@ -46,6 +47,7 @@ public class DBManager {
             e.printStackTrace();
         }
     }
+
     private static Statement st;
 
     static {
@@ -83,7 +85,7 @@ public class DBManager {
         psuser.setString(1, login);
         ResultSet rsuser = psuser.executeQuery();
 
-        if(!rsuser.next()){
+        if (!rsuser.next()) {
             return new String[]{"Err1", String.format("User with login %s not found.", login)};
         }
 
@@ -92,15 +94,15 @@ public class DBManager {
         pspass.setString(2, getSHA224Hash(pass));
         ResultSet rspass = pspass.executeQuery();
 
-        if(!rspass.next()){
+        if (!rspass.next()) {
             return new String[]{"Err2", String.format("Wrong password for user %s", login)};
         }
 
-        return new String[]{"Succ", "Успешная авторизация."};
+        return new String[]{"Succ", "Успешная авторизация.", String.valueOf(rspass.getInt(1))};
     }
 
     public static String[] reg_user(String login, String pass) throws SQLException {
-        if(!check_user(login, pass)[0].equals("Err1")){
+        if (!check_user(login, pass)[0].equals("Err1")) {
             return new String[]{"Err1", String.format("Пользователь с логином %s уже существует.", login)};
         }
 
@@ -118,7 +120,7 @@ public class DBManager {
         psown.setInt(1, flatid);
         ResultSet rsown = psown.executeQuery();
 
-        if(!rsown.next()){
+        if (!rsown.next()) {
             return null;
         }
 
@@ -142,7 +144,7 @@ public class DBManager {
         st.execute(Struct.struct);
 
         ResultSet rs = st.executeQuery("Select * from flats");
-        while(rs.next()) {
+        while (rs.next()) {
             int flatid = rs.getInt(1);
             int ownerid = rs.getInt(2);
             String name = rs.getString(3);
@@ -184,7 +186,10 @@ public class DBManager {
             data.add(flat);
         }
     }
+
     public static void addElement(Flat flat, String ownerlogin, String ownerpass) throws SQLException {
+
+        System.out.println(flat.getId());
 
         PreparedStatement psowner = conn.prepareStatement("Select id from Users where login = ? and password = ?");
         psowner.setString(1, ownerlogin);
@@ -208,7 +213,13 @@ public class DBManager {
         ResultSet house = pshouse.executeQuery();
         house.next();
 
-        PreparedStatement addflat = conn.prepareStatement("Insert into flats values (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning id");
+        PreparedStatement addflat;
+        if (flat.getId() == -1){
+            addflat = conn.prepareStatement("Insert into flats values (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning id");
+        } else {
+            addflat = conn.prepareStatement("Insert into flats values (%s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning id".formatted(flat.getId()));
+        }
+
         addflat.setInt(1, owner_id.getInt(1));
         addflat.setString(2, flat.getName());
         addflat.setInt(3, cord.getInt(1));
@@ -228,13 +239,14 @@ public class DBManager {
         data.add(flat);
 
     }
+
     public static void changeElement(int flatid, Flat flat, String login, String pass) throws SQLException {
 
         removeflat(flat.getId());
         addElement(flat, login, pass);
 
-        for(Flat f : DBManager.data){
-            if (f.getId() == flatid){
+        for (Flat f : DBManager.data) {
+            if (f.getId() == flatid) {
                 flat.setId(f.getId());
                 flat.setCreationDate(f.getCreationDate());
                 DBManager.data.remove(f);

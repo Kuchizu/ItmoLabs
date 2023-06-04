@@ -22,7 +22,7 @@ public class CountMetroFootTime extends Command {
 
     @Override
     public String execute(String vall, String login) {
-        if(vall == null){
+        if (vall == null) {
             return "Usage: count_by_time_to_metro_on_foot {arg}";
         }
 
@@ -30,8 +30,8 @@ public class CountMetroFootTime extends Command {
         ArrayDeque<Flat> flats = DBManager.getData();
 
         int x = 0;
-        for(Flat flat: flats){
-            if(Objects.equals(flat.getTimeToMetroOnFoot(), val)){
+        for (Flat flat : flats) {
+            if (Objects.equals(flat.getTimeToMetroOnFoot(), val)) {
                 x++;
             }
         }

@@ -32,8 +32,17 @@ public class CommandExecutor {
     private static InetAddress inetAddress;
     private static String host;
     private static int port;
+    private static int userID;
     private static String login;
     private static String pass;
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        CommandExecutor.userID = userID;
+    }
 
     public String getLogin() {
         return login;

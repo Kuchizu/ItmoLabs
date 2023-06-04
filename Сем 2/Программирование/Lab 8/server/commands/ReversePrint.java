@@ -4,8 +4,7 @@ import collections.Flat;
 import managers.DBManager;
 
 import java.util.ArrayDeque;
-
-import java.util.*;
+import java.util.Iterator;
 
 /**
  * Prints all collection elements reversed.
@@ -25,14 +24,14 @@ public class ReversePrint extends Command {
     public String execute(String arg, String login) {
         ArrayDeque<Flat> flats = DBManager.getData();
 
-        if(flats.size() == 0){
+        if (flats.size() == 0) {
             return "Clear collection, nothing to show.";
         }
-        
+
         StringBuilder res = new StringBuilder();
 
         Iterator<Flat> it = flats.descendingIterator();
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             res.append(it.next()).append("\n");
         }
 

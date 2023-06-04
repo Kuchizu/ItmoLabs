@@ -20,6 +20,7 @@ public class RemoveIfLover extends Command {
     public String getDesc() {
         return "Удалить из коллекции все элементы, меньшие, чем заданный";
     }
+
     @Override
     public String execute(String arg, String login) throws SQLException {
         if (arg == null) {
@@ -34,8 +35,8 @@ public class RemoveIfLover extends Command {
         }
 
         int x = 0;
-        for(Flat f: new ArrayDeque<>(DBManager.getData())){
-            if(f.getId() < val && Objects.equals(DBManager.getFlatOwnerLogin(f.getId()), login)){
+        for (Flat f : new ArrayDeque<>(DBManager.getData())) {
+            if (f.getId() < val && Objects.equals(DBManager.getFlatOwnerLogin(f.getId()), login)) {
                 DBManager.removeflat(f.getId());
                 x++;
             }

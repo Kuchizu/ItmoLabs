@@ -4,6 +4,7 @@ import collections.Coordinates;
 import collections.Flat;
 import collections.Furnish;
 import collections.House;
+import commands.Info;
 import commands.InfoPacket;
 import javafx.application.Application;
 import javafx.beans.property.*;
@@ -85,6 +86,7 @@ public class MainGUI extends Application {
                 InfoPacket loginPacket = executor.request(credentials);
 
                 if (loginPacket.getCmd().equals("/login")){
+                    executor.setUserID(Integer.parseInt(loginPacket.getArg()));
                     showMainApp(primaryStage);
 
                 } else {
@@ -180,36 +182,41 @@ public class MainGUI extends Application {
             }
 
             if(!(isFurnish(fields[7].getText().toUpperCase(Locale.ROOT)))){
-                showError("Error when firmatting Furnish", "It must be one of [NONE, DESIGNER, FINE, LITTLE]");
+                showError("Error when formatting Furnish", "It must be one of [NONE, DESIGNER, FINE, LITTLE]");
                 return;
             }
 
             System.out.println("True");
 
-            // TODO: ID
-            objects.add(
-                    new Flat(
-                            -1,
-                            -1,
-                            fields[0].getText(),
-                            new Coordinates(
-                                    Long.parseLong(fields[1].getText()),
-                                    Double.parseDouble(fields[2].getText())
-                            ),
-                            ZonedDateTime.now(),
-                            Integer.parseInt(fields[3].getText()),
-                            Integer.parseInt(fields[4].getText()),
-                            Float.parseFloat(fields[5].getText()),
-                            Double.parseDouble(fields[6].getText()),
-                            Furnish.valueOf(fields[7].getText().toUpperCase(Locale.ROOT)),
-                            new House(
-                                    fields[8].getText(),
-                                    Long.parseLong(fields[9].getText()),
-                                    Long.parseLong(fields[10].getText()),
-                                    Integer.parseInt(fields[11].getText())
-                            )
+
+            Flat flat = new Flat(
+                    objects.get(objects.size() - 1).getId() + 1,
+                    executor.getUserID(),
+                    fields[0].getText(),
+                    new Coordinates(
+                            Long.parseLong(fields[1].getText()),
+                            Double.parseDouble(fields[2].getText())
+                    ),
+                    ZonedDateTime.now(),
+                    Integer.parseInt(fields[3].getText()),
+                    Integer.parseInt(fields[4].getText()),
+                    Float.parseFloat(fields[5].getText()),
+                    Double.parseDouble(fields[6].getText()),
+                    Furnish.valueOf(fields[7].getText().toUpperCase(Locale.ROOT)),
+                    new House(
+                            fields[8].getText(),
+                            Long.parseLong(fields[9].getText()),
+                            Long.parseLong(fields[10].getText()),
+                            Integer.parseInt(fields[11].getText())
                     )
             );
+
+            objects.add(flat);
+
+            InfoPacket addPacket = new InfoPacket("add", null);
+            addPacket.setFlat(flat);
+
+            executor.request(addPacket);
 
             // stage.close();
 
@@ -260,12 +267,18 @@ public class MainGUI extends Application {
 
     }
 
-    private void requestChange(Flat newflat) { // TODO: FIX
+    private void requestChange(TableColumn.CellEditEvent event) { // TODO: FIX
 
-        InfoPacket upd = new InfoPacket("update", Integer.toString(newflat.getId()));
-        upd.setFlat(newflat);
+        Flat newFlat = (Flat) event.getRowValue();
+
+        System.out.println(newFlat);
+
+        InfoPacket upd = new InfoPacket("update", Integer.toString(newFlat.getId()));
+        upd.setFlat(newFlat);
 
         InfoPacket inf = executor.request(upd);
+
+        // Check
 
         System.out.println(inf);
 
@@ -387,6 +400,23 @@ public class MainGUI extends Application {
         buttonsPane.setCollapsible(true);
         buttonsPane.setExpanded(false);
 
+        /* TODO: FIX
+        table.setRowFactory(tv -> new TableRow<>() {
+            @Override
+            protected void updateItem(Flat item, boolean empty) {
+                super.updateItem(item, empty);
+
+                if (item == null || empty) {
+                    setStyle("");
+                } else {
+                    System.out.println(item.getOwnerId() + " " + executor.getUserID());
+                    if (item.getOwnerId() == executor.getUserID()) {
+                        setStyle("-fx-background-color: lightblue;");
+                    }
+                }
+            }
+        });
+         */
 
         table.setItems(null);
         table.layout();
@@ -439,72 +469,97 @@ public class MainGUI extends Application {
         houseNumberOfLiftsColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getHouse().getNumberOfLifts()).asObject());
 
         nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        nameColumn.setOnEditCommit(event -> requestChange(event.getRowValue()));
+        nameColumn.setOnEditCommit(event -> {
+            Flat flat = event.getRowValue();
+            if (flat.getOwnerId() == executor.getUserID()) {
+                flat.setName(event.getNewValue());
+                requestChange(event);
+            } else {
+                nameColumn.getTableView().refresh();
+                showError("Not enough rights.", "You don't have permission to modify this object.");
+                event.consume();
+            }
+        });
 
         xColumn.setCellFactory(TextFieldTableCell.forTableColumn(new LongStringConverter()));
         xColumn.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
             flat.getCoordinates().setX(event.getNewValue());
+            requestChange(event);
         });
 
         yColumn.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
         yColumn.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
             flat.getCoordinates().setY(event.getNewValue());
+            requestChange(event);
         });
 
         areaColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         areaColumn.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
             flat.setArea(event.getNewValue());
+            requestChange(event);
         });
 
         numberOfRoomsColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         numberOfRoomsColumn.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
-            flat.setNumberOfRooms(event.getNewValue());
+            if (flat.getOwnerId() == executor.getUserID()) {
+                flat.setNumberOfRooms(event.getNewValue());
+                requestChange(event);
+            } else {
+                event.consume();
+            }
         });
 
         timeToMetroOnFootColumn.setCellFactory(TextFieldTableCell.forTableColumn(new FloatStringConverter()));
         timeToMetroOnFootColumn.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
             flat.setTimeToMetroOnFoot(event.getNewValue());
+            requestChange(event);
         });
 
         timeToMetroByTransport.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
         timeToMetroByTransport.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
             flat.setTimeToMetroByTransport(event.getNewValue());
+            requestChange(event);
         });
 
         furnishColumn.setCellFactory(ComboBoxTableCell.forTableColumn(Furnish.values()));
         furnishColumn.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
             flat.setFurnish(event.getNewValue());
+            requestChange(event);
         });
 
         houseNameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         houseNameColumn.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
             flat.getHouse().setName(event.getNewValue());
+            requestChange(event);
         });
 
         houseYearColumn.setCellFactory(TextFieldTableCell.forTableColumn(new LongStringConverter()));
         houseYearColumn.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
             flat.getHouse().setYear(event.getNewValue());
+            requestChange(event);
         });
 
         houseNumberOfFloorsColumn.setCellFactory(TextFieldTableCell.forTableColumn(new LongStringConverter()));
         houseNumberOfFloorsColumn.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
             flat.getHouse().setNumberOfFloors(event.getNewValue());
+            requestChange(event);
         });
 
         houseNumberOfLiftsColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         houseNumberOfLiftsColumn.setOnEditCommit(event -> {
             Flat flat = event.getRowValue();
             flat.getHouse().setNumberOfLifts(event.getNewValue());
+            requestChange(event);
         });
 
         table.setEditable(true);

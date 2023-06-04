@@ -5,8 +5,7 @@ package exceptions;
  */
 public class CreateObjException extends Exception {
 
-    public CreateObjException(String msg)
-    {
+    public CreateObjException(String msg) {
         super(msg);
     }
 }

@@ -9,13 +9,11 @@ import java.sql.SQLException;
 import java.time.LocalTime;
 
 /***
-
  * AYO MAIN
  * Author Kuchizu
  * Var: 3131704
  * <p>
  * Passed 17.05.2023 90 / 100
-
  ***/
 
 public class Main {

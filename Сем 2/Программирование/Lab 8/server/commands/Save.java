@@ -1,8 +1,5 @@
 package commands;
 
-import main.Main;
-import managers.DBManager;
-import managers.DBManager;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;

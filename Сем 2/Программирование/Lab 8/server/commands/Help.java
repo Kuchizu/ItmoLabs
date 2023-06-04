@@ -23,7 +23,7 @@ public class Help extends Command {
     public String execute(String arg, String login) throws SocketException {
 
         StringBuilder res = new StringBuilder().append("\n");
-        for(Command cmd: CommandExecutor.getCommands().values()){
+        for (Command cmd : CommandExecutor.getCommands().values()) {
             res.append(cmd.getName()).append(": ").append(cmd.getDesc()).append("\n");
         }
 

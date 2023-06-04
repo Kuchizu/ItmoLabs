@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 /**
  * Shows all collection elements.
  */
-public class Show extends Command{
+public class Show extends Command {
     @Override
     public String getName() {
         return "show";
@@ -24,7 +24,7 @@ public class Show extends Command{
     public String execute(String arg, String login) {
         ArrayDeque<Flat> flats = DBManager.getData();
 
-        if(flats.size() == 0){
+        if (flats.size() == 0) {
             return "Clear collection, nothing to show.";
         }
 

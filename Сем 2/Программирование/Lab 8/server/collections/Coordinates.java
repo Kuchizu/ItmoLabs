@@ -32,7 +32,7 @@ public class Coordinates implements Serializable {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "X: " + this.getX() + "; Y: " + this.getY();
     }
 

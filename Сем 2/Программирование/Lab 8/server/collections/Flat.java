@@ -126,24 +126,24 @@ public class Flat implements Serializable {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return String.format(
                 """
-    ***    ***    ***
+                            ***    ***    ***
 
-Flat №%s
-    name: %s
-    coordinates: %s
-    creationDate: %s
-    area: %s
-    numberOfRooms: %s
-    timeToMetroOnFoot: %s
-    timeToMetroByTransport: %s
-    furnish: %s
-House:
-%s
-    ***    ***    ***
-                """,
+                        Flat №%s
+                            name: %s
+                            coordinates: %s
+                            creationDate: %s
+                            area: %s
+                            numberOfRooms: %s
+                            timeToMetroOnFoot: %s
+                            timeToMetroByTransport: %s
+                            furnish: %s
+                        House:
+                        %s
+                            ***    ***    ***
+                                        """,
                 this.getId(),
                 this.getName(),
                 this.getCoordinates().toString(),

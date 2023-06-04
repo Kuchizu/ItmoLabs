@@ -11,7 +11,6 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
-import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.time.ZonedDateTime;
@@ -51,7 +50,7 @@ public class ExecuteScript extends Command {
             String cmd = line.split(" ")[0];
 
             String sarg = null;
-            if (line.split(" ").length == 2){
+            if (line.split(" ").length == 2) {
                 sarg = line.split(" ")[1];
             }
 
@@ -90,29 +89,28 @@ public class ExecuteScript extends Command {
                     response.append("Ошибка при выполнении команды add: \n").append(e.getMessage());
                     return response.toString();
                 }
-                if(cmd.equals("add")){
+                if (cmd.equals("add")) {
                     try {
                         DBManager.addElement(flat, login, pass);
-                    } catch (SQLException ignored){
+                    } catch (SQLException ignored) {
 
                     }
                     response.append("Объект ").append(flat.getName()).append(" добавлен в коллекцию.\n");
-                }
-                else{
+                } else {
                     String owner = null;
                     try {
                         owner = DBManager.getFlatOwnerLogin(Integer.parseInt(arg));
-                    } catch (SQLException ignored){
+                    } catch (SQLException ignored) {
 
                     }
-                    if(owner == null) {
+                    if (owner == null) {
                         response.append(String.format("Object by id %s not found", arg));
-                    } else if(!owner.equals(login)){
+                    } else if (!owner.equals(login)) {
                         response.append("You don't have permission to modify this object.");
                     } else {
                         try {
                             DBManager.changeElement(Integer.parseInt(arg), flat, login, pass);
-                        } catch (SQLException ignored){
+                        } catch (SQLException ignored) {
                         }
                         response.append("Объект ").append(flat.getName()).append(" изменён\n");
                     }
@@ -122,11 +120,11 @@ public class ExecuteScript extends Command {
             if (commands.containsKey(cmd)) {
                 try {
                     response.append(commands.get(cmd).execute(sarg, login));
-                } catch (IOException | ParserConfigurationException | TransformerException | SAXException | CreateObjException | SQLException ignored){
+                } catch (IOException | ParserConfigurationException | TransformerException | SAXException |
+                         CreateObjException | SQLException ignored) {
 
                 }
-            }
-            else{
+            } else {
                 response.append("Неизвестная команда: ").append(line).append("\n");
             }
         }

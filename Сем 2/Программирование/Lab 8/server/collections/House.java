@@ -52,14 +52,14 @@ public class House implements Serializable {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return String.format(
                 """
-                    name: %s
-                    year: %s
-                    numberOfFloors: %s
-                    numberOfLifts: %s
-                """,
+                            name: %s
+                            year: %s
+                            numberOfFloors: %s
+                            numberOfLifts: %s
+                        """,
 
                 this.getName(),
                 this.getYear(),

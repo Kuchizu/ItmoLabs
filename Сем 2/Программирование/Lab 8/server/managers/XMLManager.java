@@ -39,14 +39,14 @@ public class XMLManager {
 
     /**
      * Loads database to data object.
+     *
      * @param path XML DB file path
-     * @throws ParserConfigurationException
-     * Throws when DB can't be parsed.
+     * @throws ParserConfigurationException Throws when DB can't be parsed.
      */
     public static void loadData(String path) throws ParserConfigurationException {
 
         File checknull = new File(path);
-        if(checknull.length() == 0){
+        if (checknull.length() == 0) {
             return;
         }
 
@@ -108,14 +108,16 @@ public class XMLManager {
 
     /**
      * Adds new Flat element to the collection.
+     *
      * @param flat Flat object
      */
-    public static void addElement(Flat flat){
+    public static void addElement(Flat flat) {
         XMLManager.data.add(flat);
     }
-    public static void changeElement(int flatid, Flat flat){
-        for(Flat f : XMLManager.data){
-            if (f.getId() == flatid){
+
+    public static void changeElement(int flatid, Flat flat) {
+        for (Flat f : XMLManager.data) {
+            if (f.getId() == flatid) {
                 flat.setId(f.getId());
                 flat.setCreationDate(f.getCreationDate());
                 XMLManager.data.remove(f);
@@ -128,12 +130,13 @@ public class XMLManager {
     /**
      * Clears data object.
      */
-    public static void dropAll(){
+    public static void dropAll() {
         XMLManager.data.clear();
     }
 
     /**
      * Writes new changes to DB file.
+     *
      * @param path XML DB file path
      * @return
      * @throws TransformerException
@@ -152,17 +155,16 @@ public class XMLManager {
 
         ArrayDeque<Flat> flats = XMLManager.getData();
 
-        if(flats.isEmpty()){
+        if (flats.isEmpty()) {
             try {
                 new FileWriter(path, false).close();
-            }
-            catch (java.io.IOException io){
+            } catch (java.io.IOException io) {
                 System.err.println("Изменения не сохранены. Ошибка доступа к файлу, проверьте файл и попробуйте сохранить ещё раз.");
                 return false;
             }
         }
 
-        for(Flat flat: flats) {
+        for (Flat flat : flats) {
 
             Element nodee = doc.createElement("Flat");
             Node q = rootElement.appendChild(nodee);
@@ -216,6 +218,7 @@ public class XMLManager {
 
     /**
      * Parses node.
+     *
      * @param doc
      * @param name
      * @param value

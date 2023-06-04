@@ -24,13 +24,13 @@ public class RemoveHead extends Command {
     public String execute(String arg, String login) throws SQLException {
         ArrayDeque<Flat> flat = DBManager.getData();
 
-        if(flat.size() == 0){
+        if (flat.size() == 0) {
             return "Clear collection, nothing to return and delete.";
         }
 
         Flat head = flat.getFirst();
 
-        if(!DBManager.getFlatOwnerLogin(head.getId()).equals(login)) {
+        if (!DBManager.getFlatOwnerLogin(head.getId()).equals(login)) {
             return "You don't have permission to modify this object.";
         }
 
