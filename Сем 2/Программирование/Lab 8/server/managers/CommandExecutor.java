@@ -12,6 +12,8 @@ import java.sql.SQLException;
 import java.util.*;
 import java.util.concurrent.*;
 
+import static managers.UpdateSender.connectedUsers;
+
 class EofIndicatorClass implements Serializable {
 }
 
@@ -41,8 +43,6 @@ public class CommandExecutor {
     };
     private static int port;
     private final ExecutorService sendResponseExecutor = Executors.newFixedThreadPool(100);
-
-    private List <InetSocketAddress> connectedUsers = new ArrayList<>();
 
     public CommandExecutor() {
         port = 1234;
@@ -174,8 +174,7 @@ public class CommandExecutor {
                                 infoPacket.setDB(DBManager.getData());
                             }
 
-                            default ->
-                                    infoPacket.setCmd(commands.get(finalInf.getCmd()).execute(finalInf.getArg(), finalInf.getLogin()));
+                            default -> infoPacket.setCmd(commands.get(finalInf.getCmd()).execute(finalInf.getArg(), finalInf.getLogin()));
 
                         }
 
@@ -208,7 +207,9 @@ public class CommandExecutor {
                     });
                 });
 
-                UpdateSender.sendUpdate(new InfoPacket("UPD", "TEST"));
+                System.out.println("Connected Users: " + connectedUsers);
+
+                UpdateSender.sendUpdate(new InfoPacket(inetAddress.toString(), "TEST"));
 
             } catch (Exception e) {
                 System.err.println("Unknown error");

@@ -1,0 +1,192 @@
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: Connected Users: [/127.0.0.1:59565]
+Jun 04, 2023 4:18:16 PM managers.LogPrinter println
+INFO: Connected Users: [/127.0.0.1:59565]
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: 59565
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: ]: [Connected]
+
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: 59565
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'connectme', arg = 'null', login = 'null', password = 'null'}
+Jun 04, 2023 4:18:16 PM managers.LogPrinter print
+INFO: 
+
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: 59565
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: ]: [Connected]
+
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: Connected Users: [/127.0.0.1:59565]
+Jun 04, 2023 4:18:17 PM managers.LogPrinter println
+INFO: Connected Users: [/127.0.0.1:59565]
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: 59565
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'connectme', arg = 'null', login = 'null', password = 'null'}
+Jun 04, 2023 4:18:17 PM managers.LogPrinter print
+INFO: 
+
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: Connected Users: [/127.0.0.1:59565]
+Jun 04, 2023 4:18:26 PM managers.LogPrinter println
+INFO: Connected Users: [/127.0.0.1:59565]
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: 59565
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = '/login', arg = 'null', login = 'Kuchizu', password = 'koemta'}
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: 
+
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: 59565
+Jun 04, 2023 4:18:26 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: Connected Users: [/127.0.0.1:43690, /127.0.0.1:59565]
+Jun 04, 2023 4:19:12 PM managers.LogPrinter println
+INFO: Connected Users: [/127.0.0.1:43690, /127.0.0.1:59565]
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: 43690
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: ]: [Connected]
+
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: 43690
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'connectme', arg = 'null', login = 'null', password = 'null'}
+Jun 04, 2023 4:19:12 PM managers.LogPrinter print
+INFO: 
+
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: 43690
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: ]: [Connected]
+
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: 43690
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = 'connectme', arg = 'null', login = 'null', password = 'null'}
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: 
+
+Jun 04, 2023 4:19:13 PM managers.LogPrinter print
+INFO: Connected Users: [/127.0.0.1:43690, /127.0.0.1:59565]
+Jun 04, 2023 4:19:13 PM managers.LogPrinter println
+INFO: Connected Users: [/127.0.0.1:43690, /127.0.0.1:59565]
+Jun 04, 2023 4:19:19 PM managers.LogPrinter print
+INFO: Connected Users: [/127.0.0.1:43690, /127.0.0.1:59565]
+Jun 04, 2023 4:19:19 PM managers.LogPrinter println
+INFO: Connected Users: [/127.0.0.1:43690, /127.0.0.1:59565]
+Jun 04, 2023 4:19:19 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: 43690
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = '/login', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: 
+
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: [Succ, Успешная авторизация., 1]
+Jun 04, 2023 4:19:20 PM managers.LogPrinter println
+INFO: [Succ, Успешная авторизация., 1]
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: 43690
+Jun 04, 2023 4:19:20 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+

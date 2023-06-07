@@ -6,32 +6,35 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
+import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
-import java.util.ArrayList;
-import java.util.List;
-
-import static managers.CommandExecutor.datagramSocket;
+import java.net.SocketException;
+import java.util.HashSet;
 
 public class UpdateSender {
-    private static List<InetSocketAddress> connectedUsers = new ArrayList<>();
+    public static HashSet<InetSocketAddress> connectedUsers = new HashSet<>();
+    static DatagramSocket updateDatagramSocket;
 
-    static public void sendUpdate(InfoPacket upd) throws IOException {
-        for (InetSocketAddress client: connectedUsers) {
-
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            ObjectOutputStream oos;
-            oos = new ObjectOutputStream(baos);
-            InfoPacket infoPacket = new InfoPacket(null, null);
-            oos.writeObject(infoPacket);
-            oos.flush();
-            oos.close();
-
-
-            byte[] buffer = baos.toByteArray();
-            DatagramPacket responsePacket = new DatagramPacket(buffer, buffer.length, client.getAddress(), client.getPort());
-
-            datagramSocket.send(responsePacket);
+    static {
+        try {
+            updateDatagramSocket = new DatagramSocket();
+        } catch (SocketException e) {
+            throw new RuntimeException(e);
         }
     }
 
+    static public void sendUpdate(InfoPacket upd) throws IOException {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(baos);
+        oos.writeObject(upd);
+        oos.flush();
+        oos.close();
+
+        byte[] buffer = baos.toByteArray();
+        for (InetSocketAddress client : connectedUsers) {
+            DatagramPacket updatePacket = new DatagramPacket(buffer, buffer.length, client.getAddress(), client.getPort());
+            updateDatagramSocket.send(updatePacket);
+            System.out.println("Sent update to: " + client);
+        }
+    }
 }

@@ -17,7 +17,7 @@ class EofIndicatorClass implements Serializable{
  */
 public class CommandExecutor {
 
-    private static final DatagramSocket datagramSocket;
+    public static final DatagramSocket datagramSocket;
 
     static {
         try {
@@ -29,9 +29,9 @@ public class CommandExecutor {
         }
     }
 
-    private static InetAddress inetAddress;
+    public static InetAddress inetAddress;
     private static String host;
-    private static int port;
+    public static int port;
     private static int userID;
     private static String login;
     private static String pass;

@@ -1,0 +1,36 @@
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: Connected Users: [/127.0.0.1:48851]
+Jun 04, 2023 4:20:14 PM managers.LogPrinter println
+INFO: Connected Users: [/127.0.0.1:48851]
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: 48851
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: ]: Got message:
+
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: InfoPacket{cmd = '/login', arg = 'null', login = 'Kuchizu', password = 'kometa'}
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: 
+
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: [Succ, Успешная авторизация., 1]
+Jun 04, 2023 4:20:14 PM managers.LogPrinter println
+INFO: [Succ, Успешная авторизация., 1]
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: [
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: /127.0.0.1
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: ][
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: 48851
+Jun 04, 2023 4:20:14 PM managers.LogPrinter print
+INFO: ]: Sent response.
+
+

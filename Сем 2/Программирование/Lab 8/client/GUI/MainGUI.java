@@ -4,7 +4,6 @@ import collections.Coordinates;
 import collections.Flat;
 import collections.Furnish;
 import collections.House;
-import commands.Info;
 import commands.InfoPacket;
 import javafx.application.Application;
 import javafx.beans.property.*;
@@ -34,11 +33,17 @@ import javafx.util.converter.IntegerStringConverter;
 import javafx.util.converter.LongStringConverter;
 import managers.CommandExecutor;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.SocketTimeoutException;
 import java.sql.Timestamp;
 import java.time.ZonedDateTime;
 import java.util.*;
 
+import static managers.CommandExecutor.inetAddress;
 import static managers.ConverterChecker.*;
 
 public class MainGUI extends Application {
@@ -85,6 +90,8 @@ public class MainGUI extends Application {
 
                 InfoPacket loginPacket = executor.request(credentials);
 
+                System.out.println("KER " + loginPacket);
+
                 if (loginPacket.getCmd().equals("/login")){
                     executor.setUserID(Integer.parseInt(loginPacket.getArg()));
                     showMainApp(primaryStage);
@@ -114,9 +121,6 @@ public class MainGUI extends Application {
     }
 
     private void showInfo(String title, String header, String context){
-
-        System.out.println(title + header + context);
-
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setHeaderText(header);
@@ -243,6 +247,22 @@ public class MainGUI extends Application {
         return field;
     }
 
+    private void updateHandler() throws IOException, ClassNotFoundException {
+        DatagramSocket updateDatagramSocket = new DatagramSocket(10101);
+
+        System.out.println("Waiting for update");
+
+        while (true) {
+            DatagramPacket respPacket = new DatagramPacket(new byte[3000], 3000);
+            updateDatagramSocket.receive(respPacket);
+            ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(respPacket.getData()));
+
+            InfoPacket UPD = (InfoPacket) ois.readObject();
+            System.out.println("Got update: " + UPD);
+        }
+    }
+
+
     private void requestInfo(ActionEvent event) {
 
         Map<String, String> commands = new HashMap<>() {
@@ -262,7 +282,6 @@ public class MainGUI extends Application {
         }
 
         InfoPacket inf = executor.request(new InfoPacket(cmd, null));
-        System.out.println(inf);
         showInfo(cmd, inf.getCmd(), inf.getCmd());
 
     }
@@ -271,16 +290,12 @@ public class MainGUI extends Application {
 
         Flat newFlat = (Flat) event.getRowValue();
 
-        System.out.println(newFlat);
-
         InfoPacket upd = new InfoPacket("update", Integer.toString(newFlat.getId()));
         upd.setFlat(newFlat);
 
         InfoPacket inf = executor.request(upd);
 
         // Check
-
-        System.out.println(inf);
 
     }
 
@@ -295,6 +310,17 @@ public class MainGUI extends Application {
         InfoPacket DB = executor.request(new InfoPacket("/loadDB", null));
         System.out.println(DB.getDB().size());
         objects.addAll(DB.getDB());
+
+        Thread updateThread = new Thread(
+                () -> {
+                    try {
+                        updateHandler();
+                    } catch (IOException | ClassNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+        );
+        updateThread.start();
 
 
         TableView<Flat> table = new TableView<>();
