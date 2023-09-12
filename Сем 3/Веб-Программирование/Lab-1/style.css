@@ -1,0 +1,124 @@
+header {
+    display: flex;
+    font-family: monospace;
+    color: black;
+    font-size: 17px;
+    justify-content: space-between;
+}
+
+#itmo_logo {
+    height: 70px;
+}
+body {
+    font-size: 16px;
+}
+
+.scroll-table-body {
+    font-size: 15px;
+}
+
+.win {
+    display: flex;
+    justify-content: center;
+}
+
+.head_menu {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+}
+.graph {
+    height: 340px;
+}
+#menu {
+    height: 300px;
+    display: grid;
+    align-content: center;
+}
+input#x {
+    padding-left: 10px;
+}
+#forma {
+    width: 400px;
+    justify-self: center;
+}
+.values>div {
+    margin-left: 1%;
+}
+.values {
+    padding: 1%;
+    border-color: black;
+    border-style: groove;
+    border-radius: 10px;
+}
+.values>div {
+    display: flex;
+    justify-content: center;
+}
+
+.x_value>input {
+    margin-left: 2%;
+}
+
+.incorrectX {
+    background-color: red;
+
+}
+.y_value {
+    margin-top: 0%;
+}
+
+#r_value>input {
+    margin-left: 2%;
+}
+
+.but {
+    display: flex;
+    margin-top: 3%;
+    justify-content: center;
+}
+
+.under_form_input {
+    margin-top: 3%;
+    justify-self: center;
+}
+
+input[type="checkbox"]:checked+label::before {
+    content: "«";
+}
+
+input[type="checkbox"]:checked+label::after {
+    content: "»";
+}
+
+.tab_head {
+    border-style: groove;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.tab1>*>*>th {
+    border-style: groove;
+    border-color: black;
+    border-radius: 10px;
+}
+
+#scroll-table-body {
+    width: 800px;
+    height: 310px;
+    overflow-y: auto;
+    margin-top: 10px;
+    border-style: solid;
+    color: black;
+    border-radius: 10px;
+}
+.scroll-table table {
+    width:800px;
+    table-layout: fixed;
+}
+
+#tab>*>*>*>*>*>td {
+    border-style: groove;
+    border-color: black;
+    border-radius: 10px;
+}

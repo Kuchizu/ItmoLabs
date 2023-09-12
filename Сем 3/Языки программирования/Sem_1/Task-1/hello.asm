@@ -1,6 +1,6 @@
 ; hello.asm
   section .data
-  message: db  'hello, world!', 10
+  message: db  'Hello, world!', 10
 
   section .text
   global _start

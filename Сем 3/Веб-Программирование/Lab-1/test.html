@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="1">
+
+</div>
+<div id="parent">
+    <div>qwerty</div>
+    <div>asdfgh</div>
+</div>
+    <script>
+        function Test(param1, param2) {
+            this.p1=param1;
+            var pp = "dasd"
+            this.p2=param2;
+            this.print=function () {
+                alert(this.p1);
+            }
+        }
+        Test.prototype.yyy="fdasfo";
+        var t1 = new Test("asf", 12);
+        var t2 = new Test(143, "bcx");
+        t1.print();
+        t2.print();
+        t1.yyy="dasdoiq";
+        t2.pp = "nnnnn"
+        alert(t2.pp);
+        var asd = document.getElementById("1");
+        asd.innerHTML = "<div id='2'> </div>";
+        var dsa = document.getElementById("2");
+        dsa.innerHTML = "hello";
+        var dd = document.getElementById("parent");
+        let ch = dd.getElementsByTagName("div");
+        for (let i = 0; i < ch.length; i++) {
+            alert(ch[i].innerHTML);
+        }
+    </script>
+</body>
+</html>

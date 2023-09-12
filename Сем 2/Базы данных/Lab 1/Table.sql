@@ -31,7 +31,7 @@ CREATE TABLE Animals(
 	name TEXT,
 	type TEXT NOT NULL,
 	location INT NOT NULL REFERENCES Locations,
-	way INT REFERENCES Ways on delete cascade
+	way INT REFERENCES Ways ON DELETE CASCADE
 );
 
 CREATE TABLE Cars(

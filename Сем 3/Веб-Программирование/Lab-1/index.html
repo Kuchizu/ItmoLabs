@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB LAB 1</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <script src="JQ/jquery-3.7.0.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <header>
+        <img id="itmo_logo" src="https://itmo.ru/promo/itmo-logo-dark.svg">
+        <h1 id="lab1">Лабораторная работа №1 Нодири Хисравхон P3231 вариант 1212 </h1>
+    </header>
+    <hr>
+    <body>
+        <table class="win">
+            <tr>
+                <td class="graph">
+                    <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+                        <!--                Оси-->
+                        <line stroke="black" x1="150" x2="150" y1="300" y2="0"></line>
+                        <text x="160" y="12">Y</text>
+                        <line stroke="black" x1="0" x2="300" y1="150" y2="150"></line>
+                        <text x="286" y="135">X</text>
+                        <!--                Промежутки-->
+                        <line stroke="black" x1="147" x2="153" y1="30" y2="30"></line>
+                        <text x="160" y="35">R</text>
+                        <line stroke="black" x1="147" x2="153" y1="90" y2="90"></line>
+                        <text x="160" y="95">R/2</text>
+                        <line stroke="black" x1="147" x2="153" y1="210" y2="210"></line>
+                        <text x="160" y="215">-R/2</text>
+                        <line stroke="black" x1="147" x2="153" y1="270" y2="270"></line>
+                        <text x="160" y="275">-R</text>
+                        <line stroke="black" x1="30" x2="30" y1="147" y2="153"></line>
+                        <text x="23" y="140">-R</text>
+                        <line stroke="black" x1="90" x2="90" y1="147" y2="153"></line>
+                        <text x="83" y="140">-R/2</text>
+                        <line stroke="black" x1="210" x2="210" y1="147" y2="153"></line>
+                        <text x="202" y="140">R/2</text>
+                        <line stroke="black" x1="270" x2="270" y1="147" y2="153"></line>
+                        <text x="264" y="140">R</text>
+                        <!--                Стрелочки-->
+                        <line stroke="black" x1="300" x2="290" y1="150" y2="146"></line>
+                        <line stroke="black" x1="300" x2="290" y1="150" y2="154"></line>
+                        <line stroke="black" x1="150" x2="146" y1="0" y2="10"></line>
+                        <line stroke="black" x1="150" x2="154" y1="0" y2="10"></line>
+                        <!--                Выделенная область-->
+                        <polygon fill="blue" fill-opacity="0.3" points="150,30 270,30 270,150 150,150"></polygon>
+                        <polygon fill="blue" fill-opacity="0.3" points="90,150 150,150 150,210"></polygon>
+                        <path fill="blue" fill-opacity="0.3" d="M150,150 L30,150 A120,120 1 0,1 150,30"></path>
+                    </svg>
+                </td>
+                <td id="menu">
+                    <div id="forma" name="form" onsubmit="return check_value()">
+                        <div class="values">
+                            <div class="x_value">
+                                Выберите X:
+                                <input type="text" name="x" id="x" onchange="check_value()" placeholder="-5 ... 3">
+                            </div>
+                            <div class="y_value">
+                                Выберите Y:
+                                <input type="checkbox" class="y" id="y_-4" onchange="handleCheckbox(this), check_value()" name="y" value="-4">
+                                <label for="y_-4">-4</label>
+                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="-3">
+                                <label>-3</label>
+                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="-2">
+                                <label>-2</label>
+                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="-1">
+                                <label>-1</label>
+                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="0">
+                                <label>0</label>
+                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="1">
+                                <label>1</label>
+                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="2">
+                                <label>2</label>
+                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="3">
+                                <label>3</label>
+                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="4">
+                                <label>4</label>
+                            </div>
+                            <div id="r_value">
+                                Выберите R:
+                                <input type="hidden" id="r_val">
+                                <input type="button" class="r" name="r" value="1" onclick="saveR(this), check_value()">
+                                <input type="button" class="r" name="r" value="2" onclick="saveR(this), check_value()">
+                                <input type="button" class="r" name="r" value="3" onclick="saveR(this), check_value()">
+                                <input type="button" class="r" name="r" value="4" onclick="saveR(this), check_value()">
+                                <input type="button" class="r" name="r" value="5" onclick="saveR(this), check_value()">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" class="under_form_input" id="sub_but" value="Submit" disabled>
+                    <input type="button" class="under_form_input" id="clear" value="Clear table" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td id="tab" colspan="2">
+                    <div class="scroll-table">
+                        <div class="tab_head">
+                            <table class="tab1">
+                                <thead>
+                                <tr>
+                                    <th>X</th>
+                                    <th>Y</th>
+                                    <th>R</th>
+                                    <th>Hit fact</th>
+                                    <th>Current time</th>
+                                    <th>Script running time, ms</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                        <div id="scroll-table-body">
+                            <table class="result">
+
+                            </table>
+                            <a id="end_table"></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
