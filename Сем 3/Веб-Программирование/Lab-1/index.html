@@ -2,10 +2,11 @@
 <html>
     <head>
         <title>WEB LAB 1</title>
+        <link rel="icon" href="https://lichess1.org/assets/_VCyzdj/logo/lichess-favicon-512.png">
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <script src="JQ/jquery-3.7.0.js"></script>
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="./script.js"></script>
     </head>
     <header>
         <img id="itmo_logo" src="https://itmo.ru/promo/itmo-logo-dark.svg">
@@ -53,39 +54,35 @@
                 <td id="menu">
                     <div id="forma" name="form" onsubmit="return check_value()">
                         <div class="values">
-                            <div class="x_value">
+                            <div id="x_value">
                                 Выберите X:
-                                <input type="text" name="x" id="x" onchange="check_value()" placeholder="-5 ... 3">
+                                <input type="hidden" id="x_val">
+                                <input type="button" class="x" name="x" value="-3" onclick="saveX(this), check_value()">
+                                <input type="button" class="x" name="x" value="-2" onclick="saveX(this), check_value()">
+                                <input type="button" class="x" name="x" value="-1" onclick="saveX(this), check_value()">
+                                <input type="button" class="x" name="x" value="0" onclick="saveX(this), check_value()">
+                                <input type="button" class="x" name="x" value="1" onclick="saveX(this), check_value()">
+                                <input type="button" class="x" name="x" value="2" onclick="saveX(this), check_value()">
+                                <input type="button" class="x" name="x" value="3" onclick="saveX(this), check_value()">
+                                <input type="button" class="x" name="x" value="4" onclick="saveX(this), check_value()">
+                                <input type="button" class="x" name="x" value="5" onclick="saveX(this), check_value()">
                             </div>
                             <div class="y_value">
                                 Выберите Y:
-                                <input type="checkbox" class="y" id="y_-4" onchange="handleCheckbox(this), check_value()" name="y" value="-4">
-                                <label for="y_-4">-4</label>
-                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="-3">
-                                <label>-3</label>
-                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="-2">
-                                <label>-2</label>
-                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="-1">
-                                <label>-1</label>
-                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="0">
-                                <label>0</label>
-                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="1">
-                                <label>1</label>
-                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="2">
-                                <label>2</label>
-                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="3">
-                                <label>3</label>
-                                <input type="checkbox" class="y" onchange="handleCheckbox(this), check_value()" name="y" value="4">
-                                <label>4</label>
+                                <input type="text" name="y" id="y" oninput="check_value()" placeholder="-3 ... 5">
                             </div>
-                            <div id="r_value">
+                            <div class="r_value">
                                 Выберите R:
-                                <input type="hidden" id="r_val">
-                                <input type="button" class="r" name="r" value="1" onclick="saveR(this), check_value()">
-                                <input type="button" class="r" name="r" value="2" onclick="saveR(this), check_value()">
-                                <input type="button" class="r" name="r" value="3" onclick="saveR(this), check_value()">
-                                <input type="button" class="r" name="r" value="4" onclick="saveR(this), check_value()">
-                                <input type="button" class="r" name="r" value="5" onclick="saveR(this), check_value()">
+                                <input type="checkbox" class="r" id="r_1" onchange="handleCheckbox(this), check_value()" name="r" value="1">
+                                <label for="r_1">1</label>
+                                <input type="checkbox" class="r" id="r_2" onchange="handleCheckbox(this), check_value()" name="r" value="2">
+                                <label for="r_2">2</label>
+                                <input type="checkbox" class="r" id="r_3" onchange="handleCheckbox(this), check_value()" name="r" value="3">
+                                <label for="r_3">3</label>
+                                <input type="checkbox" class="r" id="r_4" onchange="handleCheckbox(this), check_value()" name="r" value="4">
+                                <label for="r_4">4</label>
+                                <input type="checkbox" class="r" id="r_5" onchange="handleCheckbox(this), check_value()" name="r" value="5">
+                                <label for="r_5">5</label>
                             </div>
                         </div>
                     </div>

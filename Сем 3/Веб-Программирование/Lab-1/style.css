@@ -56,20 +56,20 @@ input#x {
     justify-content: center;
 }
 
-.x_value>input {
+.y_value>input {
     margin-left: 2%;
 }
 
-.incorrectX {
+.incorrectY {
     background-color: red;
-
 }
-.y_value {
+
+.r_value {
     margin-top: 0%;
 }
 
-#r_value>input {
-    margin-left: 2%;
+#x_value>input {
+    margin-left: 1%;
 }
 
 .but {

@@ -9,28 +9,33 @@ function check_value() {
     }
 }
 
-function checkX() {
-    let x = document.getElementById("x").value;
-    if (isNaN(x)) {
-        document.getElementById("x").classList.add("incorrectX");
+function checkY() {
+    let y = document.getElementById("y").value;
+    y = y.replace(',', '.');
+    if (isNaN(y)) {
+        document.getElementById("y").classList.add("incorrectY");
         return false;
     }
-    if (x == "") {
-        document.getElementById("x").classList.add("incorrectX");
+    if (y == "") {
+        document.getElementById("y").classList.add("incorrectY");
         return false;
     }
-    if ((x >= -5) && (x <= 3)) {
-        document.getElementById("x").classList.remove("incorrectX");
+    if ((y.split('.')[1] || []).length > 4){
+        document.getElementById("y").classList.remove("incorrectY");
+        return false;
+    }
+    if ((y >= -3) && (y <= 5)) {
+        document.getElementById("y").classList.remove("incorrectY");
         return true;
     }
     else {
-        document.getElementById("x").classList.add("incorrectX");
+        document.getElementById("y").classList.add("incorrectY");
         return false;
     }
 }
 
-function checkY() {
-        const collection = document.getElementsByClassName("y");
+function checkR() {
+        const collection = document.getElementsByClassName("r");
         for (let i = 0; i < collection.length; i++) {
             if (collection[i].checked == true) {
                 return true;
@@ -41,7 +46,7 @@ function checkY() {
 
 function handleCheckbox(elem) {
     if (elem.checked == true) {
-        const collection = document.getElementsByClassName("y");
+        const collection = document.getElementsByClassName("r");
         for (let i = 0; i < collection.length; i++) {
             if (collection[i] != elem) {
                 collection[i].checked = false;
@@ -50,30 +55,23 @@ function handleCheckbox(elem) {
     }
 }
 
-function checkR() {
-    if (document.getElementById("r_val").value == "") {
-        return false;
-    }
-    return true;
+function checkX() {
+    return document.getElementById("x_val").value !== "";
 }
 
-function saveR(r) {
-    document.getElementById("r_val").value = r.value;
-    r.disabled = true;
-    let buttons = document.getElementsByClassName("r");
+function saveX(x) {
+    document.getElementById("x_val").value = x.value;
+    x.disabled = true;
+    let buttons = document.getElementsByClassName("x");
     for (let i = 0; i < buttons.length; i++) {
-        if (buttons[i] !== r) {
+        if (buttons[i] !== x) {
             buttons[i].disabled = false;
         }
     }
 }
 
 function clear_but() {
-    if (document.querySelectorAll('.res_tab').length == 0) {
-        document.getElementById("clear").disabled = true;
-    } else {
-        document.getElementById("clear").disabled = false;
-    }
+    document.getElementById("clear").disabled = document.querySelectorAll('.res_tab').length === 0;
 }
 
 $(document).ready( function() {
@@ -81,7 +79,7 @@ $(document).ready( function() {
         type: 'GET',
         crossDomain: true,
         dataType: 'json',
-        url: 'load_table.php',
+        url: 'PHP/load_table.php',
         success: function(data,textStatus,xhr){
             console.log(data);
             var result_str = "<tbody>";
@@ -90,7 +88,7 @@ $(document).ready( function() {
                 result_str += "<td>" + data[i].x + "</td>";
                 result_str += "<td>" + data[i].y + "</td>";
                 result_str += "<td>" + data[i].r + "</td>";
-                if (data[i].result == "hit") {
+                if (data[i].result === "hit") {
                     result_str += "<td style='color: green;'>" + data[i].result + "</td>";
                 } else{
                     result_str += "<td style='color: red;'>" + data[i].result + "</td>";
@@ -105,7 +103,7 @@ $(document).ready( function() {
             clear_but();
         },
         error: function(xhr, statusText, err) {
-            alert("error: "+statusText+" "+err);
+            // alert("Error 1: "+statusText+" "+err);
         }
     })
 
@@ -114,7 +112,7 @@ $(document).ready( function() {
             $.ajax({
                 type: 'GET',
                 crossDomain: true,
-                url: 'clean_table.php',
+                url: 'PHP/clean_table.php',
                 success: function () {
                     let table = document.querySelectorAll('.res_tab');
                     for (let i = 0; i < table.length; i++) {
@@ -127,15 +125,15 @@ $(document).ready( function() {
     )
     $("#sub_but").click(
         function () {
-                var r = $("#r_val").val();
-                var x = $("#x").val();
-                var y = $(".y:checked").val();
+                var r = $(".r:checked").val();
+                var x = $("#x_val").val();
+                var y = $("#y").val();
                 $.ajax({
                     type: 'GET',
                     crossDomain: true,
                     data: {r:r, x:x, y:y},
                     dataType: 'json',
-                    url: 'index.php',
+                    url: 'PHP/index.php',
                     success:
                         function(data,textStatus,xhr){
                             console.log(data);
@@ -145,7 +143,7 @@ $(document).ready( function() {
                                 result_str += "<td>" + data[i].x + "</td>";
                                 result_str += "<td>" + data[i].y + "</td>";
                                 result_str += "<td>" + data[i].r + "</td>";
-                                if (data[i].result == "hit") {
+                                if (data[i].result === "hit") {
                                     result_str += "<td style='color: green;'>" + data[i].result + "</td>";
                                 } else{
                                     result_str += "<td style='color: red;'>" + data[i].result + "</td>";
