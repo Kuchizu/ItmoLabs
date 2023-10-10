@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <servlet>
+        <servlet-name>ControllerServlet</servlet-name>
+        <servlet-class>servlets.ControllerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControllerServlet</servlet-name>
+        <url-pattern>/controller</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>areaCheckServlet</servlet-name>
+        <servlet-class>servlets.AreaCheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>areaCheckServlet</servlet-name>
+        <url-pattern>/area-check</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <error-code>400</error-code>
+        <location>/Error-pages/400.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/Error-pages/403.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/Error-pages/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/Error-pages/500.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>503</error-code>
+        <location>/Error-pages/503.jsp</location>
+    </error-page>
+
+</web-app>
