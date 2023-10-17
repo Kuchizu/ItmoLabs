@@ -1,5 +1,5 @@
 ; hello_mmap.asm
-%define O_RDONLY 0 
+%define O_RDONLY 0
 %define PROT_READ 0x1
 %define MAP_PRIVATE 0x2
 %define SYS_WRITE 1
@@ -58,6 +58,7 @@ print_substring:
     ret
 
 _start:
+    push rbx
     ; Вызовите open и откройте fname в режиме read only.
     mov  rax, SYS_OPEN
     mov  rdi, fname
@@ -98,6 +99,8 @@ _start:
     mov  rax, SYS_CLOSE
     mov  rdi, rbx
     syscall
+
+    pop rbx
 
     ; И выйти
     call exit

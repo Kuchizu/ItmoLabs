@@ -1,4 +1,3 @@
-
 %define O_RDONLY 0
 %define PROT_READ 0x1
 %define MAP_PRIVATE 0x2
@@ -14,17 +13,9 @@
 %define OFFSETOF_ST_SIZE 48
 %define SIZEOF_OFF_T 8
 
-
-section .data
-    fname: db 'text.txt', 0
-
 section .text
-global _start
-
-exit:
-    mov  rax, SYS_EXIT
-    xor  rdi, rdi
-    syscall
+global print_file
+global print_string
 
 print_string:
     push rdi
@@ -54,12 +45,11 @@ print_substring:
     syscall
     ret
 
-_start:
+print_file:
     push rbx
     push r12
 
     mov  rax, SYS_OPEN
-    mov  rdi, fname
     mov  rsi, O_RDONLY
     mov  rdx, 0
     syscall
@@ -73,7 +63,6 @@ _start:
     syscall
 
     mov  rax, [rsp + OFFSETOF_ST_SIZE]
-
     mov  r12, rax
 
     xor  rdi, rdi
@@ -98,9 +87,7 @@ _start:
     mov  rdi, rbx
     syscall
 
+    add rsp, STAT_SIZE
     pop r12
     pop rbx
-
-    mov  rax, SYS_EXIT
-    xor  rdi, rdi
-    syscall
+    ret
