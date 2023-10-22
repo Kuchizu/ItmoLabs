@@ -84,5 +84,4 @@ public class AreaCheckServlet extends HttpServlet {
         }
         return false;
     }
-
 }
