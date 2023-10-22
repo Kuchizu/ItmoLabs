@@ -19,12 +19,13 @@ public class AreaCheckServlet extends HttpServlet {
         final String x = request.getParameter("x");
         final String y = request.getParameter("y");
         final String r = request.getParameter("r");
+        final String mini = request.getParameter("m");
 
         final double dx;
         final double dy;
         final double dr;
 
-        System.out.printf("Got in AreaChecker with args %s %s %s ", x, y, r);
+        System.out.printf("Got in AreaChecker with args %s %s %s %s", x, y, r, mini);
 
         try {
             dx = Double.parseDouble(x);
@@ -60,9 +61,28 @@ public class AreaCheckServlet extends HttpServlet {
         sessionData.addResult(data);
 
         session.setAttribute("data", sessionData);
-        response.sendRedirect("table.jsp");
+
+        if (mini != null) {
+            response.sendRedirect("mini.jsp");
+        } else {
+            response.sendRedirect("table.jsp");
+        }
     }
+
     private boolean checkArea(final double x, final double y, final double r) {
-        return true;
+        System.out.printf("Checking area with args %s %s %s", x, y, r);
+        if (x <= 0 && y >= 0) {
+            return (x * x) + (y * y) <= (r * r);
+        }
+        if (x <= 0 && y <= 0){
+            return x >= -r && y >= -r;
+        }
+        if (x >= 0 && y <= 0) {
+            if (y >= -r) {
+                return (r + y) / x >= 2;
+            }
+        }
+        return false;
     }
+
 }

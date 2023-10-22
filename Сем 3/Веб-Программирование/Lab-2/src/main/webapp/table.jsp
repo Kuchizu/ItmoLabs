@@ -19,7 +19,7 @@
         <th>Calculation Time</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody class="result-body">
     <c:if test="${data.lastResult != null}">
         <tr>
             <td>${data.lastResult.x}</td>

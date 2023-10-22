@@ -15,23 +15,22 @@ public class ControllerServlet extends HttpServlet {
         String x = request.getParameter("x");
         String y = request.getParameter("y");
         String r = request.getParameter("r");
+        String m = request.getParameter("m");
         String clear = request.getParameter("clear");
 
         System.out.println("Got request: " + request);
-        System.out.println(x + "  " + y + "  " + r);
+        System.out.println(x + "  " + y + "  " + r + " " + m);
 
         if ("1".equals(clear)) {
             request.getSession().invalidate();
-            response.sendRedirect("http://localhost:8080/Web2-1.0-SNAPSHOT/");
+            response.sendRedirect(this.getServletContext().getContextPath());
             return;
         }
 
-        if (x != null && y != null && r != null) {
-            System.out.printf("Forwarding to AreaChecker with args %s %s %s ", x, y, r);
-            System.out.println(this.getServletContext().getContextPath() + "/check?x=" + request.getParameter("x")
-                    + "&y=" + request.getParameter("y") + "&r=" + request.getParameter("r"));
-            response.sendRedirect(this.getServletContext().getContextPath() + "/check?x=" + request.getParameter("x")
-                    + "&y=" + request.getParameter("y") + "&r=" + request.getParameter("r"));
+        if (m != null){
+            response.sendRedirect(this.getServletContext().getContextPath() + "/check?x=" + x + "&y=" + y + "&r=" + r + "&m=" + m);
+        } else {
+            response.sendRedirect(this.getServletContext().getContextPath() + "/check?x=" + x + "&y=" + y + "&r=" + r);
         }
     }
 }

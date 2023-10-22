@@ -25,7 +25,7 @@
                 <div id="calculator" style="width: 500px; height: 500px;"></div>
             </div>
             <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-            <script src="Scripts/graph.js"></script>
+            <script src="Scripts/graphdes.js"></script>
             <script type="text/javascript">
                 enable_graph();
             </script>

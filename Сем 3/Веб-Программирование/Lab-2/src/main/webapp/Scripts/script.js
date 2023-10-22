@@ -77,7 +77,6 @@ $(document).ready(function() {
             url: formAction,
             success: function(data) {
                 let tableBody = $(".result-body");
-                // tableBody.append(data);
             },
             error: function (xhr, textStatus, errorThrown) {
                 console.log('Error Something');

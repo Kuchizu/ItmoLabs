@@ -32,7 +32,6 @@ function drawPoint(x, y) {
 }
 
 function drawFig(R){
-    console.log("123123123123123123123");
     calculator.setExpression({ id: 'triangle', latex: `\\polygon((0, 0), (${R/2}, 0), (0, ${-R}))`, color: Desmos.Colors.RED, opacity: 0.3});
     calculator.setExpression({ id: 'rectangle', latex: `\\polygon((${-R}, 0), (0, 0), (0, ${-R}), (${-R}, ${-R}))`, color: Desmos.Colors.RED, opacity: 0.3});
     calculator.setExpression({id: 'circle', latex: `r<=${R} \\{\\frac{\\pi}{2}\\le\\theta\\le\\pi\\}`, color: Desmos.Colors.RED});
@@ -67,18 +66,29 @@ function handleGraphClick (evt) {
     const x = evt.clientX - rect.left;
     const y = evt.clientY - rect.top;
 
-    alert(r_val + " " + x + " " + y);
-
     // Note, pixelsToMath expects x and y to be referenced to the top left of
     // the calculator's parent container.
     const mathCoordinates = calculator.pixelsToMath({x: x, y: y});
 
-    // if (!inRectangle(mathCoordinates, calculator.graphpaperBounds.mathCoordinates)) return;
-
     console.log('setting expression...');
     console.log(mathCoordinates);
 
-    drawPoint(x, y);
+    drawPoint(mathCoordinates.x, mathCoordinates.y);
 
-    // send_intersection_rq(mathCoordinates.x, mathCoordinates.y, r);
+    $.ajax({
+        type: 'GET',
+        data: { r: r_val, x: mathCoordinates.x, y: mathCoordinates.y, m: true },
+        dataType: 'html',
+        url: $("#forma").attr("action"),
+        success: function(data) {
+            let tableBody = $(".result-body");
+            tableBody.append(data);
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            console.log('Error Something');
+            console.log(errorThrown);
+            console.log(textStatus);
+            alert(xhr + textStatus + errorThrown);
+        }
+    });
 }
