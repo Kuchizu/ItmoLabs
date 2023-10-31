@@ -12,3 +12,4 @@ extern parse_int
 extern string_copy
 extern print_string
 extern print_error
+extern read_line

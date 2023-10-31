@@ -11,6 +11,15 @@ db "second_word_explanation", 0
 colon "third_w", third_w
 db "third_word_explanation", 0
 
+colon "a b c", abc
+db "abc", 0
+
+colon "three fucking words", tfw
+db "eqjkwnjkqwndjqwndqwjqwndqwd  ", 0
+
+colon "Kuchizu", Kuchizu
+db "Kuchizu", 0
+
 colon "neko", neko
 db "NekoPeko", 0
 

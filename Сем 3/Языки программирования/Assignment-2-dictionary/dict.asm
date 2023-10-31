@@ -2,32 +2,33 @@ extern string_equals
 global find_word
 
 find_word:
-	%assign addr_size 8
-	push r12
-	push r13
-	mov r12, rdi
-	mov r13, rsi
+    push rsi      ; store callee-saved register
+    mov rcx, rsi  ; store matching string address
 
-    .check_key:
-	mov rdi, [r13]
-	test rdi, rdi
-	je .end_of_dict
-	add rdi, addr_size
-	mov rsi, r12
-	call string_equals
-	test rax, rax
-	jne .found
-	mov r13, [r13]
-	jmp .check_key
+    .loop:
+        add rcx, 8          ; skipping value of pointer of previous element
+        mov rsi, rcx        ; now here is an address of dictionary value
+        push rcx
+        call string_equals  ; compare with rdi string, result in rax
+        pop rcx
 
-    .found:
-	mov rax, [r13]
-	jmp .end
+        test rax, rax       ; 1 -- equals
+        jnz .equals         ; 0 -- not equals
 
-    .end_of_dict:
-	xor rax, rax
+        sub rcx, 8          ; store value of pointer of previous element again
+        mov rcx, [rcx]      ; switch to next element
 
-    .end:
-	pop r13
-	pop r12
-	ret
+        test rcx, rcx       ; pointer state end of dictionary
+        jz .not_equals      ; end searching
+
+        jmp .loop
+
+
+    .equals:
+        mov rax, rsi        ; return dictionary address of value
+        jmp .return
+    .not_equals:
+        xor rax, rax
+    .return:
+        pop rsi             ; restore callee-saved
+        ret

@@ -19,13 +19,18 @@ test_cases = [
     },
     {
         'input': 'peko',
-        'expected_output': '\n',
-        'expected_error': 'Key not found.'
+        'expected_output': '',
+        'expected_error': 'String not found.'
+    },
+    {
+        'input': 'a b c',
+        'expected_output': 'abc',
+        'expected_error': ''
     },
     {
         'input': 'peko' * 100,
-        'expected_output': '\n',
-        'expected_error': 'Key is too long (>255).'
+        'expected_output': '',
+        'expected_error': 'String is too long (>255).'
     }
 ]
 
@@ -37,9 +42,9 @@ for test_case in test_cases:
         or process.stderr != test_case['expected_error']
     ):
         print(f"[ERROR]")
-        print("Input:", test_case['input'])
-        print("Expected Output:", test_case['expected_output'])
-        print("Expected Error:", test_case['expected_error'])
+        print("Input:", repr(test_case['input']))
+        print("Expected Output:", repr(test_case['expected_output']))
+        print("Expected Error:", repr(test_case['expected_error']))
         print("Actual Output:", repr(process.stdout))
         print("Actual Error:", repr(process.stderr), end='\n\n')
 

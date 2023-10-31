@@ -1,5 +1,13 @@
 section .text
 
+%define SYS_EXIT 60
+%define SYS_WRITE 1
+%define SYS_READ  0
+%define STDOUT 1
+%define STDIN  0
+%define STDERR 2
+
+
 global exit
 global string_length
 global print_string
@@ -14,24 +22,22 @@ global parse_uint
 global parse_int
 global string_copy
 global print_error
-
+global read_line
 
 ; Принимает код возврата и завершает текущий процесс
 exit:
-    mov rax, 60
+    mov rax, SYS_EXIT
     syscall
 
 ; Принимает указатель на нуль-терминированную строку, возвращает её длину
 string_length:
-    mov  rax, rdi
-  .counter:
-    cmp  byte [rdi], 0
-    je   .end
-    inc  rdi
-    jmp  .counter
+    xor rax, rax
+  .loop:
+    cmp   byte[rax+rdi], 0
+    je    .end
+    inc   rax
+    jmp   .loop
   .end:
-    sub  rdi, rax
-    mov  rax, rdi
     ret
 
 ; Принимает указатель на нуль-терминированную строку, выводит её в stdout
@@ -40,8 +46,8 @@ print_string:
     call string_length
     mov  rdx, rax
     pop rsi
-    mov  rax, 1
-    mov  rdi, 1
+    mov  rax, SYS_WRITE
+    mov  rdi, STDOUT
     syscall
     ret
 
@@ -49,9 +55,9 @@ print_string:
 print_char:
     push rdi
     mov rsi, rsp
-    mov rdi, 1
+    mov rax, SYS_WRITE
+    mov rdi, STDIN
     mov rdx, 1
-    mov rax, 1
     syscall
     pop rdi
     ret
@@ -67,46 +73,48 @@ print_newline:
 ; Совет: выделите место в стеке и храните там результаты деления
 ; Не забудьте перевести цифры в их ASCII коды.
 print_uint:
-    xor rax, rax
-    xor rdx, rdx
-    xor rsi, rsi
-
-    push rbx
-    mov rbx, rsp
+    push rbp
+    mov rbp, rsp
+    mov r10, 10
     mov rax, rdi
-    mov rsi, 10
-    mov [rsp], byte 0
+    mov r8, rsp
+    sub rsp, 64
+    dec r8
+    mov byte[r8], 0
 
-    .loop:
-        div rsi
-
-        lea rdx, ['0' + rdx]
-        dec rsp
-        mov [rsp], dl
-        xor rdx, rdx
-        test rax, rax
-        jnz .loop
-
-    mov rdi, rsp
+  .loop:
+    xor rdx, rdx
+    div r10
+    add dl, '0'
+    dec r8
+    mov [r8], dl
+    test rax, rax
+    jnz .loop
+    mov rdi, r8
     call print_string
-
-    mov rsp, rbx
-    pop rbx
+    mov r8, rbp
+    add rsp, 64
+    pop rbp
     ret
+
 
 ; Выводит знаковое 8-байтовое число в десятичном формате
 print_int:
-    mov rax, rdi
-    test rax, rax
-    jns .print_uint
+    test rdi, rdi
+    jge .greater
     push rdi
     mov rdi, '-'
     call print_char
     pop rdi
     neg rdi
+    call print_uint
+    ret
 
-    .print_uint:
-        jmp print_uint
+  .greater:
+    call print_uint
+    ret
+
+
 
 ; Принимает два указателя на нуль-терминированные строки, возвращает 1 если они равны, 0 иначе
 string_equals:
@@ -135,24 +143,22 @@ string_equals:
 
 ; Читает один символ из stdin и возвращает его. Возвращает 0 если достигнут конец потока
 read_char:
-    sub rsp, 32      ; Allocate space for a character
-    mov rdi, 0
-    mov rsi, rsp
+    mov rax, SYS_READ
+    mov rdi, STDIN
     mov rdx, 1
-    mov rax, 0
+    dec rsp
+    mov rsi, rsp
     syscall
-    cmp rax, 0
-    je .eof
-    movzx rax, byte [rsp]
-    add rsp, 32      ; Restore the stack
-    ret
-.eof:
-    add rsp, 32      ; Restore the stack
-    xor rax, rax
+    test rax, rax
+    jz .quit_read
+    mov al, [rsp]
+  .quit_read:
+    inc rsp
     ret
 
+
 ; Принимает: адрес начала буфера, размер буфера
-; Читает в буфер слово из stdin, пропуская пробельные символы в начале, .
+; Читает в буфер слово из stdin, пропуская пробельные символы в начале.
 ; Пробельные символы это пробел 0x20, табуляция 0x9 и перевод строки 0xA.
 ; Останавливается и возвращает 0 если слово слишком большое для буфера
 ; При успехе возвращает адрес буфера в rax, длину слова в rdx.
@@ -249,27 +255,25 @@ parse_uint:
 ; Возвращает в rax: число, rdx : его длину в символах (включая знак, если он был)
 ; rdx = 0 если число прочитать не удалось
 parse_int:
-    xor rsi, rsi
-    cmp byte[rdi], '-'
-    je .negative
-    cmp byte[rdi], '+'
-    je .positive
+    cmp   byte[rdi], '-'
+    je    .signed
+    cmp   byte[rdi], '+'
+    je    .unsigned
+    jmp   parse_uint
 
-    .unsigned:
-        jmp parse_uint
-
-    .negative:
-        inc rdi
-        call parse_uint
-
-    inc rdx
-    neg rax
+  .unsigned:
+    inc   rdi
+    call  parse_uint
+    inc   rdx
     ret
 
-    .positive:
-        inc rdi
+  .signed:
+    inc   rdi
+    call  parse_uint
+    neg   rax
+    inc   rdx
+    ret
 
-    jmp parse_uint
 
 
 ; Принимает указатель на строку, указатель на буфер и длину буфера
@@ -298,8 +302,8 @@ print_error:
     call string_length
     mov  rdx, rax
     pop  rsi
-    mov  rax, 1
-    mov  rdi, 2
+    mov  rax, SYS_WRITE
+    mov  rdi, STDERR
     syscall
     call print_newline
     ret

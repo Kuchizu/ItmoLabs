@@ -1,21 +1,20 @@
-ASM = nasm 
-ASMFLAG = -f elf64
-LD = ld
-PY = python3
+ASM=nasm
+ASMFLAGS=-f elf64
+PYTHON=python3
 
 %.o: %.asm
-	${ASM} ${ASMFLAG} -o $@ $^
-
+	$(ASM) $(ASMFLAGS) -o $@ $<
 
 program: lib.o dict.o main.o
-	$(LD) -o $@ $^
+	ld -o program lib.o dict.o main.o
 
-test:
-	$(PY) test.py
+words.inc: colon.inc
+main.asm: words.inc
 
+.PHONY: clean
 clean:
 	rm -f *.o program
 
-sum: clean program test
-
-.PHONY: test clean
+.PHONY: test
+test: program
+	$(PYTHON) test.py

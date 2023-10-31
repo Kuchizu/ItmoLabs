@@ -1,63 +1,52 @@
+%define STR_LENGTH 256
+%define ERR_EXIT 1
+
+%include "lib.inc"
+%include "dict.inc"
 %include "words.inc"
 
-%define buff_size 256
-%define psize 8
-
-section .data
-not_found: db "Key not found.", 0
-key_too_long: db "Key is too long (>255).", 0
+section .rodata
+    err_too_long:     db "String is too long (>255).", 0
+    err_not_fnd:      db "String not found.", 0
 
 section .bss
-buffer resb 256
+    input: resb STR_LENGTH-1
 
 section .text
-
 global _start
 
-extern exit
-extern read_word
-extern print_string
-extern find_word
-extern print_error
-extern print_newline
-extern string_length
-
 _start:
-    mov rdi, buffer
-    mov rsi, buff_size
-    call read_word
+    lea rsi, [input]
+    mov rdx, STR_LENGTH
+    syscall
 
     test rax, rax
-    jz .key_too_long
+    jl .error_exit
+    cmp rax, STR_LENGTH
+    jge .error_length
 
-    mov rdi, rax
-    mov rsi, elem
+    lea rdi, [input]
+    mov rsi, test
     call find_word
-
     test rax, rax
-    jz .key_not_found
+    jz .error_notfound
 
     mov rdi, rax
-    add rdi, psize
-    push rdi
     call string_length
-
-    pop rdi
     lea rdi, [rdi+rax+1]
     call print_string
+    call print_newline
+    xor rdi, rdi
+    jmp exit
 
-    jmp .exit
 
-    .key_too_long:
-        mov rdi, key_too_long
-        call print_error
-        jmp .exit
-    
-    .key_not_found:
-        mov rdi, not_found
-        call print_error
+.error_length:
+    mov rdi, err_too_long
+    jmp .error_exit
 
-    .exit:
-        xor rdi, rdi
-        call exit
+.error_notfound:
+    mov rdi, err_not_fnd
 
+.error_exit:
+    call print_error
+    mov rdi, ERR_EXIT
