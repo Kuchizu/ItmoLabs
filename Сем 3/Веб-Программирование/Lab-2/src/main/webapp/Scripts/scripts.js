@@ -48,9 +48,17 @@ function checkR() {
     return document.getElementById("r_val").value !== "";
 }
 
+function clearPoints() {
+    for (let point of points) {
+        calculator.removeExpression({ id: point.x + '' + point.y });
+    }
+}
+
 function saveR(r) {
+    let old_r = document.getElementById("r_val").value
     document.getElementById("r_val").value = r.value;
     drawFig(r.value);
+
     r.disabled = true;
     let buttons = document.getElementsByClassName("r");
     for (let i = 0; i < buttons.length; i++) {
@@ -58,7 +66,15 @@ function saveR(r) {
             buttons[i].disabled = false;
         }
     }
+    console.log(old_r.toString() + " " + r.value.toString() + "  //  " + old_r / r.value);
 
+    clearPoints();
+    let diff = r.value / old_r;
+    for (let point of points){
+        point.x = point.x * diff;
+        point.y = point.y * diff;
+        drawPoint(point.x, point.y);
+    }
 }
 
 $(document).ready(function() {
@@ -88,6 +104,8 @@ $(document).ready(function() {
     });
 
     $("#clear_table").click(function () {
+        clearPoints();
+        points = [];
         const formAction = $("#forma").attr("action");
         $.ajax({
             type: 'GET',

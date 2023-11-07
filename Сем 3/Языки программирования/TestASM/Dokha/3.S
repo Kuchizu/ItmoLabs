@@ -6,7 +6,6 @@
 .global main
 
 main:
-
     call readi32
 
     testl %eax, %eax

@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="Styles/style2.css">
     <meta charset="UTF-8">
     <script src="JQ/jquery-3.7.0.js"></script>
-    <script type="text/javascript" src="Scripts/script.js"></script>
+    <script type="text/javascript" src="Scripts/scripts.js"></script>
 </head>
 <body>
 <header>
     <img id="itmo_logo" src="https://itmo.ru/promo/itmo-logo-dark.svg">
-    <h1 id="lab1">Lab-2 Nodiri Khisravkhon P3231 var: 17535354 ver: 3</h1>
+    <h1 id="lab1">Lab-2 Nodiri Khisravkhon P3231 var: 17535354 ver: 4</h1>
 </header>
 <hr>
 
@@ -25,7 +25,7 @@
                 <div id="calculator" style="width: 500px; height: 500px;"></div>
             </div>
             <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-            <script src="Scripts/graphdes.js"></script>
+            <script src="Scripts/graphDesmos.js"></script>
             <script type="text/javascript">
                 enable_graph();
             </script>

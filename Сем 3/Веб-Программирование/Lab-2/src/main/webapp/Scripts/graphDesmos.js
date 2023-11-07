@@ -23,12 +23,16 @@ calculator.setMathBounds({
 let newDefaultState = calculator.getState();
 calculator.setDefaultState(newDefaultState);
 
+
+let points = [];
+
 function drawPoint(x, y) {
     calculator.setExpression({
         id: x + '' + y,
         latex: '(' + x + ', ' + y + ')',
         color: Desmos.Colors.RED
     });
+    console.log(points);
 }
 
 function drawFig(R){
@@ -36,15 +40,6 @@ function drawFig(R){
     calculator.setExpression({ id: 'rectangle', latex: `\\polygon((${-R}, 0), (0, 0), (0, ${-R}), (${-R}, ${-R}))`, color: Desmos.Colors.RED, opacity: 0.3});
     calculator.setExpression({id: 'circle', latex: `r<=${R} \\{\\frac{\\pi}{2}\\le\\theta\\le\\pi\\}`, color: Desmos.Colors.RED});
 }
-function inRectangle(point, rect) {
-    return (
-        point.x >= rect.left &&
-        point.x <= rect.right &&
-        point.y <= rect.top &&
-        point.y >= rect.bottom
-    )
-}
-
 function enable_graph() {
     if (graph_click_enabled) {
         elt.removeEventListener('click', handleGraphClick);
@@ -73,6 +68,7 @@ function handleGraphClick (evt) {
     console.log('setting expression...');
     console.log(mathCoordinates);
 
+    points.push({x: mathCoordinates.x, y: mathCoordinates.y});
     drawPoint(mathCoordinates.x, mathCoordinates.y);
 
     $.ajax({

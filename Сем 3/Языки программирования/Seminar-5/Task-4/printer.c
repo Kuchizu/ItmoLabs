@@ -6,7 +6,7 @@ struct AST {
     enum AST_type { AST_BINOP, AST_UNOP, AST_LIT } type;
     union {
         struct binop {
-            enum binop_type { BIN_PLUS, BIN_MINUS, BIN_MUL, BIN_DIV } type;
+            enum binop_type { BIN_PLUS, BIN_MINUS, BIN_MUL, BIN_DIV } type;  // <-- обновлено
             struct AST *left, *right;
         } as_binop;
         struct unop {
