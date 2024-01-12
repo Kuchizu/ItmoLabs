@@ -1,7 +1,5 @@
 # ItmoLabs
 
-Всё то чем я страдаю в #ИТМО для будущих поколений
+My ITMO Laboratory works.
 
-(If you want to ask smth, open an issue above.)
-
-Дополню soon...
+TG: @Kuchizu
