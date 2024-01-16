@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSharedSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" GENERATION_DIR="out/build/debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-G Ninja -DCMAKE_BUILD_TYPE=Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" GENERATION_DIR="out/build/release" CONFIG_NAME="Release" GENERATION_OPTIONS="-G Ninja -DCMAKE_BUILD_TYPE=Release" />
+      <configuration PROFILE_NAME="ASan" ENABLED="true" GENERATION_DIR="out/build/asan" CONFIG_NAME="ASan" GENERATION_OPTIONS="-G Ninja -DCMAKE_BUILD_TYPE=ASan" />
+      <configuration PROFILE_NAME="LSan" ENABLED="true" GENERATION_DIR="out/build/lsan" CONFIG_NAME="LSan" GENERATION_OPTIONS="-G Ninja -DCMAKE_BUILD_TYPE=LSan" />
+      <configuration PROFILE_NAME="MSan" ENABLED="true" GENERATION_DIR="out/build/msan" CONFIG_NAME="MSan" GENERATION_OPTIONS="-G Ninja -DCMAKE_BUILD_TYPE=MSan" />
+      <configuration PROFILE_NAME="UBSan" ENABLED="true" GENERATION_DIR="out/build/ubsan" CONFIG_NAME="UBSan" GENERATION_OPTIONS="-G Ninja -DCMAKE_BUILD_TYPE=UBSan" />
+    </configurations>
+  </component>
+</project>

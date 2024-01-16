@@ -1,0 +1,7 @@
+.idea
+backend/.idea
+backend/target
+frontend+express/.idea
+frontend+express/dist
+frontend+express/node_modules
+apache-tomcat-9.0.85

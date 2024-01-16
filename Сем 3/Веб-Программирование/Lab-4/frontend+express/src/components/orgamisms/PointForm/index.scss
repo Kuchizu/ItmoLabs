@@ -1,0 +1,66 @@
+@import "../../templates/template_form.scss";
+@import "../../templates/variables.scss";
+
+.chevron svg {
+    transition: transform 0.3s ease-out;
+    transform-origin: 50% 40%;
+    transform: rotate(0deg);
+}
+
+.rotated svg {
+    transform: rotate(180deg);
+}
+
+.form-point {
+    @extend .template-form;
+    @media screen and (max-width: $width-tablet) {
+        padding: 20px;
+        margin: 0px;
+    }
+
+    &__header {
+        @extend .template-form__header;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+.form-point-x,
+.form-point-y,
+.form-point-r,
+.point-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-point-x__input,
+.form-point-y__input,
+.form-point-r__input {
+    @extend .template-form__input;
+    flex-grow: 1;
+}
+
+.point-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__button {
+        min-width: 4ex;
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.7rem !important;
+        margin: 0.15rem !important;
+        @extend .template-form__button;
+    }
+
+    &__button.selected {
+        background-color: darken(#3498db, 10%) !important;
+        color: #2ecc71 !important;
+        border: 1px solid darken(#3498db, 20%) !important;
+    }
+}
