@@ -1,5 +1,5 @@
 # ItmoLabs
 
-All my work in ITMO University.
+My ITMO Laboratory Works.
 
 TG: @Kuchizu
