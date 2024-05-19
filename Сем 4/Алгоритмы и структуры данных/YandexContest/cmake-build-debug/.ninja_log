@@ -1,0 +1,23 @@
+# ninja log v5
+2	237	7314649860322877	CMakeFiles/YandexContest.dir/A.cpp.obj	a330aaf1b33ca850
+2	919	7314646733668376	CMakeFiles/YandexContest.dir/C.cpp.obj	dbeaaf72e4581eab
+338	402	7335241835212940	YandexContest.exe	def69f7b91512a96
+1	78	7335387350004828	build.ninja	6ebdec8ae7455cd0
+2	673	7317141485024459	CMakeFiles/YandexContest.dir/B.cpp.obj	8dbb38d019d812ce
+1	323	7335234774040254	CMakeFiles/YandexContest.dir/E.cpp.obj	9229eb220c032f41
+1	709	7317142749670412	CMakeFiles/YandexContest.dir/D.cpp.obj	458b91a6fe84104d
+4	1072	7321069817214567	CMakeFiles/YandexContest.dir/F.cpp.obj	cebfb59f9a7cc3b8
+2	338	7335241834599458	CMakeFiles/YandexContest.dir/G.cpp.obj	c3a1560233b1739d
+2	382	7335387723809024	CMakeFiles/YandexContest.dir/G.cpp.obj	c3a1560233b1739d
+382	486	7335387724799448	YandexContest.exe	def69f7b91512a96
+2	276	7335388064098093	CMakeFiles/YandexContest.dir/G.cpp.obj	c3a1560233b1739d
+276	340	7335388064730331	YandexContest.exe	def69f7b91512a96
+2	363	7335389010226707	CMakeFiles/YandexContest.dir/G.cpp.obj	c3a1560233b1739d
+363	440	7335389010998561	YandexContest.exe	def69f7b91512a96
+2	341	7335389624067871	CMakeFiles/YandexContest.dir/G.cpp.obj	c3a1560233b1739d
+341	420	7335389624861961	YandexContest.exe	def69f7b91512a96
+1	333	7335389780489604	CMakeFiles/YandexContest.dir/G.cpp.obj	c3a1560233b1739d
+333	401	7335389781159702	YandexContest.exe	def69f7b91512a96
+2	278	7335391973956648	CMakeFiles/YandexContest.dir/G.cpp.obj	c3a1560233b1739d
+1	273	7335393418379720	CMakeFiles/YandexContest.dir/G.cpp.obj	c3a1560233b1739d
+273	359	7335393419220583	YandexContest.exe	def69f7b91512a96

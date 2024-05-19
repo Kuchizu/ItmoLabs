@@ -1,0 +1,3 @@
+C:/Users/Kuchizu/Desktop/YandexContest/cmake-build-debug/CMakeFiles/YandexContest.dir
+C:/Users/Kuchizu/Desktop/YandexContest/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Kuchizu/Desktop/YandexContest/cmake-build-debug/CMakeFiles/rebuild_cache.dir
