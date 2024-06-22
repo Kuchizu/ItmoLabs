@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.openide.util.ui">
+    <module_version install_time="1709842133253" last="true" origin="installer" specification_version="9.30">
+        <file crc="2878023274" name="lib/org-openide-util-ui.jar"/>
+    </module_version>
+</module>

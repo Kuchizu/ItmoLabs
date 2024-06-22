@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="lab3" default="build">
+    <property file="build.properties"/>
+    <property file="excluded.properties"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="javadoc.dir" value="javadoc"/>
+    <property name="working.dir" value="C:/Users/Kuchizu/Desktop/Lab-3"/>
+    <property name="svn.repo.dir" value="C:/Users/Kuchizu/Desktop/SVNRepo"/>
+    <property name="svn.repo.url" value="file:///${svn.repo.dir}"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+        <fileset dir="${main.dir}" includes="*.java"/>
+    </path>
+
+    <path id="classpath.test">
+        <pathelement location="${junit}"/>
+        <pathelement location="${hamcrest}"/>
+        <pathelement location="${classes.dir}"/>
+    </path>
+
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="${contrib}"/>
+        </classpath>
+    </taskdef>
+
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="${contrib}"/>
+        </classpath>
+    </taskdef>
+
+    <target name="init-svn">
+        <mkdir dir="${svn.repo.dir}"/>
+        <exec executable="svnadmin" failonerror="true">
+            <arg value="create"/>
+            <arg value="${svn.repo.dir}"/>
+        </exec>
+    </target>
+
+    <target name="import-svn">
+        <exec executable="svn" failonerror="true">
+            <arg value="import"/>
+            <arg value="${working.dir}"/>
+            <arg value="${svn.repo.url}"/>в
+            <arg value="-m"/>
+            <arg value="Initial import of src"/>
+        </exec>
+    </target>
+
+    <target name="checkout-svn">
+        <delete dir="${working.dir}"/>
+        <exec executable="svn" failonerror="true">
+            <arg value="checkout"/>
+            <arg value="${svn.repo.url}"/>
+            <arg value="${working.dir}"/>
+        </exec>
+    </target>
+
+    <target name="sync-svn">
+        <exec executable="svn" failonerror="true">
+            <arg value="update"/>
+            <arg value="${working.dir}"/>
+        </exec>
+        <exec executable="svn" failonerror="true">
+            <arg value="add"/>
+            <arg value="--force"/>
+            <arg value="${working.dir}"/>
+        </exec>
+        <exec executable="svn" failonerror="true">
+            <arg value="commit"/>
+            <arg value="-m"/>
+            <arg value="Synced src folder"/>
+        </exec>
+    </target>
+
+    <target name="compile" depends="clean">
+        <echo message="***** COMPILE STARTED *****"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" includeantruntime="false" failonerror="false"/>
+
+        <!-- Check for the presence of any .class files in the output directory -->
+        <fileset dir="${classes.dir}" id="classfiles" includes="**/*.class"/>
+        <condition property="class.files.present">
+            <resourcecount when="greater" count="0" refid="classfiles"/>
+        </condition>
+
+        <condition property="build.failed">
+            <not>
+                <isset property="class.files.present"/>
+            </not>
+        </condition>
+
+        <echo message="Build failed property is set to: ${build.failed}"/>
+
+        <echo message="***** COMPILE COMPLETED *****"/>
+
+    </target>
+
+    <target name="build" depends="compile">
+        <echo message="***** BUILD STARTED *****"/>
+        <copy todir="${build.dir}">
+            <fileset dir="${web.dir}"/>
+        </copy>
+        <copy todir="${build.dir.lib}">
+            <fileset dir="${lib.dir}"/>
+        </copy>
+        <copy todir="${classes.dir}">
+            <fileset dir="${resources.dir}"/>
+        </copy>
+        <jar destfile="${build.dir}/${ant.project.name}.jar">
+            <fileset dir="${classes.dir}"/>
+            <manifest>
+                <attribute name="Created-By" value="Kuchizu"/>
+                <attribute name="Manifest-Version" value="1.0"/>
+                <attribute name="Main-Class" value="Main"/>
+            </manifest>
+        </jar>
+        <war destfile="${build.dir}/${ant.project.name}.war" webxml="${build.web.xml}">
+            <fileset dir="${build.dir}"/>
+            <manifest>
+                <attribute name="Created-By" value="Kuchizu"/>
+                <attribute name="Manifest-Version" value="1.0"/>
+                <attribute name="Main-Class" value="NoClass"/>
+            </manifest>
+        </war>
+        <antcall target="music"/>
+        <echo message="***** BUILD COMPLETED *****"/>
+    </target>
+
+    <target name="clean">
+        <echo message="***** CLEAN STARTED *****"/>
+        <delete dir="${build.dir}"/>
+        <delete dir="${junit.report.dir}"/>
+        <echo message="***** CLEAN COMPLETED *****"/>
+    </target>
+
+    <target name="test" depends="build">
+        <echo message="***** TEST STARTED *****"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <mkdir dir="${junit.report.dir}"/>
+        <javac destdir="${test.classes.dir}" srcdir="${test.dir}" includeantruntime="false" encoding="utf-8">
+            <classpath refid="classpath.test"/>
+        </javac>
+        <junit printsummary="on" haltonfailure="true" haltonerror="true">
+            <classpath>
+                <path refid="classpath.test"/>
+                <pathelement location="${test.classes.dir}"/>
+            </classpath>
+            <batchtest fork="yes" todir="${junit.report.dir}">
+                <formatter type="xml"/>
+                <fileset dir="${test.dir}" includes="*Test.java"/>
+            </batchtest>
+        </junit>
+        <echo message="***** TEST COMPLETED *****"/>
+    </target>
+
+    <target name="native2ascii">
+        <echo message="***** NATIVE2ASCII STARTED *****"/>
+        <delete dir="${native2ascii.resources}"/>
+        <native2ascii src="${resources.dir}"
+                      dest="${native2ascii.resources}"
+                      includes="**/*.loc"/>
+        <echo message="***** NATIVE2ASCII COMPLETED *****"/>
+    </target>
+
+    <target name="calculate-hashes">
+        <echo message="Calculating MD5 and SHA-1 hashes..."/>
+        <checksum todir="${dist.dir}/hashes" algorithm="MD5">
+            <fileset dir="${build.dir}" includes="**/*.class"/>
+        </checksum>
+        <checksum todir="${dist.dir}/hashes" algorithm="SHA-1">
+            <fileset dir="${build.dir}" includes="**/*.class"/>
+        </checksum>
+    </target>
+
+    <target name="update-manifest">
+        <echo message="Updating MANIFEST.MF with hashes..."/>
+        <manifest file="${build.dir}/MANIFEST.MF">
+            <attribute name="MD5-Digest" value="${dist.dir}/hashes/MD5"/>
+            <attribute name="SHA-1-Digest" value="${dist.dir}/hashes/SHA-1"/>
+        </manifest>
+    </target>
+
+    <target name="generate-javadoc">
+        <echo message="Generating Javadoc..."/>
+        <mkdir dir="${javadoc.dir}"/>
+        <javadoc destdir="${javadoc.dir}" sourcepath="${src.dir}" packagenames="*" author="true" version="true" use="true" additionalparam="-Xdoclint:none">
+            <classpath refid="classpath"/>
+        </javadoc>
+    </target>
+
+    <target name="package-javadoc">
+        <echo message="Adding Javadoc to project archive..."/>
+        <zip destfile="${dist.dir}/${ant.project.name}-docs.zip">
+            <fileset dir="${javadoc.dir}" includes="**/*"/>
+        </zip>
+    </target>
+
+    <target name="doc" depends="calculate-hashes, generate-javadoc, update-manifest, package-javadoc">
+        <echo message="Documentation and hash updates complete. Project archive updated."/>
+    </target>
+
+    <target name="scp" depends="build">
+        <echo message="***** SCP START STARTED *****"/>
+        <echo message="***** SCP STARTED SENDING ${ant.project.name}.war to s373746@se.ifmo.ru:~ *****"/>
+        
+        <exec executable="scp" failonerror="true">
+            <arg value="-P"/>
+            <arg value="2222"/>
+            <arg value="${build.dir}/${ant.project.name}.war"/>
+            <arg value="s373746@se.ifmo.ru:~"/>
+        </exec>
+        
+        <echo message="***** SCP START COMPLETED *****"/>
+    </target>
+
+    <target name="music">
+        <echo message="***** MUSIC STARTED *****"/>
+<!--         <exec executable="C:/Program Files/VideoLAN/VLC/vlc.exe">
+            <arg value="./stopit.mp3"/>
+            <arg value="-play-and-exit"/>
+        </exec> -->
+        <echo message="***** MUSIC COMPLETED *****"/>
+    </target>
+
+    <target name="alt">
+        <echo message="Creating alternative version of the project..."/>
+
+        <!-- Создание копии исходных файлов -->
+        <copy todir="${build.dir}/alt/src">
+            <fileset dir="${src.dir}"/>
+        </copy>
+
+        <!-- Замена имен в копии исходных файлов -->
+        <replace dir="${build.dir}/alt/src" includes="**/*.java" summary="yes">
+            <replacetoken>updateResult</replacetoken>
+            <replacevalue>altupdateResult</replacevalue>
+        </replace>
+        <replace dir="${build.dir}/alt/src" includes="**/*.java" summary="yes">
+            <replacetoken>session</replacetoken>
+            <replacevalue>altsession</replacevalue>
+        </replace>
+
+        <!-- Компиляция альтернативной версии -->
+        <mkdir dir="${build.dir}/alt/classes"/>
+        <javac srcdir="${build.dir}/alt/src" destdir="${build.dir}/alt/classes" classpathref="classpath" includeantruntime="false"/>
+
+        <!-- Упаковка в JAR -->
+        <jar destfile="${dist.dir}/alt-version.jar" basedir="${build.dir}/alt/classes">
+            <manifest>
+                <attribute name="Main-Class" value="AltMainClass"/>
+            </manifest>
+        </jar>
+
+        <echo message="Alternative version packaged into ${dist.dir}/alt-version.jar"/>
+    </target>
+
+    <target name="fetch-revisions">
+        <exec executable="svn" outputproperty="revisions.raw" failonerror="true">
+            <arg value="log ${svn.repo.url} --revision HEAD:1 --xml"/>
+        </exec>
+        <echo message="${revisions.raw}"/>
+    </target>
+
+    <target name="history">
+        <exec executable="git" outputproperty="current.revision" failonerror="false">
+            <arg value="rev-parse"/>
+            <arg value="HEAD"/>
+        </exec>
+
+        <property name="previous.revision" value="HEAD"/>
+        <property name="found.working.revision" value="false"/>
+
+        <foreach list="${previous.revision}" param="revision" target="find-working-revision">
+            <param name="revision" value="${previous.revision}"/>
+            <param name="current.revision" value="${current.revision}"/>
+        </foreach>
+    </target>
+
+    <target name="find-working-revision">
+        <exec executable="git" failonerror="false">
+            <arg value="checkout"/>
+            <arg value="${revision}"/>
+        </exec>
+
+        <antcall target="compile"/>
+        <fileset dir="${classes.dir}" id="classfiles" includes="**/*.class"/>
+        <condition property="class.files.present">
+            <resourcecount when="greater" count="0" refid="classfiles"/>
+        </condition>
+
+        <condition property="build.failed">
+            <not>
+                <isset property="class.files.present"/>
+            </not>
+        </condition>
+
+        <if>
+            <isset property="build.failed"/>
+            <then>
+                <exec executable="git" failonerror="false">
+                    <arg value="stash"/>
+                </exec>
+                <exec executable="git" failonerror="false">
+                    <arg value="checkout"/>
+                    <arg value="${revision}"/>
+                </exec>
+                <exec executable="git" output="${build.dir}/diff.txt" failonerror="false">
+                    <arg value="diff"/>
+                    <arg value="${revision}~1"/>
+                    <arg value="${current.revision}"/>
+                </exec>
+                <exec executable="git" failonerror="false">
+                    <arg value="checkout"/>
+                    <arg value="${current.revision}"/>
+                </exec>
+                <echo message="Compilation fixed. Please check diff.txt for changes."/>
+            </then>
+            <else>
+                <echo message="Compilation was successful, nothing to backup."/>
+            </else>
+        </if>
+
+<!--         <trycatch>
+            <try>
+                <antcall target="compile"/>
+                <echo>Found working revision: ${revision}</echo>
+                <exec executable="git" output="${build.dir}/diff.txt" failonerror="false">
+                    <arg value="diff"/>
+                    <arg value="${revision}~1"/>
+                    <arg value="${current.revision}"/>
+                </exec>
+                <exec executable="git" failonerror="false">
+                    <arg value="checkout"/>
+                    <arg value="${current.revision}"/>
+                </exec>
+                <echo message="Compilation fixed. Please check diff.txt for changes."/>
+            </try>
+            <catch>
+                <echo>Compilation failed on revision: ${revision}. Checking previous revision...</echo>
+            </catch>
+        </trycatch>
+ -->
+    </target>
+
+    <target name="xml">
+        <echo message="***** XML STARTED *****"/>
+        <echo>XML project files validation...</echo>
+        <xmlvalidate lenient="true">
+            <fileset dir="./" includes="**/*.xml">
+                <exclude name=".idea/**"/>
+            </fileset>
+        </xmlvalidate>
+        <echo message="***** XML COMPLETED *****"/>
+    </target>
+
+    <target name="env" depends="clean">
+        <echo message="***** ENV STARTED *****"/>
+
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${main.dir}" destdir="${classes.dir}" classpathref="classpath" source="${compile.version}"
+               includeantruntime="false">
+            <compilerarg line="${vm.args}"/>
+        </javac>
+        <copy todir="${classes.dir}">
+            <fileset dir="${resources.dir}"/>
+        </copy>
+        <antcall target="build"/>
+        <copy file="${build.dir}/lab3.war" todir="${scp.dir}"/>
+        <exec executable="cmd">
+            <arg line="/c start ${env.script}"/>
+        </exec>
+        <echo message="***** ENV COMPLETED *****"/>
+    </target>
+
+    <target name="report" depends="test">
+        <echo message="***** REPORT STARTED *****"/>
+
+        <condition property="tests.successful">
+            <not>
+                <isset property="tests.failed" />
+            </not>
+        </condition>
+
+        <if>
+            <isset property="tests.successful" />
+            <then>
+                <junitreport todir="${junit.report.dir}">
+                    <fileset dir="${junit.report.dir}" includes="TEST-*.xml" />
+                    <report todir="${junit.report.dir}" />
+                </junitreport>
+
+                <mkdir dir="${working.dir}/reports"/>
+
+                <move todir="${working.dir}/reports">
+                    <fileset dir="${junit.report.dir}" includes="TESTS-*.xml"/>
+                </move>
+
+                <antcall target="commit"/>
+            </then>
+            <else>
+                <echo message="Tests were not successful. Skipping report generation." />
+            </else>
+        </if>
+        <echo message="***** REPORT COMPLETED *****"/>
+    </target>
+
+    <target name="commit">
+        <exec executable="git" failonerror="true">
+            <arg value="add"/>
+            <arg value="."/>
+        </exec>
+
+        <exec executable="git" failonerror="false">
+            <arg value="commit"/>
+            <arg value="-m"/>
+            <arg value="Automatic commit in diff."/>
+        </exec>
+    </target>
+
+    <target name="diff">
+        <!-- Check the status of the git repository -->
+        <exec executable="git" outputproperty="git.status" failonerror="true">
+            <arg value="status"/>
+            <arg value="--porcelain"/>
+        </exec>
+
+        <var name="safe.to.commit" value="true"/>
+
+        <!-- Load the full paths from the classes.txt file -->
+        <loadfile property="classes.to.check" srcFile="classes.txt">
+            <filterchain>
+                <tokenfilter delimoutput=","/>
+            </filterchain>
+        </loadfile>
+
+        <!-- Default property indicating no prohibited changes were detected -->
+        <property name="safe.to.commit" value="true"/>
+
+        <!-- Iterate over each class full path to detect changes -->
+        <for list="${classes.to.check}" param="class.path" delimiter=",">
+            <sequential>
+                <condition property="class.changed">
+                    <contains string="${git.status}" substring="@{class.path}"/>
+                </condition>
+                <!-- If a change is detected in the specified class files, set to false -->
+                <if>
+                    <isset property="class.changed"/>
+                    <then>
+                        <var name="safe.to.commit" value="false"/>
+                        <echo message="Change detected in @{class.path}, skipping commit."/>
+                    </then>
+                </if>
+            </sequential>
+        </for>
+
+        <!-- Commit the changes if no specified class paths were affected -->
+        <if>
+            <equals arg1="${safe.to.commit}" arg2="true"/>
+            <then>
+                <antcall target="commit">
+                    <param name="message" value="Automated commit triggered by changes not affecting specified classes"/>
+                </antcall>
+            </then>
+        </if>
+    </target>
+
+    <target name="team" depends="build">
+        <echo message="***** TEAM OPERATION STARTED *****"/>
+
+        <!-- Fetching the last three revisions -->
+        <exec executable="git" outputproperty="revisions">
+            <arg value="log"/>
+            <arg value="-n"/>
+            <arg value="3"/>
+            <arg value="--format=%H"/>
+        </exec>
+
+        <!-- Extracting and trimming the first and second revisions -->
+        <propertyregex property="first.revision" input="${revisions}" regexp="([^\n]+)\n([^\n]+)\n([^\n]+)" select="\2"/>
+        <propertyregex property="second.revision" input="${revisions}" regexp="([^\n]+)\n([^\n]+)\n([^\n]+)" select="\3"/>
+        <propertyregex property="first.revision.trimmed" input="${first.revision}" regexp="\s*([a-f0-9]+)\s*" replace="\1" global="true"/>
+        <propertyregex property="second.revision.trimmed" input="${second.revision}" regexp="\s*([a-f0-9]+)\s*" replace="\1" global="true"/>
+
+        <echo message="***** Trimmed First Revision: |${first.revision.trimmed}| *****"/>
+        <echo message="***** Trimmed Second Revision: |${second.revision.trimmed}| *****"/>
+
+        <!-- Creating temporary directories for the revisions -->
+        <mkdir dir="${dist.dir}/first_revision"/>
+        <mkdir dir="${dist.dir}/second_revision"/>
+
+        <sequential>
+            <echo message="Stashing any local changes before processing the first revision..."/>
+            <exec executable="git" failonerror="true">
+                <arg value="stash"/>
+                <arg value="push"/>
+                <arg value="-m"/>
+                <arg value="Auto-stash by Ant script before checking out first revision"/>
+            </exec>
+            <echo message="Processing first revision: ${first.revision.trimmed}"/>
+            <exec executable="git" failonerror="true">
+                <arg value="checkout"/>
+                <arg value="${first.revision.trimmed}"/>
+            </exec>
+            <antcall target="build"/>
+            <copy todir="${dist.dir}/first_revision">
+                <fileset dir="${build.dir}" includes="**/*.jar"/>
+            </copy>
+            <exec executable="git" failonerror="true">
+                <arg value="checkout"/>
+                <arg value="master"/>
+            </exec>
+        </sequential>
+
+        <!-- Stashing any local changes before processing the second revision -->
+        <sequential>
+            <echo message="Stashing any local changes before processing the second revision..."/>
+            <exec executable="git" failonerror="true">
+                <arg value="stash"/>
+                <arg value="push"/>
+                <arg value="-m"/>
+                <arg value="Auto-stash by Ant script before checking out second revision"/>
+            </exec>
+            <echo message="Processing second revision: ${second.revision.trimmed}"/>
+            <exec executable="git" failonerror="true">
+                <arg value="checkout"/>
+                <arg value="${second.revision.trimmed}"/>
+            </exec>
+            <antcall target="build"/>
+            <copy todir="${dist.dir}/second_revision">
+                <fileset dir="${build.dir}" includes="**/*.jar"/>
+            </copy>
+            <exec executable="git" failonerror="true">
+                <arg value="checkout"/>
+                <arg value="master"/>
+            </exec>
+        </sequential>
+
+        <exec executable="git" failonerror="true">
+            <arg value="checkout"/>
+            <arg value="master"/>
+        </exec>
+        <echo message="Returned to the latest commit on the master branch."/>
+
+        <zip destfile="${dist.dir}/revisions.zip">
+            <fileset dir="${dist.dir}/first_revision" includes="**/*.jar"/>
+            <fileset dir="${dist.dir}/second_revision" includes="**/*.jar"/>
+        </zip>
+        <echo message="Packaging completed. Zip archive created at: ${dist.dir}/revisions.zip"/>
+
+    </target>
+</project>

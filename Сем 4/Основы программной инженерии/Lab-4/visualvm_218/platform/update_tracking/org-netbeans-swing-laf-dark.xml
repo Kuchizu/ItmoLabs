@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.swing.laf.dark/1">
+    <module_version install_time="1709842179839" last="true" origin="installer" specification_version="2.16.0.2">
+        <file crc="1297960100" name="config/Modules/org-netbeans-swing-laf-dark.xml"/>
+        <file crc="598484863" name="modules/org-netbeans-swing-laf-dark.jar"/>
+    </module_version>
+</module>

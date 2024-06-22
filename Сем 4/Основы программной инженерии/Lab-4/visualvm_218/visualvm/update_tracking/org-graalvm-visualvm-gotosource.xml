@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.graalvm.visualvm.gotosource/2">
+    <module_version install_time="1710753673194" last="true" origin="installer" specification_version="2.0">
+        <file crc="3770543380" name="config/Modules/org-graalvm-visualvm-gotosource.xml"/>
+        <file crc="527969165" name="modules/org-graalvm-visualvm-gotosource.jar"/>
+    </module_version>
+</module>

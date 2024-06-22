@@ -1,0 +1,271 @@
+/*noinspection ALL*/
+
+@font-face {
+    font-family: "Bree Serif";
+    src: url(#{resource['fonts/BreeSerif-Regular.eot']});
+    src: url(#{resource['fonts/BreeSerif-Regular.eot?#iefix']}) format('embedded-opentype'),
+    url(#{resource['fonts/BreeSerif-Regular.woff2']}) format('woff2'),
+    url(#{resource['fonts/BreeSerif-Regular.woff']}) format('woff'),
+    url(#{resource['fonts/BreeSerif-Regular.svg#BreeSerif-Regular']}) format('svg'),
+    url(#{resource['fonts/BreeSerif-Regular.ttf']})  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-image: url(#{resource['images/FoolMoonNight.jpg']});
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    height: calc(100% - 1px);
+}
+
+form {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+select {
+    padding: 2px;
+    border-radius: 4px;
+    border: solid 1px black;
+}
+
+a:link {
+    color: #00ffe9;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #e289ff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff8484;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ffff78;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+input[type=button], input[type=submit], input[type=reset], button {
+    background-color: #F0D6A3;
+    border: solid 1px black;
+    border-radius: 4px;
+    color: black;
+    text-decoration: none;
+    padding: 2px 6px;
+    cursor: pointer;
+}
+
+input[type=text] {
+    padding: 2px;
+    width: fit-content;
+    background-color: #d7d7d7;
+    border: solid 1px black;
+    border-radius: 2px;
+}
+
+/* This is our style for the invalid fields */
+input.invalid {
+    border-color: #900;
+    background-color: #fdd;
+}
+
+input:focus.invalid {
+    outline: none;
+}
+
+p {
+    margin: 0.5em;
+}
+
+table {
+    border: solid 2px black;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px black;
+    padding: 5px;
+}
+
+.margin {
+    margin: 2px;
+}
+
+/* This is the style of our error messages */
+.error {
+    width: 100%;
+    padding: 0;
+
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    overflow: auto;
+    white-space: nowrap;
+
+    border-radius: 5px;
+}
+
+.error.active {
+    padding: 0.3em;
+    margin: 1px 0 0;
+}
+
+.select-container {
+    margin-left: 0.5em;
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 4px;
+    justify-content: space-between;
+}
+
+.select-input-container {
+    width: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.select-radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    gap: 2px;
+}
+
+input[type=button] {
+    transition: color 0.3s, background-color 0.3s;
+}
+
+input[type=button].selected {
+    color: #00ffe9;
+    background-color: #268078;
+}
+
+.round-container {
+    border: solid 2px black;
+    border-radius: 4px;
+}
+
+.blured-container {
+    color: #F0EEEB;
+    background-color: rgba(77, 77, 77, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.fit-content-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+#container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    & p {
+        margin: auto;
+    }
+
+    padding: 5px;
+
+    box-shadow: 0 -20px 100px black;
+
+    overflow: auto;
+
+    /* setup font in header by task */
+    font-family: "Bree Serif", serif;
+    color: #ffffff;
+    font-size: 15px;
+    height: fit-content; /* auto size for header */
+    background-color: rgba(255, 235, 205, 0.2);
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    overflow: auto;
+    align-content: flex-start;
+}
+
+#choose {
+    float: left;
+    width: fit-content;
+    height: fit-content;
+}
+
+#clear-table-container {
+    margin-bottom: 2%;
+}
+
+#submit-container {
+    padding: 0 4px;
+    display: flex;
+    justify-content: right;
+}
+
+#graph-container {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+}
+
+#graph {
+    width: 500px;
+    height: 500px;
+    padding: 2px;
+}
+
+#result-table-container {
+    padding: 2px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#clock-container form {
+    margin: 2%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+#footer {
+    & p {
+        margin: auto;
+    }
+
+    overflow: auto;
+
+    padding: 5px;
+
+    height: fit-content; /* also auto-size for footer */
+    background-color: rgba(255, 235, 205, 0.2);
+}

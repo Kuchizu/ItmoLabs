@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.graalvm.visualvm.pluginimporter">
+    <module_version install_time="1710753672651" last="true" origin="installer" specification_version="1.0">
+        <file crc="992965078" name="config/Modules/org-graalvm-visualvm-pluginimporter.xml"/>
+        <file crc="3768148350" name="modules/org-graalvm-visualvm-pluginimporter.jar"/>
+    </module_version>
+</module>

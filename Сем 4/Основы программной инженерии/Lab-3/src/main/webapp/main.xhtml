@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <meta name="viewport" content="initial-scale=1.0" />
+        <meta http-equiv="Content-Type" content="text/html" />
+        <h:outputStylesheet library="css" name="style.css" />
+        <title>Lab-3</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript">
+        </script>
+    </h:head>
+    <h:body>
+        <div id="container" class="margin">
+            <div id="header" class="blured-container round-container margin">
+                <p>Lab-3</p>
+                <p>By Nodiri Khisravkhon, P3231</p>
+                <p>Variant N. 51928588</p>
+            </div>
+            <div id="main" class="margin">
+                <div id="choose" class="blured-container round-container margin">
+                    <p>Enter parameters:</p>
+                    <h:form id="choose-form">
+                        <div id="x-select-container" class="select-container margin">
+                            <h:outputLabel for="x-select-m2">Choose X:</h:outputLabel>
+                            <div class="select-input-container">
+                                <div id="x-select-input">
+                                    <div id="x-select" class="select-radio-container">
+                                        <h:selectBooleanCheckbox id="x-select-m3" value="#{selectXBean.selectedM3}" validator="#{selectXBean.validateSelectX}">
+                                            <f:ajax listener="#{selectXBean.checkboxValueChanged}" render="@form" />
+                                            <f:validateRequired />
+                                        </h:selectBooleanCheckbox> -3
+                                        <h:selectBooleanCheckbox id="x-select-m2" value="#{selectXBean.selectedM2}" >
+                                            <f:ajax listener="#{selectXBean.checkboxValueChanged}" render="@form" />
+                                        </h:selectBooleanCheckbox> -2
+                                        <h:selectBooleanCheckbox id="x-select-m1" value="#{selectXBean.selectedM1}" >
+                                            <f:ajax listener="#{selectXBean.checkboxValueChanged}" render="@form" />
+                                        </h:selectBooleanCheckbox> -1
+                                        <h:selectBooleanCheckbox id="x-select-0" value="#{selectXBean.selected0}" >
+                                            <f:ajax listener="#{selectXBean.checkboxValueChanged}" render="@form" />
+                                        </h:selectBooleanCheckbox> 0
+                                        <h:selectBooleanCheckbox id="x-select-1" value="#{selectXBean.selected1}" >
+                                            <f:ajax listener="#{selectXBean.checkboxValueChanged}" render="@form" />
+                                        </h:selectBooleanCheckbox> 1
+                                        <h:selectBooleanCheckbox id="x-select-2" value="#{selectXBean.selected2}" >
+                                            <f:ajax listener="#{selectXBean.checkboxValueChanged}" render="@form" />
+                                        </h:selectBooleanCheckbox> 2
+                                        <h:selectBooleanCheckbox id="x-select-3" value="#{selectXBean.selected3}" >
+                                            <f:ajax listener="#{selectXBean.checkboxValueChanged}" render="@form" />
+                                        </h:selectBooleanCheckbox> 3
+                                    </div>
+                                </div>
+                                <h:message for="x-select-m2" id="x-select-error" class="error active" />
+                            </div>
+                        </div>
+                        <div id="y-select-container" class="select-container margin">
+                            <h:outputLabel for="y-select">Enter Y:</h:outputLabel>
+                            <div class="select-input-container">
+                                <div id="y-select-input" class="select-input-container">
+                                    <h:inputText id="y-select" value="#{selectYBean.value}" size="27" a:placeholder="Should be between -5 and 5"
+                                                 validator="#{selectYBean.validateSelectY}">
+                                        <f:validateLongRange minimum="-5" maximum="5" />
+                                        <f:ajax execute="y-select" render="@form" />
+                                    </h:inputText>
+                                </div>
+                                <h:message id="y-select-error" for="y-select" class="error active" />
+                            </div>
+                        </div>
+                        <div id="r-select-container" class="select-container margin">
+                            <h:outputLabel for="r-select">Choose R:</h:outputLabel>
+                            <div class="select-input-container">
+                                <div id="r-select-input" class="select-input-container">
+                                    <h:selectOneMenu id="r-select" value="#{selectRBean.value}"
+                                                     validator="#{selectRBean.validateSelectR}">
+                                        <f:selectItem itemLabel="---Please, choose an option---" />
+                                        <f:selectItem itemValue = "1" itemLabel = "1" />
+                                        <f:selectItem itemValue = "2" itemLabel = "2" />
+                                        <f:selectItem itemValue = "3" itemLabel = "3" />
+                                        <f:selectItem itemValue = "4" itemLabel = "4" />
+                                        <f:selectItem itemValue = "5" itemLabel = "5" />
+                                        <f:validateRequired />
+                                        <f:ajax execute="@this" render="@form" />
+                                    </h:selectOneMenu>
+                                </div>
+                                <h:message for="r-select" id="r-select-error" class="error active" />
+                            </div>
+                        </div>
+                        <div id="submit-container" class="margin">
+                            <h:commandButton id="submit-button" value="Clicfk">
+                                <f:ajax execute="@form" listener="#{checkAreaResultsBean.newResult(selectXBean.value,
+                                        selectYBean.value, selectRBean.value)}" render="@form result-table" />
+                            </h:commandButton>
+                        </div>
+                    </h:form>
+
+                    <div id="another-way-container" class="select-container margin">
+                        <button id="enable-graph" onclick="enable_graph()">Enable graph aiming</button>
+                    </div>
+                    <h:form>
+                        <input type="hidden" name="clear" value="1" />
+                        <div id="clear-table-container" class="select-container margin">
+                            <h:commandButton id="clear-table" value="Clear table">
+                                <f:ajax execute="@form" listener="#{checkAreaResultsBean.clearResults()}" />
+                            </h:commandButton>
+                        </div>
+                    </h:form>
+                    <h:form>
+                        <div id="return-index-container" class="select-container margin">
+                            <h:commandButton id="return-to-index" value="Return to index page"
+                                             action="goToPage1"/>
+                        </div>
+                    </h:form>
+                </div>
+
+                <div id="graph-container" class="blured-container round-container margin">
+                    <div id="graph">
+
+                    </div>
+                </div>
+                <div id="result-table-container" class="blured-container margin">
+                    <h:dataTable id="result-table" value="#{checkAreaResultsBean.results}" var="result">
+                        <h:column>
+                            <f:facet name = "header">X</f:facet>
+                            #{result.x}
+                        </h:column>
+                        <h:column>
+                            <f:facet name = "header">Y</f:facet>
+                            #{result.y}
+                        </h:column>
+                        <h:column>
+                            <f:facet name = "header">R</f:facet>
+                            #{result.r}
+                        </h:column>
+                        <h:column>
+                            <f:facet name = "header">Result</f:facet>
+                            #{result.result ? "Hit / Success" : "Miss / Fail"}
+                        </h:column>
+                        <h:column>
+                            <f:facet name = "header">Executed at</f:facet>
+                            <h:outputText converter="localDateTimeConverter" value="#{result.executedAt}" />
+                        </h:column>
+                        <h:column>
+                            <f:facet name = "header">Execution time</f:facet>
+                            #{result.execTime}
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6">
+
+        </script>
+        <h:form id="graphSelect">
+            <h:inputHidden id="graph-x" value="#{selectGraphBean.x}" />
+            <h:inputHidden id="graph-y" value="#{selectGraphBean.y}" />
+            <p:remoteCommand name="updateBeanValues" update="graph-x graph-y result-table choose-form"
+                             action="#{checkAreaResultsBean.newResult(selectGraphBean.x, selectGraphBean.y, selectRBean.value)}"/>
+        </h:form>
+        <h:outputScript>
+            function getCurrentR() {
+                return $('#choose-form\\:r-select').val()
+            }
+        </h:outputScript>
+        <h:outputScript library="js" name="graphDesmos.js" />
+        <h:outputScript>
+            <ui:repeat var="loadedResults" value="#{checkAreaResultsBean.results}">
+                drawPointXYRRes('#{loadedResults.x}', '#{loadedResults.y}', '#{loadedResults.r}', '#{loadedResults.result ? '?' : ''}');
+            </ui:repeat>
+        </h:outputScript>
+        <h:outputScript>
+            drawGraphByR("#{selectRBean.value == null ? 0 : selectRBean.value}");
+        </h:outputScript>
+    </h:body>
+</html>

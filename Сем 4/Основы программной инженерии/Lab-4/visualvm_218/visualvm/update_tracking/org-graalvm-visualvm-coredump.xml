@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.graalvm.visualvm.coredump/2">
+    <module_version install_time="1710753675979" last="true" origin="installer" specification_version="2.1">
+        <file crc="427842995" name="config/Modules/org-graalvm-visualvm-coredump.xml"/>
+        <file crc="3526514358" name="modules/org-graalvm-visualvm-coredump.jar"/>
+    </module_version>
+</module>

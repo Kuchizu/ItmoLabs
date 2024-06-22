@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <h:outputStylesheet library="css" name="style.css" />
+    <title>Lab-3</title>
+    <style type="text/css">
+        .clock {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 5px solid #333;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin: 20px auto;
+        }
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 49.75%;
+            background: #333;
+            transform-origin: 50% 100%;
+            border-radius: 10px;
+        }
+        .hour-hand {
+            width: 5px;
+            height: 50px;
+        }
+        .minute-hand {
+            width: 3px;
+            height: 70px;
+        }
+        .second-hand {
+            width: 2px;
+            height: 90px;
+            background: red;
+        }
+        .clock-center {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #333;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</h:head>
+
+<h:body>
+
+    <div id="container" class="margin">
+        <div id="header" class="blured-container round-container margin">
+            <p>Lab-3</p>
+            <p>By Nodiri Khisravkhon, P3231</p>
+            <p>Variant N. 51928588</p>
+        </div>
+        <div id="main" class="margin">
+            <div id="clock-container" class="margin blured-container round-container">
+                <h:form id="time-form" styleClass="margin">
+                    <p>
+                        <h:outputText id="updateable-time" value="#{timeBean.nowTime}" />
+                    </p>
+                    <div class="clock">
+                        <div class="hour-hand hand" id="hour-hand"></div>
+                        <div class="minute-hand hand" id="minute-hand"></div>
+                        <div class="second-hand hand" id="second-hand"></div>
+                        <div class="clock-center"></div>
+                    </div>
+                </h:form>
+                <h:form id="hiddenForm" style="display:none">
+                    <h:commandButton id="updatePresentDateTime">
+                        <f:ajax render="time-form:updateable-time" />
+                    </h:commandButton>
+                </h:form>
+            </div>
+            <div id="redirect-container" class="margin blured-container round-container fit-content-container">
+                <h:form styleClass="margin">
+                    <h:commandButton id="redirect" action="goToPage2" value="Go To Main?" />
+                </h:form>
+            </div>
+        </div>
+    </div>
+
+    <h:outputScript>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var hourDegrees = (hours + minutes / 60) * 30;
+            var minuteDegrees = minutes * 6;
+            var secondDegrees = seconds * 6;
+            document.getElementById('hour-hand').style.transform = 'rotate(' + hourDegrees + 'deg)';
+            document.getElementById('minute-hand').style.transform = 'rotate(' + minuteDegrees + 'deg)';
+            document.getElementById('second-hand').style.transform = 'rotate(' + secondDegrees + 'deg)';
+
+            document.getElementById("hiddenForm:updatePresentDateTime").click();
+        }
+
+        setInterval(updateClock, 7000);
+        updateClock();
+    </h:outputScript>
+</h:body>
+
+</html>

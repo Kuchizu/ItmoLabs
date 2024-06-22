@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.github.Lab3.converter"},{"l":"io.github.Lab3.db"},{"l":"io.github.Lab3.model"}];updateSearchResults();
