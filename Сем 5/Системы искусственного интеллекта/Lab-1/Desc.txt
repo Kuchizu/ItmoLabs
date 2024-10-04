@@ -1,0 +1,31 @@
+1. Запрос для поиска жанра конкретной игры
+
+   ?- genre("The Witcher 3", Genre).
+
+2. Запрос с логическим оператором И для поиска игры, которая является RPG и разработана FromSoftware
+
+   ?- genre(X, rpg), developer(X, "FromSoftware").
+
+3. Запрос с логическим оператором ИЛИ для поиска популярных игр (RPG или FPS)
+
+   ?- popular_game(X).
+
+4. Запрос с использованием переменной для нахождения всех игр, созданных Valve
+
+   ?- developer(Game, "Valve").
+
+5. Запрос с использованием правила для проверки, сделаны ли две игры одной и той же студией
+
+   ?- same_developer("Counter-Strike", "Dota 2").
+
+6. Запрос на основе правила для нахождения разработчиков стратегических игр
+
+   ?- strategic_developer(Developer).
+
+Game and hasGenre value RPG_Ind
+Game and developedBy value CD_Projekt_Red
+Game and runsOn value PC
+Game and (runsOn value PC) and (hasGenre value RPG_Ind)
+Game and hasPlayerMode value Multiplayer
+Game and (developedBy value Blizzard) and (hasPlayerMode value Multiplayer)
+Game and (hasGenre value Strategy_Ind) and (hasPlayerMode value SinglePlayer)

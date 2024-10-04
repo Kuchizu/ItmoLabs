@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://yourontology.org/VideoGameOntology.owl"
+         xmlns="http://yourontology.org/VideoGameOntology.owl#">
+
+<owl:Ontology rdf:about="http://yourontology.org/VideoGameOntology.owl"/>
+
+<owl:ObjectProperty rdf:about="#hasGenre">
+  <rdfs:domain rdf:resource="#Game"/>
+  <rdfs:range rdf:resource="#Genre"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#developedBy">
+  <rdfs:domain rdf:resource="#Game"/>
+  <rdfs:range rdf:resource="#Developer"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#runsOn">
+  <rdfs:domain rdf:resource="#Game"/>
+  <rdfs:range rdf:resource="#Platform"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasPlayerMode">
+  <rdfs:domain rdf:resource="#Game"/>
+  <rdfs:range rdf:resource="#PlayerMode"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Game">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Genre">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Developer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Platform">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PlayerMode">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RPG">
+  <rdfs:subClassOf rdf:resource="#Genre"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FPS">
+  <rdfs:subClassOf rdf:resource="#Genre"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Strategy">
+  <rdfs:subClassOf rdf:resource="#Genre"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ActionAdventure">
+  <rdfs:subClassOf rdf:resource="#Genre"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MOBA">
+  <rdfs:subClassOf rdf:resource="#Genre"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BattleRoyale">
+  <rdfs:subClassOf rdf:resource="#Genre"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sandbox">
+  <rdfs:subClassOf rdf:resource="#Genre"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sports">
+  <rdfs:subClassOf rdf:resource="#Genre"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SinglePlayer">
+  <rdfs:subClassOf rdf:resource="#PlayerMode"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Multiplayer">
+  <rdfs:subClassOf rdf:resource="#PlayerMode"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Coop">
+  <rdfs:subClassOf rdf:resource="#PlayerMode"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#RPG_Ind">
+  <rdf:type rdf:resource="#RPG"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#FPS_Ind">
+  <rdf:type rdf:resource="#FPS"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Strategy_Ind">
+  <rdf:type rdf:resource="#Strategy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ActionAdventure_Ind">
+  <rdf:type rdf:resource="#ActionAdventure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#MOBA_Ind">
+  <rdf:type rdf:resource="#MOBA"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BattleRoyale_Ind">
+  <rdf:type rdf:resource="#BattleRoyale"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sandbox_Ind">
+  <rdf:type rdf:resource="#Sandbox"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sports_Ind">
+  <rdf:type rdf:resource="#Sports"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CD_Projekt_Red">
+  <rdf:type rdf:resource="#Developer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#FromSoftware">
+  <rdf:type rdf:resource="#Developer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Blizzard">
+  <rdf:type rdf:resource="#Developer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Valve">
+  <rdf:type rdf:resource="#Developer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#EA_Sports">
+  <rdf:type rdf:resource="#Developer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Riot_Games">
+  <rdf:type rdf:resource="#Developer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Epic_Games">
+  <rdf:type rdf:resource="#Developer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mojang">
+  <rdf:type rdf:resource="#Developer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PUBG_Corp">
+  <rdf:type rdf:resource="#Developer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ensemble_Studios">
+  <rdf:type rdf:resource="#Developer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC">
+  <rdf:type rdf:resource="#Platform"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PlayStation">
+  <rdf:type rdf:resource="#Platform"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Xbox">
+  <rdf:type rdf:resource="#Platform"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Nintendo_Switch">
+  <rdf:type rdf:resource="#Platform"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#SinglePlayer_">
+  <rdf:type rdf:resource="#SinglePlayer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Multiplayer_">
+  <rdf:type rdf:resource="#Multiplayer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Coop_">
+  <rdf:type rdf:resource="#Coop"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#The_Witcher_3">
+  <rdf:type rdf:resource="#Game"/>
+  <hasGenre rdf:resource="#RPG_Ind"/>
+  <developedBy rdf:resource="#CD_Projekt_Red"/>
+  <runsOn rdf:resource="#PC"/>
+  <runsOn rdf:resource="#PlayStation"/>
+  <hasPlayerMode rdf:resource="#SinglePlayer_"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dark_Souls">
+  <rdf:type rdf:resource="#Game"/>
+  <hasGenre rdf:resource="#RPG_Ind"/>
+  <developedBy rdf:resource="#FromSoftware"/>
+  <runsOn rdf:resource="#PC"/>
+  <runsOn rdf:resource="#PlayStation"/>
+  <hasPlayerMode rdf:resource="#SinglePlayer_"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Overwatch">
+  <rdf:type rdf:resource="#Game"/>
+  <hasGenre rdf:resource="#FPS_Ind"/>
+  <developedBy rdf:resource="#Blizzard"/>
+  <runsOn rdf:resource="#PC"/>
+  <runsOn rdf:resource="#PlayStation"/>
+  <hasPlayerMode rdf:resource="#Multiplayer_"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dota_2">
+  <rdf:type rdf:resource="#Game"/>
+  <hasGenre rdf:resource="#MOBA_Ind"/>
+  <developedBy rdf:resource="#Valve"/>
+  <runsOn rdf:resource="#PC"/>
+  <hasPlayerMode rdf:resource="#Multiplayer_"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#League_of_Legends">
+  <rdf:type rdf:resource="#Game"/>
+  <hasGenre rdf:resource="#MOBA_Ind"/>
+  <developedBy rdf:resource="#Riot_Games"/>
+  <runsOn rdf:resource="#PC"/>
+  <hasPlayerMode rdf:resource="#Multiplayer_"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fortnite">
+  <rdf:type rdf:resource="#Game"/>
+  <hasGenre rdf:resource="#BattleRoyale_Ind"/>
+  <developedBy rdf:resource="#Epic_Games"/>
+  <runsOn rdf:resource="#PC"/>
+  <runsOn rdf:resource="#PlayStation"/>
+  <runsOn rdf:resource="#Xbox"/>
+  <hasPlayerMode rdf:resource="#Multiplayer_"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#FIFA">
+  <rdf:type rdf:resource="#Game"/>
+  <hasGenre rdf:resource="#Sports_Ind"/>
+  <developedBy rdf:resource="#EA_Sports"/>
+  <runsOn rdf:resource="#PC"/>
+  <runsOn rdf:resource="#PlayStation"/>
+  <runsOn rdf:resource="#Xbox"/>
+  <hasPlayerMode rdf:resource="#Multiplayer_"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Minecraft">
+  <rdf:type rdf:resource="#Game"/>
+  <hasGenre rdf:resource="#Sandbox_Ind"/>
+  <developedBy rdf:resource="#Mojang"/>
+  <runsOn rdf:resource="#PC"/>
+  <runsOn rdf:resource="#PlayStation"/>
+  <runsOn rdf:resource="#Xbox"/>
+  <runsOn rdf:resource="#Nintendo_Switch"/>
+  <hasPlayerMode rdf:resource="#SinglePlayer_"/>
+  <hasPlayerMode rdf:resource="#Multiplayer_"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PUBG">
+  <rdf:type rdf:resource="#Game"/>
+  <hasGenre rdf:resource="#BattleRoyale_Ind"/>
+  <developedBy rdf:resource="#PUBG_Corp"/>
+  <runsOn rdf:resource="#PC"/>
+  <runsOn rdf:resource="#PlayStation"/>
+  <runsOn rdf:resource="#Xbox"/>
+  <hasPlayerMode rdf:resource="#Multiplayer_"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Age_of_Empires_II">
+  <rdf:type rdf:resource="#Game"/>
+  <hasGenre rdf:resource="#Strategy_Ind"/>
+  <developedBy rdf:resource="#Ensemble_Studios"/>
+  <runsOn rdf:resource="#PC"/>
+  <hasPlayerMode rdf:resource="#SinglePlayer_"/>
+  <hasPlayerMode rdf:resource="#Multiplayer_"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
