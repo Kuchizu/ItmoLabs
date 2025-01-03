@@ -1,0 +1,22 @@
+root@Kuchizu:~/DiyShell# perf stat ./bench2 10000000
+Total time: 665928 microseconds
+Result: 10000000
+
+ Performance counter stats for './bench2 10000000':
+
+            666.96 msec task-clock                #    0.999 CPUs utilized
+                 0      context-switches          #    0.000 /sec
+                 0      cpu-migrations            #    0.000 /sec
+                60      page-faults               #   89.961 /sec
+        2976537094      cycles                    #    4.463 GHz
+          10235195      stalled-cycles-frontend   #    0.34% frontend cycles idle
+           1027809      stalled-cycles-backend    #    0.03% backend cycles idle
+       12001725888      instructions              #    4.03  insn per cycle
+                                                  #    0.00  stalled cycles per insn
+        1590400432      branches                  #    2.385 G/sec
+                 0      branch-misses             #    0.00% of all branches
+
+       0.667354669 seconds time elapsed
+
+       0.667389000 seconds user
+       0.000000000 seconds sys

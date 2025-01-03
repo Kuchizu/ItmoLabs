@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Nov 21 20:02:28 2024
+# Process ID: 17152
+# Current directory: C:/Users/Kuchizu/Desktop/Vivado/project_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17008 C:\Users\Kuchizu\Desktop\Vivado\project_2\project_2.xpr
+# Log file: C:/Users/Kuchizu/Desktop/Vivado/project_2/vivado.log
+# Journal file: C:/Users/Kuchizu/Desktop/Vivado/project_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+source safe_descending_stack_tb.tcl
+close_sim
+launch_simulation
+source safe_descending_stack_tb.tcl
+close_sim
+launch_simulation
+source safe_descending_stack_tb.tcl
+close_sim

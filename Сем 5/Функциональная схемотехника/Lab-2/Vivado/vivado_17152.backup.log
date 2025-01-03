@@ -1,0 +1,196 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Nov 21 20:02:28 2024
+# Process ID: 17152
+# Current directory: C:/Users/Kuchizu/Desktop/Vivado/project_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17008 C:\Users\Kuchizu\Desktop\Vivado\project_2\project_2.xpr
+# Log file: C:/Users/Kuchizu/Desktop/Vivado/project_2/vivado.log
+# Journal file: C:/Users/Kuchizu/Desktop/Vivado/project_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 867.469 ; gain = 192.934
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'safe_descending_stack_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj safe_descending_stack_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto f0ef8122731745e5a005c049d72451f0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot safe_descending_stack_tb_behav xil_defaultlib.safe_descending_stack_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f0ef8122731745e5a005c049d72451f0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot safe_descending_stack_tb_behav xil_defaultlib.safe_descending_stack_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'data_in' [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:18]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'data_out' [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:19]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "safe_descending_stack_tb_behav -key {Behavioral:sim_1:Functional:safe_descending_stack_tb} -tclbatch {safe_descending_stack_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source safe_descending_stack_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Success: Reset behavior is correct.
+Success: Push behavior is correct.
+Error: Expected 0xAAAA, got zzaa
+Error: Expected 0xBBBB, got zzbb
+Success: Read behavior is correct.
+Test completed successfully at 100 MHz.
+$finish called at time : 75 ns : File "C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv" Line 76
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'safe_descending_stack_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 925.008 ; gain = 11.602
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'safe_descending_stack_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj safe_descending_stack_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module safe_descending_stack_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto f0ef8122731745e5a005c049d72451f0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot safe_descending_stack_tb_behav xil_defaultlib.safe_descending_stack_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f0ef8122731745e5a005c049d72451f0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot safe_descending_stack_tb_behav xil_defaultlib.safe_descending_stack_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'data_in' [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:18]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'data_out' [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:19]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.safe_fifo
+Compiling module xil_defaultlib.safe_descending_stack_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot safe_descending_stack_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "safe_descending_stack_tb_behav -key {Behavioral:sim_1:Functional:safe_descending_stack_tb} -tclbatch {safe_descending_stack_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source safe_descending_stack_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Error: Expected 0xAAAA on data_out, got zzaa
+Error: Expected 0xBBBB on data_out, got zzcc
+Test completed for simultaneous read and write.
+$finish called at time : 85 ns : File "C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv" Line 66
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'safe_descending_stack_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 925.070 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'safe_descending_stack_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj safe_descending_stack_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module safe_descending_stack_tb
+INFO: [VRFC 10-2458] undeclared symbol write, assumed default net type wire [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:16]
+INFO: [VRFC 10-2458] undeclared symbol read, assumed default net type wire [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:17]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto f0ef8122731745e5a005c049d72451f0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot safe_descending_stack_tb_behav xil_defaultlib.safe_descending_stack_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f0ef8122731745e5a005c049d72451f0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot safe_descending_stack_tb_behav xil_defaultlib.safe_descending_stack_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'data_in' [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:18]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'data_out' [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:19]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.safe_fifo
+Compiling module xil_defaultlib.safe_descending_stack_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot safe_descending_stack_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "safe_descending_stack_tb_behav -key {Behavioral:sim_1:Functional:safe_descending_stack_tb} -tclbatch {safe_descending_stack_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source safe_descending_stack_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Success: Reset behavior is correct.
+Test completed successfully at 100 MHz.
+$finish called at time : 45 ns : File "C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv" Line 48
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'safe_descending_stack_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 927.695 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 21 20:23:34 2024...

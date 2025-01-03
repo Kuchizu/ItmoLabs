@@ -1,0 +1,5 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Success: Reset behavior is correct.
+Test completed successfully at 100 MHz.
+$finish called at time : 45 ns : File "C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv" Line 48

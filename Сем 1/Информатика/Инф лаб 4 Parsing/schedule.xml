@@ -1,63 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-   <Format>UTF-8</Format>
-   <Group>P3113</Group>
-      <Вторник type="list">
-         <element type="dict">
-            <Time>08:20-09:50</Time>
-            <Campus>Ул.Ломоносова, д.9, лит. М</Campus>
-            <Subject>Информатика (Лекция)</Subject>
-            <Cabinet>Актовый зал</Cabinet>
-            <Teacher>Балакшин Павел Валерьевич</Teacher>
+<Forma>UTF-8</Forma>
+<Grou>P3113</Grou>
+   <Вторник type="list">
+      <element type="dict">
+         <"Time>"08:20-09:50"</"Time>
+         <"Campus>"Ул.Ломоносова</"Campus>
+         <"Subject>"Информатика </"Subject>
+         <"Cabinet>"Актовый зал"</"Cabinet>
+         <"Teacher>"Балакшин Павел Валерьевич"</"Teacher>
             <week type="list">
-               <item type="int">1</item>
-               <item type="int">2</item>
-               <item type="int">3</item>
-               <item type="int">4</item>
-               <item type="int">5</item>
-               <item type="int">6</item>
             </week>
-            <Format>Очно - дистанционный</Format>
-         </element>
-         <element type="dict">
-            <Time>08:20-09:50</Time>
-            <Campus null="true" />
-            <Subject>Информатика (Лекция): ZOOM</Subject>
-            <Cabinet null="true" />
-            <Teacher>Балакшин Павел Валерьевич</Teacher>
-            <Format>Дистанционный</Format>
-         </element>
-         <element type="dict">
-            <Time>10:00-11:30</Time>
-            <Campus>Ул.Ломоносова, д.9, лит. М</Campus>
-            <Subject>Основы профессиональной деятельности (Лекция)</Subject>
-            <Cabinet>Актовый зал</Cabinet>
-            <Teacher>Клименков Сергей Викторович</Teacher>
-            <Format>Очно - дистанционный</Format>
-         </element>
-         <element type="dict">
-            <Time>10:00-11:30</Time>
-            <Campus null="true" />
-            <Subject>Основы профессиональной деятельности (Лекция): ZOOM</Subject>
-            <Cabinet null="true" />
-            <Teacher>Клименков Сергей Викторович</Teacher>
-            <Format>Дистанционный</Format>
-         </element>
-         <element type="dict">
-            <Time>11:40-13:10</Time>
-            <Campus>Ул.Ломоносова, д.9, лит. М</Campus>
-            <Subject>Программирование (Лекция)</Subject>
-            <Cabinet>1223 ауд.</Cabinet>
-            <Teacher>Письмак Алексей Евгеньевич</Teacher>
-            <Format>Очно - дистанционный</Format>
-         </element>
-         <element type="dict">
-            <Time>11:40-13:10</Time>
-            <Campus null="true" />
-            <Subject>Программирование (Лекция): ZOOM</Subject>
-            <Cabinet null="true" />
-            <Teacher>Письмак Алексей Евгеньевич</Teacher>
-            <Format>Дистанционный</Format>
-         </element>
-      </week>
+         <"week></"week>
+         <"Format>"Очно - дистанционный"</"Format>
+      </element>
+      <element type="dict">
+         <"Time>"08:20-09:50"</"Time>
+         <"Campus null="true" />
+         <"Subject>"Информатика </"Subject>
+         <"Cabinet null="true" />
+         <"Teacher>"Балакшин Павел Валерьевич"</"Teacher>
+         <"Format>"Дистанционный"</"Format>
+      </element>
+      <element type="dict">
+         <"Time>"10:00-11:30"</"Time>
+         <"Campus>"Ул.Ломоносова</"Campus>
+         <"Subject>"Основы профессиональной деятельности </"Subject>
+         <"Cabinet>"Актовый зал"</"Cabinet>
+         <"Teacher>"Клименков Сергей Викторович"</"Teacher>
+         <"Format>"Очно - дистанционный"</"Format>
+      </element>
+      <element type="dict">
+         <"Time>"10:00-11:30"</"Time>
+         <"Campus null="true" />
+         <"Subject>"Основы профессиональной деятельности </"Subject>
+         <"Cabinet null="true" />
+         <"Teacher>"Клименков Сергей Викторович"</"Teacher>
+         <"Format>"Дистанционный"</"Format>
+      </element>
+      <element type="dict">
+         <"Time>"11:40-13:10"</"Time>
+         <"Campus>"Ул.Ломоносова</"Campus>
+         <"Subject>"Программирование </"Subject>
+         <"Cabinet>"1223 ауд."</"Cabinet>
+         <"Teacher>"Письмак Алексей Евгеньевич"</"Teacher>
+         <"Format>"Очно - дистанционный"</"Format>
+      </element>
+      <element type="dict">
+         <"Time>"11:40-13:10"</"Time>
+         <"Campus null="true" />
+         <"Subject>"Программирование </"Subject>
+         <"Cabinet null="true" />
+         <"Teacher>"Письмак Алексей Евгеньевич"</"Teacher>
+         <"Format>"Дистанционный"</"Format>
+      </element>
+   </week>
 </root>

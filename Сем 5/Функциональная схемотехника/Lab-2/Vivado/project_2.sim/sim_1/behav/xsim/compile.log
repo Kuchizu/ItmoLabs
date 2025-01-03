@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module safe_descending_stack_tb
+INFO: [VRFC 10-2458] undeclared symbol write, assumed default net type wire [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:16]
+INFO: [VRFC 10-2458] undeclared symbol read, assumed default net type wire [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:17]

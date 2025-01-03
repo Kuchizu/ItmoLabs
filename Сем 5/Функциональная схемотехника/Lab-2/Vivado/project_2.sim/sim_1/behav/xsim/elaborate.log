@@ -1,0 +1,16 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f0ef8122731745e5a005c049d72451f0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot safe_descending_stack_tb_behav xil_defaultlib.safe_descending_stack_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'data_in' [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:18]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 8 for port 'data_out' [C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.srcs/sim_1/new/Test_1.sv:19]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/Kuchizu/Desktop/Vivado/project_2/project_2.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.safe_fifo
+Compiling module xil_defaultlib.safe_descending_stack_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot safe_descending_stack_tb_behav

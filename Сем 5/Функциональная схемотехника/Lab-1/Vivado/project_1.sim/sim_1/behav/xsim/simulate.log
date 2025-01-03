@@ -1,0 +1,35 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+The adder output is correct!!! a_in=0,  b_in=0, c_in=0, d_in=0, e_in=0 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=0, c_in=0, d_in=0, e_in=0 y_out = 0
+The adder output is correct!!! a_in=0,  b_in=1, c_in=0, d_in=0, e_in=0 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=1, c_in=0, d_in=0, e_in=0 y_out = 0
+The adder output is correct!!! a_in=0,  b_in=0, c_in=1, d_in=0, e_in=0 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=0, c_in=1, d_in=0, e_in=0 y_out = 0
+The adder output is correct!!! a_in=0,  b_in=1, c_in=1, d_in=0, e_in=0 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=1, c_in=1, d_in=0, e_in=0 y_out = 1
+The adder output is correct!!! a_in=0,  b_in=0, c_in=0, d_in=1, e_in=0 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=0, c_in=0, d_in=1, e_in=0 y_out = 0
+The adder output is correct!!! a_in=0,  b_in=1, c_in=0, d_in=1, e_in=0 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=1, c_in=0, d_in=1, e_in=0 y_out = 1
+The adder output is correct!!! a_in=0,  b_in=0, c_in=1, d_in=1, e_in=0 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=0, c_in=1, d_in=1, e_in=0 y_out = 1
+The adder output is correct!!! a_in=0,  b_in=1, c_in=1, d_in=1, e_in=0 y_out = 1
+The adder output is correct!!! a_in=1,  b_in=1, c_in=1, d_in=1, e_in=0 y_out = 1
+The adder output is correct!!! a_in=0,  b_in=0, c_in=0, d_in=0, e_in=1 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=0, c_in=0, d_in=0, e_in=1 y_out = 0
+The adder output is correct!!! a_in=0,  b_in=1, c_in=0, d_in=0, e_in=1 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=1, c_in=0, d_in=0, e_in=1 y_out = 1
+The adder output is correct!!! a_in=0,  b_in=0, c_in=1, d_in=0, e_in=1 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=0, c_in=1, d_in=0, e_in=1 y_out = 1
+The adder output is correct!!! a_in=0,  b_in=1, c_in=1, d_in=0, e_in=1 y_out = 1
+The adder output is correct!!! a_in=1,  b_in=1, c_in=1, d_in=0, e_in=1 y_out = 1
+The adder output is correct!!! a_in=0,  b_in=0, c_in=0, d_in=1, e_in=1 y_out = 0
+The adder output is correct!!! a_in=1,  b_in=0, c_in=0, d_in=1, e_in=1 y_out = 1
+The adder output is correct!!! a_in=0,  b_in=1, c_in=0, d_in=1, e_in=1 y_out = 1
+The adder output is correct!!! a_in=1,  b_in=1, c_in=0, d_in=1, e_in=1 y_out = 1
+The adder output is correct!!! a_in=0,  b_in=0, c_in=1, d_in=1, e_in=1 y_out = 1
+The adder output is correct!!! a_in=1,  b_in=0, c_in=1, d_in=1, e_in=1 y_out = 1
+The adder output is correct!!! a_in=0,  b_in=1, c_in=1, d_in=1, e_in=1 y_out = 1
+The adder output is correct!!! a_in=1,  b_in=1, c_in=1, d_in=1, e_in=1 y_out = 1
+$stop called at time : 330 ns : File "C:/Users/Kuchizu/Desktop/Vivado/project_1/project_1.srcs/sim_1/new/adder_tb.v" Line 44

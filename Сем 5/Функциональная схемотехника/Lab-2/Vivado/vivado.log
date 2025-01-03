@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov 22 17:46:59 2024
+# Process ID: 580
+# Current directory: C:/Users/Kuchizu/Desktop/Функциональная Схемотехника/Lab-2/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12520 C:\Users\Kuchizu\Desktop\Функциональная Схемотехника\Lab-2\Vivado\project_2.xpr
+# Log file: C:/Users/Kuchizu/Desktop/Функциональная Схемотехника/Lab-2/Vivado/vivado.log
+# Journal file: C:/Users/Kuchizu/Desktop/Функциональная Схемотехника/Lab-2/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Kuchizu/Desktop/Функциональная Схемотехника/Lab-2/Vivado/project_2.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Kuchizu/Desktop/Vivado/project_2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 848.023 ; gain = 189.363
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 22 18:25:04 2024...

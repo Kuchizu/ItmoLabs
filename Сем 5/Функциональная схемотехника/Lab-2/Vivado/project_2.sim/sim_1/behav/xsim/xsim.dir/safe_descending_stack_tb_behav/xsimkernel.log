@@ -1,0 +1,7 @@
+Running: xsim.dir/safe_descending_stack_tb_behav/xsimk.exe -simmode gui -wdb safe_descending_stack_tb_behav.wdb -simrunnum 0 -socket 59532
+Design successfully loaded
+Design Loading Memory Usage: 5920 KB (Peak: 5920 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 6508 KB (Peak: 6508 KB)
+Simulation CPU Usage: 46 ms
