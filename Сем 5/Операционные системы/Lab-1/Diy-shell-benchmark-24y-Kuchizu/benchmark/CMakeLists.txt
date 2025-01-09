@@ -1,3 +1,5 @@
+#benchmark/CMakeLists.txt
+
 get_filename_component(MONOLITH_BENCH_SOURCE_PATH "./${PROJECT_NAME}" ABSOLUTE)
 
 set(MONOLITH_BENCH_TARGET_BASE "${PROJECT_NAME}-bench")

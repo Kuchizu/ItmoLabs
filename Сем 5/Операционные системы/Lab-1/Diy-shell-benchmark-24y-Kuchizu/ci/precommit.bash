@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+# set -x
 
 cd "$(dirname "$0")"/..
 
@@ -36,17 +37,20 @@ message "Testing the project..."
 
 if [ "$MODE" = "fix" ]; then
   message "Formatting code..."
-  find source test -iname '*.hpp' -o -iname '*.cpp' \
+  find source test -iname '*.hpp' -o -iname '*.cpp' -o -iname "*.c" \
   | xargs clang-format -i --fallback-style=Google --verbose
 fi
 
 message "Checking code format..."
-find source test -iname '*.hpp' -o -iname '*.cpp' \
-| xargs clang-format -Werror --dry-run --fallback-style=Google --verbose
+find source test -iname '*.hpp' -o -iname '*.cpp' -o -iname "*.c" \
+| xargs clang-format -Werror --dry-run --fallback-style=Google -i --verbose
+
+# find source test -iname '*.hpp' -o -iname '*.cpp' -o -iname "*.c" | xargs clang-format --fallback-style=Google -i
+
 
 if [ "$STYLE" = "--style" ]; then
   message "Checking code style..."
-  find source -iname '*.hpp' -o -iname '*.cpp' \
+  find source -iname '*.hpp' -o -iname '*.cpp' -o -iname "*.c" \
   | xargs clang-tidy -p build/compile_commands.json
 fi
 
