@@ -1,0 +1,4 @@
+-Iinclude/
+-pedantic
+-Wall
+-Werror
