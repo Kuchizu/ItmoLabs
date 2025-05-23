@@ -1,0 +1,55 @@
+initdb -D "$HOME/fer7" -E UTF8 --locale=en_US.UTF-8 -U postgres0
+
+pg_ctl -D $HOME/fer7 -l $HOME/fer7/server.log start
+
+# postgres -D $HOME/fer7
+# service postgresql start
+
+pg_ctl -D ~/fer7 status
+pg_ctl -D $HOME/fer7 stop -m fast
+
+mkdir -p /var/db/postgres0/uie11
+
+CREATE TABLESPACE uie11 OWNER postgres0 LOCATION '/var/db/postgres0/uie11';
+
+CREATE DATABASE wetwhitelaw 
+    TEMPLATE template0 
+    OWNER postgres0;
+
+CREATE ROLE appuser 
+    WITH LOGIN PASSWORD '1';
+
+ALTER DATABASE wetwhitelaw OWNER TO appuser;
+\c wetwhitelaw postgres0
+ALTER SCHEMA public OWNER TO appuser;
+\c postgres postgres0
+
+GRANT CONNECT ON DATABASE wetwhitelaw TO appuser;
+GRANT CREATE ON TABLESPACE uie11 TO appuser;
+
+psql -d wetwhitelaw -U appuser -h pg152 -p 9116
+
+CREATE TABLE accounts (
+    account_id   SERIAL PRIMARY KEY,
+    name         TEXT,
+    balance      NUMERIC(10,2)
+);
+
+CREATE INDEX idx_accounts_name 
+    ON accounts(name) 
+    TABLESPACE uie11;
+
+INSERT INTO accounts (name, balance) VALUES
+    ('User1', 1000.00),
+    ('User2',   250.50),
+    ('Pekora',  0.00);
+
+# Check
+
+\d accounts
+
+SELECT indexname, tablespace 
+FROM pg_indexes 
+WHERE schemaname='public' AND tablename='accounts';
+
+\db+ uie11
