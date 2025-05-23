@@ -1,0 +1,330 @@
+2025-05-14 22:52:45,998 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-05-14 22:52:46,013 INFO o.a.j.JMeter: Loading user properties from: C:\Users\Kuchizu\Desktop\apache-jmeter-5.6.3\bin\user.properties
+2025-05-14 22:52:46,014 INFO o.a.j.JMeter: Loading system properties from: C:\Users\Kuchizu\Desktop\apache-jmeter-5.6.3\bin\system.properties
+2025-05-14 22:52:46,025 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-05-14 22:52:46,025 INFO o.a.j.JMeter: Version 5.6.3
+2025-05-14 22:52:46,025 INFO o.a.j.JMeter: java.version=17.0.11
+2025-05-14 22:52:46,025 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2025-05-14 22:52:46,025 INFO o.a.j.JMeter: os.name=Windows 10
+2025-05-14 22:52:46,025 INFO o.a.j.JMeter: os.arch=amd64
+2025-05-14 22:52:46,025 INFO o.a.j.JMeter: os.version=10.0
+2025-05-14 22:52:46,025 INFO o.a.j.JMeter: file.encoding=Cp1251
+2025-05-14 22:52:46,026 INFO o.a.j.JMeter: java.awt.headless=true
+2025-05-14 22:52:46,026 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-05-14 22:52:46,026 INFO o.a.j.JMeter: Available Processors =20
+2025-05-14 22:52:46,032 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-05-14 22:52:46,032 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-05-14 22:52:46,032 INFO o.a.j.JMeter: JMeterHome=C:\Users\Kuchizu\Desktop\apache-jmeter-5.6.3
+2025-05-14 22:52:46,032 INFO o.a.j.JMeter: user.dir  =C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4
+2025-05-14 22:52:46,032 INFO o.a.j.JMeter: PWD       =C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4
+2025-05-14 22:52:46,033 INFO o.a.j.JMeter: IP: 192.168.31.176 Name: HOME-PC FullName: host.docker.internal
+2025-05-14 22:52:46,041 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4\stress_report'
+2025-05-14 22:52:46,043 INFO o.a.j.s.FileServer: Default base='C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4'
+2025-05-14 22:52:46,044 INFO o.a.j.s.FileServer: Set new base='C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4'
+2025-05-14 22:52:46,217 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-05-14 22:52:46,240 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-05-14 22:52:46,242 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-05-14 22:52:46,245 INFO o.a.j.s.SaveService: Loading file: stress_conf2.jmx
+2025-05-14 22:52:46,290 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-14 22:52:46,290 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-14 22:52:46,290 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-14 22:52:46,290 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-05-14 22:52:46,290 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-05-14 22:52:46,290 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-05-14 22:52:46,311 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-05-14 22:52:46,316 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2025-05-14 22:52:46,316 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: stress_conf2.jtl
+2025-05-14 22:52:46,316 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: C:\Users\Kuchizu\Desktop\apache-jmeter-5.6.3\bin\reportgenerator.properties
+2025-05-14 22:52:46,317 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2025-05-14 22:52:46,320 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2025-05-14 22:52:46,323 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2025-05-14 22:52:46,323 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2025-05-14 22:52:46,323 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2025-05-14 22:52:46,323 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2025-05-14 22:52:46,323 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2025-05-14 22:52:46,324 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2025-05-14 22:52:46,324 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2025-05-14 22:52:46,324 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2025-05-14 22:52:46,328 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2025-05-14 22:52:46,328 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-05-14 22:52:46,328 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2025-05-14 22:52:46,329 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2025-05-14 22:52:46,329 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2025-05-14 22:52:46,329 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2025-05-14 22:52:46,329 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-05-14 22:52:46,329 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-05-14 22:52:46,329 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-05-14 22:52:46,329 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-05-14 22:52:46,331 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2025-05-14 22:52:46,331 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2025-05-14 22:52:46,331 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2025-05-14 22:52:46,332 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2025-05-14 22:52:46,332 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2025-05-14 22:52:46,332 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2025-05-14 22:52:46,344 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-05-14 22:52:46,345 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-05-14 22:52:46,345 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-05-14 22:52:46,348 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-05-14 22:52:46,348 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-05-14 22:52:46,401 INFO o.a.j.JMeter: Running test (1747252366401)
+2025-05-14 22:52:46,413 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Stress-Users-Conf2
+2025-05-14 22:52:46,413 INFO o.a.j.e.StandardJMeterEngine: Starting 60 threads for group Stress-Users-Conf2.
+2025-05-14 22:52:46,413 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-05-14 22:52:46,413 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=60 ramp-up=600 delayedStart=false
+2025-05-14 22:52:46,421 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-1
+2025-05-14 22:52:46,431 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-05-14 22:52:46,431 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-05-14 22:52:48,150 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = HOME-PC
+2025-05-14 22:52:48,157 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-05-14 22:52:48,158 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-05-14 22:52:48,158 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-05-14 22:52:48,158 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-05-14 22:52:48,158 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-05-14 22:52:56,417 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-2
+2025-05-14 22:53:00,875 INFO o.a.j.r.Summariser: summary +      8 in 00:00:14 =    0.6/s Avg:   756 Min:   713 Max:   969 Err:     1 (12.50%) Active: 2 Started: 2 Finished: 0
+2025-05-14 22:53:06,417 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-3
+2025-05-14 22:53:16,417 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-4
+2025-05-14 22:53:26,416 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-5
+2025-05-14 22:53:30,302 INFO o.a.j.r.Summariser: summary +     41 in 00:00:29 =    1.4/s Avg:   732 Min:   720 Max:   791 Err:     0 (0.00%) Active: 5 Started: 5 Finished: 0
+2025-05-14 22:53:30,303 INFO o.a.j.r.Summariser: summary =     49 in 00:00:44 =    1.1/s Avg:   736 Min:   713 Max:   969 Err:     1 (2.04%)
+2025-05-14 22:53:36,417 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-6
+2025-05-14 22:53:46,417 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-7
+2025-05-14 22:53:56,416 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-8
+2025-05-14 22:54:00,426 INFO o.a.j.r.Summariser: summary +     82 in 00:00:30 =    2.7/s Avg:   741 Min:   723 Max:   799 Err:     0 (0.00%) Active: 8 Started: 8 Finished: 0
+2025-05-14 22:54:00,427 INFO o.a.j.r.Summariser: summary =    131 in 00:01:14 =    1.8/s Avg:   739 Min:   713 Max:   969 Err:     1 (0.76%)
+2025-05-14 22:54:06,417 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-9
+2025-05-14 22:54:16,416 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-10
+2025-05-14 22:54:26,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-11
+2025-05-14 22:54:30,030 INFO o.a.j.r.Summariser: summary +    118 in 00:00:30 =    4.0/s Avg:   760 Min:   732 Max:  1046 Err:     2 (1.69%) Active: 11 Started: 11 Finished: 0
+2025-05-14 22:54:30,031 INFO o.a.j.r.Summariser: summary =    249 in 00:01:44 =    2.4/s Avg:   749 Min:   713 Max:  1046 Err:     3 (1.20%)
+2025-05-14 22:54:36,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-12
+2025-05-14 22:54:46,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-13
+2025-05-14 22:54:56,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-14
+2025-05-14 22:55:00,361 INFO o.a.j.r.Summariser: summary +    167 in 00:00:30 =    5.5/s Avg:   759 Min:   739 Max:   812 Err:     0 (0.00%) Active: 14 Started: 14 Finished: 0
+2025-05-14 22:55:00,362 INFO o.a.j.r.Summariser: summary =    416 in 00:02:14 =    3.1/s Avg:   753 Min:   713 Max:  1046 Err:     3 (0.72%)
+2025-05-14 22:55:06,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-15
+2025-05-14 22:55:16,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-16
+2025-05-14 22:55:26,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-17
+2025-05-14 22:55:30,237 INFO o.a.j.r.Summariser: summary +    202 in 00:00:30 =    6.8/s Avg:   773 Min:   753 Max:   836 Err:     0 (0.00%) Active: 17 Started: 17 Finished: 0
+2025-05-14 22:55:30,238 INFO o.a.j.r.Summariser: summary =    618 in 00:02:44 =    3.8/s Avg:   760 Min:   713 Max:  1046 Err:     3 (0.49%)
+2025-05-14 22:55:36,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-18
+2025-05-14 22:55:46,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-19
+2025-05-14 22:55:56,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-20
+2025-05-14 22:56:00,109 INFO o.a.j.r.Summariser: summary +    240 in 00:00:30 =    8.0/s Avg:   795 Min:   769 Max:  1143 Err:     7 (2.92%) Active: 20 Started: 20 Finished: 0
+2025-05-14 22:56:00,110 INFO o.a.j.r.Summariser: summary =    858 in 00:03:14 =    4.4/s Avg:   769 Min:   713 Max:  1143 Err:    10 (1.17%)
+2025-05-14 22:56:06,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-21
+2025-05-14 22:56:16,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-22
+2025-05-14 22:56:26,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-23
+2025-05-14 22:56:30,309 INFO o.a.j.r.Summariser: summary +    273 in 00:00:30 =    9.0/s Avg:   815 Min:   779 Max:  1156 Err:     6 (2.20%) Active: 23 Started: 23 Finished: 0
+2025-05-14 22:56:30,310 INFO o.a.j.r.Summariser: summary =   1131 in 00:03:44 =    5.1/s Avg:   780 Min:   713 Max:  1156 Err:    16 (1.41%)
+2025-05-14 22:56:36,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-24
+2025-05-14 22:56:46,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-25
+2025-05-14 22:56:56,416 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-26
+2025-05-14 22:57:00,091 INFO o.a.j.r.Summariser: summary +    309 in 00:00:30 =   10.4/s Avg:   824 Min:   794 Max:   998 Err:     5 (1.62%) Active: 26 Started: 26 Finished: 0
+2025-05-14 22:57:00,092 INFO o.a.j.r.Summariser: summary =   1440 in 00:04:14 =    5.7/s Avg:   790 Min:   713 Max:  1156 Err:    21 (1.46%)
+2025-05-14 22:57:06,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-27
+2025-05-14 22:57:16,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-28
+2025-05-14 22:57:26,417 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-29
+2025-05-14 22:57:30,045 INFO o.a.j.r.Summariser: summary +    340 in 00:00:30 =   11.4/s Avg:   843 Min:   811 Max:  1169 Err:    14 (4.12%) Active: 29 Started: 29 Finished: 0
+2025-05-14 22:57:30,045 INFO o.a.j.r.Summariser: summary =   1780 in 00:04:44 =    6.3/s Avg:   800 Min:   713 Max:  1169 Err:    35 (1.97%)
+2025-05-14 22:57:36,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-30
+2025-05-14 22:57:46,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-31
+2025-05-14 22:57:56,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-32
+2025-05-14 22:58:00,144 INFO o.a.j.r.Summariser: summary +    388 in 00:00:30 =   12.9/s Avg:   859 Min:   824 Max:  1073 Err:    41 (10.57%) Active: 32 Started: 32 Finished: 0
+2025-05-14 22:58:00,145 INFO o.a.j.r.Summariser: summary =   2168 in 00:05:14 =    6.9/s Avg:   811 Min:   713 Max:  1169 Err:    76 (3.51%)
+2025-05-14 22:58:06,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-33
+2025-05-14 22:58:16,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-34
+2025-05-14 22:58:26,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-35
+2025-05-14 22:58:30,003 INFO o.a.j.r.Summariser: summary +    420 in 00:00:30 =   14.1/s Avg:   892 Min:   849 Max:  1014 Err:   180 (42.86%) Active: 35 Started: 35 Finished: 0
+2025-05-14 22:58:30,003 INFO o.a.j.r.Summariser: summary =   2588 in 00:05:44 =    7.5/s Avg:   824 Min:   713 Max:  1169 Err:   256 (9.89%)
+2025-05-14 22:58:36,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-36
+2025-05-14 22:58:46,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-37
+2025-05-14 22:58:56,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-38
+2025-05-14 22:59:00,183 INFO o.a.j.r.Summariser: summary +    449 in 00:00:30 =   14.9/s Avg:   898 Min:   854 Max:   979 Err:   279 (62.14%) Active: 38 Started: 38 Finished: 0
+2025-05-14 22:59:00,184 INFO o.a.j.r.Summariser: summary =   3037 in 00:06:14 =    8.1/s Avg:   835 Min:   713 Max:  1169 Err:   535 (17.62%)
+2025-05-14 22:59:06,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-39
+2025-05-14 22:59:16,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-40
+2025-05-14 22:59:26,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-41
+2025-05-14 22:59:30,011 INFO o.a.j.r.Summariser: summary +    471 in 00:00:30 =   15.8/s Avg:   917 Min:   875 Max:  1236 Err:   425 (90.23%) Active: 41 Started: 41 Finished: 0
+2025-05-14 22:59:30,012 INFO o.a.j.r.Summariser: summary =   3508 in 00:06:44 =    8.7/s Avg:   846 Min:   713 Max:  1236 Err:   960 (27.37%)
+2025-05-14 22:59:36,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-42
+2025-05-14 22:59:46,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-43
+2025-05-14 22:59:56,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-44
+2025-05-14 23:00:00,018 INFO o.a.j.r.Summariser: summary +    513 in 00:00:30 =   17.1/s Avg:   936 Min:   895 Max:  1022 Err:   513 (100.00%) Active: 44 Started: 44 Finished: 0
+2025-05-14 23:00:00,018 INFO o.a.j.r.Summariser: summary =   4021 in 00:07:14 =    9.3/s Avg:   857 Min:   713 Max:  1236 Err:  1473 (36.63%)
+2025-05-14 23:00:06,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-45
+2025-05-14 23:00:16,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-46
+2025-05-14 23:00:26,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-47
+2025-05-14 23:00:30,091 INFO o.a.j.r.Summariser: summary +    543 in 00:00:30 =   18.1/s Avg:   967 Min:   912 Max:  1141 Err:   543 (100.00%) Active: 47 Started: 47 Finished: 0
+2025-05-14 23:00:30,092 INFO o.a.j.r.Summariser: summary =   4564 in 00:07:44 =    9.8/s Avg:   870 Min:   713 Max:  1236 Err:  2016 (44.17%)
+2025-05-14 23:00:36,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-48
+2025-05-14 23:00:46,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-49
+2025-05-14 23:00:56,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-50
+2025-05-14 23:01:03,745 INFO o.a.j.r.Summariser: summary +    531 in 00:00:34 =   15.8/s Avg:  1153 Min:   938 Max:  6628 Err:   531 (100.00%) Active: 50 Started: 50 Finished: 0
+2025-05-14 23:01:03,746 INFO o.a.j.r.Summariser: summary =   5095 in 00:08:17 =   10.2/s Avg:   900 Min:   713 Max:  6628 Err:  2547 (49.99%)
+2025-05-14 23:01:06,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-51
+2025-05-14 23:01:16,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-52
+2025-05-14 23:01:26,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-53
+2025-05-14 23:01:36,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-54
+2025-05-14 23:01:46,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-55
+2025-05-14 23:01:56,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-56
+2025-05-14 23:02:00,026 INFO o.a.j.r.Summariser: summary +    578 in 00:00:56 =   10.3/s Avg:  3988 Min:   732 Max: 32291 Err:   465 (80.45%) Active: 56 Started: 56 Finished: 0
+2025-05-14 23:02:00,026 INFO o.a.j.r.Summariser: summary =   5673 in 00:09:14 =   10.2/s Avg:  1214 Min:   713 Max: 32291 Err:  3012 (53.09%)
+2025-05-14 23:02:06,415 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-57
+2025-05-14 23:02:16,414 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-58
+2025-05-14 23:02:26,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-59
+2025-05-14 23:02:30,011 INFO o.a.j.r.Summariser: summary +    676 in 00:00:30 =   22.5/s Avg:  1082 Min:  1015 Max:  1321 Err:   676 (100.00%) Active: 59 Started: 59 Finished: 0
+2025-05-14 23:02:30,011 INFO o.a.j.r.Summariser: summary =   6349 in 00:09:44 =   10.9/s Avg:  1200 Min:   713 Max: 32291 Err:  3688 (58.09%)
+2025-05-14 23:02:36,413 INFO o.a.j.t.JMeterThread: Thread started: Stress-Users-Conf2 1-60
+2025-05-14 23:03:00,022 INFO o.a.j.r.Summariser: summary +    697 in 00:00:30 =   23.2/s Avg:  1106 Min:  1057 Max:  1323 Err:   697 (100.00%) Active: 60 Started: 60 Finished: 0
+2025-05-14 23:03:00,022 INFO o.a.j.r.Summariser: summary =   7046 in 00:10:14 =   11.5/s Avg:  1191 Min:   713 Max: 32291 Err:  4385 (62.23%)
+2025-05-14 23:03:30,059 INFO o.a.j.r.Summariser: summary +    700 in 00:00:30 =   23.3/s Avg:  1118 Min:  1049 Max:  1334 Err:   700 (100.00%) Active: 60 Started: 60 Finished: 0
+2025-05-14 23:03:30,060 INFO o.a.j.r.Summariser: summary =   7746 in 00:10:44 =   12.0/s Avg:  1184 Min:   713 Max: 32291 Err:  5085 (65.65%)
+2025-05-14 23:04:00,047 INFO o.a.j.r.Summariser: summary +    682 in 00:00:30 =   22.7/s Avg:  1110 Min:  1055 Max:  1486 Err:   682 (100.00%) Active: 60 Started: 60 Finished: 0
+2025-05-14 23:04:00,048 INFO o.a.j.r.Summariser: summary =   8428 in 00:11:14 =   12.5/s Avg:  1178 Min:   713 Max: 32291 Err:  5767 (68.43%)
+2025-05-14 23:04:30,034 INFO o.a.j.r.Summariser: summary +    699 in 00:00:30 =   23.3/s Avg:  1111 Min:  1056 Max:  1380 Err:   699 (100.00%) Active: 60 Started: 60 Finished: 0
+2025-05-14 23:04:30,034 INFO o.a.j.r.Summariser: summary =   9127 in 00:11:44 =   13.0/s Avg:  1173 Min:   713 Max: 32291 Err:  6466 (70.84%)
+2025-05-14 23:05:00,005 INFO o.a.j.r.Summariser: summary +    694 in 00:00:30 =   23.2/s Avg:  1106 Min:  1058 Max:  1295 Err:   694 (100.00%) Active: 60 Started: 60 Finished: 0
+2025-05-14 23:05:00,005 INFO o.a.j.r.Summariser: summary =   9821 in 00:12:14 =   13.4/s Avg:  1168 Min:   713 Max: 32291 Err:  7160 (72.90%)
+2025-05-14 23:05:30,012 INFO o.a.j.r.Summariser: summary +    690 in 00:00:30 =   23.0/s Avg:  1102 Min:  1057 Max:  1217 Err:   690 (100.00%) Active: 60 Started: 60 Finished: 0
+2025-05-14 23:05:30,013 INFO o.a.j.r.Summariser: summary =  10511 in 00:12:44 =   13.8/s Avg:  1164 Min:   713 Max: 32291 Err:  7850 (74.68%)
+2025-05-14 23:06:00,048 INFO o.a.j.r.Summariser: summary +    688 in 00:00:30 =   22.9/s Avg:  1102 Min:  1042 Max:  1258 Err:   688 (100.00%) Active: 60 Started: 60 Finished: 0
+2025-05-14 23:06:00,049 INFO o.a.j.r.Summariser: summary =  11199 in 00:13:14 =   14.1/s Avg:  1160 Min:   713 Max: 32291 Err:  8538 (76.24%)
+2025-05-14 23:06:30,034 INFO o.a.j.r.Summariser: summary +    687 in 00:00:30 =   22.9/s Avg:  1103 Min:  1050 Max:  1366 Err:   687 (100.00%) Active: 60 Started: 60 Finished: 0
+2025-05-14 23:06:30,036 INFO o.a.j.r.Summariser: summary =  11886 in 00:13:44 =   14.4/s Avg:  1157 Min:   713 Max: 32291 Err:  9225 (77.61%)
+2025-05-14 23:07:00,022 INFO o.a.j.r.Summariser: summary +    686 in 00:00:30 =   22.9/s Avg:  1098 Min:  1048 Max:  1184 Err:   686 (100.00%) Active: 60 Started: 60 Finished: 0
+2025-05-14 23:07:00,022 INFO o.a.j.r.Summariser: summary =  12572 in 00:14:14 =   14.7/s Avg:  1154 Min:   713 Max: 32291 Err:  9911 (78.83%)
+2025-05-14 23:07:30,012 INFO o.a.j.r.Summariser: summary +    692 in 00:00:30 =   23.1/s Avg:  1110 Min:  1050 Max:  1437 Err:   692 (100.00%) Active: 60 Started: 60 Finished: 0
+2025-05-14 23:07:30,013 INFO o.a.j.r.Summariser: summary =  13264 in 00:14:44 =   15.0/s Avg:  1151 Min:   713 Max: 32291 Err: 10603 (79.94%)
+2025-05-14 23:07:43,662 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-12
+2025-05-14 23:07:44,181 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-49
+2025-05-14 23:07:44,285 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-41
+2025-05-14 23:07:44,514 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-35
+2025-05-14 23:07:44,548 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-7
+2025-05-14 23:07:44,755 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-13
+2025-05-14 23:07:44,836 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-50
+2025-05-14 23:07:44,848 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-32
+2025-05-14 23:07:45,020 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-53
+2025-05-14 23:07:45,275 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-46
+2025-05-14 23:07:45,330 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-44
+2025-05-14 23:07:45,399 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-54
+2025-05-14 23:07:45,477 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-27
+2025-05-14 23:07:45,481 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-56
+2025-05-14 23:07:45,538 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-23
+2025-05-14 23:07:45,549 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-58
+2025-05-14 23:07:45,631 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-10
+2025-05-14 23:07:45,720 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-22
+2025-05-14 23:07:45,774 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-51
+2025-05-14 23:07:45,848 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-17
+2025-05-14 23:07:45,939 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-8
+2025-05-14 23:07:45,949 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-59
+2025-05-14 23:07:45,979 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-15
+2025-05-14 23:07:45,998 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-39
+2025-05-14 23:07:46,098 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-43
+2025-05-14 23:07:46,112 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-5
+2025-05-14 23:07:46,185 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-26
+2025-05-14 23:07:46,193 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-4
+2025-05-14 23:07:46,232 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-19
+2025-05-14 23:07:46,298 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-21
+2025-05-14 23:07:46,365 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-40
+2025-05-14 23:07:46,400 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-38
+2025-05-14 23:07:46,411 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-11
+2025-05-14 23:07:46,516 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-6
+2025-05-14 23:07:46,517 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-6
+2025-05-14 23:07:46,528 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-45
+2025-05-14 23:07:46,528 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-45
+2025-05-14 23:07:46,571 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-36
+2025-05-14 23:07:46,572 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-36
+2025-05-14 23:07:46,580 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-28
+2025-05-14 23:07:46,580 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-28
+2025-05-14 23:07:46,618 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-20
+2025-05-14 23:07:46,618 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-20
+2025-05-14 23:07:46,644 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-55
+2025-05-14 23:07:46,644 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-55
+2025-05-14 23:07:46,670 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-2
+2025-05-14 23:07:46,670 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-2
+2025-05-14 23:07:46,680 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-48
+2025-05-14 23:07:46,680 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-48
+2025-05-14 23:07:46,759 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-52
+2025-05-14 23:07:46,759 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-52
+2025-05-14 23:07:46,777 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-24
+2025-05-14 23:07:46,777 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-24
+2025-05-14 23:07:46,802 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-18
+2025-05-14 23:07:46,802 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-18
+2025-05-14 23:07:46,840 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-1
+2025-05-14 23:07:46,840 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-1
+2025-05-14 23:07:46,851 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-47
+2025-05-14 23:07:46,851 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-47
+2025-05-14 23:07:46,869 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-14
+2025-05-14 23:07:46,869 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-14
+2025-05-14 23:07:46,915 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-37
+2025-05-14 23:07:46,915 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-37
+2025-05-14 23:07:46,922 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-9
+2025-05-14 23:07:46,922 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-9
+2025-05-14 23:07:46,951 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-29
+2025-05-14 23:07:46,951 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-29
+2025-05-14 23:07:47,019 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-30
+2025-05-14 23:07:47,020 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-30
+2025-05-14 23:07:47,094 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-31
+2025-05-14 23:07:47,094 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-31
+2025-05-14 23:07:47,118 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-3
+2025-05-14 23:07:47,118 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-57
+2025-05-14 23:07:47,118 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-3
+2025-05-14 23:07:47,118 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-57
+2025-05-14 23:07:47,162 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-42
+2025-05-14 23:07:47,162 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-42
+2025-05-14 23:07:47,275 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-16
+2025-05-14 23:07:47,275 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-16
+2025-05-14 23:07:47,293 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-33
+2025-05-14 23:07:47,293 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-33
+2025-05-14 23:07:47,345 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-25
+2025-05-14 23:07:47,346 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-25
+2025-05-14 23:07:47,355 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-34
+2025-05-14 23:07:47,355 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-34
+2025-05-14 23:07:47,482 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress-Users-Conf2 1-60
+2025-05-14 23:07:47,483 INFO o.a.j.t.JMeterThread: Thread finished: Stress-Users-Conf2 1-60
+2025-05-14 23:07:47,484 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-05-14 23:07:47,486 INFO o.a.j.r.Summariser: summary +    396 in 00:00:17 =   22.7/s Avg:  1081 Min:  1034 Max:  1216 Err:   396 (100.00%) Active: 0 Started: 60 Finished: 60
+2025-05-14 23:07:47,486 INFO o.a.j.r.Summariser: summary =  13660 in 00:15:01 =   15.2/s Avg:  1149 Min:   713 Max: 32291 Err: 10999 (80.52%)
+2025-05-14 23:07:47,487 INFO o.a.j.JMeter: Generating Dashboard
+2025-05-14 23:07:47,488 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2025-05-14 23:07:47,502 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2025-05-14 23:07:48,298 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2025-05-14 23:07:48,298 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2025-05-14 23:07:48,301 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2025-05-14 23:07:48,301 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2025-05-14 23:07:48,311 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2025-05-14 23:07:48,315 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2025-05-14 23:07:48,316 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2025-05-14 23:07:48,317 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2025-05-14 23:07:48,487 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2025-05-14 23:07:48,490 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2025-05-14 23:07:48,490 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2025-05-14 23:07:48,490 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2025-05-14 23:07:48,640 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2025-05-14 23:07:48,642 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 95620 samples
+2025-05-14 23:07:48,642 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2025-05-14 23:07:48,642 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2025-05-14 23:07:48,642 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2025-05-14 23:07:48,642 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2025-05-14 23:07:48,642 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2025-05-14 23:07:48,642 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2025-05-14 23:07:48,645 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2025-05-14 23:07:48,647 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2025-05-14 23:07:48,647 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2025-05-14 23:07:48,647 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2025-05-14 23:07:48,647 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 204900 samples
+2025-05-14 23:07:48,647 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 40980 samples
+2025-05-14 23:07:48,648 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 13660 samples
+2025-05-14 23:07:48,652 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 13660 samples produced in 1s 123 ms on channel 0
+2025-05-14 23:07:48,652 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2025-05-14 23:07:48,724 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2025-05-14 23:07:48,724 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2025-05-14 23:07:48,725 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2025-05-14 23:07:48,725 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2025-05-14 23:07:48,726 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4\stress_report\statistics.json
+2025-05-14 23:07:48,780 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2025-05-14 23:07:48,785 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4\stress_report
+2025-05-14 23:07:48,934 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4\stress_report, creating folder structure
+2025-05-14 23:07:48,937 INFO o.a.j.r.d.TemplateVisitor: Copying folder from 'C:\Users\Kuchizu\Desktop\apache-jmeter-5.6.3\bin\report-template' to 'C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4\stress_report', got message: C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4\stress_report, found non empty folder with following content [C:\Users\Kuchizu\Desktop\Тестирование проргаммного обеспечения\Lab-4\stress_report\statistics.json], will be ignored
+2025-05-14 23:07:49,186 INFO o.a.j.JMeter: Dashboard generated
