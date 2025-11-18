@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(main_temp.c)",
+      "Bash(main_temp2.c)",
+      "Bash(make clean:*)",
+      "Bash(make)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
