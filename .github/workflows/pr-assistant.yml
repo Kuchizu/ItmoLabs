@@ -1,0 +1,19 @@
+name: PR Assistant
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: write
+
+jobs:
+  pr-assistant:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: codex-team/action-pr-assistant@master
+        with:
+          check: both
+          mode: draft
