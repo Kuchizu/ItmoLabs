@@ -1,3 +1,6 @@
 [submodule "Сем 7/Высокопроизводительные-системы"]
 	path = Сем 7/Высокопроизводительные системы
 	url = https://github.com/Kuchizu/Restaurant-management
+[submodule "Сем 7/Информационная безопасность/Lab-1"]
+	path = Сем 7/Информационная безопасность/Lab-1
+	url = https://github.com/Kuchizu/Infobez-Lab-1
