@@ -1,0 +1,141 @@
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\setmainfont{Times New Roman}
+\setmonofont{Courier New}
+\newfontfamily\cyrillicfonttt{Courier New}
+
+\usepackage[nodisplayskipstretch]{setspace}
+\onehalfspacing
+
+\usepackage[a4paper, left=30mm, right=15mm, top=20mm, bottom=20mm]{geometry}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\usepackage{indentfirst}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\usepackage{titlesec}
+\titleformat{\section}[block]
+  {\bfseries\fontsize{14pt}{14pt}\selectfont}
+  {\thesection}
+  {1em}
+  {}
+\titlespacing*{\section}{\parindent}{3\baselineskip}{3\baselineskip}
+
+\titleformat{\subsection}[block]
+  {\bfseries\normalsize}
+  {\thesubsection}
+  {1em}
+  {}
+\titlespacing*{\subsection}{\parindent}{\baselineskip}{\baselineskip}
+
+\titleformat{\subsubsection}[block]
+  {\bfseries\normalsize}
+  {\thesubsubsection}
+  {1em}
+  {}
+\titlespacing*{\subsubsection}{\parindent}{\baselineskip}{\baselineskip}
+
+\usepackage{tocloft}
+\renewcommand{\contentsname}{СОДЕРЖАНИЕ}
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{2\baselineskip}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{float}
+
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{emdash}{~--~}
+\captionsetup[figure]{labelsep=emdash, justification=centering, singlelinecheck=false}
+\captionsetup[table]{labelsep=emdash, justification=raggedright, singlelinecheck=false, position=top}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=--, itemsep=0pt, topsep=0pt}
+\setlist[enumerate]{itemsep=0pt, topsep=0pt}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+  basicstyle=\rmfamily\small,
+  breaklines=true,
+  frame=single,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  xleftmargin=\parindent
+}
+
+\usepackage{hyperref}
+\hypersetup{
+  unicode=true,
+  colorlinks=false,
+  pdfborder={0 0 0}
+}
+\urlstyle{same}
+
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\renewenvironment{thebibliography}[1]
+     {\list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \setlength{\itemsep}{0pt}%
+            \setlength{\parsep}{0pt}%
+            \setlength{\parskip}{0pt}%
+            \setlength{\topsep}{0pt}%
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \widowpenalty4000
+      \sfcode`\.\@m}
+     {\def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+\newcommand{\structuralsection}[1]{%
+  \clearpage
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}%
+  \begin{center}
+    \textbf{\MakeUppercase{#1}}
+  \end{center}
+}
+
+\newcommand{\appendixsection}[2]{%
+  \clearpage
+  \phantomsection
+  \addcontentsline{toc}{section}{Приложение #1. #2}%
+  \begin{flushright}
+    \textbf{Приложение #1}
+  \end{flushright}
+  \begin{center}
+    \textbf{#2}
+  \end{center}
+}
+
+\sloppy

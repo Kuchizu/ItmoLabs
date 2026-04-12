@@ -1,0 +1,153 @@
+% preamble.tex — Преамбула отчёта по практике
+% Оформление по ГОСТ 7.32-2017
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\usepackage{mathptmx}                        % Times New Roman
+
+\usepackage[nodisplayskipstretch]{setspace}   % Полуторный интервал
+\onehalfspacing
+
+% Поля: лев 30, прав 15, верх 20, низ 20 мм
+\usepackage[top=20mm, bottom=20mm, left=30mm, right=15mm]{geometry}
+
+\parindent=1.25cm
+\usepackage{indentfirst}
+
+% Нумерация страниц в правом верхнем углу
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[R]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% Содержание
+\usepackage{titletoc}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\setcounter{tocdepth}{3}
+
+\makeatletter
+\patchcmd{\@cftmaketoctitle}{\cfttoctitlefont\contentsname}{\cfttoctitlefont\MakeUppercase{\contentsname}}{}{}
+\makeatother
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Заголовки: с абзацного отступа, полужирный
+\usepackage{titlesec}
+\usepackage{textcase}
+
+\titleformat{\section}[block]{\hspace{\parindent}\bfseries\normalsize}
+                         {\arabic{section}}{1ex}{\MakeUppercase}
+\titlespacing*{\section}{0pt}{42pt}{42pt}
+
+\titleformat{\subsection}[block]{\hspace{\parindent}\bfseries\normalsize}
+                         {\arabic{section}.\arabic{subsection}}{1ex}{}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
+
+\titleformat{\subsubsection}[block]{\hspace{\parindent}\bfseries\normalsize}
+                         {\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}{1ex}{}
+\titlespacing*{\subsubsection}{0pt}{\baselineskip}{\baselineskip}
+
+% Подписи: разделитель — короткое тире
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{endash}{ -- }
+\captionsetup{labelsep=endash}
+\captionsetup[figure]{justification=centering, font=normalsize}
+\captionsetup[table]{singlelinecheck=false, justification=raggedright, font=normalsize}
+
+\addto\captionsrussian{
+  \def\figurename{Рисунок}
+  \def\tablename{Таблица}
+  \def\contentsname{Содержание}
+  \def\refname{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+}
+
+% Сквозная нумерация
+\renewcommand{\theequation}{\arabic{equation}}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{float}
+
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+
+% Списки: маркер — тире
+\usepackage{enumitem}
+\setlist[enumerate]{topsep=0pt, itemsep=0ex, partopsep=1ex, parsep=1ex}
+\setlist[itemize]{topsep=0pt, itemsep=0ex, partopsep=1ex, parsep=1ex}
+\def\labelitemi{--}
+
+% Листинги кода с поддержкой кириллицы
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  frame=single,
+  xleftmargin=\parindent,
+  showstringspaces=false,
+  extendedchars=true,
+  literate=
+    {а}{{\cyra}}1 {б}{{\cyrb}}1 {в}{{\cyrv}}1 {г}{{\cyrg}}1
+    {д}{{\cyrd}}1 {е}{{\cyre}}1 {ё}{{\cyryo}}1 {ж}{{\cyrzh}}1
+    {з}{{\cyrz}}1 {и}{{\cyri}}1 {й}{{\cyrishrt}}1 {к}{{\cyrk}}1
+    {л}{{\cyrl}}1 {м}{{\cyrm}}1 {н}{{\cyrn}}1 {о}{{\cyro}}1
+    {п}{{\cyrp}}1 {р}{{\cyrr}}1 {с}{{\cyrs}}1 {т}{{\cyrt}}1
+    {у}{{\cyru}}1 {ф}{{\cyrf}}1 {х}{{\cyrh}}1 {ц}{{\cyrc}}1
+    {ч}{{\cyrch}}1 {ш}{{\cyrsh}}1 {щ}{{\cyrshch}}1 {ъ}{{\cyrhrdsn}}1
+    {ы}{{\cyrery}}1 {ь}{{\cyrsftsn}}1 {э}{{\cyrerev}}1 {ю}{{\cyryu}}1
+    {я}{{\cyrya}}1
+    {А}{{\CYRA}}1 {Б}{{\CYRB}}1 {В}{{\CYRV}}1 {Г}{{\CYRG}}1
+    {Д}{{\CYRD}}1 {Е}{{\CYRE}}1 {Ё}{{\CYRYO}}1 {Ж}{{\CYRZH}}1
+    {З}{{\CYRZ}}1 {И}{{\CYRI}}1 {Й}{{\CYRISHRT}}1 {К}{{\CYRK}}1
+    {Л}{{\CYRL}}1 {М}{{\CYRM}}1 {Н}{{\CYRN}}1 {О}{{\CYRO}}1
+    {П}{{\CYRP}}1 {Р}{{\CYRR}}1 {С}{{\CYRS}}1 {Т}{{\CYRT}}1
+    {У}{{\CYRU}}1 {Ф}{{\CYRF}}1 {Х}{{\CYRH}}1 {Ц}{{\CYRC}}1
+    {Ч}{{\CYRCH}}1 {Ш}{{\CYRSH}}1 {Щ}{{\CYRSHCH}}1 {Ъ}{{\CYRHRDSN}}1
+    {Ы}{{\CYRERY}}1 {Ь}{{\CYRSFTSN}}1 {Э}{{\CYREREV}}1 {Ю}{{\CYRYU}}1
+    {Я}{{\CYRYA}}1,
+}
+
+\usepackage{hyperref}
+\hypersetup{unicode=true, colorlinks=false, pdfborder={0 0 0}}
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks
+  \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j
+  \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t
+  \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D
+  \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N
+  \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X
+  \do\Y\do\Z}
+
+\usepackage{cmap}
+\usepackage{pdfpages}
+
+\usepackage[numbers,sort&compress]{natbib}
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\widowpenalty=10000
+\vfuzz \hfuzz
+\raggedbottom

@@ -1,0 +1,238 @@
+% vkr.tex — Шаблон ВКР, Университет ИТМО
+% ГОСТ 7.32-2017 / ЛНАОБУЧ-СМК-03-05-2022
+\documentclass[a4paper,14pt]{extarticle}
+
+\input{preamble}
+
+\begin{document}
+
+% Титульный лист, задание и аннотация оформляются в ИСУ (п. 3.3)
+% \begin{titlepage}
+% \thispagestyle{empty}
+% \begin{center}
+% \textbf{МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ}
+% \vspace{0.5cm}
+% \textbf{ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ\\
+% УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ\\
+% <<НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИТМО>>}
+% \vspace{1cm}
+% Факультет \underline{\hspace{6cm}}
+% \vspace{0.3cm}
+% Направление подготовки \underline{\hspace{6cm}}
+% \vspace{0.3cm}
+% Квалификация \underline{\hspace{6cm}}
+% \vspace{2cm}
+% {\large \textbf{ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА}}
+% \vspace{0.5cm}
+% на тему:
+% \vspace{0.3cm}
+% <<\underline{\hspace{10cm}}>>
+% \end{center}
+% \vspace{2cm}
+% \begin{flushright}
+% \begin{minipage}{0.5\textwidth}
+% Выполнил(а) студент(ка) группы \underline{\hspace{2cm}}\\[0.5cm]
+% \underline{\hspace{\textwidth}}\\
+% {\small (Фамилия И.О.)}\\[0.5cm]
+% Руководитель ВКР\\[0.3cm]
+% \underline{\hspace{\textwidth}}\\
+% {\small (должность, учёная степень, звание)}\\[0.3cm]
+% \underline{\hspace{\textwidth}}\\
+% {\small (Фамилия И.О.)}\\[0.5cm]
+% <<Допускается к защите>>\\[0.3cm]
+% Руководитель ОП\\[0.3cm]
+% \underline{\hspace{\textwidth}}\\
+% {\small (Фамилия И.О., подпись)}
+% \end{minipage}
+% \end{flushright}
+% \vfill
+% \begin{center}
+% Санкт-Петербург\\
+% \the\year
+% \end{center}
+% \end{titlepage}
+
+% === СОДЕРЖАНИЕ ===
+\setcounter{page}{4}
+\thispagestyle{fancy}
+\tableofcontents
+\newpage
+
+% === СПИСОК СОКРАЩЕНИЙ И УСЛОВНЫХ ОБОЗНАЧЕНИЙ (п. 4.8) ===
+\phantomsection
+\begin{center}
+\textbf{СПИСОК СОКРАЩЕНИЙ И УСЛОВНЫХ ОБОЗНАЧЕНИЙ}
+\end{center}
+\addcontentsline{toc}{section}{СПИСОК СОКРАЩЕНИЙ И УСЛОВНЫХ ОБОЗНАЧЕНИЙ}
+
+\noindent
+ВКР -- выпускная квалификационная работа\\
+ГИА -- государственная итоговая аттестация\\
+ГЭК -- государственная экзаменационная комиссия\\
+ПО -- программное обеспечение
+
+\newpage
+
+% === ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ (п. 4.9) ===
+\phantomsection
+\begin{center}
+\textbf{ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ}
+\end{center}
+\addcontentsline{toc}{section}{ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ}
+
+\noindent
+Алгоритм -- конечная последовательность точно определённых действий для решения задачи\\
+База данных -- организованная совокупность данных, предназначенная для хранения, обработки и извлечения информации\\
+Интерфейс -- совокупность средств и методов взаимодействия между элементами системы
+
+\newpage
+
+% === ВВЕДЕНИЕ ===
+\phantomsection
+\begin{center}
+\textbf{ВВЕДЕНИЕ}
+\end{center}
+\addcontentsline{toc}{section}{ВВЕДЕНИЕ}
+
+Во введении.
+
+\newpage
+
+% === ГЛАВА 1 ===
+\section{Название первой главы}
+
+Текст главы
+
+\subsection{Подраздел первой главы}
+
+Текст подраздела.
+
+\subsection{Ещё один подраздел}
+
+Текст ещё одного подраздела.
+
+\subsubsection{Пункт подраздела}
+
+При необходимости подразделы могут содержать пункты с нумерацией вида 1.2.1, 1.2.2 и~т.\,д.
+
+\newpage
+
+% === ГЛАВА 2 ===
+\section{Название второй главы}
+
+Текст второй главы
+
+\subsection{Пример ссылки на рисунок}
+
+Иллюстрации нумеруются сквозной нумерацией (п.~4.5.3). На все иллюстрации должны быть ссылки в тексте (п.~4.5.4).
+
+Схема архитектуры системы представлена на рисунке~\ref{fig:example}.
+
+\begin{figure}[H]
+  \centering
+  % \includegraphics[width=0.8\textwidth]{имя_файла}
+  \rule{0.6\textwidth}{4cm} % заглушка
+  \caption{Пример рисунка}
+  \label{fig:example}
+\end{figure}
+
+\subsection{Пример таблицы}
+
+Таблицы нумеруются сквозной нумерацией (п.~4.6.2). На все таблицы должны быть ссылки в тексте.
+
+Результаты эксперимента представлены в таблице~\ref{tab:results}.
+
+\begin{table}[H]
+\caption{Результаты экспериментального исследования}
+\label{tab:results}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Параметр} & \textbf{Значение 1} & \textbf{Значение 2} & \textbf{Значение 3} \\ \hline
+Метрика A          & 0.95                & 0.87                & 0.91                \\ \hline
+Метрика B          & 0.78                & 0.82                & 0.80                \\ \hline
+Метрика C          & 0.64                & 0.71                & 0.68                \\ \hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+% === ГЛАВА 3 ===
+\section{Название третьей главы}
+
+Текст третьей главы
+
+\subsection{Пример маркированного списка}
+
+\begin{itemize}
+  \item первый пункт;
+  \item второй пункт;
+  \item третий пункт.
+\end{itemize}
+
+\subsection{Пример листинга кода}
+
+Пример программного кода
+
+\begin{lstlisting}[language=Python, caption={Пример функции на Python}]
+def hello(name):
+    """Приветствие пользователя."""
+    print(f"Привет, {name}!")
+
+if __name__ == "__main__":
+    hello("мир")
+\end{lstlisting}
+
+\newpage
+
+% === ЗАКЛЮЧЕНИЕ ===
+\phantomsection
+\begin{center}
+\textbf{ЗАКЛЮЧЕНИЕ}
+\end{center}
+\addcontentsline{toc}{section}{ЗАКЛЮЧЕНИЕ}
+
+В заключении ВКР обобщаются результаты выполненного исследования и делаются выводы, даются рекомендации, определяются перспективы дальнейшей разработки темы.
+
+\newpage
+
+% === СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ ===
+\phantomsection
+\addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\bibliographystyle{unsrtnat}
+\nocite{*}
+\bibliography{references}
+
+\newpage
+
+% === ПРИЛОЖЕНИЕ А (п. 4.11) ===
+\phantomsection
+\begin{center}
+ПРИЛОЖЕНИЕ А
+\end{center}
+\addcontentsline{toc}{section}{ПРИЛОЖЕНИЕ А}
+\label{app:a}
+
+\begin{center}
+\textbf{Название приложения А}
+\end{center}
+
+Содержимое приложения А.
+
+\newpage
+
+% === ПРИЛОЖЕНИЕ Б ===
+\phantomsection
+\begin{center}
+ПРИЛОЖЕНИЕ Б
+\end{center}
+\addcontentsline{toc}{section}{ПРИЛОЖЕНИЕ Б}
+\label{app:b}
+
+\begin{center}
+\textbf{Название приложения Б}
+\end{center}
+
+Содержимое приложения Б.
+
+\end{document}
