@@ -1,0 +1,10 @@
+Question 1. Answer: a. Authenticity.
+The CIA triad is Confidentiality, Integrity, Availability. Authenticity is not one of them.
+
+Question 2. Answer: a. Confidentiality.
+The data is only copied, not changed, and the services keep running. Only confidentiality is broken by the unauthorised disclosure.
+
+Question 3.
+Confidentiality: a database breach where an attacker steals customer personal data. The records are disclosed to someone not authorised to see them.
+Integrity: an attacker changes an account balance in the bank database. The data is modified without authorisation and no longer correct.
+Availability: a DDoS attack floods the server so users cannot reach the website. Authorised users are denied access to the service.

@@ -1,0 +1,14 @@
+Part 1. Familiar topics
+
+Networking basics: TCP/IP, HTTP/HTTPS, DNS, cookies. From web development and the labs.
+Windows and Linux command line: files, processes, services. From daily admin and dev work.
+Web attacks basics: dictionary attack and SQL injection auth bypass with session and CSRF. From this course.
+Password hashing and cracking: unsalted MD5, extract from SQLite, recover with a wordlist. From the offline recovery lab.
+HTTP tooling: inspecting and replaying requests. From the labs.
+
+Part 2. Want to learn
+
+Cryptography: TLS, symmetric and asymmetric encryption, proper password storage (bcrypt, argon2). To understand why schemes are secure, not only how to break weak ones.
+Network security: firewalls, VPN, IDS/IPS, traffic analysis with Wireshark and nmap. Builds on my networking basics.
+Reverse engineering: reading binaries and malware. A clear gap for me.
+Cloud security: IAM, misconfigurations, containers. Most real systems run in the cloud.

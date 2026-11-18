@@ -1,0 +1,62 @@
+Threat Classification
+
+Boundary: team members, project accounts, devices, data, and the test server. The cloud provider's infrastructure is outside the boundary.
+
+Task 1. Five scenarios
+
+Scenario 1. Accidental deletion
+Affected asset: the project dataset in the shared folder.
+Threat source: internal, a team member.
+Nature of event: accidental, non-malicious human error.
+Vulnerability or contributing condition: no backup or version history, and the sync propagates the deletion to every device.
+Affected CIA properties: Availability, because the dataset is lost. Integrity of the dataset as a whole is also affected because the record no longer exists.
+Consequence: the dataset is permanently unavailable and work depending on it stops.
+Protection or recovery measure: versioned backups or storage snapshots, so a deleted file can be restored.
+
+Scenario 2. Stolen credentials
+Affected asset: the project account and the private project documents.
+Threat source: external, an attacker outside the team.
+Nature of event: intentional and malicious.
+Vulnerability or contributing condition: a reused password exposed in another breach, and no MFA on the account.
+Affected CIA properties: Confidentiality, because the documents are disclosed. Integrity and Availability are not affected, as stated.
+Consequence: private documents are disclosed to the attacker.
+Protection or recovery measure: enable MFA and use unique passwords, so a leaked password alone cannot grant access.
+
+Scenario 3. Device failure
+Affected asset: the unfinished project report stored only on that laptop.
+Threat source: internal, a device inside the boundary, with no human actor.
+Nature of event: non-malicious technical failure.
+Vulnerability or contributing condition: a single copy with no backup.
+Affected CIA properties: Availability, because the report cannot be accessed.
+Consequence: the report is lost and the work has to be redone.
+Protection or recovery measure: regular backups to separate storage, so a hardware failure does not destroy the only copy.
+
+Scenario 4. Deliberate modification
+Affected asset: the shared test results.
+Threat source: internal, an authorised team member.
+Nature of event: intentional, a policy violation.
+Vulnerability or contributing condition: no change tracking or review, so a single editor can alter shared data unnoticed.
+Affected CIA properties: Integrity, because the results are falsified. Confidentiality and Availability are not affected.
+Consequence: the team relies on false results and makes wrong decisions.
+Protection or recovery measure: version history and an audit log with peer review of changes, so edits are visible and reversible.
+
+Scenario 5. External service outage
+Affected asset: the presentation materials and access to the cloud storage service.
+Threat source: external and unknown. The cloud provider's infrastructure is outside the boundary and the cause is not established.
+Nature of event: unknown.
+Vulnerability or contributing condition: full dependence on one external service with no local copy.
+Affected CIA properties: Availability, because the materials cannot be accessed when needed.
+Consequence: the team cannot present its materials during the presentation.
+Protection or recovery measure: keep a local offline copy of critical materials, so an outage does not block access.
+
+Task 2. My own scenario
+
+Scenario. Exposed API key in a public repository
+A student commits a configuration file containing a live database API key and pushes it to a public Git repository for a course project.
+Affected asset: the database API key and the data it protects.
+Threat source: external, anyone who can read the public repository. The exposure is caused internally.
+Nature of event: accidental, a non-malicious mistake that creates external risk.
+Vulnerability or contributing condition: a secret committed to version control, a public repository, and no secret scanning.
+Affected CIA properties: Confidentiality directly, because the key is disclosed. Integrity and Availability of the database are at risk if the key is used.
+Consequence: an outsider can read or modify the database using the leaked key.
+Protection or recovery measure: keep secrets out of version control with environment variables and a gitignored file, rotate the exposed key immediately, and enable secret scanning.

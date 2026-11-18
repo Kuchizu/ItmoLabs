@@ -1,0 +1,36 @@
+1)
+For n ≥ 4, n! contains the factors 2 and 4, so 8  n!. Only the first three terms matter
+1! + 2! + 3! = 1 + 2 + 6 = 9 ≡ 1 (mod 8)
+Answer 1
+2)
+The product contains the factor 4! = 24 = 8 · 3, so the whole product is divisible by 8.
+Answer 0
+3)
+We work mod 10. The powers of 3 end in 3, 9, 7, 1, 3, 9, ... with period 4 (since 3^4 = 81 ≡ 1 mod 10).
+2023 = 4 · 505 + 3, so 3^2023 = (3^4)^505 · 3^3 ≡ 1 · 27 ≡ 7 (mod 10).
+Answer 7
+4)
+2023 ≡ −1 (mod 2024). Since 2025 is odd
+2023^2025 ≡ (−1)^2025 = −1 ≡ 2023 (mod 2024)
+Answer 2023
+5)
+2023 ≡ 3 (mod 5). By Fermat's little theorem, 3^4 ≡ 1 (mod 5), so we need the exponent mod 4.
+2022 ≡ 2 (mod 4), so 2022^2021 ≡ 2^2021 (mod 4). Since 2021 ≥ 2, 2^2021 is divisible by 4, so 2022^2021 ≡ 0 (mod 4).
+Answer 1
+6)
+Key fact 65537 = 2^16 + 1 is prime.
+Since 2^16 ≡ −1 (mod 65537), squaring gives 2^32 ≡ 1 (mod 65537). So powers of 2 repeat with period 32, and we need the exponent mod 32.
+- 2^2 = 4
+- 2^4 = 16
+- 2^16 = 65536
+So the number is 2^65536. Since 65536 = 2^16 = 32 · 2048, we get 65536 ≡ 0 (mod 32), hence
+2^65536 = (2^32)^2048 ≡ 1 (mod 65537).
+Answer 1
+7)
+76 = 66 + 10, so 76 ≡ 10 ≡ −1 (mod 11). Substitute x ≡ −1
+- x^10 = (−1)^10 = 1
+- 4x^7 = 4 · (−1) = −4
+- −22x^4 = −22 · 1 = −22 ≡ 0 (mod 11)
+- 101 = 99 + 2 ≡ 2 (mod 11)
+f(76) ≡ 1 − 4 + 0 + 2 = −1 ≡ 10 (mod 11)
+Answer 10

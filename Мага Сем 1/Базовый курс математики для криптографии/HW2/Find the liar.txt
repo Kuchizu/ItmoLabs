@@ -1,0 +1,16 @@
+Answer: the liar is user 1 (x1 = 1, y1 = 10).
+Solution:
+The honest shares lie on one line f(x) = ax + s mod 13. Since only one user lied, at least three of the four points must be collinear.
+Slopes between consecutive points mod 13:
+(1,10) to (2,12): 12 - 10 = 2
+(2,12) to (3,8): 8 - 12 = -4 ≡ 9
+(3,8) to (4,4): 4 - 8 = -4 ≡ 9
+Points 2, 3, 4 share the slope a = 9, so they are on the true line. Find s from (2,12):
+12 = 9*2 + s, so s = 12 - 18 = -6 ≡ 7
+f(x) = 9x + 7 mod 13
+Check:
+f(2) = 25 ≡ 12, correct
+f(3) = 34 ≡ 8, correct
+f(4) = 43 ≡ 4, correct
+f(1) = 16 ≡ 3, but user 1 reported 10
+So user 1 is the liar. The true secret is s = 7 and the true share of user 1 is 3.

@@ -1,0 +1,42 @@
+Phishing Analysis
+
+Official university domain: campus.example. Services are normally opened through a saved bookmark.
+
+Task 1. Four messages
+
+Message A. Account suspension
+Classification: likely phishing.
+Observations: the sender domain is campus-account.example, not the official campus.example, and the link points to that same lookalike domain. It demands the username and password within 30 minutes and tells you not to contact the help desk, which combines urgency, credential harvesting, and an attempt to stop you from verifying.
+What the sender wants: for you to open the link and type your university credentials into their page. If you do, they capture your password and can take over the account.
+How to verify: ignore the link, open the university site from your saved bookmark, and call or email IT support using the official contact details, not the ones in the message.
+What to do next: do not click, report the message to IT as phishing, and delete it.
+
+Message B. Library reminder
+Classification: likely legitimate.
+Observations: the sender is library@campus.example on the correct official domain, there is no link to click, and it asks you to use your usual university portal. There is no credential request and no pressure.
+What the sender wants: for you to check your loans or request an extension through your own portal. Even if the sender were spoofed, it asks for nothing harmful.
+How to verify: open the library service from your bookmark or portal and check your account directly.
+What to do next: check the due date normally; no urgent action is needed.
+
+Message C. A request from your supervisor
+Classification: likely phishing, a business email compromise attempt.
+Observations: a gift-card request with urgency and a reason you cannot call back is a classic scam pattern, the request is unexpected, and a familiar name and address can still be spoofed or display-name tricks. The payment is irreversible.
+What the sender wants: for you to buy gift cards and email the codes, which is an untraceable transfer of money. If you comply, the money is lost and cannot be recovered.
+How to verify: contact your supervisor through a separate known channel such as a saved phone number or in person, not by replying to the email.
+What to do next: do not buy anything, confirm out of band, and report it.
+
+Message D. A shared project document
+Classification: insufficient information.
+Observations: the context fits because you expected an updated schedule from this partner, and an external partner using its own domain is not by itself suspicious. However, the file-sharing service is unfamiliar, the message is a bare link with no attachment, and it does not state whether sign-in is required, so it cannot be fully trusted yet.
+What the sender wants: for you to open a link to view the schedule. If it is spoofed, the link could lead to a credential page or malware, especially if it asks you to log in.
+How to verify: confirm with the partner through a known channel that they sent it, and check the real service domain before opening. Never enter your university credentials there.
+What to do next: verify with the partner first; if you do open it, do not sign in with your university account.
+
+Task 2. Response to credential disclosure
+
+Assume the link in Message A was opened and the university password was entered, with no MFA approved yet.
+1. Regain control through a trusted route: open the official site from your saved bookmark on a known-good device and change the password immediately. If you cannot, call the IT help desk using the official number.
+2. Existing sessions and MFA: sign out all active sessions and revoke tokens. If unexpected MFA prompts arrive, deny them, because the attacker has the password and is trying to log in. Keep MFA enabled.
+3. Password reused elsewhere: change it on every other account that used the same or a similar password, starting with your email, and move to unique passwords with a password manager.
+4. Notify: report the incident and the phishing message to university IT security through the official channel, and notify any other affected service.
+Do not assume the account is safe just because no MFA approval was given; the password itself is already compromised.
